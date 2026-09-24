@@ -1,0 +1,25 @@
+# dependencies & build output
+node_modules/
+dist/
+api/index.js
+
+# secrets & local config
+.env
+.env.*
+!.env.example
+.vercel/
+.claude/
+
+# local databases & learner data
+data/
+*.db
+*.db-shm
+*.db-wal
+
+# exam question bank (not redistributed)
+src/data/questions.json
+public/data/questions.json
+
+# misc
+*.log
+.DS_Store
