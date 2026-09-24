@@ -17,6 +17,9 @@ import {
 } from 'lucide-react';
 import { useLanguage } from '../context/useLanguage';
 import { segmentTextByMatches } from '../core/textHighlighter';
+import { ServiceDeepDivePanel } from '../components/services/ServiceDeepDivePanel';
+import { getServiceDeepDive } from '../core/serviceDeepDives';
+import serviceQuestionIndex from '../data/serviceQuestionIndex.json';
 
 interface ServiceExplorerViewProps {
   onBackToHome: () => void;
@@ -83,6 +86,70 @@ export const KeywordHighlighter: React.FC<{ text: string }> = ({ text }) => {
   );
 };
 
+interface ServiceQuestionIndexEntry {
+  id: string;
+  name: string;
+  category: string;
+  tier: string;
+  count: number;
+  questionIds: number[];
+}
+
+const QUESTION_INDEX = serviceQuestionIndex as ServiceQuestionIndexEntry[];
+
+const QUESTION_COUNT_BY_ID = new Map<string, number>(
+  QUESTION_INDEX.map((item) => [item.id.toLowerCase(), item.count])
+);
+
+function getFirstSentence(text: string): string {
+  const match = text.match(/^.*?[.?!](?:\s|$)/);
+  return match ? match[0].trim() : text.trim();
+}
+
+const buildMergedServices = (): AWSServiceGuide[] => {
+  const existingIdSet = new Set<string>(
+    AWS_SERVICES.map((s) => s.id.toLowerCase())
+  );
+
+  const synthesizedServices: AWSServiceGuide[] = [];
+
+  for (const item of QUESTION_INDEX) {
+    const normalizedId = item.id.toLowerCase();
+    if (!existingIdSet.has(normalizedId)) {
+      const deepDive = getServiceDeepDive(item.id) || getServiceDeepDive(normalizedId);
+      const summary = deepDive?.whyItExists
+        ? getFirstSentence(deepDive.whyItExists)
+        : `Service xuất hiện trong ${item.count} câu của bộ đề SAA-C03.`;
+
+      synthesizedServices.push({
+        id: item.id,
+        name: item.name,
+        category: item.category,
+        summary,
+        coreConcepts: [],
+        useCases: [],
+        commonTraps: [],
+        relatedServices: [],
+        examRelevance: `Xuất hiện trong ${item.count} câu của bộ đề.`,
+        docsUrl: 'https://docs.aws.amazon.com/',
+      });
+    }
+  }
+
+  const all = [...AWS_SERVICES, ...synthesizedServices];
+
+  return all.sort((a, b) => {
+    const countA = QUESTION_COUNT_BY_ID.get(a.id.toLowerCase()) ?? 0;
+    const countB = QUESTION_COUNT_BY_ID.get(b.id.toLowerCase()) ?? 0;
+    if (countB !== countA) {
+      return countB - countA;
+    }
+    return a.name.localeCompare(b.name);
+  });
+};
+
+const MERGED_SERVICES: AWSServiceGuide[] = buildMergedServices();
+
 export const ServiceExplorerView: React.FC<ServiceExplorerViewProps> = ({
   onBackToHome,
   onSelectServiceToStudy,
@@ -103,14 +170,14 @@ export const ServiceExplorerView: React.FC<ServiceExplorerViewProps> = ({
   const [selectedService, setSelectedService] = useState<AWSServiceGuide | null>(() => {
     if (cleanInitialId && !cleanInitialId.includes('-vs-')) {
       return (
-        AWS_SERVICES.find(
+        MERGED_SERVICES.find(
           (s) =>
             s.id.toLowerCase() === cleanInitialId.toLowerCase() ||
             s.abbreviation?.toLowerCase() === cleanInitialId.toLowerCase()
-        ) || AWS_SERVICES[0]
+        ) || MERGED_SERVICES[0]
       );
     }
-    return AWS_SERVICES[0] || null;
+    return MERGED_SERVICES[0] || null;
   });
 
   const [selectedComparison, setSelectedComparison] = useState<ServiceComparison | null>(() => {
@@ -143,7 +210,7 @@ export const ServiceExplorerView: React.FC<ServiceExplorerViewProps> = ({
 
   const serviceCategories = useMemo(() => {
     const set = new Set<string>();
-    for (const s of AWS_SERVICES) {
+    for (const s of MERGED_SERVICES) {
       set.add(s.category);
     }
     return ['All', ...Array.from(set)];
@@ -159,11 +226,12 @@ export const ServiceExplorerView: React.FC<ServiceExplorerViewProps> = ({
 
   const filteredServices = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
-    return AWS_SERVICES.filter((s) => {
+    return MERGED_SERVICES.filter((s) => {
       const matchCat = selectedCategory === 'All' || s.category === selectedCategory;
       if (!matchCat) return false;
       if (!q) return true;
       return (
+        s.id.toLowerCase().includes(q) ||
         s.name.toLowerCase().includes(q) ||
         (s.abbreviation && s.abbreviation.toLowerCase().includes(q)) ||
         s.summary.toLowerCase().includes(q) ||
@@ -216,8 +284,8 @@ export const ServiceExplorerView: React.FC<ServiceExplorerViewProps> = ({
             type="button"
             onClick={() => {
               setActiveTab('services');
-              if (!selectedService && AWS_SERVICES.length > 0) {
-                setSelectedService(AWS_SERVICES[0]);
+              if (!selectedService && MERGED_SERVICES.length > 0) {
+                setSelectedService(MERGED_SERVICES[0]);
               }
             }}
             className={`flex items-center gap-1.5 rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-all ${
@@ -227,7 +295,7 @@ export const ServiceExplorerView: React.FC<ServiceExplorerViewProps> = ({
             }`}
           >
             <Server className="h-3.5 w-3.5" />
-            <span>{t.architecture.tabServices} ({AWS_SERVICES.length})</span>
+            <span>{t.architecture.tabServices} ({MERGED_SERVICES.length})</span>
           </button>
           <button
             type="button"
@@ -314,6 +382,7 @@ export const ServiceExplorerView: React.FC<ServiceExplorerViewProps> = ({
             <div className="space-y-2 max-h-[700px] overflow-y-auto pr-1">
               {filteredServices.map((service) => {
                 const isSelected = selectedService?.id === service.id;
+                const questionCount = QUESTION_COUNT_BY_ID.get(service.id.toLowerCase());
                 return (
                   <button
                     key={service.id}
@@ -326,13 +395,18 @@ export const ServiceExplorerView: React.FC<ServiceExplorerViewProps> = ({
                     }`}
                   >
                     <div>
-                      <div className="flex items-center gap-2">
+                      <div className="flex flex-wrap items-center gap-2">
                         <span className="text-sm font-bold text-slate-900 dark:text-slate-100">
                           {service.name}
                         </span>
                         <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[10px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
                           {service.category}
                         </span>
+                        {questionCount !== undefined && questionCount > 0 && (
+                          <span className="rounded bg-blue-100 px-1.5 py-0.5 text-[10px] font-semibold text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+                            {questionCount} câu
+                          </span>
+                        )}
                       </div>
                       <p className="mt-1 line-clamp-2 text-xs text-slate-500 dark:text-slate-400">
                         {service.summary}
@@ -399,36 +473,40 @@ export const ServiceExplorerView: React.FC<ServiceExplorerViewProps> = ({
                 </div>
 
                 {/* Core Concepts */}
-                <div className="mt-6 space-y-3">
-                  <h3 className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                    <Sparkles className="h-3.5 w-3.5 text-blue-500" />
-                    Core Architecture Concepts
-                  </h3>
-                  <ul className="space-y-2">
-                    {selectedService.coreConcepts.map((concept, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2.5 text-sm leading-relaxed text-slate-700 dark:text-slate-300"
-                      >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400" />
-                        <span>{concept}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {selectedService.coreConcepts && selectedService.coreConcepts.length > 0 && (
+                  <div className="mt-6 space-y-3">
+                    <h3 className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                      <Sparkles className="h-3.5 w-3.5 text-blue-500" />
+                      Core Architecture Concepts
+                    </h3>
+                    <ul className="space-y-2">
+                      {selectedService.coreConcepts.map((concept, i) => (
+                        <li
+                          key={i}
+                          className="flex items-start gap-2.5 text-sm leading-relaxed text-slate-700 dark:text-slate-300"
+                        >
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400" />
+                          <span>{concept}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
                 {/* Exam Relevance */}
-                <div className="mt-6 rounded-xl border border-blue-100 bg-blue-50/50 p-4 dark:border-blue-950 dark:bg-blue-950/30">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-blue-900 dark:text-blue-300">
-                    SAA-C03 Exam Relevance
-                  </h4>
-                  <p className="mt-1 text-xs leading-relaxed text-blue-950 dark:text-blue-200">
-                    {selectedService.examRelevance}
-                  </p>
-                </div>
+                {Boolean(selectedService.examRelevance && selectedService.examRelevance.trim()) && (
+                  <div className="mt-6 rounded-xl border border-blue-100 bg-blue-50/50 p-4 dark:border-blue-950 dark:bg-blue-950/30">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-blue-900 dark:text-blue-300">
+                      SAA-C03 Exam Relevance
+                    </h4>
+                    <p className="mt-1 text-xs leading-relaxed text-blue-950 dark:text-blue-200">
+                      {selectedService.examRelevance}
+                    </p>
+                  </div>
+                )}
 
                 {/* Common Traps */}
-                {selectedService.commonTraps.length > 0 && (
+                {selectedService.commonTraps && selectedService.commonTraps.length > 0 && (
                   <div className="mt-4 rounded-xl border border-amber-100 bg-amber-50/50 p-4 dark:border-amber-950 dark:bg-amber-950/30">
                     <h4 className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-amber-900 dark:text-amber-300">
                       <AlertTriangle className="h-3.5 w-3.5 text-amber-600" />
@@ -447,6 +525,12 @@ export const ServiceExplorerView: React.FC<ServiceExplorerViewProps> = ({
                     </ul>
                   </div>
                 )}
+
+                {/* Nội dung học sâu: cơ chế, khi nào dùng, chi phí, bẫy đề */}
+                <ServiceDeepDivePanel
+                  serviceId={selectedService.id}
+                  onPracticeService={onSelectServiceToStudy}
+                />
               </div>
             ) : (
               <div className="flex h-[400px] flex-col items-center justify-center rounded-2xl border border-dashed border-slate-200 bg-slate-50/50 p-8 text-center dark:border-slate-800 dark:bg-slate-900/40">

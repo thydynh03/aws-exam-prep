@@ -1,0 +1,13 @@
+[
+  {
+    "question_id": 1,
+    "question": "A team stores application logs in an Amazon S3 bucket and wants logs older than 90 days to move automatically to a cheaper storage class. What is the simplest way to do this?",
+    "choices": {
+      "A": "Write a Lambda function that copies old objects to another bucket every night.",
+      "B": "Add an S3 Lifecycle rule that transitions objects to S3 Glacier Flexible Retrieval after 90 days.",
+      "C": "Enable S3 Versioning on the bucket.",
+      "D": "Use S3 Cross-Region Replication to another Region."
+    },
+    "answer": "B"
+  }
+]

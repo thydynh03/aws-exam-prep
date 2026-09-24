@@ -11,7 +11,9 @@ api/index.js
 .claude/
 
 # local databases & learner data
-data/
+# Dấu / ở đầu để chỉ khớp thư mục data ở gốc project.
+# Không có nó thì rule này nuốt luôn src/data/ và public/data/.
+/data/
 *.db
 *.db-shm
 *.db-wal
