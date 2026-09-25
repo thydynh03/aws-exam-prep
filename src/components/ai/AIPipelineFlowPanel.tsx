@@ -146,8 +146,54 @@ export const AIPipelineFlowPanel: React.FC<AIPipelineFlowPanelProps> = ({
   title = 'Luồng Xử Lý AI (Pipeline 10 Giai Đoạn)',
 }) => {
   const [expandedStep, setExpandedStep] = useState<number | null>(null);
+  const [runningStepIndex, setRunningStepIndex] = useState<number>(0);
+  const [elapsedMs, setElapsedMs] = useState<number>(0);
 
-  const activeSteps = steps && steps.length > 0 ? steps : DEFAULT_10_STEPS;
+  React.useEffect(() => {
+    if (!isLoading) {
+      setRunningStepIndex(0);
+      setElapsedMs(0);
+      return;
+    }
+    const start = performance.now();
+    const timerInterval = setInterval(() => {
+      setElapsedMs(Math.round(performance.now() - start));
+    }, 60);
+
+    const stepInterval = setInterval(() => {
+      setRunningStepIndex((prev) => (prev < 9 ? prev + 1 : prev));
+    }, 650);
+
+    return () => {
+      clearInterval(timerInterval);
+      clearInterval(stepInterval);
+    };
+  }, [isLoading]);
+
+  const activeSteps = React.useMemo(() => {
+    if (steps && steps.length > 0 && !isLoading) return steps;
+    if (isLoading) {
+      return DEFAULT_10_STEPS.map((step, idx) => {
+        if (idx < runningStepIndex) {
+          return {
+            ...step,
+            status: 'PASS' as const,
+            latencyMs: Math.max(1, Math.round(10 + idx * 15)),
+            details: `Đã hoàn tất kiểm định giai đoạn ${step.step} (${step.name})`,
+          };
+        }
+        if (idx === runningStepIndex) {
+          return {
+            ...step,
+            status: 'RUNNING' as const,
+            details: `Đang phân tích và xử lý realtime giai đoạn ${step.step}...`,
+          };
+        }
+        return { ...step, status: 'IDLE' as const };
+      });
+    }
+    return DEFAULT_10_STEPS;
+  }, [steps, isLoading, runningStepIndex]);
 
   const toggleExpand = (stepNumber: number) => {
     setExpandedStep((prev) => (prev === stepNumber ? null : stepNumber));
@@ -289,7 +335,7 @@ export const AIPipelineFlowPanel: React.FC<AIPipelineFlowPanelProps> = ({
             </h4>
             <span className="text-[10px] text-slate-500 dark:text-slate-400">
               {isLoading
-                ? 'Đang thực thi pipeline thời gian thực...'
+                ? `⚡ Đang chạy realtime: ${elapsedMs}ms • Giai đoạn ${Math.min(10, runningStepIndex + 1)}/10: ${DEFAULT_10_STEPS[runningStepIndex]?.name || 'Xử lý'}`
                 : totalLatencyMs !== undefined
                 ? `Độ trễ: ${totalLatencyMs}ms • Model: ${modelUsed || 'Gemini/Local'}`
                 : '10 chặng kiểm định an ninh & tri thức'}

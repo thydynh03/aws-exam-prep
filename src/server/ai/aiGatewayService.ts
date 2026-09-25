@@ -383,12 +383,17 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
     }
   }
 
+  // 1. Input Sanitizer Timing
+  const inputSanitizerLatencyMs = Math.max(1, Math.round(performance.now() - startTime));
+
   // 2. Input Security Check (Prompt Injection, XSS, Secret & PII Scanning)
+  const step2Start = performance.now();
   const securityCheck = await inspectInputSecurity(payload.query, {
     tenantId,
     userId: payload.userId,
     ipAddress: payload.ipAddress,
   });
+  const securityLatencyMs = Math.max(1, Math.round(performance.now() - step2Start));
 
   if (!securityCheck.isSafe) {
     const secLatency = Date.now() - startTime;
@@ -403,8 +408,8 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
       intent: 'UNCLEAR',
       topic: 'General',
       pipelineSteps: [
-        { step: 1, id: 'input_validation', name: 'Khử khuẩn Đầu vào (Input Sanitizer)', category: 'GUARD', status: 'PASS', latencyMs: 1, details: 'Đã chuẩn hóa Unicode và kiểm tra giới hạn token' },
-        { step: 2, id: 'security_gateway', name: 'Bảo vệ An ninh (Security Guard)', category: 'SECURITY', status: 'BLOCKED', latencyMs: secLatency, details: `Phát hiện nguy cơ: ${securityCheck.securityFlags.join(', ')}` },
+        { step: 1, id: 'input_validation', name: 'Khử khuẩn Đầu vào (Input Sanitizer)', category: 'GUARD', status: 'PASS', latencyMs: inputSanitizerLatencyMs, details: 'Đã chuẩn hóa Unicode và kiểm tra giới hạn token' },
+        { step: 2, id: 'security_gateway', name: 'Bảo vệ An ninh (Security Guard)', category: 'SECURITY', status: 'BLOCKED', latencyMs: securityLatencyMs, details: `Phát hiện nguy cơ: ${securityCheck.securityFlags.join(', ')}` },
         { step: 3, id: 'domain', name: 'Ranh giới AWS (Domain Scope)', category: 'GUARD', status: 'SKIPPED', latencyMs: 0, details: 'Bỏ qua do vi phạm bảo mật' },
         { step: 4, id: 'rewrite', name: 'Tối ưu Câu hỏi (Query Rewriter)', category: 'UNDERSTANDING', status: 'SKIPPED', latencyMs: 0, details: 'Bỏ qua do vi phạm bảo mật' },
         { step: 5, id: 'cache', name: 'Bộ nhớ đệm (Semantic Cache)', category: 'CACHE', status: 'SKIPPED', latencyMs: 0, details: 'Bỏ qua do vi phạm bảo mật' },
@@ -432,8 +437,11 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
   const hasQuestionContext =
     Boolean(payload.currentQuestion) ||
     (payload.history || []).some((m) => m.role === 'assistant');
+  const step3Start = performance.now();
+  let domainLatencyMs = 1;
   if (config.security.domainScopeGuard) {
     const domainCheck = evaluateDomainScope(securityCheck.sanitizedInput, hasQuestionContext);
+    domainLatencyMs = Math.max(1, Math.round(performance.now() - step3Start));
     if (domainCheck.classification === 'OUT_OF_SCOPE') {
       const domainLatency = Date.now() - startTime;
       return {
@@ -472,6 +480,7 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
   }
 
   // 4a. History-aware rewrite: turn follow-ups into a standalone query for cache/memory/RAG
+  const step4Start = performance.now();
   const contextualized = await contextualizeQuery({
     query: securityCheck.sanitizedInput,
     history: payload.history || [],
@@ -482,8 +491,10 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
 
   // 4b. Prompt Rewriter & Question Understanding
   const rewrite = rewritePrompt(contextualized.standaloneQuery);
+  const rewriteLatencyMs = Math.max(1, Math.round(performance.now() - step4Start));
 
   // 5. Question Memory & Previous Mistakes Check
+  const step6Start = performance.now();
   const similarQuestion = await findSimilarQuestions(
     rewrite.normalizedQuery,
     rewrite.intent,
@@ -492,10 +503,13 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
   );
 
   const pastCorrections = await retrieveRelevantCorrections(rewrite.normalizedQuery, tenantId);
+  const memoryLatencyMs = Math.max(1, Math.round(performance.now() - step6Start));
 
   // 6. Semantic Cache Check & Prior Knowledge Retrieval
+  const step5Start = performance.now();
   let matchedPreviousOutput: string | undefined = undefined;
   let cacheHitEntry: CacheEntry | undefined = undefined;
+  let cacheLatencyMs = 1;
 
   if (config.memory.semanticCacheEnabled && pastCorrections.length === 0) {
     const cacheResult = await checkSemanticCache(
@@ -503,6 +517,7 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
       tenantId,
       config.memory.similarityThreshold
     );
+    cacheLatencyMs = Math.max(1, Math.round(performance.now() - step5Start));
 
     if (cacheResult.isHit && cacheResult.entry) {
       const hasHistory = Boolean(payload.history && payload.history.length > 0);
@@ -752,11 +767,13 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
   const generationLatencyMs = Date.now() - genStart;
 
   // 11. Evidence Verification & Hallucination Check
+  const step10Start = performance.now();
   const hasVerifiedHit = rerankedChunks.some((c) => c.sourceType === 'VERIFIED_KNOWLEDGE' && c.authority >= 0.9);
   const verification = verifyGeneratedAnswer(rawGenerated, rerankedChunks, hasVerifiedHit, securityCheck.sanitizedInput);
 
   // 12. Output Security Gate (PII, Secrets, XSS)
   const outputGuard = guardOutput(verification.verifiedAnswer);
+  const outputGuardLatencyMs = Math.max(1, Math.round(performance.now() - step10Start));
   const finalSecurityFlags = [...securityCheck.securityFlags, ...outputGuard.securityFlags];
 
   const totalLatencyMs = Date.now() - startTime;
@@ -838,26 +855,26 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
   });
 
   const pipelineSteps: AIPipelineStepInfo[] = [
-    { step: 1, id: 'input_validation', name: 'Khử khuẩn Đầu vào (Input Sanitizer)', category: 'GUARD', status: 'PASS', latencyMs: 1, details: 'Đã chuẩn hóa Unicode, loại bỏ ký tự điều khiển và xác thực giới hạn token' },
-    { step: 2, id: 'security_gateway', name: 'Bảo vệ An ninh (Security Guard)', category: 'SECURITY', status: securityCheck.securityFlags.length ? 'FLAGGED' : 'PASS', latencyMs: 2, details: securityCheck.securityFlags.length ? `Cảnh báo an ninh: ${securityCheck.securityFlags.join(', ')}` : 'An toàn: Không phát hiện Prompt Injection, Jailbreak hay đánh cắp System Prompt' },
-    { step: 3, id: 'domain', name: 'Ranh giới AWS (Domain Scope)', category: 'GUARD', status: 'PASS', latencyMs: 2, details: `Xác nhận trong phạm vi đề thi AWS Certified Solutions Architect Associate (Chủ đề: ${rewrite.topic})` },
-    { step: 4, id: 'rewrite', name: 'Tối ưu Câu hỏi (Query Rewriter)', category: 'UNDERSTANDING', status: 'PASS', latencyMs: 3 + contextualized.latencyMs, details: `Ý định: ${rewrite.intent}${contextualized.method !== 'none' ? ` | Viết lại theo ngữ cảnh hội thoại (${contextualized.method === 'llm' ? 'LLM' : 'heuristic'}): "${contextualized.standaloneQuery}"` : ''} | Chuẩn hóa từ viết tắt AWS: "${rewrite.normalizedQuery}"` },
+    { step: 1, id: 'input_validation', name: 'Khử khuẩn Đầu vào (Input Sanitizer)', category: 'GUARD', status: 'PASS', latencyMs: inputSanitizerLatencyMs, details: 'Đã chuẩn hóa Unicode, loại bỏ ký tự điều khiển và xác thực giới hạn token' },
+    { step: 2, id: 'security_gateway', name: 'Bảo vệ An ninh (Security Guard)', category: 'SECURITY', status: securityCheck.securityFlags.length ? 'FLAGGED' : 'PASS', latencyMs: securityLatencyMs, details: securityCheck.securityFlags.length ? `Cảnh báo an ninh: ${securityCheck.securityFlags.join(', ')}` : 'An toàn: Không phát hiện Prompt Injection, Jailbreak hay đánh cắp System Prompt' },
+    { step: 3, id: 'domain', name: 'Ranh giới AWS (Domain Scope)', category: 'GUARD', status: 'PASS', latencyMs: domainLatencyMs, details: `Xác nhận trong phạm vi đề thi AWS Certified Solutions Architect Associate (Chủ đề: ${rewrite.topic})` },
+    { step: 4, id: 'rewrite', name: 'Tối ưu Câu hỏi (Query Rewriter)', category: 'UNDERSTANDING', status: 'PASS', latencyMs: rewriteLatencyMs, details: `Ý định: ${rewrite.intent}${contextualized.method !== 'none' ? ` | Viết lại theo ngữ cảnh hội thoại (${contextualized.method === 'llm' ? 'LLM' : 'heuristic'}): "${contextualized.standaloneQuery}"` : ''} | Chuẩn hóa từ viết tắt AWS: "${rewrite.normalizedQuery}"` },
     {
       step: 5,
       id: 'cache',
       name: 'Bộ nhớ đệm (Semantic Cache)',
       category: 'CACHE',
       status: cacheHitEntry ? 'CACHE_HIT' : 'CACHE_MISS',
-      latencyMs: 3,
+      latencyMs: cacheLatencyMs,
       details: cacheHitEntry
         ? `Khớp tri thức trước đó (${Math.round((cacheHitEntry.hitCount ? 0.95 : 0.88) * 100)}%) - Đã nạp vào ngữ cảnh để AI đối soát và tổng hợp đa nguồn`
         : 'Không có cache trùng khớp, chuyển tiếp sang RAG và Rerank',
     },
-    { step: 6, id: 'memory', name: 'Bộ nhớ Tri thức (Knowledge Memory)', category: 'MEMORY', status: 'PASS', latencyMs: 4, details: similarQuestion ? `Khớp câu hỏi tương tự (${Math.round(similarQuestion.similarityScore * 100)}%): "${similarQuestion.matchedQuestion}"` : (pastCorrections.length ? `Đã nạp ${pastCorrections.length} đính chính lỗi sai cũ` : 'Đã đối chiếu bộ nhớ sửa sai và câu hỏi học viên') },
-    { step: 7, id: 'rag', name: 'Truy xuất RAG (Knowledge Retrieval)', category: 'RETRIEVAL', status: 'PASS', latencyMs: retrievalLatencyMs, details: `Trích xuất thành công ${retrievedChunks.length} tài liệu từ 1,019 câu hỏi SAA & 42 cẩm nang AWS` },
-    { step: 8, id: 'rerank', name: 'Cohere Rerank Engine', category: 'RERANK', status: rerankUsed ? 'RERANKED' : 'PASS', latencyMs: rerankLatencyMs, details: rerankUsed ? `Đã rerank Top-${retrievedChunks.length} xuống Top-${rerankedChunks.length} đoạn tối ưu bằng Cohere Rerank v3.5` : `Rerank trực tiếp Top-${rerankedChunks.length} tài liệu liên quan` },
-    { step: 9, id: 'generation', name: 'Tạo sinh AI (LLM Generation)', category: 'GENERATION', status: 'GENERATED', latencyMs: generationLatencyMs, details: `Tạo phản hồi an toàn với model ${modelUsed} trong ranh giới UNTRUSTED_REFERENCE_DATA` },
-    { step: 10, id: 'output_guard', name: 'Kiểm định Đầu ra (Output Guard)', category: 'OUTPUT_GUARD', status: 'GROUNDED', latencyMs: 2, details: `Độ tin cậy: ${verification.confidence} (${Math.round(verification.confidenceScore * 100)}%). Đã kiểm tra chống rò rỉ secret, lọc PII và làm sạch XSS` },
+    { step: 6, id: 'memory', name: 'Bộ nhớ Tri thức (Knowledge Memory)', category: 'MEMORY', status: 'PASS', latencyMs: memoryLatencyMs, details: similarQuestion ? `Khớp câu hỏi tương tự (${Math.round(similarQuestion.similarityScore * 100)}%): "${similarQuestion.matchedQuestion}"` : (pastCorrections.length ? `Đã nạp ${pastCorrections.length} đính chính lỗi sai cũ` : 'Đã đối chiếu bộ nhớ sửa sai và câu hỏi học viên') },
+    { step: 7, id: 'rag', name: 'Truy xuất RAG (Knowledge Retrieval)', category: 'RETRIEVAL', status: 'PASS', latencyMs: Math.max(1, retrievalLatencyMs), details: `Trích xuất thành công ${retrievedChunks.length} tài liệu từ 1,019 câu hỏi SAA & 42 cẩm nang AWS` },
+    { step: 8, id: 'rerank', name: 'Cohere Rerank Engine', category: 'RERANK', status: rerankUsed ? 'RERANKED' : 'PASS', latencyMs: Math.max(1, rerankLatencyMs), details: rerankUsed ? `Đã rerank Top-${retrievedChunks.length} xuống Top-${rerankedChunks.length} đoạn tối ưu bằng Cohere Rerank v3.5` : `Rerank trực tiếp Top-${rerankedChunks.length} tài liệu liên quan` },
+    { step: 9, id: 'generation', name: 'Tạo sinh AI (LLM Generation)', category: 'GENERATION', status: 'GENERATED', latencyMs: Math.max(1, generationLatencyMs), details: `Tạo phản hồi an toàn với model ${modelUsed} trong ranh giới UNTRUSTED_REFERENCE_DATA` },
+    { step: 10, id: 'output_guard', name: 'Kiểm định Đầu ra (Output Guard)', category: 'OUTPUT_GUARD', status: 'GROUNDED', latencyMs: outputGuardLatencyMs, details: `Độ tin cậy: ${verification.confidence} (${Math.round(verification.confidenceScore * 100)}%). Đã kiểm tra chống rò rỉ secret, lọc PII và làm sạch XSS` },
   ];
 
   return {

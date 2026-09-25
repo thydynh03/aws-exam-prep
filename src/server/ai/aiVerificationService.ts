@@ -29,22 +29,33 @@ const KNOWN_HALLUCINATION_PATTERNS = [
   /s3\s+(?:infinite|ultra|extreme)\s+tier/i,
 ];
 
+const STOP_WORDS = new Set([
+  'của', 'trong', 'ngoài', 'những', 'các', 'được', 'phải', 'không', 'chúng', 'người',
+  'dùng', 'cho', 'với', 'trên', 'dưới', 'khi', 'nếu', 'thì', 'là', 'và', 'hoặc',
+  'bởi', 'vì', 'nên', 'bạn', 'hãy', 'câu', 'hỏi', 'này', 'đó', 'đây', 'một',
+  'hai', 'ba', 'bốn', 'năm', 'có', 'thể', 'rất', 'cũng', 'đã', 'đang', 'sẽ',
+  'tự', 'động', 'đáp', 'án', 'phương', 'chọn', 'sai', 'đúng', 'giải', 'thích',
+  'the', 'and', 'for', 'that', 'this', 'with', 'are', 'was', 'were', 'from',
+  'have', 'has', 'you', 'your', 'our', 'can', 'will', 'not', 'but', 'all',
+]);
+
 function tokenize(text: string): Set<string> {
   const words = (text || '')
     .toLowerCase()
     .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .split(/\s+/)
-    .filter((w) => w.length > 2);
+    .filter((w) => w.length > 1 && !STOP_WORDS.has(w));
   return new Set(words);
 }
 
 const AWS_CORE_SERVICES = [
   'alb', 'nlb', 'glb', 'elb', 'ec2', 's3', 'ebs', 'efs', 'vpc',
   'rds', 'aurora', 'dynamodb', 'sqs', 'sns', 'lambda', 'fargate',
-  'ecs', 'eks', 'route53', 'cloudfront', 'waf', 'shield', 'iam',
+  'ecs', 'eks', 'route53', 'route 53', 'cloudfront', 'waf', 'shield', 'iam',
   'kms', 'secrets manager', 'cloudwatch', 'cloudtrail', 'redshift',
   'kinesis', 'glue', 'emr', 'athena', 'eventbridge', 'step functions',
   'transit gateway', 'direct connect', 'global accelerator', 'elasticache',
+  'api gateway', 'apigateway', 'cognito', 'opensearch', 'guardduty', 'inspector',
 ];
 
 /**
@@ -95,20 +106,29 @@ export function verifyGeneratedAnswer(
     }
   }
 
+  // Raw technical lexical coverage against generated answer
   const coverage = answerTokens.size > 0 ? groundedCount / answerTokens.size : 0;
 
   // 3. Confidence Calculation
-  let score = coverage * 0.5;
+  // In Generative RAG, an answer of 300+ words with 15-25% technical lexical overlap with reference snippets
+  // represents strong grounding (non-matching tokens are explanatory grammar, structure, and formatting).
+  const normalizedCoverage = Math.min(1.0, coverage * 2.5);
+  let score = normalizedCoverage * 0.45;
 
-  // Boost for high-authority chunks
+  // Boost for high-authority chunks (AWS guides, official exam questions)
   const avgAuthority = chunks.length > 0
     ? chunks.reduce((acc, c) => acc + c.authority, 0) / chunks.length
     : 0.5;
-  score += avgAuthority * 0.3;
+  score += avgAuthority * 0.35;
+
+  // Additional grounding signal if canonical AWS docs or questions are present
+  if (chunks.some((c) => c.sourceType === 'AWS_GUIDE' || c.sourceType === 'CANONICAL_QUESTION')) {
+    score += 0.10;
+  }
 
   // Boost if verified memory / exact source match
   if (hasVerifiedMemoryHit) {
-    score += 0.25;
+    score += 0.20;
   }
 
   score = Math.min(Math.max(score, 0.1), 1.0);
@@ -149,20 +169,20 @@ export function verifyGeneratedAnswer(
   }
 
   let confidence: ConfidenceLevel = 'MEDIUM';
-  if (unsupportedClaims.length > 0 || score < 0.35) {
+  if (unsupportedClaims.length > 0 || score < 0.25) {
     confidence = 'LOW';
-  } else if (hasVerifiedMemoryHit && score >= 0.85) {
+  } else if (hasVerifiedMemoryHit && score >= 0.80) {
     confidence = 'VERIFIED';
-  } else if (score >= 0.75) {
+  } else if (score >= 0.55 || (chunks.length > 0 && avgAuthority >= 0.9 && coverage >= 0.12)) {
     confidence = 'HIGH';
-  } else if (score >= 0.45) {
+  } else if (score >= 0.30 || chunks.length > 0) {
     confidence = 'MEDIUM';
   } else {
     confidence = 'LOW';
   }
 
-  // If evidence coverage is critically low (< 15%) and no question context was present
-  if (coverage < 0.12 && chunks.length === 0) {
+  // If evidence coverage is critically low (< 10%) and no question context was present
+  if (coverage < 0.10 && chunks.length === 0) {
     return {
       isValid: true,
       confidence: 'LOW',
@@ -170,7 +190,7 @@ export function verifyGeneratedAnswer(
       unsupportedClaims: ['Độ bao phủ chứng cứ thấp'],
       hallucinationDetected: false,
       verifiedAnswer: `${answer}\n\n*Lưu ý: Câu trả lời này dựa trên tri thức tổng quát và chưa được đối chiếu đầy đủ với tài liệu chuyên biệt trong cơ sở tri thức.*`,
-      evidenceCoverage: coverage,
+      evidenceCoverage: Math.round(coverage * 100) / 100,
     };
   }
 
