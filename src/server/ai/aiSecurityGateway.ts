@@ -89,22 +89,22 @@ const PROMPT_INJECTION_PATTERNS: Array<{ regex: RegExp; name: string; severity: 
 
   // Secrecy & Concealment Directives (Anti-Audit / Anti-Transparency Evasion)
   {
-    regex: /(?:do\s+not|don't|never|cannot|should\s+not)\s+(?:reveal|disclose|mention|show|tell|leak|output|display)\s+(?:this|these|the)?\s*(?:instruction|prompt|rule|message|directive|command|secret|order)/i,
+    regex: /(?:do\s+not|don't|never|cannot|should\s+not)\s+(?:reveal|disclose|mention|show|tell|leak|output|display)\s+(?:this|these|the)?\s*(?:system\s+|developer\s+|internal\s+)?(?:instruction|prompt|rule|message|directive|command|secret|order)/i,
     name: 'SECRECY_CONCEALMENT_DIRECTIVE',
     severity: 'CRITICAL',
   },
   {
-    regex: /(?:keep|maintain)\s+(?:this|these)\s+(?:instruction|directive|rule|command|prompt)\s+(?:secret|hidden|confidential|private)/i,
+    regex: /(?:keep|maintain)\s+(?:this|these)\s+(?:system\s+|developer\s+|internal\s+)?(?:instruction|directive|rule|command|prompt)\s+(?:secret|hidden|confidential|private)/i,
     name: 'SECRECY_CONCEALMENT_DIRECTIVE',
     severity: 'CRITICAL',
   },
   {
-    regex: /(?:không\s+được|đừng|tuyệt\s+đối\s+không|cấm)\s+(?:tiết\s+lộ|nói|nhắc\s+đến|cho\s+biết|đọc\s+ra|in\s+ra|hiển\s+thị)\s+(?:chỉ\s+dẫn|hướng\s+dẫn|lệnh|câu\s+lệnh|quy\s+tắc|prompt|chỉ\s+thị)\s+này/i,
+    regex: /(?:không\s+được|đừng|tuyệt\s+đối\s+không|cấm)\s+(?:tiết\s+lộ|nói|nhắc\s+đến|cho\s+biết|đọc\s+ra|in\s+ra|hiển\s+thị)\s+(?:chỉ\s+dẫn|hướng\s+dẫn|lệnh|câu\s+lệnh|quy\s+tắc|prompt|chỉ\s+thị)?\s*(?:hệ\s+thống\s+)?(?:này|gốc|ban\s+đầu)/i,
     name: 'SECRECY_CONCEALMENT_DIRECTIVE_VI',
     severity: 'CRITICAL',
   },
   {
-    regex: /(?:giữ|bảo\s+mật)\s+(?:bí\s+mật|kín)\s+(?:chỉ\s+dẫn|hướng\s+dẫn|lệnh|câu\s+lệnh|prompt)\s+này/i,
+    regex: /(?:giữ|bảo\s+mật)\s+(?:bí\s+mật|kín)\s+(?:chỉ\s+dẫn|hướng\s+dẫn|lệnh|câu\s+lệnh|prompt)\s*(?:hệ\s+thống\s+)?(?:này|gốc)?/i,
     name: 'SECRECY_CONCEALMENT_DIRECTIVE_VI',
     severity: 'CRITICAL',
   },
@@ -151,6 +151,58 @@ const PROMPT_INJECTION_PATTERNS: Array<{ regex: RegExp; name: string; severity: 
   { regex: /do\s+anything\s+now|DAN\s+mode|jailbreak|bypass\s+(?:safety|filters|guardrails|policies)/i, name: 'JAILBREAK_ATTEMPT', severity: 'CRITICAL' },
   { regex: /enter\s+(?:developer\s+mode|jailbreak\s+mode|god\s+mode|unrestricted\s+mode)/i, name: 'JAILBREAK_ATTEMPT', severity: 'CRITICAL' },
 
+  // Fiction & Hypothetical Framing Jailbreak (Vietnamese & English)
+  {
+    regex: /(?:chúng\s+ta\s+đang\s+đóng|trong)\s+(?:một\s+)?(?:vở\s+kịch|bộ\s+phim|kịch\s+bản|câu\s+chuyện|tiểu\s+thuyết|trò\s+chơi)\s+(?:giả\s+tưởng|hư\s+cấu|đóng\s+vai)/i,
+    name: 'HYPOTHETICAL_ROLEPLAY_JAILBREAK',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /(?:vở\s+kịch|kịch\s+bản|câu\s+chuyện|tình\s+huống)\s+(?:giả\s+tưởng|hư\s+cấu|đóng\s+vai|giả\s+định)/i,
+    name: 'HYPOTHETICAL_ROLEPLAY_JAILBREAK',
+    severity: 'HIGH',
+  },
+  {
+    regex: /(?:we\s+are\s+acting|in\s+this)\s+(?:a\s+)?(?:fictional|hypothetical|imaginary)\s+(?:play|movie|script|story|roleplay|scenario)/i,
+    name: 'HYPOTHETICAL_ROLEPLAY_JAILBREAK',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /(?:for|in)\s+a\s+(?:fictional|hypothetical|fantasy)\s+(?:movie|play|story|novel|game|scenario)/i,
+    name: 'HYPOTHETICAL_ROLEPLAY_JAILBREAK',
+    severity: 'HIGH',
+  },
+  {
+    regex: /(?:hãy\s+)?(?:nhập\s+vai|vào\s+vai|thủ\s+vai|hóa\s+thân\s+thành)\s+(?:và\s+)?(?:chỉ|hướng\s+dẫn|làm|nói|viết)?/i,
+    name: 'JAILBREAK_ROLEPLAY_VI',
+    severity: 'HIGH',
+  },
+  {
+    regex: /(?:bạn\s+diễn\s+là|bạn\s+là)\s+(?:một\s+)?(?:tên\s+cướp|hacker|tội\s+phạm|kẻ\s+phá\s+khóa|kẻ\s+trộm|sát\s+thủ|kẻ\s+gian)/i,
+    name: 'MALICIOUS_ROLEPLAY_PERSONA',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /(?:act\s+as|pretend\s+to\s+be|roleplay\s+as)\s+(?:a\s+)?(?:bank\s+robber|robber|thief|hacker|criminal|lockpicker|villain|assassin)/i,
+    name: 'MALICIOUS_ROLEPLAY_PERSONA',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /(?:cách|hướng\s+dẫn\s+chi\s+tiết\s+cách)\s+(?:phá\s+khóa|bẻ\s+khóa|cướp\s+ngân\s+hàng|trộm|hack|tấn\s+công|chế\s+tạo\s+vũ\s+khí)/i,
+    name: 'DANGEROUS_ACTIVITY_EXTRACTION',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /(?:how\s+to|detailed\s+guide\s+to)\s+(?:pick\s+(?:a\s+)?lock|rob\s+(?:a\s+)?bank|break\s+into|hack\s+into|make\s+(?:a\s+)?weapon)/i,
+    name: 'DANGEROUS_ACTIVITY_EXTRACTION',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /(?:làm\s+điều\s+đó|thực\s+hiện\s+điều\s+này)\s+(?:ngoài\s+đời\s+thực|trong\s+thực\s+tế)/i,
+    name: 'REAL_WORLD_EXPLOIT_REQUEST',
+    severity: 'CRITICAL',
+  },
+
   // Jailbreak & Roleplay (Vietnamese)
   { regex: /(?:bạn\s+là|hãy\s+đóng\s+vai|hóa\s+thân\s+thành|chuyển\s+sang\s+chế\s+độ)\s+(?:DAN|developer\s+mode|nhà\s+phát\s+triển|không\s+giới\s+hạn|bẻ\s+khóa|ác\s+quỷ|god\s+mode|tự\s+do|không\s+kiểm\s+duyệt)/i, name: 'JAILBREAK_ROLEPLAY_VI', severity: 'CRITICAL' },
   { regex: /(?:vượt\s+qua|bỏ\s+qua|vô\s+hiệu\s+hóa)\s+(?:hàng\s+rào\s+bảo\s+vệ|bảo\s+mật|kiểm\s+duyệt|bộ\s+lọc\s+an\s+toàn)/i, name: 'JAILBREAK_ATTEMPT_VI', severity: 'CRITICAL' },
@@ -168,7 +220,21 @@ const PROMPT_INJECTION_PATTERNS: Array<{ regex: RegExp; name: string; severity: 
 
   // Delimiter Injection & Role Spoofing (OWASP LLM01)
   { regex: /<\|(?:im_start|im_end|endoftext|system|assistant|user)\|>/i, name: 'DELIMITER_INJECTION', severity: 'CRITICAL' },
-  { regex: /\[(?:SYSTEM|INSTRUCTION|ADMIN|ROOT|HỆ\s+THỐNG|QUẢN\s+TRỊ)\]/i, name: 'ROLE_SPOOFING', severity: 'HIGH' },
+  {
+    regex: /\[(?:SYSTEM(?:\s+PROMPT|\s+INSTRUCTION|\s+DIRECTIVE|\s+RULES?)?|USER(?:\s+MESSAGE|\s+INPUT|\s+PROMPT)?|ASSISTANT(?:\s+MESSAGE|\s+RESPONSE)?|CONVERSATION(?:\s+HISTORY)?|CHAT(?:\s+HISTORY)?|INSTRUCTION|ADMIN|ROOT|DEVELOPER|HỆ\s+THỐNG|QUẢN\s+TRỊ)\]\s*:/i,
+    name: 'DELIMITER_INJECTION',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /\[(?:SYSTEM|USER|ASSISTANT|ADMIN|DEVELOPER|ROOT|HỆ\s+THỐNG|QUẢN\s+TRỊ|CONVERSATION)\s*(?:PROMPT|MESSAGE|HISTORY|INSTRUCTION)?\]/i,
+    name: 'ROLE_SPOOFING',
+    severity: 'HIGH',
+  },
+  {
+    regex: /\{user_input\}|\{system_prompt\}|\{conversation_history\}|\{prompt\}/i,
+    name: 'PROMPT_TEMPLATE_INJECTION',
+    severity: 'HIGH',
+  },
   { regex: /<<\s*SYS\s*>>|\[\/?INST\]/i, name: 'DELIMITER_INJECTION', severity: 'CRITICAL' },
   { regex: /(?:---|===)\s*(?:BEGIN|START|END)\s+(?:SYSTEM|PROMPT|INSTRUCTION|CONTEXT|LỆNH)/i, name: 'DELIMITER_INJECTION', severity: 'HIGH' },
   { regex: /<<<END_(?:UNTRUSTED|STUDENT|CONTEXT)/i, name: 'DELIMITER_INJECTION', severity: 'CRITICAL' },
@@ -423,8 +489,10 @@ export async function inspectInputSecurity(
       specificMessage = 'phát hiện cấu trúc tiêm nhiễm chỉ dẫn ẩn hoặc thao túng hành vi mô hình (Indirect Prompt Injection)';
     } else if (flags.some((f) => f.includes('SYSTEM_PROMPT_EXTRACTION'))) {
       specificMessage = 'nghi vấn trích xuất dữ liệu nội bộ hoặc System Prompt';
-    } else if (flags.some((f) => f.includes('JAILBREAK'))) {
-      specificMessage = 'phát hiện kịch bản bẻ khóa Jailbreak hoặc giả mạo vai trò';
+    } else if (flags.some((f) => f.includes('JAILBREAK') || f.includes('ROLEPLAY') || f.includes('PERSONA') || f.includes('DANGEROUS'))) {
+      specificMessage = 'phát hiện kịch bản giả định, bẻ khóa Jailbreak hoặc nhập vai hành vi nguy hại';
+    } else if (flags.some((f) => f.includes('DELIMITER') || f.includes('SPOOFING') || f.includes('TEMPLATE'))) {
+      specificMessage = 'phát hiện cấu trúc giả mạo định dạng hội thoại hoặc chèn thẻ Delimiter trái phép';
     }
 
     const blockedReason = `> [!CAUTION]\n> 🛡️ **Yêu cầu bị từ chối do vi phạm chính sách an toàn AI (OWASP LLM01 - Security Gateway)**\n> \n> **Lý do:** Yêu cầu bị chặn do ${specificMessage}.\n> **Mã nhận diện rủi ro:** \`${flags.join('`, `')}\`\n> \n> *Hệ thống đã chủ động ngắt kết nối với mô hình AI để bảo vệ an toàn và tính toàn vẹn của nền tảng.*`;
