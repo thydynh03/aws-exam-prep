@@ -47,7 +47,7 @@ const ACRONYM_EXPANSIONS: Record<string, string> = {
 };
 
 // Patterns to strip from search queries so injections don't distort RAG retrieval
-const INJECTION_STRIP_REGEX = /(?:ignore\s+(?:all\s+)?(?:previous|prior)\s+instructions|disregard\s+rules|system\s+prompt|reveal\s+secret|jailbreak|DAN\s+mode|as\s+an\s+unfiltered\s+assistant|do\s+anything\s+now)/gi;
+const INJECTION_STRIP_REGEX = /(?:ignore\s+(?:all\s+)?(?:previous|prior)\s+instructions|disregard\s+rules|system\s+prompt|reveal\s+secret|jailbreak|DAN\s+mode|as\s+an\s+unfiltered\s+assistant|do\s+anything\s+now|<!--[\s\S]*?-->|AI\s*[-_]?\s*INSTRUCTION\s*:?|do\s+not\s+reveal\s+this\s+instruction)/gi;
 
 /**
  * Rewrite, normalize and classify query for retrieval and memory

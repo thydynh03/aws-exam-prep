@@ -26,6 +26,111 @@ export interface SecurityEventRecord {
 
 // 1. Direct & Indirect Prompt Injection & Jailbreak Patterns (OWASP Top 10 for LLM - LLM01)
 const PROMPT_INJECTION_PATTERNS: Array<{ regex: RegExp; name: string; severity: 'HIGH' | 'CRITICAL' }> = [
+  // Indirect Prompt Injection & Comment-based Smuggling (HTML / Markdown / Code comments)
+  {
+    regex: /<!--[\s\S]*?(?:AI\s*[-_]?\s*INSTRUCTION|SYSTEM\s*[-_]?\s*INSTRUCTION|DEVELOPER\s*[-_]?\s*INSTRUCTION|PROMPT\s*[-_]?\s*INSTRUCTION|MODEL\s*[-_]?\s*INSTRUCTION|LLM\s*[-_]?\s*INSTRUCTION|AGENT\s*[-_]?\s*INSTRUCTION|DIRECTIVE|DO\s+NOT\s+REVEAL|IF\s+YOU\s+(?:ARE\s+)?(?:PROCESSING|READING)|PROVIDE\s+USERS?\s+WITH|IGNORE\s+ALL|DISREGARD|COMPETITOR|CHỈ\s+DẪN|HƯỚNG\s+DẪN|LỆNH)[\s\S]*?-->/i,
+    name: 'INDIRECT_PROMPT_INJECTION',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /\[\/\/(?:comment)?\]:\s*#\s*\([\s\S]*?(?:instruction|system|ignore|override|do\s+not\s+reveal|chỉ\s+dẫn)[\s\S]*?\)/i,
+    name: 'INDIRECT_PROMPT_INJECTION',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /\/\*[\s\S]*?(?:AI\s*[-_]?\s*INSTRUCTION|SYSTEM\s*[-_]?\s*INSTRUCTION|PROMPT\s*[-_]?\s*INJECTION|IGNORE\s+ALL|DO\s+NOT\s+REVEAL|CHỈ\s+DẪN)[\s\S]*?\*\//i,
+    name: 'INDIRECT_PROMPT_INJECTION',
+    severity: 'CRITICAL',
+  },
+
+  // Instruction Headers & Synthetic System Directives (English & Vietnamese)
+  {
+    regex: /(?:<!--\s*)?(?:AI|SYSTEM|DEVELOPER|MODEL|LLM|AGENT|PROMPT)\s*[-_]?\s*(?:INSTRUCTION|DIRECTIVE|COMMAND|ORDER|RULE)\s*:/i,
+    name: 'INSTRUCTION_TAG_INJECTION',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /(?:CHỈ\s+DẪN|HƯỚNG\s+DẪN|LỆNH|MỆNH\s+LỆNH|QUY\s+TẮC)\s+(?:AI|HỆ\s+THỐNG|CHO\s+AI|CỦA\s+AI|MÔ\s+HÌNH|NỘI\s+BỘ|BÍ\s+MẬT)\s*:/i,
+    name: 'INSTRUCTION_TAG_INJECTION_VI',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /<\/?(?:ai[-_]?instruction|system[-_]?instruction|developer[-_]?instruction|llm[-_]?instruction|model[-_]?instruction|instruction[-_]?override|hidden[-_]?directive|prompt[-_]?injection)[\s\S]*?>/i,
+    name: 'INSTRUCTION_TAG_INJECTION',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /<(?:div|span|p|font)[^>]*(?:display\s*:\s*none|visibility\s*:\s*hidden|font-size\s*:\s*0|opacity\s*:\s*0)[^>]*>[\s\S]*?(?:instruction|system|ignore|override|do\s+not\s+reveal|chỉ\s+dẫn)[\s\S]*?<\/(?:div|span|p|font)>/i,
+    name: 'HIDDEN_ELEMENT_INJECTION',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /(?:note\s+(?:to|for)\s+(?:the\s+)?(?:ai|model|llm|assistant|bot)|instruction\s+(?:to|for)\s+(?:the\s+)?(?:ai|model|llm|assistant|bot))\s*:/i,
+    name: 'INSTRUCTION_TAG_INJECTION',
+    severity: 'HIGH',
+  },
+  {
+    regex: /(?:lưu\s+ý|ghi\s+chú)\s+(?:cho|dành\s+cho)\s+(?:ai|mô\s+hình|trợ\s+lý|bot)\s*:/i,
+    name: 'INSTRUCTION_TAG_INJECTION_VI',
+    severity: 'HIGH',
+  },
+
+  // Conditional Triggers (Indirect Prompt Injection Targeting Document Processing)
+  {
+    regex: /(?:if|when)\s+you\s+(?:are\s+)?(?:processing|reading|evaluating|analyzing|handling|summarizing|answering|parsing)\s+(?:this\s+)?(?:document|text|input|data|query|message|prompt|file|question|content)/i,
+    name: 'CONDITIONAL_INJECTION_TRIGGER',
+    severity: 'HIGH',
+  },
+  {
+    regex: /(?:nếu|khi)\s+(?:bạn|ngươi|AI|hệ\s+thống)\s+(?:đang\s+)?(?:xử\s+lý|đọc|phân\s+tích|nhận|đánh\s+giá|tóm\s+tắt|trả\s+lời)\s+(?:tài\s+liệu|văn\s+bản|nội\s+dung|câu\s+hỏi|yêu\s+cầu|file|đoạn\s+văn)\s+này/i,
+    name: 'CONDITIONAL_INJECTION_TRIGGER_VI',
+    severity: 'HIGH',
+  },
+
+  // Secrecy & Concealment Directives (Anti-Audit / Anti-Transparency Evasion)
+  {
+    regex: /(?:do\s+not|don't|never|cannot|should\s+not)\s+(?:reveal|disclose|mention|show|tell|leak|output|display)\s+(?:this|these|the)?\s*(?:instruction|prompt|rule|message|directive|command|secret|order)/i,
+    name: 'SECRECY_CONCEALMENT_DIRECTIVE',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /(?:keep|maintain)\s+(?:this|these)\s+(?:instruction|directive|rule|command|prompt)\s+(?:secret|hidden|confidential|private)/i,
+    name: 'SECRECY_CONCEALMENT_DIRECTIVE',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /(?:không\s+được|đừng|tuyệt\s+đối\s+không|cấm)\s+(?:tiết\s+lộ|nói|nhắc\s+đến|cho\s+biết|đọc\s+ra|in\s+ra|hiển\s+thị)\s+(?:chỉ\s+dẫn|hướng\s+dẫn|lệnh|câu\s+lệnh|quy\s+tắc|prompt|chỉ\s+thị)\s+này/i,
+    name: 'SECRECY_CONCEALMENT_DIRECTIVE_VI',
+    severity: 'CRITICAL',
+  },
+  {
+    regex: /(?:giữ|bảo\s+mật)\s+(?:bí\s+mật|kín)\s+(?:chỉ\s+dẫn|hướng\s+dẫn|lệnh|câu\s+lệnh|prompt)\s+này/i,
+    name: 'SECRECY_CONCEALMENT_DIRECTIVE_VI',
+    severity: 'CRITICAL',
+  },
+
+  // Output Hijacking & Behavioral Manipulation
+  {
+    regex: /(?:provide|supply|give|serve|present|feed)\s+(?:users|the\s+user|everyone|students?)\s+with\s+(?:this|the\s+following|a)?\s*(?:competitor|comparison|false|fake|biased|recommendation|answer|response)/i,
+    name: 'OUTPUT_HIJACKING',
+    severity: 'HIGH',
+  },
+  {
+    regex: /(?:instead\s+of\s+answering|instead\s+of\s+explaining)\s+(?:the\s+question)?\s*,\s*(?:output|say|tell|provide|respond)/i,
+    name: 'OUTPUT_HIJACKING',
+    severity: 'HIGH',
+  },
+  {
+    regex: /(?:thay\s+vì\s+trả\s+lời|thay\s+vì\s+giải\s+thích)\s+(?:câu\s+hỏi|đề\s+thi)?\s*,\s*hãy\s+(?:nói|trả\s+lời|cung\s+cấp|in\s+ra|khen)/i,
+    name: 'OUTPUT_HIJACKING_VI',
+    severity: 'HIGH',
+  },
+  {
+    regex: /(?:cung\s+cấp|đưa\s+ra|trả\s+lời)\s+(?:cho\s+)?(?:người\s+dùng|học\s+viên)\s+(?:so\s+sánh\s+với\s+đối\s+thủ|thông\s+tin\s+sai\s+lệch|kết\s+quả\s+sau)/i,
+    name: 'OUTPUT_HIJACKING_VI',
+    severity: 'HIGH',
+  },
+
   // Direct Instruction Override (English)
   { regex: /ignore\s+(?:all\s+)?(?:previous|above|prior)\s+(?:instructions|prompts|rules|commands|guidelines)/i, name: 'INSTRUCTION_OVERRIDE', severity: 'CRITICAL' },
   { regex: /disregard\s+(?:all\s+)?(?:previous|above|prior)\s+(?:instructions|prompts|rules)/i, name: 'INSTRUCTION_OVERRIDE', severity: 'CRITICAL' },
@@ -294,36 +399,57 @@ export async function inspectInputSecurity(
   ];
 
   // 3. Multi-layer Prompt Injection & Jailbreak Detection (OWASP LLM01)
+  let highestSeverity: 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL' = 'LOW';
+  let primaryAttackType = '';
+
   for (const target of targetsToScan) {
     for (const pat of PROMPT_INJECTION_PATTERNS) {
       if (pat.regex.test(target.text)) {
         const flagName = target.isBase64 ? `OBFUSCATED_${pat.name}` : pat.name;
-        flags.push(flagName);
-        const severity = pat.severity;
-
-        // Log Security Event to Database
-        await logSecurityEvent({
-          tenantId,
-          userId: context.userId,
-          ipAddress: context.ipAddress,
-          eventType: 'PROMPT_INJECTION_BLOCKED',
-          severity,
-          attackType: flagName,
-          payloadSnippet: target.text.slice(0, 200),
-          blocked: true,
-          actionTaken: 'REQUEST_BLOCKED_BY_SECURITY_GATEWAY',
-        });
-
-        return {
-          isSafe: false,
-          securityFlags: flags,
-          sanitizedInput: cleaned,
-          blockedReason: 'Yêu cầu của bạn bị từ chối do vi phạm chính sách an toàn AI (phát hiện cấu trúc ghi đè chỉ dẫn hệ thống hoặc can thiệp bảo mật).',
-          severity,
-          attackType: flagName,
-        };
+        if (!flags.includes(flagName)) {
+          flags.push(flagName);
+        }
+        if (!primaryAttackType) primaryAttackType = flagName;
+        if (pat.severity === 'CRITICAL' || (pat.severity === 'HIGH' && highestSeverity !== 'CRITICAL')) {
+          highestSeverity = pat.severity;
+        }
       }
     }
+  }
+
+  if (flags.length > 0) {
+    let specificMessage = 'phát hiện cấu trúc ghi đè chỉ dẫn hệ thống hoặc can thiệp bảo mật';
+    if (flags.some((f) => f.includes('INDIRECT') || f.includes('TAG') || f.includes('CONCEALMENT') || f.includes('HIJACKING') || f.includes('CONDITIONAL') || f.includes('HIDDEN'))) {
+      specificMessage = 'phát hiện cấu trúc tiêm nhiễm chỉ dẫn ẩn hoặc thao túng hành vi mô hình (Indirect Prompt Injection)';
+    } else if (flags.some((f) => f.includes('SYSTEM_PROMPT_EXTRACTION'))) {
+      specificMessage = 'nghi vấn trích xuất dữ liệu nội bộ hoặc System Prompt';
+    } else if (flags.some((f) => f.includes('JAILBREAK'))) {
+      specificMessage = 'phát hiện kịch bản bẻ khóa Jailbreak hoặc giả mạo vai trò';
+    }
+
+    const blockedReason = `> [!CAUTION]\n> 🛡️ **Yêu cầu bị từ chối do vi phạm chính sách an toàn AI (OWASP LLM01 - Security Gateway)**\n> \n> **Lý do:** Yêu cầu bị chặn do ${specificMessage}.\n> **Mã nhận diện rủi ro:** \`${flags.join('`, `')}\`\n> \n> *Hệ thống đã chủ động ngắt kết nối với mô hình AI để bảo vệ an toàn và tính toàn vẹn của nền tảng.*`;
+
+    // Log Security Event to Database
+    await logSecurityEvent({
+      tenantId,
+      userId: context.userId,
+      ipAddress: context.ipAddress,
+      eventType: 'PROMPT_INJECTION_BLOCKED',
+      severity: highestSeverity,
+      attackType: primaryAttackType,
+      payloadSnippet: targetsToScan[0].text.slice(0, 200),
+      blocked: true,
+      actionTaken: 'REQUEST_BLOCKED_BY_SECURITY_GATEWAY',
+    });
+
+    return {
+      isSafe: false,
+      securityFlags: flags,
+      sanitizedInput: cleaned,
+      blockedReason,
+      severity: highestSeverity,
+      attackType: primaryAttackType,
+    };
   }
 
   // 4. Secret scan on input (Prevent users from accidentally submitting live secrets)
