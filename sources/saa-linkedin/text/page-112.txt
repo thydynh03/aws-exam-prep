@@ -1,0 +1,38 @@
+111
+
+Amazon Neptune
+What It Is
+
+‘Amazon Neptune is a fully managed graph database service designed for applications that need
+to work with complex, interconnected datasets. It supports graph models like Property Graph
+(TinkerPop Gremlin) and RDF (SPARQL), making it ideal for use cases like social networks,
+recommendation engines, fraud detection, and knowledge graphs.
+
+Key Features
+© Purpose-built for graph applications
+* Supports two major graph models: Property Graph and RDF
+* Uses open query languages: Gremlin for Property Graph and SPARQL for RDF
+* Optimized for high performance and low-latency graph queries
+Fully managed with built-in backup, patching, and maintenance
+*  ACID-compliant transactions for data integrity
+* Supports encryption at rest and in transit
+© High availability with multi-AZ deployments
+* Integrated with AWS Identity and Access Management (IAM)
+« Built-in integration with CloudWatch, VPC, and other AWS services
+Graph Models Supported
+* Property Graph
+© Query language: Apache TinkerPop Gremlin
+Use case: Social networks, fraud detection, real-time recommendations
+* RDF (Resource Description Framework)
+© Query language: SPARQL
+© Use case: Knowledge graphs, linked data applications, semantic search
+Architecture
+* Deployed within a VPC for network isolation
+© High availability with up to 15 read replicas
+* Writer and reader endpoints for separating workloads
++ Replicates six copies of data across three Availability Zones
+* Automated failover to replicas during node failures
++ Backups stored in Amazon $3 with point-in-time recovery
+Performance and Scaling
+* Designed for high-throughput, low-latency graph queries
+

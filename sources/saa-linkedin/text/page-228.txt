@@ -1,0 +1,14 @@
+227
+
+Exam Tips
+* AWS Artifact = compliance documents and agreements portal.
+* Use it to get SOC, ISO, PCI, and other audit reports.
+* Accept HIPAA BAA and GDPR DPA agreements in Artifact.
+* IAM can control access; CloudTrail logs activity.
+* Available as a self-service tool, no AWS support ticket needed.
+Quick Summary
+
+AWS Artifact is a free self-service portal that provides access to AWS compliance reports and
+agreements (e.g, SOC, ISO, HIPAA BAA, GDPR DPA), helping customers meet regulatory and
+audit requirements.
+

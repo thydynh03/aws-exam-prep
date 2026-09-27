@@ -1,0 +1,48 @@
+173
+
+© Maintain desired state configuration (like enforcing antivirus installation or NTP
+settings).
+
++ Applies configs continuously or at a schedule.
+9, OpsCenter
+* Central dashboard for operational issues (Opsltems).
++ Integrated with CloudWatch and Config for diagnostics.
+10. Change Manager
+* Manage and approve infrastructure changes with built-in change control workflows.
+Use Cases:
++ Patch and maintain EC2 fleets at scale.
++ Secure, auditable remote instance management.
++ Store secrets and config outside of code.
+* Automate AMI creation, backups, and compliance tasks.
+* Replace bastion hosts and SSH with Session Manager.
+Security & IAM:
+* IAM policies control access to SSM documents, session access, and parameter values.
++ Allactions can be logged via CloudTrail.
+«Parameter Store encryption via KMS.
+Pricing:
+
+© Core features are free (Run Command, Session Manager, Parameter Store - Standard
+tier).
+
+* Advanced features like Parameter Store (Advanced), OpsCenter integrations, and
+Automation steps may incur cost.
+
+Exam Tips:
+
+« Use Session Manager instead of SSH for secure, auditable access.
+
+* Use Run Command for quick multi-instance operations.
+
+* Parameter Store stores secrets /configs; encrypt with KMS.
+
+* Patch Manager automates patch compliance.
+
+« Automation uses runbooks to automate tasks.
+
+* SSM Agent must be installed and running on instances for SSM to work.
+Quick Summary
+
+AWS Systems Manager provides a single interface for managing infrastructure securely and at
+scale automating tasks, maintaining compliance, and avoiding the need for manual SSH or
+custom scripts.
+

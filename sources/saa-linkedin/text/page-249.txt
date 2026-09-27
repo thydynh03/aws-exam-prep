@@ -1,0 +1,38 @@
+Amazon GuardDuty
+What It Is
+
+248
+
+* Managed threat detection service that continuously monitors AWS accounts, workloads,
+
+and data for malicious or unauthorized activity.
+* Uses machine learning, anomaly detection, and threat intelligence feeds.
+Key Features:
+1. Continuous Threat Detection
+« Monitors AWS resources for:
+© Unauthorized API calls.
+Reconnaissance (port scanning, unusual login attempts)
+o Malware activity.
+o Data exfiltration attempts.
+© Cryptocurrency mining.
+2, Data Sources Analysed
+* VPC Flow Logs: Network traffic patterns.
++ AWS CloudTrail: API activity across AWS accounts.
+* DNS Logs: Domain name lookups.
++ Kubernetes Audit Logs (optional): For Amazon EKS clusters.
+* Malware Scan: (Optional feature) Scans EC2 workloads for malware.
+3, Threat Intelligence Feeds
+* Integrated AWS threat intelligence.
+© Third-party threat intel feeds.
+* Helps detect known malicious IPs, domains, and behaviours.
+4. Findings
+* Alerts called Findings describe suspicious activities.
+* Classified by severity (Low, Medium, High).
+* Includes recommended remediation steps.
+5, Integration with AWS Security Hub
+« Findings can be sent to AWS Security Hub for centralized security visibility.
++ Integrates with AWS EventBridge for custom workflows and automation.
+Key Benefits:
+
++ Fully managed, no need to deploy or maintain infrastructure.
+

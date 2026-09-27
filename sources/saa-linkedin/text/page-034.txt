@@ -1,0 +1,59 @@
+33
+
+Amazon QuickSight
+
+What It Is
+
+Amazon QuickSight is a fully managed business intelligence (BI) service that enables you to
+easily create and publish interactive dashboards, visualizations, and analyses from various data
+sources. It is designed to be scalable, serverless, and cost-effective, with pay-per-session pricing
+for readers.
+
+Key Features
+
+Managed, serverless BI service with no infrastructure to manage
+
+Interactive dashboards with rich visualizations and drill-downs
+
+Supports ad hoc analysis and sharing of insights
+
+Pay-per-session pricing model for readers
+
+SPICE (Super-fast, Parallel, In-memory Calculation Engine) for fast performance
+Supports scheduled and email reports
+
+ML Insights for anomaly detection and forecasting
+
+Integration with AWS data sources and on-premises databases
+
+Data Sources
+
+AWS services: S3, Athena, Redshift, RDS, Aurora, EMR, Glue Data Catalog
+On-premises databases via QuickSight data sources
+
+‘Third-party databases: MySQL, PostgreSQL, SQL Server, Oracle, Teradata
+Files: CSV, Excel, JSON
+
+SaaS connectors: Salesforce, ServiceNow, Twitter, and others
+
+SPICE Engine
+
+In-memory storage and calculation engine
+
+Enables fast, interactive querying even on large datasets
+Automatic scaling to support thousands of users
+
+Data can be refreshed on schedule or on demand
+
+Cost-effective compared to direct querying of data sources
+
+Dashboard and Visualization
+
+Rich set of visual types: bar, line, pie charts, maps, tables, KPIs
+Supports drill-down and drill-through for exploration
+Parameterized dashboards for customization
+
+Filters and controls for interactive exploration
+
+Embedding dashboards into apps and portals
+

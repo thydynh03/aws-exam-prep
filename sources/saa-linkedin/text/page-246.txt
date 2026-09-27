@@ -1,0 +1,34 @@
+245
+
+* AD Connector requires reliable network connectivity to on-premises AD.
+
+* Directory Service integrates with WorkSpaces, WorkDocs, WorkMail, EC2 Windows, and
+AWS SSO.
+
++ Supports high availability with multi-AZ deployments.
+
+Comparison Table
+Feature ‘AWS Managed Microsoft | AD Connector Simple AD
+AD
+Type Fully managed Microsoft | Proxy to on-premises | Standalone, Samba-
+AD AD based AD-
+compatible
+AWS-Hosted __| Yes No Yes
+Directory
+Trust Yes Uses on-premises AD | No
+Relationships trust
+Group Policy | Yes Via on-premises AD | Limited
+Support
+Use Cases Full AD compatibility, Leverage existing AD | Small-scale AD
+hybrid environments without migration | needs, low cost
+Editions/Sizes | Standard/Enterprise Small/Large Small/Large
+Typical Enterprises with AD Customers with Small organizations
+Customers workloads existing AD wanting | with simple needs
+integration
+Quick Summary
+
+AWS Directory Service offers multiple ways to use or connect to Active Directory in AWS. AWS
+Managed Microsoft AD provides a fully managed, highly available Microsoft AD in the cloud. AD
+Connector links AWS resources to your on-premises AD without migrating it. Simple AD offers a
+low-cost, standalone AD-compatible directory for smaller deployments.
+

@@ -1,0 +1,63 @@
+183
+
+Integration with Other AWS Services
+
++ AWS Migration Hub - Central dashboard for discovery, migration tracking, and planning.
++ AWS Migration Evaluator - Provides TCO analysis based on discovery data.
+
++ AWS Application Migration Service (MGN) - For lift-and-shift server migrations.
+
++ AWS Database Migration Service (DMS) - For database migration and modernization.
+
+Pricing
+
++ AWS Application Discovery Service is free to use.
++ Standard AWS data transfer and storage charges may apply.
++ Agents and collectors incur no additional software licensing costs.
+
+Use Cases
+
++ Assessing on-premises environments before migration
++ Mapping application dependencies for multi-tier workloads
+« Identifying underutilized resources for cost optimization
+
++ Supporting rehosting and replatforming strategies
+
++ Generating inventory and performance baselines
+
+Best Practices
+
++ Run discovery for at least 2-4 weeks to capture accurate workload patterns.
++ Use agent-based discovery for in-depth performance data.
+
++ Combine agent-based and agentless discovery for comprehensive visibility.
+* Group discovered servers into logical applications before migration.
+
++ Regularly export and back up discovery data from Migration Hub.
+
+* Restrict IAM access to discovery data and use encryption for security.
+
+Exam Tips
+
++ Application Discovery Service identifies on-premises servers, applications, and dependencies
+for migration planning.
+
++ Agent-based discovery gives deep performance and dependency details.
+
+« Agentless discovery works with VMware environments for fast inventory.
+
++ Integrates tightly with AWS Migration Hub for migration visualization.
+
++ Helps build an accurate TCO and migration roadmap.
+
++ Used during the Assessment and Discovery phase of migration not during actual migration.
+
++ No additional cost, it's a free AWS service.
+
+Quick Summary
+
+AWS Application Discovery Service automates the detection and analysis of on-premises
+workloads to streamline migration planning. It provides insights into server performance,
+dependencies, and configurations, integrates with AWS Migration Hub, and enables data-driven
+migration strategies all without manual inventory or guesswork.
+

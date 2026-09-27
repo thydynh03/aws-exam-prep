@@ -1,0 +1,36 @@
+210
+
++ Enables user sessions to stay on the same backend for duration of session.
+* Useful for stateful applications.
+Security Features
++ Integrated with AWS Certificate Manager for SSL/TLS.
+* Supports Security Groups (for ALB and CLB).
+* AWS WAF integration with ALB for Layer 7 protection.
+© Access logs to $3 for audit and analysis.
+* IAM policies control API-level access.
+Logging and Monitoring
+* Access logs can be sent to $3.
+© CloudWatch metrics include request count, latency, healthy /unhealthy host count.
+© CloudTrail records API calls.
++ ALB supports detailed request tracing with X-Amzn-Trace-Id header.
+Integration with Other AWS Services
+© Works with Auto Scaling Groups for dynamic scaling of targets.
+* Integrated with ECS for containerized applications.
+© Supports Lambda as a target (for ALB).
+* Integrated with AWS Global Accelerator for improved global performance.
+* Can be fronted by Route 53 for DNS-based routing.
+Pricing
+* Charged based on hours the load balancer is running and the amount of data processed.
+* Includes charges for LCU (Load Balancer Capacity Units) for ALB and NLB.
+© GWLB pricing is based on processed data.
+Use Cases
+* ALB: Microservices architectures, advanced HTTP routing, containerized apps.
+* NLB: Low-latency TCP/UDP workloads, real-time gaming, IoT, financial apps.
+© GWLB: Deploying security appliances transparently.
+© CLB: Legacy workloads needing simple Layer 4/7 routing.
+Exam Tips
+*  ALBis best for Layer 7 advanced routing, path-based and host-based rules.
+© NLBis optimized for high-throughput, low-latency Layer 4 connections.
+
+* GWLBis for deploying and managing virtual appliances at Layer 3.
+

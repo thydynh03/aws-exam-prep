@@ -1,0 +1,42 @@
+293
+
+* ACLs (Access Control Lists):
+© Legacy, finer-grained control.
+* Block Public Access:
+© Central settings to prevent public access.
+© Strongly recommended for securing buckets.
+3 Access Points
+Simplified way to manage access for shared datasets.
+* Each access point has its own policy.
+* Supports VPC restrictions for private access.
+3 Storage Lens
+© Provides organization-wide visibility into storage usage and activity.
+* Helps identify cost-saving opportunities and improve security posture.
+$3 Event Notifications
+
+* Can trigger actions when objects are created, deleted, etc.
+
+* Supports:
+
+o SNS
+
+© SQs
+
+o Lambda
+$3 Lifecycle Policies
+
+« Automate object transitions between storage classes.
++ Define expiration rules to delete objects automatically.
+$3 Replication
++ Cross-Region Replication (CRR):
+Automatically replicates objects to a bucket in another Region.
+© Useful for disaster recovery and compliance.
++ Same-Region Replication (SRR)
+o  Replicates objects within the same Region.
+© Useful for log aggregation and latency reduction.
+© Supports replication of new objects and existing objects via batch operations.
+3 Transfer Acceleration
+
+* Speeds up uploads and downloads by routing through Amazon CloudFront edge
+locations.
+

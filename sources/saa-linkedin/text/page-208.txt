@@ -1,0 +1,34 @@
+207
+
+Integration with Other AWS Services
+
+AWS VPC for private connectivity
+AWS Transit Gateway for large-scale network hub-and-spoke architectures
+AWS Direct Connect Gateway for cross-region access
+
+AWS VPN for hybrid and backup connections
+
+AWS CloudWatch for monitoring metrics such as connection state and data transfer
+
+Exam Tips
+
+Direct Connect provides private, dedicated connectivity and avoids the internet
+
+Private VIF connects to VPC for private resources; Public VIF connects to AWS public
+endpoints
+
+Direct Connect Gateway allows cross-region VPC connections
+Recommended to use redundant connections for high availability and SLA compliance
+Can combine Direct Connect with VPN for secure, resilient hybrid architectures
+
+LAG enables combining multiple connections for higher bandwidth and redundancy
+
+Cheaper outbound data transfer costs compared to internet routes
+
+Quick Summary
+
+AWS Direct Connect provides dedicated, secure, and consistent network connections between
+your on-premises infrastructure and AWS. It supports high-bandwidth workloads, reduces
+latency, avoids the public internet, and integrates with AWS services like VPC, Transit Gateway,
+and Direct Connect Gateway for flexible, scalable hybrid cloud architectures.
+

@@ -1,0 +1,45 @@
+163
+
+* Resource tagging for cost allocation and management
+
+Integration with AWS Services
+* Amazon EKS: Native integration for scraping metrics from Kubernetes clusters
+* AWS Distro for OpenTelemetry: Supports metrics collection from various sources
+* Amazon Managed Grafana: For building dashboards with Prometheus metrics
+
+« AWS CloudWatch: Can be used alongside for logs and other metrics
+
+* Based on ingestion (data written), storage (GB-month), and query requests
+* No upfront fees or long-term commitments
+
++ Pay only for what you use, making it cost-efficient for workloads with variable
+monitoring needs
+
+Use Cases
+* Monitoring Kubernetes workloads on Amazon EKS
+* Collecting and analysing application metrics using Prometheus exporters
+* Creating custom alerts and dashboards using PromQL and Grafana
+* Centralizing metrics from multiple AWS and on-premises environments
+© Supporting SRE and DevOps practices with scalable, highly available metric storage
+Best Practices
+* Use IAM policies to control access to AMP workspaces
+* Leverage AWS PrivateLink for secure, private connectivity
+Tag resources for easier cost allocation and management
++ Design retention policies to balance compliance needs and cost
+Exam Tips
+© AMPis fully managed and Prometheus-compatible
+* Supports PromQL for querying metrics
+© Works with remote write for collecting data from existing Prometheus servers
+* Integrates with AWS IAM for access control and AWS PrivateLink for secure connections
++ Pay-as-you-go pricing model without upfront costs
+
+Quick Summary
+
+‘Amazon Managed Service for Prometheus enables customers to monitor and analyse metrics
+from AWS and on-premises environments using familiar Prometheus tools and PromQL, without
+worrying about the operational complexity of scaling and managing Prometheus infrastructure.
+
+It integrates with AWS security, networking, and visualization services to provide a secure, cost-
+
+effective, and easy-to-use monitoring solution.
+

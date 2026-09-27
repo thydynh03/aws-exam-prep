@@ -1,0 +1,26 @@
+211
+
+ALB supports Lambda as a target.
+
+Sticky sessions are supported on ALB and CLB.
+
+Cross-Zone Load Balancing is on by default for ALB and CLB.
+
+Use ACM to manage SSL/TLS certificates.
+
+Health checks are critical for removing unhealthy targets automatically.
+Access logs help with auditing and analysis.
+
+Security Groups apply to ALB and CLB, not NLB.
+
+Use AWS WAF with ALB for application-layer protection.
+
+Quick Summary
+
+AWS Elastic Load Balancing offers fully managed load balancing across EC2, containers, IP
+addresses, and Lambda functions. It supports multiple types of load balancers tailored to
+different use cases: ALB for Layer 7 advanced routing, NLB for ultra-low latency Layer 4 traffic,
+GWLB for security appliance deployment, and CLB for legacy applications. It integrates with
+AWS services like Auto Scaling, ECS, ACM, and WAF to build scalable, secure, and highly available
+architectures.
+

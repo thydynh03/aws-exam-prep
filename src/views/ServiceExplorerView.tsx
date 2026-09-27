@@ -18,6 +18,7 @@ import {
 import { useLanguage } from '../context/useLanguage';
 import { segmentTextByMatches } from '../core/textHighlighter';
 import { ServiceDeepDivePanel } from '../components/services/ServiceDeepDivePanel';
+import { HandbookPanel } from '../components/services/HandbookPanel';
 import { getServiceDeepDive } from '../core/serviceDeepDives';
 import serviceQuestionIndex from '../data/serviceQuestionIndex.json';
 
@@ -531,6 +532,9 @@ export const ServiceExplorerView: React.FC<ServiceExplorerViewProps> = ({
                   serviceId={selectedService.id}
                   onPracticeService={onSelectServiceToStudy}
                 />
+
+                {/* Trích đoạn tài liệu SAA-C03 Handbook (OCR) */}
+                <HandbookPanel serviceId={selectedService.id} />
               </div>
             ) : (
               <div className="flex h-[400px] flex-col items-center justify-center rounded-2xl border border-dashed border-slate-200 bg-slate-50/50 p-8 text-center dark:border-slate-800 dark:bg-slate-900/40">

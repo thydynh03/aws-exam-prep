@@ -17,6 +17,7 @@ import { getDomainMeta } from './domainMeta';
 import { getCuratedExplanation } from './curatedExplanations';
 import type { AICitation } from './aiConversationStorage';
 import type { AITutorMode } from './aiConfigStorage';
+import { searchHandbook, formatHandbookPages, HANDBOOK_TITLE } from './saaHandbook';
 
 export interface RAGContext {
   systemPrompt: string;
@@ -69,7 +70,23 @@ ${svc.commonTraps.slice(0, 2).map(t => `  * ⚠️ ${t}`).join('\n')}
     );
   }
 
-  // 2. Retrieve related questions from the 1,019 question bank
+  // 2. Retrieve matching passages from the SAA-C03 Handbook
+  const handbookHits = searchHandbook(searchTerms, {
+    serviceIds: [...matchedServices.map((s) => s.id), ...(currentQuestion?.serviceTags || [])],
+    limit: 2,
+  });
+  for (const hit of handbookHits) {
+    const body = hit.subsection.items.slice(0, 6).map((i) => `  * ${i}`).join('\n');
+    citations.push({
+      id: `hb_${hit.section.id}_${hit.subsection.heading}`,
+      title: `SAA-C03 Handbook: ${hit.section.name} – ${hit.subsection.heading} (${formatHandbookPages(hit.section.printedPages)})`,
+      snippet: hit.subsection.items.join(' ').slice(0, 200),
+      type: 'official_doc',
+    });
+    serviceSnippets.push(`### ${hit.section.name}: ${hit.subsection.heading} (${HANDBOOK_TITLE}, ${formatHandbookPages(hit.section.printedPages)})\n${body}`);
+  }
+
+  // 3. Retrieve related questions from the 1,019 question bank
   const allQuestions = questionRepository.getAllQuestions();
   const relatedQuestions: Question[] = [];
 
@@ -107,7 +124,7 @@ ${svc.commonTraps.slice(0, 2).map(t => `  * ⚠️ ${t}`).join('\n')}
     }
   }
 
-  return { citations: citations.slice(0, limit), serviceSnippets, relatedQuestions };
+  return { citations: citations.slice(0, limit + handbookHits.length), serviceSnippets, relatedQuestions };
 }
 
 type ChatHistoryItem = { role: 'user' | 'assistant'; content: string };

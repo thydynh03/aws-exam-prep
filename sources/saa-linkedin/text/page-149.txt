@@ -1,0 +1,40 @@
+148
+
+AWS Confi
+
+What It Is
+
+AWS Config is a fully managed service that enables you to assess, audit, and evaluate the
+configurations of your AWS resources. It continuously monitors and records your AWS resource
+configurations and allows you to automate the evaluation of recorded configurations against
+desired settings.
+
+Key Features
+* Records configuration changes of supported AWS resources
+* Captures point-in-time snapshots and changes over time
+«Evaluates resource configurations against compliance rules
+* Provides a history of resource configuration changes
+* Delivers configuration snapshots and change notifications to Amazon $3 and SNS
+«Integrates with AWS Organizations for multi-account governance
+Configuration Recorder
+* Core component of AWS Config
+* Records changes to supported AWS resources in your account
++ Must be turned on to capture configuration changes
+‘* Defines which resources are recorded (all supported resources or specific types)
+Configuration Items (CIs)
+«Represent the configuration of a resource at a point in time
+* Include metadata, relationships, and current configuration details
++ Delivered to $3 bucket in JSON format
+Resource Inventory
+* Provides a view of all recorded AWS resources and their configurations
++ Searchable inventory of resources
+* Tracks relationships between resources (e.g., which EC2 instances are in which VPC)
+Configuration History
+* Detailed history of resource configuration changes over time
+* Can analyse historical configurations for troubleshooting and audits
+* Stored in $3 for long-term retention and analysis
+Configuration Snapshots
++ Point-in-time capture of all resource configurations
+
++ Delivered to $3 bucket
+

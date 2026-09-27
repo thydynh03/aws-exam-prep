@@ -1,0 +1,43 @@
+297
+
+* Compatible with most enterprise backup solutions.
+* Virtual tapes stored in $3.
++ Archived tapes stored in $3 Glacier or $3 Glacier Deep Archive.
++ Eliminates need for physical tape infrastructure.
+«Use Cases:
+© Backup/archive replacement
+Long-term compliance storage
+Deployment Options
+© VMware ESXi, Microsoft Hyper-V, or Amazon EC2 (for cloud-based deployment)
+* Requires local disk space for cache and upload buffer.
+* Connects securely to AWS using HTTPS.
+* Managed via AWS Storage Gateway Console or AWS CLI.
+Security
++ Alldata transferred is encrypted using TLS.
+* Data at rest is encrypted using AWS Key Management Service (KMS).
+* Supports IAM policies for access control.
+* File Gateway supports Active Directory integration for SMB access control.
+Monitoring & Management
++ Integrated with:
+© Amazon CloudWatch for monitoring.
+© AWS CloudTrail for auditing API calls.
+o AWS Backup for managing backup policies (for Volume and Tape Gateway).
+* Storage Gateway software and configuration updates are managed automatically.
+
+Storage Integration
+
+Gateway ‘Access ‘AWS Backend Storage | Caching | Use Case
+
+Type Protocol
+
+File Gateway | NFS/SMB | Amazon $3 Local File share, ingest to S3
+disk
+
+Volume iSCSI EBS Snapshots Local Block storage with
+
+Gateway (Stored/Cached) (opt) backup
+
+Tape iSCSI (VTL) | $3 + Glacier Local Virtual tape
+
+Gateway disk backup/archive
+

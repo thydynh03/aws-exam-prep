@@ -1,0 +1,21 @@
+283
+
+Exam Tips
+* EBS volumes persist independently from EC2 instances.
+* Snapshots are incremental and stored in $3.
++ Encryption at rest uses AWS KMS.
+* You can resize volumes without downtime (Elastic Volumes).
++ gp3 is general purpose with customizable IOPS.
++ i01/io2 support high IOPS and Multi-Attach.
+
++ st1and sci are HDD options for large, sequential workloads—cannot be used as boot
+volumes.
+
++ Fast Snapshot Restore reduces initialization times for volumes created from snapshots.
++ Always provision in same AZ as EC2 instance.
+Quick Summary
+
+Amazon EBS provides durable, high-performance block storage for EC2, with flexible volume
+types, snapshot-based backups, encryption, and advanced features like Multi-Attach and Fast
+Snapshot Restore. Essential for building reliable, scalable, and secure applications on AWS.
+

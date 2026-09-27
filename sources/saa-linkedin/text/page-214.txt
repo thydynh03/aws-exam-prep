@@ -1,0 +1,36 @@
+213
+
++ Endpoint:
+© Where traffic is ultimately delivered.
+Can be:
++ Elastic IP addresses
+= Network Load Balancers (NLB)
++ Application Load Balancers (ALB)
+* EC2 instances
++ Elastic IP addresses
+
+* AWS Global Accelerator can also front AWS Application Load Balancer
+endpoints with regional support.
+
+Health Checks
+* Global Accelerator runs health checks on endpoints.
+* Routes traffic only to healthy endpoints.
++ Health checks can be customized (protocol, port, path, interval).
+Traffic Distribution
+Traffic Dial:
+o Controls percentage of traffic sent to a region.
+© Allows easy shifting of traffic for testing, failover, blue/green deployments.
++ Client IP Preservation:
+© Optionally preserves the original client IP.
+© Works with NLBs.
+Routing and Performance
+* Routes traffic over AWS's global network rather than the public internet.
++ Reduces latency, jitter, and packet loss.
+Uses the optimal AWS edge location for user requests.
+* Automatically finds the best healthy endpoint.
+Failover and High Availability
+* Monitors endpoint health with health checks.
+* Automatic rerouting to healthy endpoints or regions if failures occur.
+
+Ensures high availability for global applications.
+

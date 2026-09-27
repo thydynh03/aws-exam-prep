@@ -1,0 +1,36 @@
+* AWS CloudWatch for monitoring and alerting
+* AWS Secrets Manager for storing credentials
+Security
+* Encryption at rest using AWS KMS
+Encryption in transit using TLS between clients and brokers
++ IAM integration for authentication and access control
+*  TLS-based mutual authentication supported
++ Private connectivity via AWS VPC
+«AWS Secrets Manager integration for managing credentials
+Monitoring and Logging
+* Amazon CloudWatch metrics for broker performance, storage, throughput
+* AWS CloudTrail for auditing API calls
+* Kafka broker logs can be streamed to CloudWatch Logs or Amazon $3
++ JMX and Node metrics for fine-grained Kafka monitoring
+«AWS CloudFormation support for infrastructure as code
+Performance and Scaling
+* Horizontal scaling by adding brokers
+* Storage scaling via EBS volume adjustments
+© MSK Serverless scales automatically based on demand
+« = Multi-AZ replication for high availability and durability
+* Custom configurations supported via MSK configurations
+MSK Versions
+* Supports multiple versions of open-source Apache Kafka
+* Option to choose versions during cluster creation
+* AWS manages upgrades and patching
+Pricing
+© MSK Standard clusters: Charged per broker-hour and storage used
+© MSK Serverless: Charged per partition-hour, data volume, and throughput
++ Data transfer charges may apply for cross-AZ traffic
++ Noupfront costs or long-term commitments required
+Use Cases
+
+Real-time analytics and event processing
+
+28
+

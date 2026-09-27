@@ -1,0 +1,66 @@
+Integration with AWS Services
+
+107
+
++ Works with EC2, Lambda, RDS, DynamoDB, and more
+
+* Used to cache database query results
+
+* Can serve as a session store for stateless applications
+
+« Integrates with AWS CloudFormation for laC
+Use Cases
+
+* Database query caching
+
++ Real-time analytics and leaderboards
+
+© Message brokering (Pub/Sub with Redis)
+
+* Caching API responses
+
+* Pay for node hours based on instance type
+* Backup storage billed separately (Redis)
++ Data transfer within VPC free
+
+* Additional cost for multi-AZ, cluster mode
+
+Best Practices
+
++ Choose Redis for advanced features and persistence
+
+* Use Memcached for simple, ephemeral caching
+
+* Enable multi-AZ for production workloads needing HA
+
+* Monitor usage with CloudWatch and scale nodes appropriately
+
+* Secure access with VPC, IAM, and Redis AUTH
+Exam Tips
+
++ Redis supports replication, backups, multi-AZ,
+
+cluster mode
+
++ Memcached is simpler, no replication or persistence
+
++ Multi-AZ is Redis-only with automatic failover
+
++ Encryption options available for Redis
+
+* Use ElastiCache to reduce database load and improve latency
+
+Quick Summary
+
+Amazon ElastiCache is a fully managed, in-memory ca
+Memecached to deliver microsecond latency and high t
+provides automatic scaling, multi-AZ failover (Re
+
+ching service that supports Redis and
+throughput for real-time applications. It
+encryption, and monitoring, making it
+
+ideal for caching, session management, real-time analytics, and reducing database load in
+
+scalable cloud architectures.
+

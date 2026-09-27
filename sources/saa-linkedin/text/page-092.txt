@@ -1,0 +1,42 @@
+Free tier includes SOOMB storage per month for private repositories
+
+Public Repositories
+
+Host public container images with no authentication required for pulls
+
+Ideal for sharing software, tools, or base images publicly
+
+Integrates with the AWS Container Registry website for browsing
+
+Use Cases
+
+Storing private Docker images for ECS, EKS, Fargate
+Hosting public images for open-source projects
+
+Integrating secure, managed image storage in CI/CD pipelines
+Enabling multi-region deployments with cross-region replication
+
+Ensuring security with built-in vulnerability scanning
+
+Exam Tips
+
+Supports both private and public repositories
+IAM policies and resource policies manage access
+Vulnerability scanning can be on-push or on-demand
+Cross-region replication for DR and global distribution
+Integrated with ECS, EKS, Fargate, CodePipeline, Lambda
+Lifecycle policies help automate image cleanup
+Encryption at rest with KMS and in transit with TLS
+
+Use ECR Credential Helper or AWS CLI for authentication
+
+Quick Summary
+‘Amazon ECR isa fully managed, secure, scalable container image registry that integrates with
+
+AWS container services and C1/CD workflows. It simplifies storing, managing, and sharing
+container images with built-in security, replication, and automation features for modern
+
+containerized application development.
+
+91
+

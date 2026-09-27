@@ -1,0 +1,36 @@
+103
+
+* Adaptive Capacity:
+© Automatically adjusts throughput for imbalanced workloads
+Data Consistency
++ Eventually Consistent Reads (default, more scalable)
++ Strongly Consistent Reads (read after write consistency)
++ Transactions:
+ACID-compliant operations across multiple items/tables
+Streams
+* Capture item-level changes (insert, update, delete)
+* Can trigger AWS Lambda for real-time processing
++ Provides exactly-once event delivery
+Backup and Restore
+* On-Demand Backup: Full backups, manual
+*  Point-in-Time Recovery (PITR):
+© Continuous backup up to 35 days
+© Restore to any second within the window
+Security
+* Encryption at Rest: AWS KMS integration
++ IAM Policies: Fine-grained access control
+* VPC Endpoints: Private connectivity without Internet exposure
+Global Tables
++ Multi-Region, multi-active replication
++ Low-latency global access
+* Automatic conflict resolution
+* Supports disaster recovery across regions
+Integration
++ Lambda: Trigger from Streams
+‘+ AppSyne: GraphQL API layer for DynamoDB
+© Glue/Data Pipeline: ETL and data movement
++ CloudWatch: Monitoring and alerting
+* Backup: Centralized backup through AWS Backup
+
++ Kinesis Firehose: Data streaming to analytics tools
+

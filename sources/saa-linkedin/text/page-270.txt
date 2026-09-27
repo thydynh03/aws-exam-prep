@@ -1,0 +1,35 @@
+269
+
+AWS WAF
+What It Is
++ AWeb Application Firewall to protect web applications from common exploits.
+* Let's you control which HTTP/S requests reach your resources.
+* Helps block, allow, or count web requests based on defined rules.
+Key Features
+1. Web ACL (Access Control List)
+* The main container for WAF rules.
+© Attach Web ACL to:
+© Amazon CloudFront distributions.
+© Application Load Balancers (ALB).
+o AWS App Runner services.
+o Amazon API Gateway.
+o AWS AppSync.
+2. Rules and Rule Groups
+« Define conditions for filtering web traffic.
+© Types of rules:
+© IP match conditions (allow/block specific IPs).
+© String match (inspect headers, body, query string).
+Geo match (block/allow by country).
+o Regex pattern sets.
+© Size constraints.
+© Rate-based rules (limit requests per IP).
+* Managed Rule Groups
+© AWS provides pre-configured rules against common threats (SQL injection, XSS).
+o AWS Marketplace sellers also offer curated rule groups.
+3, Rate-Based Rules
+* Automatically block IPs that exceed a configurable request threshold.
+4. Bot Control
+* Identify and block unwanted bots and scrapers.
+
++« AWS-managed detection with optional CAPTCHA challenges.
+

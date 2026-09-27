@@ -1,0 +1,38 @@
+152
+
+© Require MFA for root accounts.
+Architecture Overview
+* Control Tower builds on:
+© AWS Organizations: Manages account hierarchy.
+© Service Catalog: Used for Account Factory.
+© CloudTrail: Captures API activity logs.
+AWS Config: Tracks resource compliance.
+© CloudWatch & SNS: For alerting and monitoring.
+« Accounts Created:
+©o Management Account: Central administration and billing.
+© Audit Account: Read-only access to all accounts for compliance.
+© Log Archive Account: Centralized storage for CloudTrail and Config logs
+Account Structure
+* Organizational Units (OUs): Group accounts logically (e.g., production, development).
+© Guardrails are applied at the OU level.
+* New accounts can be provisioned into specific OUs.
+Customizations for Control Tower (CICT)
+
+* A framework that allows adding customizations, resources, and configurations to the
+landing zone.
+
+* Can deploy CloudFormation templates across accounts and OUs.
+* Supports lifecycle management for custom resources.
+Integration and Extension
+* AWS Config Aggregator: Central view of configuration compliance.
+* AWS CloudTrail Lake: Central storage of activity logs.
++ IAM Identity Center (formerly AWS SSO): Enables single sign-on access.
+* Supports custom SCPs in addition to managed guardrails.
+Security and Compliance
+* 1AM policies, SCPs, and Config rules enforce governance.
+* Automatically sets up:
+© CloudTrail logs stored in Log Archive account.
+© AWS Config enabled across accounts.
+
++ Helps with audit readiness and aligns with frameworks like CIS and NIST.
+

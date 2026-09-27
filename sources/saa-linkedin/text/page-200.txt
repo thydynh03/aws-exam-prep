@@ -1,0 +1,40 @@
+199
+
+Pricing
++ Based on:
+Endpoint hours.
+© Data uploaded/downloaded.
+o Additional costs for $3 or EFS storage used.
+Comparison with AWS Storage Gateway
+Feature ‘AWS Transfer Family ‘AWS Storage Gateway
+Purpose Protocol-based file transfer to/from __ | Hybrid on-prem to cloud storage
+AWS integration
+Protocols SFTP, FTPS, FTP NFS, SMB, iSCSI
+Storage Back- | Amazon $3, Amazon EFS $3, EBS Snapshots, Glacier
+end
+Use Cases Partner data exchange, legacy FTP _| Backup, disaster recovery, hybrid
+replacement cloud
+Exam Tips
+
+« AWS Transfer Family provides SFTP/FTPS/FTP access to $3 and EFS.
+
+* Common exam scenario: Replacing a legacy FTP server with secure, scalable, managed
+AWS service.
+
+* Supports custom authentication via API Gateway and Lambda.
+
++ Integrates directly with $3 access points and EFS file systems.
+
+* Supports VPC endpoints for private access.
+
+* IAM policies and user management control permissions.
+
+* Logs all API activity in CloudTrail.
+
+*  Encrypts data in transit (SFTP/FTPS) and at rest (via $3/EFS encryption).
+Quick Summary
+
+AWS Transfer Family provides managed, secure, scalable SFTP, FTPS, and FTP access to Amazon
+$3 and EFS, enabling easy modernization of legacy file transfer workflows without maintaining
+your own servers.
+

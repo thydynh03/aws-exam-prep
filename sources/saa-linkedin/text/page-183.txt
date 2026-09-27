@@ -1,0 +1,77 @@
+182
+
+AWS A)
+What It Is
+
+n Di
+
+AWS Application Discovery Service helps enterprises plan migration projects to AWS by
+automatically identifying on-premises servers, applications, and their dependencies. It collects
+detailed system configuration, performance, and usage data to provide insights that help with
+migration planning and cost estimation.
+
+Key Features
+
++ Automatically discovers on-premises servers and applications
+
+* Collects system configuration, performance, and usage data
+
++ Identifies application dependencies and network connections
+
++ Provides detailed migration planning data to AWS Migration Hub
+
++ Supports both agent-based and agentless discovery methods
+
++ Enables accurate Total Cost of Ownership (TCO) and migration readiness analysis
+
+Discovery Methods
+
+1. Agent-Based Discovery
+
++ Lightweight agent installed on each on-premises server
+
+* Collects detailed data on CPU, memory, disk, and network usage
++ Captures process-level and dependency information
+
++ Ideal for complex workloads requiring deep visibility
+
++ Data is encrypted and sent securely to AWS
+
+2. Agentless Discovery (via AWS Agentless Collector)
+
++ Deploys a virtual appliance (OVA) in VMware vCenter environments
+
+* Discovers VM configurations, usage metrics, and network connections
++ No need to install software on individual VMs
+
++ Best suited for large-scale VMware environments
+
+Data Collected
+
+* Server details - hostnames, IPs, MAC addresses, 0S, CPU, RAM, storage
+
++ Performance metrics - CPU utilization, memory, disk I/0, network throughput
++ Application and process information ~ running services and dependencies
+
++ Network connections - inbound and outbound communication mapping
+
++ Usage patterns and workload trends over time
+
+Integration with AWS Migration Hub
+
++ All collected data is stored and visualized in AWS Migration Hub
++ Helps group servers into applications for migration planning
+
++ Provides migration recommendations and status tracking
+
++ Supports export of discovered data for further analysis
+
+Security
+
++ All communication between agents, collectors, and AWS is encrypted (HTTPS/TLS)
++ IAM roles and policies control data access
+
+* No data is shared with AWS regions unless explicitly configured
+
+* Collected data can be deleted at any time via the console or API
+

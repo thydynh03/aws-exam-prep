@@ -1,0 +1,59 @@
+266
+
+Integrates With
+
+* AWS GuardDuty
+
+* AWS Inspector
+
+* AWS Macie
+
+«AWS Firewall Manager
+
+* AWSIAM Access Analyzer
+
+AWS Systems Manager
+
+* AWS Config
+
+«Third-party security solutions (via AWS Security Finding Format - ASFF)
+Security & Compliance
+
+* Helps meet audit and compliance requirements.
+
+* Supports continuous security posture management.
+Pricing
+
+* Charged based on:
+
+o Number of security checks per account.
+o Volume of ingested findings.
+
+* No upfront fees.
+Use Cases
+
+* Centralize and simplify security management.
+
+* Automate compliance checks against industry standards.
+
+Enable automated remediation for faster incident response.
+
++ Provide executive-level visibility into AWS security posture.
+Exam Tips
+
+* Security Hub = central dashboard for security findings.
+
+Supports CIS Benchmarks, AWS Best Practices, PCI DSS checks
+
++ Integrates with EventBridge for automated responses.
+
+*  Cross-account and multi-region aggregation.
+
++ Findings are standardized using ASFF.
+Quick Summary
+
+AWS Security Hub is a centralized security service that aggregates, prioritizes, and standardizes
+findings from AWS services and third-party tools to give a unified view of your security posture.
+It continuously evaluates your AWS environment against industry standards like CIS, AWS Best
+Practices, and PCI DSS, generating findings for non-compliance.
+

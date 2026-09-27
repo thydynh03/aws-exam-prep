@@ -1,0 +1,31 @@
+215
+
+Integration with Other AWS Services
+
+* Works with ALB, NLB, EC2, and Elastic IP endpoints.
+
+* Supports AWS Certificate Manager via ALB/NLB.
+
+* Can be used alongside AWS WAF and Shield.
+
+* Health checks integrate with CloudWatch for monitoring,
+Exam Tips
+
+* AWS Global Accelerator improves availability and performance by routing traffic over
+the AWS global network.
+
++ Provides static IP addresses that stay the same even if endpoints change.
++ Supports TCP and UDP.
+«Traffic dial allows gradual traffic shifting.
+© Uses health checks for failover and resilience.
++ Best for global, latency-sensitive applications that need consistent performance.
++ Nota CDN, no content caching like CloudFront.
++ Pricing includes monthly fee plus accelerated data transfer costs.
+* Compare carefully with CloudFront when selecting for exam scenarios.
+Quick Summary
+
+AWS Global Accelerator is a global traffic management service that uses AWS's private network
+to route traffic to optimal endpoints, improving availability, performance, and resilience for
+global applications. It offers static IP addresses, health checks, failover, and fine-grained traffic
+control without caching content.
+

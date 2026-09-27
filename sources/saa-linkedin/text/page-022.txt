@@ -1,0 +1,42 @@
+21
+
+Amazon Kinesis
+
+What It Is
++ Fully managed service for real-time processing of streaming data at massive scale.
+* Enables you to collect, process, and analyse data streams in near real-time.
+
+* Supports use cases like log analytics, event data processing, IoT telemetry, and video
+streams.
+
+Kinesis Data Streams (KDS)
++ Real-time streaming service for continuous capture of gigabytes of data per second.
+* Producers send records to the stream.
+* Data is stored in shards.
+© Each shard: 1 MB/s write, 2 MB/s read.
+* Records retained for 24 hours by default, up to 7 days (extended retention).
+* Consumers:
+o AWS Lambda for processing.
+© Kinesis Client Library (KCL) applications,
+Supports enhanced fan-out (dedicated throughput per consumer).
++ Partition Key:
+© Determines which shard the data lands in.
+© Encryption:
+© Supports server-side encryption with AWS KMS.
+* Use Cases:
+© Real-time dashboards
+© Log and event collection
+
+© Clickstream analysis
+
+Kinesis Data Firehose
+Fully managed, no-shards-to-manage service to reliably load streaming data to
+destinations:
+o $3
+Redshift
+
+© Elasticsearch Service (now OpenSearch)
+Splunk
+
+© Custom HTTP endpoints
+

@@ -1,0 +1,17 @@
+* Integrates with IAM for access control.
+* Supports CloudWatch for monitoring.
+Exam Tips
+* Managed integration service for SaaS + AWS.
+* Supports scheduled, on-demand, event-triggered flows.
+* Transforms data during transfer.
+© Uses PrivateLink for secure connectivity.
+* Alternative to building custom ETL jobs or APIs for data movement.
+
+Quick Summary
+Amazon AppFlow simplifies secure data movement between SaaS apps and AWS without any
+custom coding. It's scalable, automated, and integrates seamlessly with core AWS services,
+making it a go-to solution for building reliable, serverless data pipelines for analytics and
+business workflows.
+
+40
+

@@ -1,0 +1,58 @@
+220
+
++ Data traffic does not traverse the public internet
+Bandwidth and Performance
+
+* Highly scalable throughput supporting tens of Gbps
+
+* Designed for large-scale, high-performance network architectures
+
+© AWS manages the scaling, availability, and fault tolerance
+Multicast Support
+
++ Native multicast support for workloads needing IP multicast
+
+* Useful for real-time data distribution such as financial trading or media streaming
+Security and Access Control
+
++ Supports AWS Resource Access Manager (RAM) to share Transit Gateway across AWS
+accounts
+
++ IAM policies control API access
+
+«Traffic does not traverse the internet unless configured to do so
+
+« Integrated with AWS CloudTrail for auditing API calls
+Integration with AWS Services
+
+* AWS Direct Connect for dedicated hybrid connectivity
+
+* AWS Site-to-Site VPN for secure internet-based hybrid connections
+
+* AWS Resource Access Manager for sharing with other accounts
+
+* AWS Network Firewall can be deployed in VPCs connected via Transit Gateway
+Pricing and Billing
+
++ Charged based on attachments per hour
+
+«Data processing charges per GB for traffic through Transit Gateway
+
++ Inter-Region peering has separate pricing based on data transferred between regions
+Use Cases
+
+© Hub-and-spoke network architectures
+
+* Simplifying many-to-many VPC peering
+
+* Hybrid cloud architectures connecting on-premises to multiple VPCs
+
+*  Multi-Region applications requiring private connectivity
+
+* Centralized egress filtering and inspection through shared security VPCs
+Exam Tips
+
++ Transit Gateway simplifies connecting multiple VPCs compared to full mesh peering
+
++ Route tables control which attachments can talk to each other
+

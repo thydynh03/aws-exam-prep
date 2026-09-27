@@ -1,0 +1,54 @@
+191
+
+Integration with Other AWS Services
+
+Transfer objects to/from $3 buckets.
+
+Migrate or replicate POSIX file systems.
+
+Supports Windows File Server and Lustre.
+
+Transfers data on/off Snowcone devices.
+
+AWS CloudWatch and CloudTrail for monitoring and auditing.
+
+Data Validation and Integrity
+
+eee ee
+
+« Automatic checksum verification during transfers.
+
++ Ensures transferred data matches source data.
+
+‘+ Logs transfer results for audit and compliance.
+Performance Tuning
+
+* Supports configurable bandwidth limits.
+
+* Can schedule transfers during off-peak hours.
+
++ Enables efficient incremental transfers by only copying changed data.
+
+Comparison with Other Services
+Service Use Case Key Difference
+‘AWS DataSync _| Fast, automated bulk file transfer | Designed for NFS/SMB, optimized
+for speed
+AWS Snowball | Large-scale, offline data migration | Physical device, TB-PB scale
+‘AWS Transfer Managed SFTP/FTP access to Protocol-based user transfers
+Family $3/EFS
+AWS Storage Hybrid, on-prem to cloud storage | Mount points for
+Gateway integration files/volumes/tapes
+Exam Tips
+
+* AWS DataSync = automated, high-speed data transfer between on-premises and AWS.
+« Supports NFS, SMB, S3, EFS, FSx, Snowcone.
+* Requires DataSync Agent for on-premises transfers.
+« Uses TLS encryption in transit.
++ IAM controls for access permissions.
+* Automatic integrity checks with checksums.
+Quick Summary
+
+AWS DataSync is a fully managed service for accelerated, secure, and automated data movement
+between on-premises storage systems and AWS services. It supports large-scale, repeatable
+transfers with monitoring, encryption, and integrity checks built in.
+

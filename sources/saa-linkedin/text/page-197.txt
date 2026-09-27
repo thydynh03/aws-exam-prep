@@ -1,0 +1,37 @@
+196
+
+Comparison with Snowmobile
+Feature Snowball Edge Snowmobile
+Capacity 42-80 TB per device Up to 100 PB per truck
+Use Case TB-scale transfer, edge Exabyte-scale data centre migration
+
+computing
+
+Delivery Shipped as a rugged appliance | Delivered as a secure 45-foot truck
+Compute Runs EC2, Lambda locally No compute capability, purely data
+Capabilities transfer
+
+Exam Tips
+
+* Snowball Edge is for TB-scale transfer with edge computing.
+
++ Choose Storage Optimized for bulk data movement.
+
+* Choose Compute Optimized for local processing with EC2 instances and GPU workloads.
+
+* Data is encrypted end-to-end with AWS KMS keys.
+
+* Device automatically wiped after ingestion.
+
++ Can be clustered for higher local storage and HA.
+
+* Common exam scenario: Remote site or disconnected edge environment needing local
+processing and transfer to AWS.
+
+Quick Summary
+
+AWS Snowball Edge is a portable, rugged device for securely transferring TB-scale data and
+running edge computing workloads locally. It supports offline data movement to AWS with
+encryption, built-in compute resources, and clustering for local storage and processing in harsh
+or remote environments.
+

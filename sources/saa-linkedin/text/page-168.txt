@@ -1,0 +1,35 @@
+167
+
+Pricing
+© AWS Organizations itselfis free.
+* You pay only for the AWS services used by the accounts.
+* Noextra charges for consolidated billing or policy enforcement.
+Limitations
++ SCPs do not grant permissions; they only limit what is allowed.
++ Notall AWS services fully support AWS Organizations features.
+* Changes to SCPs can impact account operations immediately.
+* Accounts can only belong to one organization at a time.
+Common Use Cases
+* Centralized billing for multiple AWS accounts.
+* Enforcing security policies across a multi-account environment.
++ Isolating workloads by account (e.g,, dey, test, prod).
++ Simplifying compliance and governance reporting.
+* Sharing resources securely across accounts with AWS RAM.
+Exam Tips
+*  SCPs are used to enforce permission boundaries, not grant permissions.
+* Management account has full admin control over the organization.
+* Consolidated billing allows sharing volume discounts and centralized payment.
+* Organizational Units (OUs) enable applying policies to groups of accounts.
+
+© AWS Organizations integrates tightly with AWS Control Tower, RAM, and IAM Identity
+Center.
+
++ Tag Policies ensure consistent tagging across accounts.
+* Backup Policies automate and enforce backup plans organization-wide.
+Quick Summary
+
+AWS Organizations helps you centrally manage, secure, and govern multiple AWS accounts by
+grouping them into Organizational Units, enforcing Service Control Policies, enabling
+consolidated billing, and integrating with [AM Identity Center, AWS Control Tower, and AWS
+RAM for streamlined multi-account management.
+

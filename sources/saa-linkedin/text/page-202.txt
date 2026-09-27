@@ -1,0 +1,40 @@
+201
+
+© Default TTL - Standard caching duration (typically 24 hours)
+* Maximum TTL - Longest time content can remain cached
+* Configurable per distribution or per object
+Cache Invalidation
+* Manually remove objects from cache before TTL expires
+* Force immediate updates for changed content
+© Supports wildcard patterns for batch invalidations
+* Can be automated via API or console
+Security Features
+SSL/TLS Encryption
+
++ AWS Certificate Manager (ACM) integration for custom SSL/TLS certificates at no extra
+cost
+
+* HTTPS enforcement between viewers and CloudFront
++ HTTPS support between CloudFront and origin servers
+* Supports SNI (Server Name Indication) and dedicated IP options
+Origin Access Control (OAC)
+* Recommended method for securing $3 origins
++ Prevents direct $3 bucket access, forcing traffic through CloudFront
+© Successor to Origin Access Identity (AI) with enhanced security
+« Uses AWS Signature Version 4 for authentication
+Signed URLs and Signed Cookies
++ Restrict access to premium or private content
+* Control who can access content and for how long
+* Signed URLs - Single file access (video files, downloads)
+* Signed Cookies ~ Multiple file access (entire sections of a website)
+Field-Level Encryption
+
++ Encrypt sensitive data (credit card numbers, personal information) at the edge before
+forwarding to origin
+
+* Data remains encrypted throughout processing
+Only origin application can decrypt with private keys
+Geo Restriction
+
++ Restrict access based on viewer's geographic location
+

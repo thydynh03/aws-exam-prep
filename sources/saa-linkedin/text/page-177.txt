@@ -1,0 +1,34 @@
+176
+
+Best Practices
+
+Review Trusted Advisor dashboard regularly
+
+Act on high-priority recommendations promptly
+
+Automate remediation for common issues where possible
+
+Integrate Trusted Advisor with AWS Organizations for central visibility
+
+Use Trusted Advisor API to build custom monitoring and reporting solutions
+
+Exam Tips
+
+Trusted Advisor provides real-time recommendations across five categories
+Full set of checks is available only with Business and Enterprise Support plans
+Core checks are available to all AWS customers
+
+Supports API access for automation
+
+Integrates with AWS Organizations for multi-account management
+
+Key categories to remember: Cost Optimization, Performance, Security, Fault Tolerance,
+Service Limits
+
+Quick Summary
+
+AWS Trusted Advisor is a best-practice assessment tool that provides real-time guidance to help
+optimize cost, improve performance, enhance security, ensure fault tolerance, and monitor
+service limits across your AWS environment. It is a critical tool for keeping AWS deployments
+efficient, secure, and compliant.
+

@@ -1,0 +1,40 @@
+22
+
+* Supports data transformation using AWS Lambda.
+* Automatic scaling.
+Near real-time delivery (typical latency ~60 seconds).
++ Built-in compression and encryption.
+© Nopersistent storage of data in Firehose itself.
+* Use Cases:
+© Loading logs to $3 for analytics
+© Near-real-time reporting
+© Streaming ETL pipelines
+Kinesis Data Analytics
+Fully managed service to analyse streaming data using SQL.
++ Ingests data from Kinesis Data Streams or Firehose.
+* Runs SQL queries continuously against streaming data.
+* Supports real-time aggregation, filtering, and anomaly detection.
+* Can output to:
+© Kinesis Data Streams
+
+o Kinesis Data Firehose
+
+°
+
+o AWS Lambda
++ Use Cases:
+o Real-time metrics and alerts
+o Time-series analytics
+Continuous data transformation
+Kinesis Video Streams
+* Capture, process, and store video streams for analytics and machine learning.
++ Supports live and on-demand video ingestion.
+* Automatically encrypts and indexes video data.
+© Integrates with:
+o AWS Rekognition Video for analysis
+o Custom ML workflows
+* Provides time-indexed video storage in $3.
++ Use Cases:
+
+© Security camera feeds
+

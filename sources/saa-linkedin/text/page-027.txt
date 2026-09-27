@@ -1,0 +1,37 @@
+Pay for metadata storage and access requests.
+
+Underlying $3, Glue, and query service charges still apply.
+
+Security and Compliance
+
+Integrates with IAM, CloudTrail, and KMS for full governance.
+Data access logs through CloudTrail.
+Fine-grained permissions reduce data exposure.
+
+Regional service, data stays within its AWS region.
+
+Exam Tips
+
+Lake Formation = simplified, secure data lake management on $3.
+Shares catalog with AWS Glue.
+
+Manages row/column-level permissions centrally.
+
+Integrates with Athena, Redshift Spectrum, and EMR.
+
+Governed tables = ACID compliance and transaction support.
+Permissions in Lake Formation are separate from IAM policies.
+Data filtering avoids data duplication.
+
+Use blueprints for automated ingestion from RDS or DynamoDB.
+
+Cloud'Trail logs all data access events for auditing.
+
+Quick Summary
+
+AWS Lake Formation helps you quickly build and secure a centralized data lake on $3, with fine-
+grained access control, governance, and integrated analytics access, making it easier to manage
+large-scale data securely across AWS services.
+
+26
+

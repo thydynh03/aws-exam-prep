@@ -1,0 +1,76 @@
+80
+
+AWS Wavelength
+What It Is
+
+AWS Wavelength extends AWS compute and storage services into 5G networks by placing AWS
+infrastructure inside telecommunications data centres. This allows developers to run
+applications closer to mobile users, achieving ultra-low latency while still using the same AWS
+services, APIs, and tools as in a normal AWS Region.
+
+Key Features
+
++ Run applications within Wavelength Zones (extensions of an AWS Region)
+
++ Ultra-low latency for mobile and edge devices
+
++ Deep integration with 5G networks (Verizon, Vodafone, KDDI, SK Telecom, etc.)
++ Use familiar AWS services like EC2, ECS, EKS, VPC, ALB, and CloudWatch
+
+* Consistent AWS APIs, tools, AMIs, and [AM model
+
+* Traffic stays local to 5G network — minimal hops, minimal jitter
+
++ Supports containers, microservices, ML inference, AR/VR, gaming workloads
+
+Wavelength Zones
+
+* Specific, carrier-operated data centres that extend an AWS Region
+
++ Appear inside your VPC as isolated subnets
+
++ Connected to the parent Region via high-bandwidth, secure network
+
++ Provide compute (EC2), storage (EBS), networking (VPC), and load balancing
++ Used for low-latency applications targeted at mobile users in that geography
+
+‘Supported Services
+
++ Amazon EC2 (certain instance types optimized for edge)
++ Amazon EBS for block storage
+
++ Amazon VPC with Wavelength subnets
+
++ Elastic Load Balancing (NLB only)
+
+* Amazon ECS/EKS for container workloads
+
++ Amazon CloudWatch for logs/metrics
+
++ Amazon CloudFormation & CLI for automation
+
+Networking
+
+«Create a VPC in the parent Region, then add Wavelength subnets
+
++ Carrier Gateways
+
+-Enable traffic between Wavelength instances and 5G mobile users
+
+-No direct internet access from Wavelength instances
+
+« Service traffic usually flows: Mobile Device + 5G Network > Wavelength Zone
+* Use NLB for distributing traffic to Wavelength EC2
+
++ Supports Security Groups, NACLs, VPC routing
+
+Storage
+
++ Amazon EBS for persistent block storage
+
++ Root volumes + data volumes supported
+
++ No $3 inside Wavelength Zones (S3 lives in the parent Region)
+
++ Use $3 for logs, backups, or static content (latency will be higher)
+

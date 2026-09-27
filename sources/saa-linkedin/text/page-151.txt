@@ -1,0 +1,49 @@
+Aggregators incur charges for cross-account and cross-region data aggregation
+
+Storage costs in $3 for snapshots and history files
+
+Use Cases
+
+Compliance auditing and reporting
+
+Security analysis and configuration monitoring
+
+Operational troubleshooting and resource tracking
+
+Change management and governance in multi-account environments
+
+Continuous enforcement of infrastructure policies
+
+Best Practices
+
+Enable AWS Config in all regions for complete coverage
+
+Use AWS Config Rules to enforce security and compliance standards
+Aggregate configuration data across accounts with AWS Organizations
+Automate remediation of noncompliant resources
+
+Store configuration snapshots and history in a secure, versioned $3 bucket
+
+Integrate with CloudWatch Logs and SNS for alerting and monitoring
+
+Exam Tips
+
+AWS Config records and evaluates AWS resource configurations over time
+Supports AWS Managed Rules and Custom Rules for compliance enforcement
+‘Aggregators provide a centralized view across accounts and regions
+
+Delivers configuration history and snapshots to $3
+
+Can trigger notifications via SNS and logs via CloudWatch
+
+Supports automated remediation using Systems Manager Automation
+
+Integrates with AWS Organizations for organization-wide governance
+
+Quick Summary
+AWS Config is a powerful tool for tracking, auditing, and enforcing AWS resource configurations.
+Itrecords changes, evaluates compliance against rules, and provides detailed histories to
+support governance, security, and operational excellence across your AWS environment.
+
+150
+

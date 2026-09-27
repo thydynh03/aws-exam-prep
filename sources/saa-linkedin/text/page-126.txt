@@ -1,0 +1,23 @@
+Best Practices
++ Enable sampling to control costs without losing visibility
+* Add meaningful annotations for better filtering and searching
+* Monitor service maps regularly to detect unexpected dependencies
+«Use X-Ray Insights for proactive detection of anomalies
+* Integrate with CI/CD pipelines for continuous observability
+Exam Tips
+* X-Ray is used for distributed tracing and debugging
++ Visualizes service maps and trace timelines
+* Supports sampling to manage cost and performance impact
+* Integrated with many AWS services, including Lambda and API Gateway
+* Helps identify errors, bottlenecks, and dependencies in microservices
+* 1AM policies control access to X-Ray data and APIs
+Quick Summary
+
+AWS X-Ray is a managed service for distributed tracing, helping developers analyse, visuali:
+
+and debug applications in production. It enables end-to-end request tracing, identifies
+performance bottlenecks, and improves observability for microservices and serverless
+architectures.
+
+125
+

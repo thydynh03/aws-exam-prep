@@ -1,0 +1,53 @@
+Scaling
+
+RabbitMQ clusters with multiple nodes for increased availability and throughput
+
+Vertical scaling by selecting larger instance types
+Supports clustering with RabbitMQ for horizontal scaling
+
+No need to manually manage broker software or infrastructure
+
+Security
+
+Encryption at rest using AWS KMS
+Encryption in transit using TLS
+
+VPC support for network isolation
+
+IAM for controlling access to Amazon MQ resources
+AWS Secrets Manager integration for storing credentials
+
+‘Access Control Lists (ACLs) for fine-grained user permissions
+
+Monitoring and Management
+
+Integrated with Amazon CloudWatch for metrics and alarms
+Detailed broker logs available in Amazon CloudWatch Logs
+AWS Management Console, CLI, and SDKs for broker management
+
+Supports broker maintenance and patching without downtime in HA deployments
+
+Integration with AWS Services
+
+‘Amazon EC2 for hosting applications that use the broker
+AWS Lambda for event-driven messaging workflows
+Amazon SQS and SNS for additional messaging patterns
+AWS Secrets Manager for managing credentials
+
+AWS Identity and Access Management (IAM) for permissions
+
+Charged per broker instance hour based on instance type
+Storage for message persistence is billed per GB per month
+Data transfer charges may apply for cross-AZ replication
+
+Additional costs for CloudWatch metrics and logs
+
+Use Cases
+
+Migrating existing on-premises ActiveMQ or RabbitMQ workloads to AWS
+Decoupling microservices with message-based communication
+
+Building reliable, fault-tolerant messaging workflows
+
+48
+

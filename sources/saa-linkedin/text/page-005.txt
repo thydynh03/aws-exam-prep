@@ -1,0 +1,55 @@
+Amazon Athena
+
+What It Is
+
+Amazon Athena is an interactive query service that makes it easy to analyse data in Amazon $3
+using standard SQL. It is serverless, so there is no infrastructure to manage, and you pay only for
+the queries you run.
+
+Key Features
+
+Serverless, no need to provision or manage infrastructure
+SQL-based queries using standard ANSI SQL
+
+Supports querying data in S3 directly
+
+Pay-per-query pricing model, charged per TB of data scanned
+Integrated with AWS Glue Data Catalog for schema management
+Supports complex joins, window functions, and arrays
+
+Results can be stored in $3
+
+How It Works
+
+Point Athena at data stored in $3
+
+Define table schema using Data Catalog or DDL in Athena
+Run SQL queries to analyse data directly in $3
+
+Query results are saved to $3 in specified location
+
+Can partition data to improve performance and reduce costs
+
+‘Supported Data Formats
+
+CSV, TSV, JSON
+ORC, Parquet, Avro
+Text files with custom delimiters
+
+Apache Web Logs
+
+Performance Optimization
+
+Partitioning: Breaks data into subsets for faster queries
+Columnar formats: ORC and Parquet reduce data scanned
+Compression: Reduces data transfer and storage costs
+
+Bucketing: Organizes data for efficient joins
+
+AWS Glue Integration
+
+Uses AWS Glue Data Catalog to store metadata
+Can crawl $3 data to infer schema automatically
+
+Shared catalog with Amazon Redshift Spectrum and EMR
+

@@ -1,0 +1,33 @@
+Best Practices
+
+Use immutable or blue/green deployments for safer updates
+Store configuration in version control using .ebextensions
+Monitor environment health and logs regularly
+
+Use environment cloning for testing changes before production
+
+Use managed updates to automate minor platform updates
+
+Exam Tips
+
+Elastic Beanstalk automatically provisions and manages the infrastructure
+Supports multiple deployment strategies including rolling and immutable
+
+Uses EC2, ELB, Auto Scaling, RDS, and other AWS services under the hood
+
+You still have full access to underlying resources
+
+Configuration is managed via environment settings and .ebextensions
+
+Blue/green deployments provide zero-downtime updates
+
+Quick Summary
+
+AWS Elastic Beanstalk simplifies application deployment by managing the infrastructure and
+platform for you. It supports a variety of programming languages and frameworks, provides
+
+75
+
+several deployment options, integrates with monitoring and scaling services, and allows deep
+customization when needed, all while giving you full control of the underlying AWS resources.
+

@@ -1,0 +1,34 @@
+264
+
+Secrets Manager vs Parameter Store
+Feature Secrets Manager Parameter Store (Standard Tier)
+Rotation Built-in automatic rotation | Manual only
+
+Secret type | Designed for sensitive secrets | Config data and secrets
+
+Pricing Paid service Free (Standard), Paid (Advanced)
+API rate limit | Higher throughput Lower in standard tier
+Encryption | KMS KMS
+
+Security
+
+* Secrets encrypted with KMS at rest.
+«IAM + Resource policies define access.
++ Rotate secrets using Lambda functions.
+© Auditall access via CloudTrail.
+Pricing
+* Charged per secret stored per month.
+* Additional cost per 10,000 API calls.
+Rotation incurs Lambda execution cost.
+Exam Tips
+* Use Secrets Manager when secrets need automatic rotation.
+*  Donot hardcode credentials, fetch them securely via Secrets Manager API.
+* Use Parameter Store for less sensitive, infrequently updated configs.
+* Always configure KMS encryption and IAM access control.
+* Know how Secrets Manager integrates with RDS for auto-rotation.
+Quick Summary
+
+AWS Secrets Manager is a secure and scalable service for storing and automatically rotating
+sensitive secrets like database credentials, API keys, and tokens with full integration into AWS
+security and monitoring tools.
+

@@ -1,0 +1,25 @@
+113
+
++ Fraud detection systems
+* Knowledge graphs and semantic search
++ Identity and access management systems
+* Network and IT operations graphs
+Exam Tips
+* Neptune is optimized for graph workloads, not relational or key-value data
+© Supports Gremlin and SPARQL query languages for different graph models
++ Replication across three AZs with 6 copies of data ensures durability
+* Upto 15 read replicas for horizontal scaling of read workloads
+* Encryption at rest and in transit is enabled by default
+* IAMis used for access control and authentication
+* Neptune is not used for OLTP or OLAP workloads
+* Use Neptune when relationships between data elements are first-class citizens
++ Bulk loading supported through Amazon $3 with the Neptune Loader
+© Multi-AZ deployment provides automatic failover and high availability
+Quick Summary
+
+Amazon Neptune is a purpose-built, fully managed graph database service ideal for applications
+that require navigating and analysing complex relationships. It supports both Property Graph
+(Gremlin) and RDF (SPARQL) models, offers high availability, durability, and seamless AWS
+integration, making it a strong choice for graph-based use cases like social networks, fraud
+detection, and knowledge graphs.
+

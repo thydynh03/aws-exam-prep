@@ -1,0 +1,35 @@
+* Helps monetize proprietary data while restricting access
+Integration with Other AWS Services
+* Amazon S3: storage destination for data sets
+© AWS Glue: data cataloging and ETL
+* Amazon Athena: query data directly from $3
+* Amazon Redshift Spectrum: analyse data without loading into Redshift
+*  EventBridge: trigger workflows when new data arrives
+* AWS CloudTrail: audit access and API calls
+Security
++ IAM policies control access to Data Exchange resources
+* $3 bucket policies secure delivered data
+* CloudTrail logging for governance and compliance
+* Encryption at rest using S3 server-side encryption
+Pricing
+© Subscribers pay for data products according to provider pricing (subscription fees)
+* AWS charges delivery fees based on data volume delivered to $3
+* Noupfront fees to browse or subscribe to free data sets
+Use Cases
+
+* Incorporating third-party data (market data, demographic data, geospatial data) into
+analytics workflows
+
+© Monetizing proprietary data by creating data products for others to subscribe
++ Simplifying data licensing, entitlement, and billing
+* Automating ingestion and processing of external data sources
+Best Practices
+* Use $3 bucket versioning to track data revisions
+Leverage EventBridge to automate processing pipelines when new data arrives
+Apply granular IAM policies to limit access to sensitive data sets
+* Review CloudTrail logs for compliance auditing
+* Validate data schema and formats upon delivery to avoid downstream issues
+* Use AWS Glue Data Catalog for metadata management and discovery
+Exam Tips
+* AWS Data Exchange simplifies finding, subscribing to, and using third-party data
+

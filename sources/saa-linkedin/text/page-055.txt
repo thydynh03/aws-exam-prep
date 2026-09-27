@@ -1,0 +1,44 @@
+54
+
++ Ifthe consumer fails to delete the message before timeout ends, it becomes visible again.
+4, Dead-Letter Queues (DLQ)
+* Stores unprocessed or unsuccessfully processed messages.
+* Helps isolate problematic messages for debugging.
+* Used to prevent endless processing retries.
+5, Delay Queues
+Postpone delivery of new messages for a configurable time (0-15 minutes).
+* Useful for delaying processing without managing timing in the producer app.
+6, Long Polling
+
++ Reduces cost and empty responses by waiting until a message arrives (up to 20
+seconds).
+
+* More efficient than short polling, which immediately returns even if no message is
+available.
+
+7. Message Retention Period
+
+* Defines how long SQS keeps a message if not deleted.
+
+* Configurable between 1 minute and 14 days (default is 4 days).
+8, Message Size
+
+* Single message size limit is up to 256 KB.
+
++ For larger payloads, can use $3 for message payloads with Amazon SQS Extended Client
+Library.
+
+9. Encryption
+«SSE (Server-Side Encryption) using AWS KMS.
+* Ensures messages are encrypted at rest.
+«Encryption keys can be managed via KMS.
+10. Access Control
+«IAM policies control who can send, receive, delete, or manage queues.
+‘* Supports resource-based policies for cross-account access.
+11. Integrations
+* AWS Lambda: Trigger functions directly from SQS.
+«SNS: Fan-out architecture by sending messages from SNS to multiple SQS queues.
++ Step Functions: Orchestrate workflows with SQS as a step.
+
+*  EventBridge: Route events to SQS for decoupled processing.
+

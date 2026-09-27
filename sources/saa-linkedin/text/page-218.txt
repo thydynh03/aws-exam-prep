@@ -1,0 +1,50 @@
+217
+
+Alias Records
+
+* Route 53-specific record type that points to AWS resources without additional DNS
+queries
+
+* No charge for DNS queries to alias records
+
+* Used with: ELB, CloudFront, API Gateway, $3 static websites, Global Accelerator, and VPC
+endpoint services
+
+© Supports apex (root) domain records
+Integration with AWS Services
+
++ Direct integration with ELB for load balancing
+
+* Supports CloudFront distributions for CDN integration
+
+* Can route traffic to $3 static website endpoints
+
+* Works with AWS Global Accelerator to route traffic through AWS edge network
+High Availability and Scalability
+
++ Globally distributed DNS infrastructure with edge locations worldwide
+
+* Designed for 100% availability SLA
+
+* Automatically scales to handle very large query volumes
+Security
+
+© Supports DNSSEC (Domain Name System Security Extensions) for domain registration
+and DNS hosting
+
++ IAM policies control access to Route 53 resources
+Integrated with AWS CloudTrail for logging API calls
+* Supports private hosted zones for VPC-internal DNS resolution
+Traffic Flow
+* Visual editor for creating complex routing policies
++ Supports versioning of traffic policies
+* Automates creation of policies for geoproximity, latency, and failover routing
+Private Hosted Zones
+* Internal DNS resolution for resources within one or more VPCs
+«Namespaces are private to the selected VPCs
+* Useful for service discovery and VPC-internal communication
+Pricing
+* Billed for hosted zones (per zone per month)
+
+* Charged per DNS query
+

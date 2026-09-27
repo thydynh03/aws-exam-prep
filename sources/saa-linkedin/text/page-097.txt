@@ -1,0 +1,53 @@
+Backups and Snapshots
+
+Automated backups with configurable retention (up to 35 days)
+Point-in-time recovery to any second during retention period
+Manual snapshots retained until deleted
+
+Snapshots can be shared with other AWS accounts or copied across regions
+
+Global Databases
+
+Designed for globally distributed applications
+Single primary Region with read-only secondary Regions
+Cross-region replication with typical lag under 1 second
+Supports fast recovery in case of regional outages
+
+Enables low-latency global reads
+
+Aurora Serverless v1
+
+On-demand, auto-scaling configuration
+Automatically starts, stops, and scales based on workload
+Ideal for variable or unpredictable workloads
+
+Charges based on actual usage (Aurora Capacity Units)
+
+Supports MySQL-compatible edition
+
+Aurora Serverless v2
+
+Fine-grained, instant scaling with minimal latency
+Supports even higher workloads and connections
+Works with both MySQL- and PostgreSQL-compatible editions
+
+More production-ready and scalable than v1
+
+Performance and Scaling
+
+Up to 64 vCPUs and hundreds of GBs of RAM per instance
+Storage and compute scale independently
+
+Supports read scaling with Aurora Replicas
+
+Write scaling can be improved with partitioning at the application layer
+
+Integrated with Amazon RDS Proxy for connection pooling
+
+Security
+
+Encryption at rest using AWS KMS
+Encryption in transit using SSL/TLS
+
+VPC isolation and subnet-level security
+

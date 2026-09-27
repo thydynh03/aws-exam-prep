@@ -1,0 +1,28 @@
+179
+
+Use improvement plans to prioritize and track remediation
+Store review history for compliance and continuous improvement
+
+Leverage lenses to tailor reviews to workload types and industry needs
+
+Exam Tips
+
+AWS Well-Architected Tool helps evaluate workloads against the Well-Architected
+Framework
+
+Supports six pillars, including the newer Sustainability pillar
+Identifies high-risk and medium-risk issues and generates improvement plans
+Offers custom lenses for industry-specific best practices
+
+Free to use in the AWS Console but may recommend services with additional costs
+Can integrate with AWS Organizations for multi-account management
+
+Ideal for ensuring workloads are secure, reliable, efficient, and cost-optimized
+
+Quick Summary
+
+AWS Well-Architected ‘Tool enables consistent, structured reviews of workloads against
+AWS's best practices, helping teams identify and prioritize risks, implement improvements,
+and track architectural progress over time. It supports custom lenses, integrates with AWS
+Organizations, and provides reporting features for ongoing compliance and optimization.
+

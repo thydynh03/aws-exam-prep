@@ -1,0 +1,37 @@
+* Supports custom authentication challenges with AWS Lambda triggers
+© OAuth 2.0 authorization code and implicit grant flows supported
+* Secure token storage and management
+Security Features
+© Multi-Factor Authentication (MFA) with SMS or TOTP apps
+* Adaptive authentication and risk-based security
+* Account recovery with email or phone number
+* Encryption of data at rest and in transit
+* AWS KMS integration for encryption keys
+* Device tracking and remembered devices
+
+* Advanced security features to detect compromised credentials and unusual sign-in
+attempts
+
+Integration with AWS Services
+«IAM: Control access to AWS resources
++ API Gateway: Use Cognito Authorizer to protect REST and WebSocket APIs
++ AWS AppSync: Secure GraphQL APIs with Cognito authentication
+* Lambda: Invoke functions with Cognito identities
+« $3: Control object access based on user identities
+* Mobile SDKs: iOS, Android, JavaScript, and more for integrating Cognito into apps
+Tokens and Sessions
+«ID Token: Contains user profile information (JWT)
++ Access Token: Used to authorize API calls
++ Refresh Token: Used to obtain new ID and Access tokens
+* Token expiration settings configurable in User Pool settings
+Deployment and Management
+* Fully managed, scalable service
+«Supports region-specific deployments
+‘* User Pools and Identity Pools managed separately
+* User data stored securely in AWS-managed directories
+* Integrates with CloudWatch for monitoring and metrics
+Pricing
+* User Pools: Charged based on Monthly Active Users (MAUs)
+
+238
+

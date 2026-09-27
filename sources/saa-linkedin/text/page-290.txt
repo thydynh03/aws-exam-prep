@@ -1,0 +1,35 @@
+289
+
+«AWS Backup integration for automated backups.
+* Data replication within and across AWS regions (for some file systems).
+Security
+* Encryption at rest using AWS KMS.
+* Encryption in transit using SMB encryption, NFS encryption, and TLS.
+* VPC Security Groups and Network ACLs for access control.
++ IAM policies for API-level access.
+* Supports AWS Identity Store integrations (e.g,, Active Directory).
+Performance
+* FSx for Windows:
+o Upto tens of GB/s throughput.
+© Supports SSD and HDD storage.
++ FSx for Lustre:
+© Hundreds of GB/s throughput.
+© Sub-millisecond latencies.
+© FSx for ONTAP:
+© Advanced caching.
+© Efficient deduplication/compression.
++ FSx for OpenZFS:
+High IOPS.
+o Consistent low latency.
+Backup and Recovery
+* Supports automated daily backups.
+*  User-initiated backups at any time.
+«Snapshots for point-in-time recovery.
+Monitoring and Management
+* Amazon CloudWatch for performance metrics and alarms.
+© AWS CloudTrail logs API calls for auditing.
+* AWS Backup integration for centralized backup management.
+* Management via AWS Console, CLI, and SDKs.
+Pricing
+* Charged based on:
+

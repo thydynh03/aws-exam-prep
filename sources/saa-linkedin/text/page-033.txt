@@ -1,0 +1,40 @@
+* Amazon $3 for snapshot storage and cold storage
+© AWS Cognito for dashboard authentication
+
+Use Cases
+* Application search
+* Log and event analytics
+* Infrastructure monitoring
+Security information and event management (SIEM)
++ Real-time application and system monitoring
+
+Business and operational dashboards
+
++ Charges based on instance hours, storage, and data transfer
+© Ultrawarm and cold storage tiers reduce cost for infrequently accessed data
+* Data transfer within the same region is free for ingestion
+«Snapshot storage in $3 incurs $3 costs
+Best Practices
+* Choose appropriate instance types and storage tiers
+* Use Ultrawarm and cold storage for older, less-frequently queried data
+«Apply fine-grained access controls and encryption
+Monitor performance using CloudWatch and slow logs
+‘* Scale clusters based on ingestion rates and query workloads
+Exam Tips
++ Fully managed service for OpenSearch and Elasticsearch
++ Supports log analytics and real-time search use cases
++ Integrates with Kinesis Data Firehose, CloudWatch, and Cognito
+*  Ultrawarm and cold storage for cost-effective long-term retention
+* Security features include encryption at rest, node-to-node encryption, and [AM
++ Automated snapshots stored in $3
+«VPC support for private network connectivity
+Quick Summary
+
+‘Amazon OpenSearch Service is AWS's fully managed search and analytics
+
+32
+
+service supporting OpenSearch and legacy Elasticsearch, designed for log analytics, monitoring,
+
+and real-time search, with strong security, scalability, and integration with AWS services.
+

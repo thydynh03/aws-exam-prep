@@ -1,0 +1,35 @@
+Backup of hybrid cloud workloads via Storage Gateway
+
+Securing critical business data with encrypted, immutable backups
+
+Best Practices
+
+Define clear backup policies for all critical resources
+
+Use Vault Lock for compliance and immutability
+Implement cross-region replication for disaster recovery
+Monitor backup activity with CloudWatch and CloudTrail
+
+Regularly test backup and restore processes
+
+Exam Tips
+
+AWS Backup centralizes and automates backup management
+Supports cross-region and cross-account backups
+
+Backup Vaults store encrypted backups with access controls
+Vault Lock enforces Write-Once-Read-Many compliance
+Integrates with AWS Organizations for policy management
+
+Monitors and audits backup activity via CloudWatch and CloudTrail
+
+Quick Summary
+AWS Backup provides a centralized, automated way to manage backups across AWS services
+and on-premises systems. It supports policy-based automation, secure storage in backup vaults,
+
+compliance reporting, cross-region and cross-account replication, and integrates with AWS
+
+Organizations for large-scale management.
+
+279
+

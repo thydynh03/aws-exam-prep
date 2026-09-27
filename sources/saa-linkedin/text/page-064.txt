@@ -1,0 +1,49 @@
+63
+
+AWS Batch
+What It Is
+
+AWS Batch is a fully managed batch processing service that efficiently runs hundreds to
+thousands of batch computing jobs on AWS. It dynamically provisions the optimal compute
+resources (e.g,, EC2, Spot, Fargate) based on the volume and requirements of your jobs — no
+need to manage clusters manually.
+
+Key Features
+«Fully managed batch computing, no cluster setup or job schedulers needed
+* Automatically provisions compute resources based on job queue demand
+Supports EC2 and Spot Instances for cost optimization
+«Integrates with Amazon ECS for containerized workloads
+* Scales up and down automatically depending on queued jobs
+‘+ Supports single, array, and multi-node parallel jobs
+*  Fine-grained job dependencies and priorities
+‘+ Integrated with CloudWatch for logging and monitoring
+* Noadditional cost, pay only for compute and storage used
+Core Components
+
+* Job -A single unit of work submitted to AWS Batch (eg,,a script, container, or
+command).
+
++ Job Definition - Template specifying job parameters such as Docker image, vCPUs,
+memory, IAM role, and retry strategy.
+
++ Job Queue ~ Holds submitted jobs and determines their priority /order of execution.
+
+* Compute Environment - Defines the compute resources (e.g., EC2, Spot, Fargate) where
+jobs are run.
+
+Job Types
+Single Job - Standard one-off task.
+
+* Array Job ~ Run multiple copies of the same job with different input parameters (up to
+10,000).
+
+© Multi-Node Parallel Job - Run tightly coupled, distributed workloads (e.g., MPI, HPC
+workloads) across multiple EC2 instances.
+
+Job States
+* SUBMITTED - Job accepted into the queue.
+© PENDING - Waiting for resources or dependencies.
++ RUNNABLE - Ready to run but waiting for compute capacity.
+
+© STARTING - Container instance being provisioned.
+

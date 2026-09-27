@@ -1,0 +1,50 @@
+143
+
+Amazon CloudWatch
+
+What It Is
+
+Amazon CloudWatch is a monitoring and observability service for AWS resources and
+applications. It provides data collection, visualization, alerting, and automated responses to
+changes in your environment.
+
+Key Features
+
+Collects and tracks metrics for AWS resources and custom metrics
+Logs aggregation, storage, search, and analysis
+
+Alarms for monitoring thresholds and triggering actions
+Dashboards for visualization of metrics and logs
+
+Events for responding to state changes in AWS resources
+Anomaly detection for identifying unusual metric patterns
+Contributor Insights for analysing high-cardinality log data
+CloudWatch Synthetics for monitoring application endpoints
+
+ServiceLens for visualizing application performance and dependencies
+
+Automatically collects metrics from AWS services like EC2, RDS, Lambda, and ELB
+Custom metrics can be published by applications
+
+Standard and detailed monitoring (e.g, 1-minute vs. 5-minute intervals)
+Supports percentile-based metrics and high-resolution (up to 1-second) metrics
+
+Metric math for creating derived metrics from existing ones
+
+Centralized storage and analysis of logs from AWS services and applications
+CloudWatch Logs Agents and AWS Lambda can send logs
+
+Supports log filtering and metric extraction
+
+Log groups and log streams for organization
+
+Subscription filters for streaming logs to other services (e.g., Lambda, Kinesis)
+
+Log Insights for querying and analysing logs with a SQL-like syntax
+
+Watches metrics and triggers actions when thresholds are breached
+Supports static thresholds and anomaly detection
+
+Actions include SNS notifications, Auto Scaling policies, and EC2 actions (eg, stop,
+terminate, reboot, recover)
+

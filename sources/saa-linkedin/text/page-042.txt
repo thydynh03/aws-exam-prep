@@ -1,0 +1,56 @@
+41
+
+AWS Al ic
+What It Is
+
+AWS AppSync is a fully managed GraphQL API service to easily build, manage, and secure APIs
+that access, combine, and serve data from multiple sources.
+
+Key Features
+
+Automatically generates a GraphQL API endpoint.
+
+Connects to multiple data sources: DynamoDB, Aurora, Lambda, HTTP APIs,
+Elasticsearch/OpenSearch, RDS.
+
+Supports real-time data with subscriptions and WebSocket.
+
+Handles queries, mutations, and subscriptions.
+
+Built-in caching for performance.
+
+Fine-grained access control with AWS IAM, Cognito, API key, OpenID Connect.
+Data merging and resolvers for combining sources.
+
+Offline support for mobile and web apps.
+
+How It Works
+
+Client sends GraphQL queries to AppSync.
+AppSync uses resolvers to fetch and transform data from backend sources.
+Returns a single, optimized response.
+
+Supports real-time updates to clients via subscriptions.
+
+Use Cases
+
+Unified API for multiple data sources.
+Mobile and web apps needing real-time data.
+Aggregating data from DynamoDB, Lambda, RDS in one API.
+
+Chat applications, dashboards, collaborative tools.
+
+Benefits
+
+Pricing
+
+Reduces backend complexity single GraphQL endpoint.
+Built-in real-time and offline support.
+Scalable, secure, and fully managed.
+
+Integrates with AWS services for easy development.
+
+Pay for queries, mutations, subscriptions, and data transfer.
+
+Optional caching incurs extra cost.
+

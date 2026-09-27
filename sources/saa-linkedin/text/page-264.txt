@@ -1,0 +1,33 @@
+263
+
+AWS Manager
+What It Is:
++ Amanaged service that helps you store, manage, and retrieve secrets securely.
+* Commonly used for database credentials, API keys, OAuth tokens, etc.
+* Provides automatic rotation, fine-grained access control, and audit logging.
+Key Features:
+1. Secure Storage
+* Secrets are encrypted at rest using AWS KMS.
++ Automatically encrypted when stored, you can bring your own KMS key (CMK).
+2. Automatic Rotation
+* Supports automatic rotation of secrets using AWS Lambda.
+*  Prebuilt templates for common integrations (e.g, RDS, Redshift, Aurora).
++ No downtime required during rotation.
+3, Fine-Grained Access Control
+* Use IAM policies and resource-based policies to control who can access specific secrets.
+* Can restrict access to parts of a secret using IAM condition keys.
+4, Audit and Monitoring
+«Integrated with AWS CloudTrail, log every access and change.
++ Supports CloudWatch for monitoring usage.
+5, Cross-Account Access
++ Supports secure sharing of secrets across AWS accounts using resource policies.
+6. SDK and CLI Integration
++ Retrieve secrets via API, SDK, or AWS CLI.
+«Secrets are fetched at runtime, no need to hard-code credentials.
+Use Cases:
+* Managing RDS credentials securely with automatic rotation.
++ Replacing hardcoded secrets in code or environment files.
+* Securely managing third-party API keys and tokens.
+
+* Sharing secrets across environments or accounts.
+

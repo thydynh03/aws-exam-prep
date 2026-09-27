@@ -1,0 +1,38 @@
+278
+
++ Vault Lock feature for Write-Once-Read-Many (WORM) compliance
+Backup Lifecycle Management
+* Define retention rules for backups
+* Automate transition of backups to low-cost cold storage
+* Control backup expiration to manage costs
+Cross-Region and Cross-Account Backups
++ Enable replication of backups to other AWS Regions for disaster recovery
+* Support for cross-account backup sharing for secure collaboration
++ Enhance resilience and meet compliance requirements
+Backup Monitoring and Reporting
++ AWS Backup console provides job status and history
+* Integration with AWS CloudTrail for auditing API activity
+« AWS CloudWatch integration for alerts and metrics
+* Compliance reporting for backup plan adherence
+AWS Organizations Integration
+* Centralized backup policy management across accounts
+© Apply backup plans consistently in multi-account setups
+* Use delegated administrator account to manage backup policies
+Security and Encryption
++ Encryption at rest using AWS KMS keys
+Encryption in transit using TLS
+* IAM roles and policies control access to backup resources
+
++ Vault Lock for immutable, tamper-proof backups
+
+Charges based on backup storage used (warm and cold storage)
++ Charges for backup transitions between warm and cold storage
+* Additional costs for cross-region backup copies
+* No upfront fees or commitments—pay-as-you-go model
+
+Use Cases
+* Centralized and automated backup for AWS workloads
+* Disaster recovery with cross-region backups
+
+* Compliance with data retention and audit requirements
+

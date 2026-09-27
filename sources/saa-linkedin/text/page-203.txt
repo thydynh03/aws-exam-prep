@@ -1,0 +1,36 @@
+202
+
++ Allowlist (whitelist) specific countries
++ Blocklist (blacklist) specific countries
+* Useful for licensing requirements and compliance
+AWS WAF Integration
+* Protect applications from common web exploits (SQL injection, XSS)
+* Create custom rules to filter malicious traffic
+* Rate limiting to prevent abuse
+Shield Standard
+* Included DDoS protection at no extra cost
+* Protects against network and transport layer attacks
+* Automatic detection and mitigation
+Content Customization
+Lambda@Edge
++ Run custom code closer to users at edge locations
+* Modify requests and responses in real-time
+* Use cases:
+o URLrewrites and redirects
+© Header manipulation
+o A/Btesting
+© User authentication
+© Content personalization
+* Supports Node,js and Python
+* More powerful but higher cost and longer latency than CloudFront Functions
+CloudFront Functions
+«Lightweight JavaScript execution at the edge
+* Designed for high-volume, simple manipulations
++ Faster (sub-millisecond) and cheaper than Lambda@Edge
+« Use cases:
+© Header manipulation
+o URLrewrites
+© Request validation
+
+o Cache key normalization
+

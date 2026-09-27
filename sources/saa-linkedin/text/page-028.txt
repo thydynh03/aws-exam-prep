@@ -1,0 +1,40 @@
+27
+
+Amazon MSK
+
+What It Is
+
+‘Amazon Managed Streaming for Apache Kafka (Amazon MSK) is a fully managed service that
+makes it easy to build and run applications that use Apache Kafka to process streaming data. It
+removes the operational overhead of setting up, scaling, and managing Kafka clusters while
+offering high availability, security, and integration with AWS services.
+
+Key Features
+* Fully managed Apache Kafka service
+* Supports open-source Kafka APIs
+* Automated provisioning, configuration, and maintenance
+* Broker patching, monitoring, and failure recovery built in
+© High availability with replication across multiple Availability Zones
+* Compatible with existing Kafka tools and client libraries
+* AWS CLI, SDK, and Console support for management
+* _ Serverless option with MSK Serverless for automatic scaling
+MSK Cluster Components
++ Brokers: Kafka server nodes handling ingestion and replication
+*  ZooKeeper: Coordinates brokers and maintains cluster metadata
+Storage: Elastic storage options, backed by EBS volumes
+* Networking: VPC integration, private endpoints, security groups
+Monitoring: Integrated with CloudWatch metrics and logging
+MSK Serverless
+© Noneed to provision or manage brokers
+* Automatically scales up and down based on data volume and throughput
++ Pay only for data ingested, stored, and throughput used
+* Ideal for variable or unpredictable workloads
+© Supports same Kafka APIs, clients, and tooling
+Integration with AWS Services
+* AWS Lambda for real-time stream processing
+¢ AWS Glue Schema Registry for enforcing schemas on data streams
+* Amazon Kinesis Data Analytics for SQL-based stream processing
+* Amazon $3 for storing processed data
+
+* AWS Identity and Access Management (IAM) for managing permissions
+

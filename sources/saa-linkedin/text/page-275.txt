@@ -1,0 +1,55 @@
+274
+
+AWS Lambda
+
+What It Is
+
+AWS Lambda is a serverless, event-driven compute service that lets you run code without
+provisioning or managing servers. It automatically scales and manages compute resources in
+response to events and charges only for compute time consumed,
+
+Key Features
+
+Serverless compute with no infrastructure to manage
+
+Runs code in response to events from AWS services or custom apps
+
+‘Automatically scales based on the number of events
+
+Supports multiple languages including Python, Nodes, Java, C#, Go, Ruby, PowerShell
+Pay only for compute time (per millisecond) and number of requests
+
+Supports up to 15 minutes per invocation
+
+Triggers and Event Sources
+
+Can be triggered by AWS services such as $3, DynamoDB, Kinesis, SNS, SQS, EventBridge
+Supports API Gateway and Application Load Balancer for HTTP(S) endpoints
+Can be invoked directly using AWS SDKs or CLI
+
+Event source mappings allow Lambda to poll services like SQS and DynamoDB Streams
+
+Execution Environment
+
+Each function runs in its own isolated environment
+Includes specified runtime, memory, temporary storage (/tmp up to 10 GB)
+Supports environment variables for configuration
+
+Can use Lambda Layers to share code and libraries across functions
+
+Concurrency and Scaling
+
+Scales automatically based on incoming events
+Default concurrency limit per account/region (can request increases)
+Reserved concurrency guarantees a set number of concurrent executions
+
+Provisioned Concurrency keeps functions pre-initialized to reduce cold starts
+
+Function Configuration
+
+Memory allocation: 128 MB to 10,240 MB (10 GB)
+CPU power proportional to memory
+Timeout setting up to 15 minutes
+
+Permissions managed via AWS IAM roles assigned to the function
+

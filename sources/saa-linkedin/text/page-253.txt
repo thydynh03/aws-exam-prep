@@ -1,0 +1,37 @@
+252
+
+* Use AWS Organizations and Service Control Policies (SCPs) for multi-account setups.
+12. 1AM Roles for Service Accounts / Applications
+« EC2 Instance Profiles:
+© Attach IAM roles to EC2 instances.
+
+o Automatically provide temporary credentials via Instance Metadata Service
+(imps).
+
+* Lambda Execution Role:
+© Grants permissions for AWS Lambda functions to access other AWS services.
+*  Cross-Account Roles:
+© Allow users in one AWS account to access resources in another.
+13. Temporary Security Credentials
++ IAM roles issue short-lived credentials via:
+© AWS Security Token Service (STS).
+© Used for:
+*  Cross-account access.
+« Federation with external IdPs.
++ AWS services assuming roles.
+14. Federation and SSO
+* IAM supports integration with external identity providers:
+o SAML 2.0 (eg, Active Directory, Okta).
+© OIDC (eg, Google).
+o AWS SSO (now AWS IAM Identity Center).
+* Enables single sign-on for accessing AWS Console or CLI.
+15. AWS Managed Policies vs Customer Managed Policies
++ AWS Managed Policies:
+© Pre-built by AWS.
+© Easy to use, less customizable.
+‘Automatically updated by AWS.
+* Customer Managed Policies:
+© Fully customizable.
+
+© Created and maintained by your organization.
+

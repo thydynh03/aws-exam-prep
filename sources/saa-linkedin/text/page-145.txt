@@ -1,0 +1,44 @@
+144
+
+* Composite alarms to combine multiple alarms with AND/OR logic
+Dashboards
+
+* Customizable views of metrics and logs in a single interface
+
+* Supports text, metric graphs, and log queries
+
+* Can include data from multiple regions and accounts
+
+* _JSON-based dashboard definitions for automation
+Events (EventBridge Integration)
+
+* CloudWatch Events is now Amazon EventBridge
+
+* Delivers system events describing changes in AWS resources
+
++ Allows setting up rules to match events and trigger targets like Lambda, SNS, or Step
+Functions
+
+* Supports scheduled (cron) events for automated tasks
+CloudWatch Synthetics
++ Allows creation of canaries to monitor application endpoints and APIs
+* Simulates user interactions to check availability and latency
+* Captures screenshots, logs, and metrics for detailed analysis
+CloudWatch Contributor Insights
+* Analyses time-series log data to identify top contributors
+* Helps troubleshoot high-cardinality issues like top talkers or top error sources
++ Real-time and historic analysis supported
+CloudWatch ServiceLens
+* Integrates metrics, logs, and traces for end-to-end observability
++ Visualizes service maps and dependencies
+«Integrates with AWS X-Ray for distributed tracing
+Helps identify bottlenecks and performance issues across microservices
+Retention and Storage
+© Metrics retained for 15 months (granularity varies by age)
+* Logs retention configurable from days to indefinite
+* Log archives can be exported to $3
+Security
++ IAM policies to control access to CloudWatch resources
+
++ Data encrypted at rest and in transit
+

@@ -1,0 +1,36 @@
+Security
+* IAM policies for domain-level access control
+*  Fine-grained access control using OpenSearch security plugin
+© Cognito integration for user authentication to dashboards
+* Encryption at rest using AWS KMS
+* Node-to-node encryption for secure cluster communication
+« HTTPS for data in transit
+* VPC support for private network connectivity
+Monitoring and Logging
+* Integrated with Amazon CloudWatch for metrics and alarms
++ Detailed logs to CloudWatch Logs
+© Slow logs for indexing and search performance analysis
+© Audit logs for security compliance
+* AWS CloudTrail for API call logging
+Data Ingestion
+* Supports ingesting data via:
+o Amazon Kinesis Data Firehose
+© Logstash
+o Fluentd
+Beats
+© Custom ingestion pipelines
+* Supports OpenSearch ingest nodes for processing data on ingestion
+Querying and Analytics
+* Powerful full-text search capabilities
+© Aggregations for analytics queries
+* SQL support for querying data
+* Piped Processing Language (PPL) for easier queries
++ OpenSearch Dashboards for visualizing data
+Integrations
+* Amazon CloudWatch for monitoring and alerts
+* AWS Kinesis Data Firehose for streaming ingestion
+
+* AWS Lambda for serverless ingestion pipelines
+
+31
+

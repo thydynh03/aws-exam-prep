@@ -1,0 +1,56 @@
+Service Integrations
+
+AWS Lambda for serverless tasks
+AWS Batch for container-based jobs
+
+AWS Glue for ETL workflows
+
+‘Amazon ECS and Fargate for container execution
+Amazon SageMaker for machine learning workflows
+SNS, SQS for messaging and queuing
+
+DynamoDB, $3 for data manipulation
+
+AWS API Gateway for service calls
+
+AWS EventBridge for event-driven workflows
+
+Supports SDK integrations for direct AWS service API calls
+
+Error Handling and Retries
+
+Retry Policies: Define retry intervals and maximum attempts
+Catchers: Handle errors and redirect workflow paths
+
+Enables resilient and fault-tolerant workflows
+
+State Input and Output
+
+InputPath: Selects part of the input to pass to the state
+Parameters: Defines the parameters sent to the task
+ResultSelector: Transforms task results before output
+
+ResultPath: Specifies where to insert the result in the state output
+
+OutputPath: Filters the final output from the state
+
+Execution Management
+
+View execution history in AWS Console
+CloudWatch Logs for detailed execution traces
+Step Functions API for programmatic management of executions
+
+Supports synchronous and asynchronous executions
+
+Express Workflow Details
+
+Designed for high-volume, event-driven workloads
+Suitable for data processing pipelines, streaming analytics
+Supports thousands of executions per second
+
+Lower cost per execution compared to Standard Workflows
+
+Limited to 5-minute execution duration
+
+57
+

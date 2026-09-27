@@ -1,0 +1,36 @@
+235
+
+AWS Key Management ‘AWS KM:
+What itis
+«Fully managed service to create, control, and manage encryption keys.
+© Central service for encrypting data across AWS.
+* Integrated with most AWS services (e.g., $3, EBS, RDS, Lambda, SQS).
+Key Features
+* Customer Master Keys (CMKs):
+o Main resources in KMS.
+o Can be AWS-managed, customer-managed, or imported.
+© Define permissions with IAM policies and key policies.
++ AWS-managed keys:
+Simple, AWS handles everything,
+o Limited customization.
+*  Customer-managed keys (CMKs):
+o Fullcontrol over lifecycle, rotation, and permissions.
+o Audit via AWS CloudTrail.
+«Envelope Encryption:
+o Encrypts data keys with CMKs.
+o Improves performance for large-scale encryption.
++ Integrated with AWS CloudTrail:
+o Logs all key usage for auditing and compliance.
+«Import Your Own Keys:
+o For compliance/regulatory needs.
++ Multi-Region Keys:
+o Replicate CMKs across regions for global apps.
+How It Works
+«Apps call KMS API to encrypt/decrypt data or data keys.
+* KMS never exposes plaintext of CMKs.
+‘* Uses envelope encryption, data encrypted with data key, data key encrypted with CMK.
+Use Cases
+«Encrypt $3 objects (SSE-KMS).
+
+* Encrypt EBS volumes.
+

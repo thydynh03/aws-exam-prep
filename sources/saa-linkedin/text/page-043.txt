@@ -1,0 +1,22 @@
+© Noupfront fees.
+Integration
++ Works with AWS IAM, Cognito for auth.
+* Monitored via CloudWatch.
+* Can trigger Lambda for custom logic.
+Exam Tips
+* Managed GraphQL API service.
+* Supports real-time subscriptions.
+« Integrates with DynamoDB, Lambda, Aurora, HTTP APIs.
+* Great for apps needing real-time, offline, and unified data.
+«Alternative to API Gateway for GraphQL workloads.
+
+Quick Summary
+
+AWS AppSync streamlines API development by unifying data from multiple sources through
+a single GraphQL endpoint. With built-in real-time, offline, and security features, it's the ideal
+choice for modern, scalable apps that demand dynamic and responsive data
+
+interactions without heavy backend management.
+
+42
+

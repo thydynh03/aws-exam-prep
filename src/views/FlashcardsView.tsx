@@ -21,9 +21,9 @@ interface FlashcardsViewProps {
   initialDeckId?: string;
 }
 
-type DeckType = 'all' | 'services' | 'domains' | 'traps' | 'comparisons';
+type DeckType = 'all' | 'services' | 'domains' | 'traps' | 'comparisons' | 'handbook';
 
-const VALID_DECKS: DeckType[] = ['all', 'services', 'domains', 'traps', 'comparisons'];
+const VALID_DECKS: DeckType[] = ['all', 'services', 'domains', 'traps', 'comparisons', 'handbook'];
 
 export const FlashcardsView: React.FC<FlashcardsViewProps> = ({ onBackToHome, initialDeckId = 'all' }) => {
   const { t } = useLanguage();
@@ -156,6 +156,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({ onBackToHome, in
           { id: 'domains', label: t.flashcards.deckDomains, count: FLASHCARDS.filter((c) => c.deckId === 'domains').length },
           { id: 'traps', label: t.flashcards.deckTraps, count: FLASHCARDS.filter((c) => c.deckId === 'traps').length },
           { id: 'comparisons', label: t.flashcards.deckComparisons, count: FLASHCARDS.filter((c) => c.deckId === 'comparisons').length },
+          { id: 'handbook', label: t.flashcards.deckHandbook, count: FLASHCARDS.filter((c) => c.deckId === 'handbook').length },
         ].map((tab) => {
           const isActive = activeDeck === tab.id;
           return (

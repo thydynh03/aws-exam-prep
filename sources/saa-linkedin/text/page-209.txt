@@ -1,0 +1,44 @@
+208
+
+Amazon Elastic Load Balancer (ELB)
+What It Is
+
+Elastic Load Balancing automatically distributes incoming application traffic across multiple
+targets such as EC2 instances, containers, IP addresses, and Lambda functions. It improves
+availability, fault tolerance, and scalability. ELB is fully managed and supports automatic scaling
+and high availability across Availability Zones.
+
+‘Types of Load Balancers
+
+1. Classic Load Balancer (CLB)
+© Legacy option (EC2-Classic only, but still supported in VPC)
+© Operates at Layer 4 (TCP) and Layer 7 (HTTP/HTTPS)
+© Basic routing and health checks
+o Limited features compared to modern alternatives
+© Not recommended for new architectures
+
+2. Application Load Balancer (ALB)
+© Operates at Layer 7 (HTTP/HTTPS)
+© Advanced request routing (host-based, path-based routing)
+© Supports containerized applications with ECS
+© Can route to multiple target groups
+© Supports WebSocket and HTTP/2
+
+Integrated with AWS WAF for protection
+
+© Supports user authentication (OIDC, Cognito)
+
+3. Network Load Balancer (NLB)
+© Operates at Layer 4 (TCP, TLS, UDP)
+© Extremely high performance (millions of requests per second)
+© Static IP support and Elastic IPs
+© Preserves source IP for backend
+© Ideal for low latency and high throughput
+o TLS termination available
+© Supports IP addresses and AWS PrivateLink
+
+4. Gateway Load Balancer (GWLB)
+© Operates at Layer 3
+
+© Used to deploy, scale, and manage virtual appliances (firewalls, IDS/IPS)
+

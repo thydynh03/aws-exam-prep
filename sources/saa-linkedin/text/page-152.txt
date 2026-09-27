@@ -1,0 +1,43 @@
+151
+
+AWS r
+What It Is
+
+AWS Control Tower is a fully managed service that helps you set up and govern a secure, multi-
+account AWS environment based on AWS best practices. It automates account provisioning,
+applies governance controls, and streamlines compliance for multi-account AWS setups using a
+landing zone.
+
+Key Benefits
+* Automated landing zone setup for multi-account environments.
+* Applies guardrails for governance and compliance.
++ Simplifies account provisioning with Account Factory.
++ Integrates with AWS Organizations, AWS Config, Service Catalog, and CloudTrail.
+Enables centralized monitoring and policy enforcement.
+Core Concepts
+1, Landing Zone
+
+A preconfigured, secure AWS environment that follows AWS best practices for setting up new
+accounts. Includes:
+
+© Centralized logging.
+* Account structure (management, audit, and log archive accounts).
+© Networking configuration.
+* Security baselines.
+2. Account Factory
++ Atool within Control Tower to automate account creation and provisioning.
+* Uses AWS Service Catalog to provide account blueprints.
++ Customizes VPC configurations, AWS Region selections, and other settings.
+3. Guardrails
++ Predefined policies that enforce rules and monitor compliance.
+= Twotypes:
+
+o Preventive: Uses Service Control Policies (SCPs) to block actions that violate
+governance rules.
+
+Detective: Uses AWS Config rules to monitor compliance and alert on violations.
++ Examples:
+© Prevent use of unapproved regions.
+
+o Ensure CloudTrail is enabled.
+

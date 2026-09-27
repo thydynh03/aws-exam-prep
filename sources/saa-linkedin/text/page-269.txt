@@ -1,0 +1,36 @@
+268
+
+* Elastic Load Balancers (ALB/NLB)
+* EC2 instances (with Elastic IP)
+* AWS Global Infrastructure
+Pricing
+* Shield Standard: Free, automatic for all customers.
+«Shield Advanced: Monthly fee per protected resource + additional data transfer fees.
+Security and Compliance
+* Protects mission-critical apps from downtime and degraded performance due to DDoS.
+* Helps meet compliance requirements for resilience and uptime.
+AWS Shield vs AWS WAF
++ AWS Shield: DDoS protection (Layer 3/4 + some Layer 7).
+«AWS WAF: Custom rules for Layer 7 (HTTP/S) filtering.
+* Often used together:
+o Shield for DDoS mitigation.
+o WAF for fine-grained application-layer security.
+Use Cases
+* Protect public-facing web apps from DDoS attacks.
+«Maintain high availability during attack attempts.
++ Reduce operational risk and cost from DDoS incidents.
+* Meet compliance standards for uptime and security.
+Exam Tips
++ Shield Standard is always on and free for AWS customers.
+* Shield Advanced provides:
+© 24/7 AWS DDoS Response Team access.
+o Enhanced, customizable protections.
+© DDoS cost protection.
+© Detailed attack diagnostics.
+* Combine AWS WAF + Shield Advanced for best Layer 7 protection.
+Quick Summary
+
+AWS Shield is a managed DDoS protection service with two levels: Shield Standard (free,
+automatic protection) and Shield Advanced (paid, enhanced protection with expert support and
+cost safeguards).
+

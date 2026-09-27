@@ -1,0 +1,57 @@
+171
+
+Use Cases
+
+Large organization wants to standardize infrastructure for developers; teams can only
+deploy approved stacks with preset configurations ~ Use Service Catalog.
+
+You want self-service provisioning by developers but still enforce governance (tagging
+policies, resource types, network configurations) > Use Service Catalog.
+
+Multi-account architecture: Central team shares portfolios into multiple accounts; each
+account uses same approved products — Service Catalog supports cross-account
+sharing.
+
+‘Track and manage application metadata across multiple stacks and accounts with
+AppRegistry integration + Service Catalog + AppRegistry.
+
+Best Practices
+
+Define clear portfolios aligned with environments (dev/test/prod) and user roles.
+
+Use launch constraints and template constraints to restrict parameters (e.g., instance
+
+type, storage size) so you maintain cost control and compliance.
+
+Use versioning for product templates: when an update is needed, create new version,
+mark old inactive, migrate existing instances carefully.
+
+Integrate with tagging strategy: when launching a product, tags from portfolio should
+propagate into all underlying resources for tracking and cost allocation.
+
+Combine with automation: Use CloudFormation templates for products, integrate
+Service Catalog into CI/CD so updates go through code and review.
+
+Monitor usage of products, ensure resources spun via Service Catalog follow policies
+(cost, security).
+
+Exam Tips
+
+Differentiate from simple CloudFormation: While CloudFormation defines
+infrastructure, Service Catalog manages distribution and governance of those defined
+infrastructures.
+
+Recognize key terms: Product, Portfolio, Version, Constraints, Provisioned Product.
+
+If question involves mu/ti-account distribution of standard stacks, Service Catalog is a
+strong candidate.
+
+Quick Summary
+
+AWS Service Catalog allows you to create, manage and distribute a curated set of infrastructure
+products (via CloudFormation templates) so that developers or end-users can deploy what they
+need, but only what you've approved and configured. Think of it as a governed store of
+architecture blueprints: you get consistency, control, compliance; developers get self-service. On
+the SAA exam: when you see self-service provisioning + standardization + guardrails, the
+answer often points to Service Catalog.
+

@@ -1,0 +1,37 @@
+206
+
+Link Aggregation Groups (LAG)
+* Combine multiple connections (same speed) into a single managed connection
+* Supports increased bandwidth and redundancy
+* Upto 4 connections in a single LAG
++ Managed as a single interface
+Redundancy and Resiliency
+* AWS recommends establishing redundant connections for high availability
+* Multiple Direct Connect locations can be used for failover
+
++ Integrated with AWS VPN for hybrid architectures that need failover over the public
+internet
+
+* AWS SLA applies when using recommended redundant configurations
+Direct Connect Gateway
+* Enables connections to multiple VPCs across AWS Regions (except China)
+* Supports global access using a single Direct Connect connection
+«Simplifies network management in multi-Region, multi-VPC environments
+Billing and Pricing
++ Port-hour charges based on speed of connection
+Data transfer out charges, typically lower than internet-based data transfer
+* No charge for inbound data transfer
++ LAG billed as aggregated port hours
+Use Cases
+© High-volume data transfers such as backups, migrations, and analytics workloads
+* Hybrid cloud deployments requiring consistent and secure connectivity
+© Low-latency applications such as financial trading, gaming, or media
+* Private access to AWS resources without traversing the internet
+*  Multi-Region VPC connectivity using Direct Connect Gateway
+Security
+* Traffic does not traverse the public internet, reducing exposure to attacks
+* Supports MACsec (Media Access Control Security) for encryption on supported ports
+* Can integrate with AWS VPN for encrypted connections over public networks
+
+© Works with IAM for permission management and auditing
+

@@ -1,0 +1,36 @@
+60
+
+AWS Management
+What It Is
+
+AWS offers a suite of tools that help you track, estimate, forecast, optimize, and alert on your
+cloud spending. These tools are essential for cost visibility, control, budgeting, and savings.
+
+1, AWS Pricing Calculator
+‘* Helps estimate monthly AWS costs before deploying.
+«Supports EC2, $3, RDS, and many other services.
+‘* Useful for planning and cost comparisons.
+¢ Results can be exported and shared.
+2, AWS Free Tier
+* Offers free usage of AWS services:
+o 12-month free tier: EC2, S3, RDS, etc.
+o Always free tier: IAM, DynamoDB, Lambda (limited usage).
+* Helps users explore AWS at no cost.
+* Usage tracked in Billing Dashboard to avoid unexpected charges.
+3, AWS Billing and Cost Management Dashboard
++ Central place to:
+o View and download billing and usage reports.
+© Set budgets and alerts.
+o Manage payment methods and invoices.
+© Monitor free tier usage.
+© Access Cost Explorer, CUR, and Budgets.
+4, AWS Budgets
++ Set spending and usage limits, with alerts triggered when thresholds are breached.
++ Types of budgets:
+o Cost Budgets - Monitor total spend.
+o Usage Budgets - Track units (e.g., hours, GB).
+© RI/Savings Plans Budgets - Monitor coverage and utilization.
+Supports notifications via SNS or AWS Chatbot.
+
+Can trigger automated actions like shutting down resources.
+

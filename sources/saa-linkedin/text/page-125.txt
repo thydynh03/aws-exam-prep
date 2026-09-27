@@ -1,0 +1,53 @@
+AWS Step Functions: Can propagate trace context between steps
+
+Sampling
+
+Reduces overhead by only tracing a subset of requests
+Default rate of 1 request per second with 5% of additional requests
+Configurable sampling rules per service or endpoint
+
+Ensures consistent visibility without excessive cost
+
+Security and Permissions
+
+IAM policies control access to X-Ray APIs and data
+Data is encrypted in transit using TLS
+
+Data is encrypted at rest in the X-Ray service
+
+Storage and Retention
+
+Trace data retained by AWS X-Ray for 30 days
+No need to manage storage infrastructure
+
+Pay only for traces recorded and analysed
+
+Analysis and Troubleshooting
+
+Service Map: Visual representation of request flow between services
+Trace Timeline: Breaks down request duration by segment and subsegment
+Error and Fault Analysis: Highlights errors, exceptions, and timeouts
+
+Filter Expressions: Search traces by annotation, service, or error type
+
+Insights: Automated root cause analysis of anomalies
+
+124
+
+Free tier: 100,000 traces recorded and 1,000,000 traces retrieved or scanned per month
+
+for the first three months
+Pricing based on traces recorded and retrieved beyond free tier
+
+No cost for integrating X-Ray SDK or agent
+
+Use Cases
+
+Debugging production issues in microservices architectures
+Analysing and improving application performance
+Identifying latency bottlenecks across services
+
+Tracing user requests end-to-end across distributed systems
+
+Compliance and audit of service interactions
+

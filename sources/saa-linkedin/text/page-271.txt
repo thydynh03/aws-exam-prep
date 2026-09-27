@@ -1,0 +1,38 @@
+5, Custom Responses
+Return custom error pages or messages when blocking traffic.
+6, Logging and Metrics
+* Detailed request logs sent to Amazon Kinesis Data Firehose.
+« Integration with CloudWatch Metrics and Alarms.
+Pricing:
+© Pay for:
+o Web ACLs.
+o Number ofrules per ACL.
+o Number of requests processed.
+Security and Compliance:
+* Helps meet PCI DSS, GDPR, and other compliance requirements.
+* Protects against OWASP Top 10 threats.
+Use Cases:
+* Blocking common web exploits like SQL injection and cross-site scripting.
++ Limiting request rates to prevent DDoS or scraping.
+Allowing or blocking traffic from specific geographies.
+* Integrating with CloudFront for global edge protection.
+* Protecting APIs hosted on API Gateway or AppSync.
+AWS WAF vs AWS Shield
+* AWS WAR: Protects at the application layer (Layer 7) with custom rules.
++ AWS Shield: Protects against DDoS attacks.
+
+o Shield Standard = automatic protection, free.
+
+© Shield Advanced = additional DDoS protection and response team access.
+
+Exam Tips:
+* AWS WAF protects web apps at Layer 7.
+* Attach WAF Web ACLs to CloudFront, ALB, API Gateway, App Runner, AppSync.
+* Use Managed Rule Groups for easy protection.
++ Rate-based rules to throttle or block abusive IPs.
+* Logging via Kinesis Firehose, metrics via CloudWatch.
+
++ Often used with AWS Shield and AWS Firewall Manager for complete protection.
+
+270
+

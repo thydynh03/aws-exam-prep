@@ -1,0 +1,48 @@
+Specifies Docker images, CPU, memory, networking, IAM roles, environment
+variables
+
+°
+
+Supports multiple containers (sidecars) in a single task
+
+°
+
+«Task
+
+Instantiation of a Task Definition
+
+°
+
+°
+
+Runs on an EC2 instance or Fargate
+Services
+© Manage long-running tasks
+* Maintain desired count of running tasks
+* Supports rolling updates and blue/green deployments (with AWS CodeDeploy)
++ Integrated with Elastic Load Balancing for distributing traffic
+© Auto-scaling support based on CloudWatch metrics
+Capacity Providers
++ Define how ECS runs tasks across launch types (EC2, Fargate)
+© Manage scaling policies and capacity weighting
+* Supports EC2 Spot instances for cost optimization
+Networking
+* Integrated with Amazon VPC
+Supports awsvpe networking mode for task-level ENIs
+© Security Groups and NACLs for controlling traffic
+* Load balancing using ALB, NLB, or CLB
+Storage
+* Supports Amazon EFS integration for persistent, shared storage
+* Data volumes defined in task definitions
++ Ephemeral storage for scratch space
+Monitoring and Logging
+* Integrated with Amazon CloudWatch Logs
+* Collect and view container logs
+* CloudWatch metrics for CPU, memory usage, and custom metrics
+«AWS X-Ray integration for tracing
+Security
+
+* IAM roles for tasks, services, and cluster management
+
+86
+

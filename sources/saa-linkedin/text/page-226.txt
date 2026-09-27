@@ -1,0 +1,41 @@
+225
+
+Use Cases
+
+* Hosting secure, scalable applications in isolated network environments
+
+* Hybrid cloud networking with on-premises data centres
+
+© Multi-VPC architectures with centralized routing via Transit Gateway
+
+« Providing private access to AWS services with PrivateLink
+
+* Securely exposing internal services to partners via VPC endpoints
+Exam Tips
+
+* Internet Gateway required for internet access in public subnets
+
+* NAT Gateway enables private subnet instances to reach the internet
+
++ Security Groups are stateful, NACLs are stateless
+
+«VPC Peering does not support transitive routing
+
++ Transit Gateway enables hub-and-spoke architectures with transitive routing
+
+*  PrivateLink provides private connectivity to AWS and partner services
+
+* Flow Logs help monitor and troubleshoot traffic flows
+
+* Interface Endpoints connect to services over PrivateLink; Gateway Endpoints for $3 and
+
+DynamoDB
++ IPv6 support is built-in without NAT requirements for internet access
+
+Quick Summary
+
+Amazon VPC gives you full control over your virtual networking in AWS, including IP ranges,
+subnets, route tables, gateways, and security controls. It enables you to securely connect
+resources within AWS and to on-premises networks, while providing powerful tools for
+managing traffic, access, and compliance.
+

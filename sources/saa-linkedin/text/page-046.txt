@@ -1,0 +1,39 @@
++ Enables seamless integration with third-party systems.
+Key Features
+© Fully managed: No servers to manage or scale.
++ Near real-time event delivery.
+© Highly scalable and reliable.
+* Integrates with over 200 AWS services.
+* Supports event filtering, transformation, and routing.
+Use Cases
+© Application decoupling with event-driven architecture.
++ Real-time notifications and automation.
+* Integrating AWS services with SaaS providers.
+* Auditing and compliance through event archiving.
+* Triggering workflows in response to resource changes.
+Pricing
+* Charged per event published and event matched.
++ Separate charges for archived events and replays.
++ Free tier available with millions of free events per month.
+EventBridge vs SNS
++ SNS:
+© Simple pub/sub with push delivery.
+© Broad, unfiltered delivery to subscribers.
++ EventBridge:
+© Advanced filtering and routing rules.
+Supports SaaS integration and schema registry.
+
+© Event archive and replay.
+
+© Designed for event-driven application architecture.
+
+Exam Tips
+« Default Event Bus = AWS service events.
++ Custom Event Bus = your apps’ events.
++ Partner Event Bus = SaaS provider events.
+Rules filter events and route to targets.
+
++ Supports multiple targets per rule.
+
+45
+

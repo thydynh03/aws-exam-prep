@@ -1,0 +1,37 @@
+250
+
+AWS TAM
+What It Is
+
+* AWS Identity and Access Management (IAM) is a global AWS service that enables you to
+securely control access to AWS services and resources.
+
+* Used to authenticate (who) and authorize (what they can do) in your AWS account.
+Key IAM Concepts
+1, IAM Users
++ Represents individual people or applications.
+* Has credentials (passwords, access keys) for AWS access.
++ Canbe assigned permissions directly or via groups.
+2. 1AM Groups
++ Collection of users.
+* Attach policies to a group to grant permissions to all members.
+‘+ Simplifies permission management for multiple users.
+3. 1AM Roles
+* Temporary credentials for AWS resources or users.
+«Used for:
+o EC2 instances accessing AWS services.
+© Cross-account access.
+o AWS services assuming roles.
+o Federated users via SAML, OIDC, or custom identity providers.
++ Nolong-term credentials.
+4, IAM Policies
+«JSON documents defining permissions.
+* Attached to users, groups, or roles.
++ Types:
+o Managed Policies:
++ AWS-managed (created/maintained by AWS).
+= Customer-managed (created by you).
+o Inline Policies:
+
++ Embedded directly in a user, group, or role.
+

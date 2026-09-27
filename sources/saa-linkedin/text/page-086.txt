@@ -1,0 +1,39 @@
+85
+
+Amazon El; ntainer (Amazon Et
+
+What It Is
+
+Amazon ECS is a fully managed container orchestration service that makes it easy to deploy,
+manage, and scale containerized applications using Docker: It eliminates the need to install and
+operate your own container orchestration software or manage clusters of virtual machines.
+
+Key Features
++ Fully managed and scalable container orchestration
+«Supports Docker containers
+* Deep integration with AWS services (IAM, CloudWatch, VPC, ALB, Service Discovery)
+«Runs on EC2 instances or AWS Fargate for serverless containers
+‘+ Supports Windows and Linux workloads
+«Integrated service discovery using AWS Cloud Map
+* Rolling updates and deployment controls
+«Task placement strategies and constraints
+Launch Types
+* EC2 Launch Type
+Run container workloads on a cluster of EC2 instances you manage
+© Fullcontrol over instance types, AMIs, networking
+© Suitable for predictable, steady workloads
+«  Fargate Launch Type
+© Serverless, no EC2 management
+o Specify CPU and memory at the task level
+o AWS manages provisioning, scaling, patching
+o Ideal for variable or bursty workloads
+Clusters
+‘© Logical grouping of tasks or services
+* Can include EC2 instances with ECS agent installed
+* Managed using ECS Console, CLI, or API
+* Integrated with AWS CloudFormation for infrastructure as code
+Tasks and Task Definitions
+* Task Definition
+
+© Blueprint for running containers
+

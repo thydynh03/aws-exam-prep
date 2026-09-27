@@ -1,0 +1,32 @@
+257
+
+Key Benefits
+«Fully managed, no infrastructure to deploy.
+* Helps meet compliance requirements (GDPR, HIPAA, PCI DSS).
+«Reduces risk of unintentional data exposure.
+* Supports multi-account management via AWS Organizations.
+Pricing
++ Pay-as-you-go pricing:
+o Based on $3 buckets evaluated.
+© Volume of data processed for sensitive data discovery.
+* Noupfront costs.
+Use Cases
++ Identifying sensitive data stored in S3 buckets.
++ Monitoring $3 buckets for public access or sharing.
+* Enforcing data security policies.
+* Supporting compliance audits with automated reporting.
+Security & Compliance
+«Helps maintain data privacy standards.
+«Integrates with AWS Organizations for multi-account governance.
++ Supports Cloud'Trail logging for full auditing.
+Exam Tips
+* Amazon Macie = $3 data discovery and classification.
+* Detects PII and sensitive data automatically using ML.
+«Evaluates $3 bucket permissions for public or cross-account access.
+« Integrates with Security Hub, EventBridge, CloudWatch.
+«Supports custom data identifiers for specific patterns.
+Quick Summary
+
+‘Amazon Macie is a fully managed service that automatically discovers, classifies, and protects
+sensitive data in $3 using machine learning, helping ensure privacy, security, and compliance
+

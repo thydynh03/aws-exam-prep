@@ -1,0 +1,55 @@
+AWS rity Hi
+What It Is
+
+265
+
+* Centralized security service that aggregates, organizes, and prioritizes security findings
+
+from multiple AWS services and partner tools.
+
++ Provides a single pane of glass for your AWS security posture.
+Key Features
+1. Aggregated Security Findings
+* Collects findings from:
+o AWS services (e.g, GuardDuty, Inspector, Macie, Firewall Manager).
+AWS Partner solutions (third-party security tools).
+
+*  Normalizes findings into a standard format for easy analysis.
+2. Security Standards & Best Practices
+* Built-in security standards to assess AWS resources:
+
+© CIS AWS Foundations Benchmark.
+
+°
+
+© AWS Foundational Security Best Practices.
+o PCI DSS v3.2.1 standard.
+
+* Runs automated checks against these standards.
+
+* Generates findings for non-compliant resources.
+
+3. Consolidated Dashboard
+
++ Central view of:
+
+°
+
+Active findings.
+© Compliance status.
+© Historical trends.
+Easy filtering and sorting.
+4. Automated Response and Remediation
+Integrates with AWS EventBridge.
+
+‘ion workflows.
+
+* Supports building custom remedia
+«Example: Auto-remediate non-compliant security groups.
+
+5. Cross-Account & Multi-Region Aggregation
+
+* View findings from multiple AWS accounts and regions in one place.
+
+* Central security operations across an AWS Organization.
+

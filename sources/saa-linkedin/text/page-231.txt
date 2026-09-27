@@ -1,0 +1,26 @@
+230
+
+Continuous compliance monitoring across AWS accounts
+Supporting internal security and risk assessments
+
+Streamlining third-party auditor reviews with organized evidence
+
+Exam Tips
+
+AWS Audit Manager automates evidence collection for compliance audits
+Supports both prebuilt and custom frameworks
+
+Integrates with AWS services like CloudTrail, Config, and Security Hub
+Evidence is securely collected, time-stamped, and exportable
+
+Helps maintain continuous compliance readiness rather than one-time audits
+Supports multi-account environments through AWS Organizations
+
+1AM controls and KMS integration ensure secure access and encryption
+
+Quick Summary
+
+AWS Audit Manager helps AWS customers simplify compliance and audit processes by
+automating evidence collection, supporting standard and custom frameworks, and maintaining
+continuous audit readiness with secure, organized, and exportable evidence.
+

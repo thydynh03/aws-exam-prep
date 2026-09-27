@@ -1,0 +1,54 @@
+205
+
+AWS Direct Connect
+
+What It Is
+
+AWS Direct Connect is a cloud service solution that establishes a dedicated, private network
+connection between your on-premises data centre or office and AWS. It reduces network costs,
+increases bandwidth throughput, and provides a more consistent network experience compared
+to internet-based connections.
+
+Key Features
+
+Provides dedicated network connectivity from on-premises to AWS
+Reduces network variability and improves performance with low latency
+
+Supports high-bandwidth workloads by offering port speeds from 50 Mbps up to 100
+Gbps
+
+Traffic does not traverse the public internet, enhancing security
+
+Integrated with AWS Virtual Private Cloud (VPC) via Virtual Interfaces (VIFs)
+
+Connection Types
+
+Dedicated Connections
+© Provisioned at 1, 10, or 100 Gbps
+© Ordered via AWS Management Console
+© Delivered at AWS Direct Connect locations
+Hosted Connections
+© Provisioned by AWS Direct Connect Partners
+© Available from 50 Mbps to 10 Gbps
+
+© Useful for faster provisioning without needing to manage physical hardware
+
+Virtual Interfaces (VIFs)
+
+Private VIF
+
+© Connects to VPC via Virtual Private Gateway or Transit Gateway
+
+© Used for accessing private AWS resources
+Public VIF
+
+© Provides access to all AWS public services using AWS public IP addresses
+
+Supports access to services like $3, DynamoDB, or AWS public endpoints
+
+Transit VIF
+
+© Connects to AWS Transit Gateway for managing multiple VPC connections
+
+© Supports scalable, hub-and-spoke architectures
+

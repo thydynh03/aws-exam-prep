@@ -1,0 +1,46 @@
+172
+
+AWS ms Man:
+What It Is:
+
+*  Acentralized operations hub to manage infrastructure and systems on AWS and on-
+premises.
+
+* Helps with automation, patching, inventory, monitoring, configuration, and remote
+command execution.
+
+Key Capabilities:
+1. SSM Agent
+
+* Installed on EC2 or on-prem machines.
+
+«Enables Systems Manager to communicate with the instance.
+2, Session Manager
+
+© Secure shell access (SSH-like) to EC2 instances without needing a bastion host or open
+ports.
+
+* Uses IAM permissions.
++ Fully auditable with CloudTrail and CloudWatch Logs.
+3, Run Command
+
+Run shell scripts or PowerShell commands across multiple EC2 or on-prem instances
+without logging in.
+
+* Requires SSM Agent and appropriate IAM permissions.
+4, Automation
+* Automate repetitive tasks like instance start/stop, patching, backups.
++ Use Automation Documents (runbooks) can be prebuilt or custom.
+5. Patch Manager
+* Automates OS patching for EC2 and on-prem.
+* You can set patch baselines and maintenance windows.
+6, Parameter Store
+© Store configuration data and secrets securely.
++ Supports plain text and encrypted (via KMS) values.
+* Used by Lambda, EC2, and other services for dynamic configuration.
+7. Inventory
+* Collect metadata from EC2/on-prem instances (e.g, installed apps, network config).
+* Helps with compliance and visibility.
+
+8, State Manager
+

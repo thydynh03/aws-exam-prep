@@ -1,0 +1,58 @@
+153
+
+Use Cases
+
+Pricing
+
+Establishing multi-account environments with best practices.
+Enforcing security baselines across multiple accounts.
+
+Centralized governance for enterprises and regulated environments.
+
+ing account provisioning for dev/test/prod environments.
+
+No additional cost for using AWS Control Tower.
+You pay for the underlying services it uses:
+
+© CloudTrail
+
+o AWS Config
+$3
+
+°
+
+o AWS Lambda
+
+© Other resources deployed by Control Tower
+
+Limitations
+
+Limited customization of SCPs and guardrails within the Control Tower console (can be
+extended manually).
+
+Guardrails only apply to accounts enrolled in Control Tower.
+Certain AWS Regions may not be supported.
+
+Some services may not be Control Tower-aware.
+
+Exam Tips
+
+Control Tower simplifies multi-account AWS governance by using landing zones,
+guardrails, and Account Factory.
+
+Guardrails are either preventive (SCPs) or detective (Config rules).
+Account Factory uses AWS Service Catalog for account provisioning.
+Logs and compliance data are centrally stored in designated accounts.
+Works with AWS Organizations to manage multiple accounts.
+
+Know the three key accounts: Management, Audit, Log Archive.
+
+Use Customizations for Control Tower for advanced control and resource deployment.
+
+Quick Summary
+
+AWS Control Tower helps you build, manage, and govern a secure, multi-account AWS
+environment at scale using preconfigured landing zones, automated account provisioning, and
+governance guardrails. It streamlines compliance, centralizes logging, and integrates tightly with
+other AWS services like IAM Identity Center, AWS Organizations, and AWS Config.
+

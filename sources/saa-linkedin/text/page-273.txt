@@ -1,0 +1,56 @@
+* Supports secrets and environment variables with AWS Secrets Manager and SSM
+Parameter Store
+
++ Define logging configuration for CloudWatch Logs
+Networking
+
+* Uses AWS VPC networking (awsvpc mode)
+
++ Each task or pod gets its own ENI with private IP
+
+© Supports security groups and NACLs
+
++ Enables fine-grained network isolation between tasks or pods
+Security
+
++ IAM roles for tasks and pods provide fine-grained permissions
+
+Encryption of data at rest and in transit
+
+* Supports Secrets Manager and Parameter Store for managing secrets
+
+VPC integration ensures private networking
+
+* Supports AWS PrivateLink for secure access to AWS services
+Monitoring and Logging
+
+Integrated with Amazon CloudWatch for logs and metrics
+
++ Container-level logs pushed to CloudWatch Logs
+
+« ECS and EKS metrics available in CloudWatch
+
+«Integration with AWS X-Ray for tracing
+Scaling
+
+* Automatically scales tasks and pods based on demand
+
+* ECS Service Auto Scaling for task-based scaling policies
+
+* _EKS Horizontal Pod Autoscaler (HPA) for Kubernetes-based scaling
+
++ Per-task or per-pod resource allocation ensures efficient use of resources
+
+* Pay for vCPU and memory resources requested per second
+
+* Separate pricing for Fargate Spot capacity (discounted for interruption-tolerant
+workloads)
+
+* Additional charges for data transfer, load balancing, and storage
+Use Cases
+© Microservices architectures
+
++ Batch processing workloads
+
+272
+

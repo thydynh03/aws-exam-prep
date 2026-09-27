@@ -1,0 +1,35 @@
+* Additional cost for health checks and domain registration
+© Noextra cost for alias record queries to AWS endpoints
+Use Cases
++ Global DNS resolution for applications
+© High-availability websites using health checks and DNS failover
+*  Geolocation-based traffic distribution
++ Load balancing with weighted routing
+* Private DNS for internal VPC service discovery
+* Domain registration and management
+Exam Tips
+* Alias records enable apex domain routing to AWS resources
+* Weighted routing splits traffic proportionally across endpoints
++ Latency-based routing improves user experience with lower latency
+
+* Health checks can trigger DNS failover to backup endpoints
+
+218
+
+© Geolocation and geoproximity routing customize traffic targeting based on user location
+
+* Private hosted zones provide internal-only DNS resolution within VPCs
+
++ Route 53 integrates deeply with AWS services like ELB, CloudFront, and Global
+Accelerator
+
+© DNSSEC ensures integrity of DNS responses and prevents spoofing
+
+Quick Summary
+
+‘Amazon Route 53 is AWS's scalable and highly available DNS and domain registration service. It
+supports flexible routing policies, DNS failover with health checks, seamless AWS integration via
+
+alias records, and private DNS zones for VPCs, making it a critical component for resilient,
+globally distributed architectures.
+

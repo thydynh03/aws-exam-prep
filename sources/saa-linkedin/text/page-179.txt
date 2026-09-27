@@ -1,0 +1,58 @@
+178
+
+Lenses
+
+Extend the framework with additional guidance for specific workload types or
+industries
+
+AWS provides lenses for Serverless, SaaS, Machine Learning, loT, and more
+Custom lenses can be created for organization-specific standards
+
+Lenses add additional questions and best practices beyond the core framework
+
+Integration with AWS Services
+
+AWS Organizations integration for sharing workload reviews across accounts
+
+AWS Service Catalog integration to ensure workloads meet Well-Architected standards
+before deployment
+
+Can use AWS IAM for fine-grained permissions to control access to workload reviews
+
+Reporting and Tracking
+
+Stores all reviews and improvements in the AWS account
+Offers comparison over time to track progress
+Can download reports in PDF format for audits and internal reviews
+
+Highlights trends in risk status and completed improvements
+
+Security and Access Control
+
+Uses AWS IAM for managing user permissions
+Supports resource-level permissions for controlling who can view or modify reviews
+
+All data is encrypted in transit and at rest using AWS encryption standards
+
+Pricing
+
+Free to use within the AWS Management Console
+
+Improvement plans may recommend using other AWS services that have separate costs
+
+Use Cases
+
+Conducting design and architecture reviews for workloads
+Identifying risks before production deployment
+
+Auditing existing workloads for compliance with best practices
+Standardizing architecture review processes across teams
+
+Supporting migration readiness assessments
+
+Best Practices
+
+Review workloads early and often, especially before production deployment
+
+Involve cross-functional teams (developers, architects, security, operations) in reviews
+

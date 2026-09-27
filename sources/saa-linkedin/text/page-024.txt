@@ -1,0 +1,38 @@
+23
+
+© Video-enabled loT devices
+© Machine learning on video data
+Data Retention and Replay
++ Kinesis Data Streams
+© Retains data for 24 hours by default, configurable up to 7 days.
+© Allows reprocessing of older data (replay capability).
+* Firehose:
+© Does not store data, delivers directly to destinations.
+Security
+* Supports Server-Side Encryption (SSE) using AWS KMS.
++ IAM policies control access to streams, Firehose delivery streams, analytics applications.
+* VPC endpoints available for private access.
+Scaling
++ Kinesis Data Streams:
+© Scale by adding/removing shards.
+© Resharding supported (split/merge).
+© On-Demand mode for automatic scaling.
++ Firehose:
+© Fully managed, auto-scales.
++ Data Analytics:
+© Managed scaling, charges based on processing units (KPU).
+Pricing
+
++ Based on:
+
+°
+
+Number of shards (KDS)
+
+© PUT payload units
+
+© Data volume delivered (Firehose)
+© Processing units (Analytics)
+
+© Video streaming duration and storage
+

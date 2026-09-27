@@ -1,0 +1,60 @@
+115
+
+Performance and Scalability
+
+Serverless design with no provisioning required
+Auto-scales to support variable workloads
+Supports high availability by replicating data across multiple AZs
+
+ACID transactions ensure consistency and reliability
+
+Integration with AWS Services
+
+AWS Identity and Access Management (IAM) for user and permission management
+AWS Key Management Service (KMS) for encryption at rest
+
+Amazon CloudWatch for monitoring metrics and setting alarms
+
+AWS CloudTrail for logging API calls and tracking changes
+
+AWS Lambda for serverless triggers and event processing
+
+Security
+
+Encryption at rest using AWS KMS-managed keys
+
+Encryption in transit using TLS
+
+Fine-grained access control using IAM policies
+
+Data is replicated for durability and availability across multiple AZs
+
+‘Audit logging and API monitoring with CloudTrail
+
+Backups and Availability
+
+‘Automatic replication across Availability Zones for high availability
+Journal data is always durable and cannot be deleted
+
+Snapshots can be exported to Amazon $3 for backup or analysis
+
+Use Cases
+
+Financial transactions and audit trails
+
+Supply chain management and tracking
+
+Insurance claim processing with full history
+
+Registries of assets such as vehicle or property ownership
+
+Systems of record requiring immutability and traceability without decentralization
+
+Advantages over Blockchain
+
+Centralized ledger with no need for consensus algorithms or peer nodes
+No complex network or distributed governance required
+Same cryptographic integrity guarantees as blockchain
+
+Easier to manage and operate for single-party or regulated environments
+

@@ -1,0 +1,37 @@
+243
+
++ Advantages:
+o Simple to set up.
+© Cost-effective, no AD infrastructure to manage in AWS.
+* Limitations:
+© Requires reliable network connectivity to on-premises AD.
+3, Simple AD
+
+* Standalone, AWS-managed directory based on Samba 4 Active Directory Compatible
+Server.
+
+* Inexpensive option for smaller workloads.
+* Supports basic AD features:
+o User and group management.
+o Kerberos-based SSO.
+Limitations:
+© Notas feature-rich as AWS Managed Microsoft AD.
+o No support for trust relationships.
++ Two sizes:
+o Small: up to 500 users.
+o Large: up to 5,000 users.
+Integration with AWS Services
+* Amazon WorkSpaces:
+o Integrates for user authentication.
+* Amazon WorkDocs:
+© Use existing AD users and groups.
+* Amazon WorkMail:
+© Native integration with AWS Managed Microsoft AD.
++ EC2 Windows Instances:
+© Domain join support.
++ AWS Single Sign-On (SSO):
+© Use Directory Service as an identity source.
+Security
++ AWS Managed Microsoft AD:
+© Multi-AZ deployment for high availability.
+

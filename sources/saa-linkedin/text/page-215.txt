@@ -1,0 +1,65 @@
+Pricing
+
++ Based on:
+
+°
+
+Use Cases
+
+Fixed monthly fee per accelerator.
+
+Data transfer costs:
+
+214
+
++ Accelerated data transfer (traffic routed over AWS backbone).
+
++ Non-accelerated traffic (standard internet path).
+
+* Global web applications needing low latency and high availability.
+
++ Disaster recovery setups needing quick failover across regions.
+
+© Gaming applications with real-time networking requirements.
+
++ loT applications needing predictable latency.
+
+* Moving to multi-region architecture with seamless failover.
+
+*  Blue/green deployments with controlled traffic shifting.
+
+Security
+
+* Integrates with AWS Shield Standard for DDoS protection (included).
+
++ AWS WAF can be used with ALB/NLB behind Global Accelerator.
+
+Static IP addresses simplify firewall whitelisting and client configurations.
+
+* Supports AWS Certificate Manager (ACM) for SSL/TLS certificates at the ALB/NLB layer.
+
+Comparison with CloudFront
+Feature ‘AWS Global Accelerator ‘Amazon CloudFront
+Primary Use | Improving performance and Content Delivery Network (CDN)
+
+availability of global applications
+with static IP and intelligent routing.
+
+for caching and distributing
+static/dynamic content.
+
+Caching No caching. Edge caching for content.
+
+Static IPs Yes. No.
+
+Protocol TCP and UDP. HTTP and HTTPS only.
+
+Support
+
+Routing Routes at L4 (network layer) to AWS | Routes at L7 (application layer) to
+endpoints. content origins.
+
+Latency Via AWS private backbone and Via edge caching close to users.
+
+Improvement _| intelligent routing.
+

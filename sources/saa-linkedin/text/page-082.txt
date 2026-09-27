@@ -1,0 +1,71 @@
+81
+
+Compute
+
++ EC2 instance families vary by carrier/location
++ Supports running containers via ECS/EKS
++ Ideal for workloads requiring high compute + low latency
+
+Use Cases
+
++ Real-time gaming and game streaming
+* AR/VR applications
+
++ Autonomous systems & robotics control
++ Live video analytics
+
++ ML inference at the edge
+
++ Smart cities & IoT backends
+
++ Telemedicine, remote monitoring
+
++ Connected vehicles (V2X)
+
+Security
+
++ Uses AWS IAM, KMS, SGs, NACLs, same as standard Region
++ VPC isolation for Wavelength subnets
+
++ All communication to parent Region secured over AWS backbone
+
++ No internet gateway inside Wavelength, use Carrier Gateway instead
+Pricing
+
+* Pay for:
+
+- EC2 instance usage in Wavelength Zones
+
+- EBS storage attached
+
+Data transfer from Wavelength — parent Region
+
++ No extra surcharge for using Wavelength Zones
+
+Deployment Flow
+
+1. Create VPC in the associated AWS Region
+
+2. Add Wavelength Zone subnets
+
+3. Deploy EC2 / ECS / EKS workloads into those subnets
+. Attach NLB for mobile user traffic
+
+Route mobile traffic via Carrier Gateway
+
+ao Pp
+
+Monitor with CloudWatch
+Exam Tips
+
++ Wavelength = AWS at the edge of SG networks
++ Wavelength Zones use Carrier Gateways, not Internet Gateways
++ Compute available: EC2, ECS, EKS
+
+Quick Summary
+
+AWS Wavelength extends AWS infrastructure directly into 5G networks, enabling developers to
+deploy compute and storage close to mobile users. It provides single-digit millisecond latency,
+consistent AWS tooling, and deep VPC integration through Wavelength Zones, perfect for real-
+time, mobile-heavy, edge-driven applications like AR/VR, gaming, analytics, and loT.
+

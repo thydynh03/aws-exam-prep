@@ -1,0 +1,58 @@
+162
+
+Amazon Managed Service for Prometheus
+
+What It Is
+
+‘Amazon Managed Service for Prometheus (AMP) is a fully managed, highly available, and secure
+monitoring service that is compatible with open-source Prometheus. It lets you collect, store,
+and query operational metrics at scale without managing the underlying infrastructure.
+
+Key Features
+
+Fully managed, serverless, and automatically scalable
+
+Prometheus-compatible querying using PromQL
+
+High availability across multiple Availability Zones
+
+Integrated with AWS security services like [AM and AWS PrivateLink
+
+Secure data encryption at rest and in transit using AWS KMS
+
+Supports AWS native services for metric collection (e.g., Amazon EKS, ECS, EC2)
+
+Pay-as-you-go pricing with no upfront costs
+
+Prometheus Compatibility
+
+Works with open-source Prometheus clients and tools
+Supports remote write for sending metrics from existing Prometheus servers
+Allows using PromQL for querying metrics
+
+Compatible with existing Prometheus exporters and instrumentation libraries
+
+Data Ingestion and Storage
+
+Supports remote write API for pushing metrics
+Automatically scales ingestion based on workload
+Durable, long-term storage of metrics
+
+Data replication across multiple Availability Zones for high availability
+
+Querying and Analysis
+
+Supports PromQL for flexible metric querying
+Integrated with Amazon Managed Grafana for visualization
+Allows building dashboards and alerts based on Prometheus metrics
+
+Low-latency query performance even at scale
+
+Security and Access Control
+
+IAM policies for fine-grained access management
+AWS PrivateLink for secure, private connectivity to AMP endpoints
+Encryption of data in transit and at rest using AWS KMS
+
+Integration with AWS CloudTrail for auditing API calls
+

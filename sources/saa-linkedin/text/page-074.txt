@@ -1,0 +1,57 @@
+73
+
+AWS El: Beanstalk
+
+What It Is
+
+AWS Elastic Beanstalk is a fully managed service that makes it easy to deploy, run, and scale web
+applications and services developed with Java, NET, PHP, Nodejs, Python, Ruby, Go, and Docker.
+Ithandles the provisioning of infrastructure such as EC2, Auto Scaling, and ELB.
+
+Key Features
++ Simplifies application deployment without worrying about the underlying infrastructure
+
+* Automatically handles capacity provisioning, load balancing, scaling, and health
+monitoring
+
+* Supports multiple programming languages and platforms
+
++ Integrated with developer tools like Git, Jenkins, and IDEs
+
+* Allows customization of environments using configuration files and extensions
+
++ Provides full control over resources if needed
+
+* Supports rolling deployments, immutable deployments, blue/green deployments
+Deployment Options
+
++ Allat once: Deploys to all instances simultaneously
+
++ Rolling: Deploys to a batch of instances ata time
+
+Rolling with additional batch: Adds a new batch before terminating the old one
+
++ Immutable: Deploys to a new set of instances before switching traffic
+
+¢ Blue/Green: Creates a new environment (green), tests it, and swaps with the old one
+(blue)
+
+‘Supported Platforms
+Java with Tomcat, NET on Windows Server with IIS, PHP, Python, Ruby, Go
+
+* Nodejs, Docker (single and multi-container)
+
+Architecture and Components
+
+Application: Logical collection of components including environments, versions, and
+configurations
+
++ Application version: Specific, deployable version of the application code
++ Environment: Collection of AWS resources running the application version
+© Environment tier: Determines if the environment is a web server or worker
+* Configuration template: Predefined settings for environment creation
+© Environment configurations are stored in .ebextensions configuration files
+Environment Tiers
+
+© Web Server Tier: Handles HTTP requests, uses a web server like Apache or Nginx
+

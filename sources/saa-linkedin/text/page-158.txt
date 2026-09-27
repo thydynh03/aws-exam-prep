@@ -1,0 +1,42 @@
+157
+
+Integration with AWS Systems Manager
+* AWS Systems Manager Inventory discovers installed software on instances
+* License Manager uses inventory data to track and manage licenses
+* Supports hybrid environments (AWS and on-premises)
+Cross-Account Management
+* Integrated with AWS Organizations for centralized license tracking
+* Share license configurations across multiple AWS accounts
+* Enable governance in multi-account environments
+AWS Marketplace Integration
+* Supports license management for Marketplace products
+Track and manage entitlements purchased through AWS Marketplace
+* Centralized view of Marketplace software usage
+Reporting and Visibility
+* Dashboard to view license configurations, usage, and compliance status
+* Detailed reports to help with audits and vendor negotiations
+* Alerts for nearing license limits or non-compliance risks
+BYOL (Bring Your Own License)
+* Supports bringing existing licenses to AWS
+* Define and enforce rules to ensure BYOL usage complies with vendor terms
+* Track usage to help maintain compliance
+Security and Access Control
++ Integration with AWS Identity and Access Management (IAM)
+
++ Fine-grained permissions to control who can create, modify, or delete license
+configurations
+
+© AWS CloudTrail logging for API calls to support auditing and compliance
+Pricing
+
+* No additional charge for using AWS License Manager
+
+Pay for the underlying AWS resources you use
+
+* Helps reduce costs by optimizing license utilization and avoiding over-purchasing
+Use Cases
+
+* Enforcing vendor licensing rules in AWS environments
+
+© Centralized license tracking for multi-account AWS setups
+

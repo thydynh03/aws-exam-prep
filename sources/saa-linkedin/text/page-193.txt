@@ -1,0 +1,52 @@
+192
+
+AWS Snowmobile
+What It Is
+
+AWS Snowmobile is an exabyte-scale data transfer service that helps move massive amounts of
+data (up to 100 PB) into AWS.
+
+Ituses a secure, physical shipping container (a 45-foot ruggedized truck) to transport data
+securely from your data centre to AWS.
+
+Key Features
+
+Capacity
+© Each Snowmobile can hold up to 100 petabytes of data.
+
+© Multiple Snowmobiles can be used for exabyte-scale transfers.
+
+Use Case
+
+© Best suited for large-scale data migrations when moving data over the network is
+impractical due to bandwidth constraints or time limitations.
+
+© Typical scenarios:
+= Data centre decommissioning
++ Massive archive migrations
+= Disaster recovery data transfer
+
+Physical Security
+
+© Snowmobile is a tractor-trailer shipping container.
+© Equipped with:
++ GPS tracking
++ 24/7 video surveillance
++ Alarms and tamper-proof mechanisms
+© Anaccompanies it during AWS dedicated security vehicle escort transit.
+Data Security
+
+© All data is automatically encrypted using 256-bit encryption keys managed
+through AWS Key Management Service (KMS).
+
+© Encryption keys are never stored on the Snowmobile.
+© Digital signatures verify data integrity during transfer.
++ Data Transfer
+
+© AWS personnel connect the Snowmobile to your local network via high-speed
+network connections.
+
+© Data transfer rates can reach up to 1 Tbps depending on your infrastructure.
+
+© Data is copied to the Snowmobile’s on-board storage arrays.
+

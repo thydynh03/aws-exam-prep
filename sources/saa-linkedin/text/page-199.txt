@@ -1,0 +1,50 @@
+198
+
+Data at rest:
+© Protected via S3/EFS encryption.
+
+© Can leverage AWS Key Management Service (KMS) for managing encryption
+keys.
+
+IAM policies control user permissions and access to backend storage.
+Supports logging with AWS CloudTrail.
+
+Supports VPC Security Groups and VPC endpoints for private access.
+
+User Management
+
+Service-managed users:
+© AWS stores user credentials and configuration.
+Directory Service:
+Integrates with Microsoft AD for authentication.
+Custom Identity Provider:
+© Use API Gateway and Lambda to authenticate users against external systems.
+
+User permissions define which folders /buckets/files users can access.
+
+Availability & Scalability
+
+High availability by design in multiple Availability Zones.
+‘Automatic scaling based on number of connections and workloads.
+
+No infrastructure to provision or maintain.
+
+Monitoring & Logging
+
+AWS CloudWatch:
+
+© Monitor server activity.
+
+© Track metrics like connections and data transfer.
+AWS CloudTrail:
+
+© Logs API calls and configuration changes for auditing.
+
+Typical Use Cases
+
+Replacing legacy FTP/SFTP servers with a managed service.
+Exchanging files securely with partners, vendors, or customers.
+Onboarding data feeds into data lakes stored in $3.
+
+Providing SFTP/FTPS access to EFS-based applications
+

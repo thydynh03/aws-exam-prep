@@ -1,0 +1,44 @@
+242
+
+AWS Directory Service
+
+What It Is
+
+AWS Directory Service is a managed service that enables you to set up and run directories in the
+AWS Cloud or connect AWS resources with existing on-premises Microsoft Active Directory
+(AD).
+
+It is essential for managing user access and enabling authenti
+applications.
+
+Why Use AWS Directory Service
+
+ition for AWS resources and
+
+* Manage user authentication and authorization.
+«Enable single sign-on (SSO) for AWS applications and services.
+* Support Microsoft Active Directory-aware applications in AWS.
+* Simplify management of user accounts, groups, and policies.
+Directory Types
+1, AWS Managed Microsoft AD
+* Actual Microsoft Active Directory deployed in AWS.
+‘AWS manages patching, replication, and maintenance.
+* Supports trust relationships with on-premises AD.
+* Ideal for full AD compatibility.
++ Features:
+o Kerberos and NTLM authentication.
+© Group Policy support.
+AD-integrated applications (e.g., SQL Server, SharePoint)
+o MFA integration with AD FS.
+* Two editions:
+© Standard Edition: up to 5,000 objects.
+o Enterprise Edition: up to 500,000 objects.
+2. AD Connector
+«Proxy that connects AWS to your existing on-premises Active Directory.
++ No directory data stored in AWS.
+* Allows AWS services (e.g., EC2, WorkSpaces) to authenticate against on-premises AD.
++ Use Cases:
+© Leverage existing credentials.
+
+o Enable SSO to AWS Management Console.
+

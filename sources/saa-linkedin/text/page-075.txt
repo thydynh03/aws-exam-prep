@@ -1,0 +1,36 @@
+74
+
+* Worker Tier: Handles background tasks using SQS
+Customizations and Extensions
+* Use .ebextensions YAML config files to customize EC2 instances and install packages
+* Add cron jobs, configure logging, change instance types, and more
+* Can use AWS CloudFormation templates embedded in extensions
+Monitoring and Logging
+* Provides real-time metrics and health status of environments
+* Integrated with Amazon CloudWatch and Elastic Load Balancing health checks
+© Logs available through the Elastic Beanstalk console or stored in $3
+* Notifications via Amazon SNS
+Scaling
+* Integrated with Auto Scaling for horizontal scaling
+© Allows setting min, max, and desired instance counts
+* Load balancing with ELB for high availability
+Security
+* Supports IAM roles for environment instances
+‘© Integrates with VPC for private networking
+* SSL termination via ELB
+* Environment variables can be encrypted with KMS
+Application Lifecycle
+© Upload application version
+* Deploy to an environment
+* Monitor and update as needed
+* Terminate environment when no longer needed
+Pricing
+* No additional charge for Elastic Beanstalk
+* You pay for the underlying resources (EC2, ELB, $3, etc.)
+Use Cases
+* Web application hosting with simplified infrastructure management
+* Rapid deployment and iteration of applications
+* Scalable and managed environments for microservices
+
+*  CI/CD pipelines for DevOps workflows
+

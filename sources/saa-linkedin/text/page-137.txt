@@ -1,0 +1,52 @@
+136
+
+Opt-out management: Especially for email/SMS; campaigns must respect user
+preferences (relevant for exam catch-question: opt-out means you can’t keep sending).
+
+Use Cases
+
+You have a mobile app and want to send a “Welcome” push notification + in-app
+message to new users. Use Pinpoint.
+
+Marketing team wants to send promotional emails and SMS messages to different user
+segments (eg, high spenders, inactive users). Use Pinpoint.
+
+You want to design a multi-channel journey: SMS after app install, if user doesn’t engage
+after 2 days -> email reminder. Pinpoint's “Journeys” feature.
+
+Track campaign performance (open rates, click rates, revenue per campaign) and feed
+into metrics dashboards. Use Pinpoint analytics.
+
+Cost & Scalability
+
+Fully managed: You don’t manage infrastructure for message delivery. Good for “reduce
+management overhead” answer.
+
+Scales with endpoints and messaging volume (channels may have quotas/regulatory
+requirements especially SMS/voice in regions).
+
+Cost drivers: number of messages, channels, endpoints, uses of dedicated resources (e.g.,
+dedicated IP for email) & region-specific compliance/reg approvals
+
+Regulatory compliance & global presence: When using multi-region architecture, ensure
+templates, opt-outs, campaigns, etc are aligned across regions.
+
+Exam Tips
+
+For “journey” or “multi-step user lifecycle messages” — Pinpoint Journeys.
+
+If the requirement is “no infrastructure management” + “scalable messaging service” >
+lean toward Pinpoint.
+
+Be aware of regional/regulatory aspects: SMS/voice may need origination identity
+registration in countries.
+
+Know the difference: Pinpoint (customer engagement) vs other services (e.g,, SES is
+email only), etc.
+
+Quick Summary
+
+Amazon Pinpoint is your AWS all-in-one for customer engagement: segments, campaigns,
+journeys, multi-channel (email/SMS/push/voice), templates, analytics. Use it when you want to
+engage & track users, not when you only need basic email sending.
+

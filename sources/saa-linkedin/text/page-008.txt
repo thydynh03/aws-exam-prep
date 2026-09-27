@@ -1,0 +1,38 @@
+AWS Data Exchange
+
+What It Is
+
+‘AWS Data Exchange is a fully managed service that makes it easy to find, subscribe to, and use
+third-party data in the cloud. It helps organizations securely exchange and consume data sets
+published by data providers, such as data from Reuters, Foursquare, and other providers,
+without complex licensing and delivery processes.
+
+Key Features
+* Catalog of thousands of third-party data products
++ Supports public data products and private (entitlement-based) data sharing
++ Automates data subscription, entitlement, and billing workflows
+* Direct delivery of data sets to Amazon $3
+«Data can be automatically updated as providers publish new revisions
+* Supports REST API and AWS CLI for managing subscriptions and data sets
++ Event notifications via Amazon EventBridge when new data is published
+Data Sets and Revisions
+* Data providers publish data sets in the AWS Data Exchange catalog
+* Each data set contains one or more revisions (versions)
++ Revisions can include files in formats like CSV, Parquet, or JSON
+‘* Subscribers access data revisions through entitlement
+Subscriptions
+* Subscribers can browse and subscribe to products in AWS Marketplace
+«Subscriptions can be free or paid (with integrated billing)
++ Entitlement grants access to the data set revisions
+* Automatic export of data revisions to an S3 bucket
+* Option to automate workflows on data arrival using EventBridge
+Data Delivery
+«Data sets are delivered directly to subscribers’ S3 buckets
+Supports incremental updates as new revisions are released
+* Delivery logs available in CloudTrail and CloudWatch
++ Data can be accessed via Athena, EMR, Redshift Spectrum, or other analytics tools
+Private Data Products
+* Enables data providers to share data products privately with specific AWS accounts
+
+© Supports entitlement management for granular access control
+

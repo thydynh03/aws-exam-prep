@@ -1,0 +1,40 @@
+244
+
+‘Automated daily snapshots.
+© Supports AWS KMS encryption for data at rest.
+© Enforces strong password policies.
+* AD Connector:
+o No AWS-stored credentials.
+© Relies on on-premises AD security.
+© Simple AD:
+© Managed by AWS.
+© Basic security controls.
+Pricing
++ AWS Managed Microsoft AD:
+© Pay per domain controller hour.
+© Cost varies by edition (Standard vs. Enterprise).
+* AD Connector:
+© Pay per connector hour.
+© Two sizes: Small and Large.
+© Simple AD:
+© Pay per directory hour.
+© Cost depends on size (Small or Large).
+Use Cases
++ Migrate on-premises Windows workloads to AWS while keeping existing AD integration.
++ Enable centralized user management and authentication for AWS-based applications.
+* Provide AD support for AWS WorkSpaces and WorkDocs.
++ Simplify Windows instance domain joins in the cloud.
+* Allow on-premises users to authenticate to AWS resources with existing credentials.
+Exam Tips
+
+* AWS Managed Microsoft AD is best for full AD support in AWS, including trust
+relationships.
+
++ AD Connector is ideal if you want to reuse on-premises AD without storing AD data in
+AWS.
+
+« Simple AD is for small, cost-sensitive environments with basic AD needs.
+
+* AWS Managed Microsoft AD supports Kerberos, NTLM, Group Policy, and integrates with
+MFA and AD FS.
+

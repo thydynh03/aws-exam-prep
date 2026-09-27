@@ -1,0 +1,36 @@
+160
+
+© OpenSearch Service
+Security and Access Control
++ Integrated with AWS SSO for user authentication and authorization
+* Supports IAM policies for fine-grained workspace access
+* Encryption at rest using AWS KMS
+* VPC connectivity for private data sources
+© Audit logging with AWS CloudTrail
+Alerting
++ Define thresholds and conditions on metrics
+* Supports multi-channel notification integrations such as SNS, Slack, and email
+* Managed Grafana alerting supports deduplication and silencing
+* Alert rule and notification policy management within Grafana
+Grafana Enterprise Features
+* Optional access to Enterprise plugins (available for additional cost)
+* Examples: ServiceNow, Splunk, Datadog, Dynatrace
+* Advanced reporting and data source integrations
+Integration with AWS Services
+* Amazon CloudWatch: Native dashboard creation for AWS metrics
++ AWS X-Ray: Visualize application traces
+* AWS IoT SiteWise: Industrial data visualization
+«Amazon Timestream: Time-series data analysis
+* AWS Managed Service for Prometheus: Scrape and visualize Prometheus metrics
+Deployment and Management
+* AWS fully manages setup, patching, scaling, and availability
++ Simple provisioning through the AWS Console, CLI, or CloudFormation
+* Automatic upgrades to latest Grafana versions
+© Supports infrastructure-as-code for workspace creation and configuration
+Pricing
++ Billed per active user per workspace per month
++ Free tier available for trial usage
+* Additional charges for Grafana Enterprise plugin usage
+
++ Data transfer costs may apply when querying external data sources
+

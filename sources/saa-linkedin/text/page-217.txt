@@ -1,0 +1,46 @@
+216
+
+Amazon Route 53
+
+What It Is
+
+Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. It
+connects user requests to AWS resources like EC2 instances, load balancers, and $3 buckets, as
+well as external endpoints. It also supports domain registration and health checking for DNS
+failover.
+
+Key Features
+* Authoritative DNS service providing reliable and cost-effective domain resolution
+* Supports domain registration for a wide variety of TLDs
+
++ Traffic management via routing policies including latency-based, geolocation, and
+weighted routing
+
+* DNS health checks and DNS failover for high availability
++ Integrated with AWS services such as ELB, $3, and CloudFront
+* Fully compliant with IPv4 and IPv6
+Routing Policies
++ Simple Routing: Single record with one value; straightforward DNS resolution
+«Weighted Routing: Distribute traffic across multiple resources with assigned weights
+« — Latency-based Routing: Route traffic to the lowest-latency endpoint
+«Failover Routing: Primary/secondary configurations for high availability
+*  Geolocation Routing: Route traffic based on the geographic location of the requester
+
+*  Geoproximity Routing (using Traffic Flow): Bias traffic to endpoints based on geographic
+distance
+
++ Multivalue Answer Routing: Return multiple healthy records to improve client-side load
+balancing
+
+Domain Registration
+Register and manage domain names directly in Route 53
+* Supports WHOIS privacy protection
+* Automatic domain renewal options
+* Easy integration with Route 53 hosted zones for DNS management
+Health Checks and DNS Failover
+* Monitor endpoint health via HTTP, HTTPS, and TCP checks
+* Configure DNS failover to redirect traffic to healthy endpoints
+© Health checks can monitor CloudWatch alarms for complex monitoring scenarios
+
+* Support for alias records that integrate health check status
+

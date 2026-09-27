@@ -1,0 +1,37 @@
+Free tier includes 50,000 MAUs per month
++ Identity Pools: Charges for AWS STS calls and data transfer
+* Advanced Security Features priced separately
+Use Cases
+‘* Add sign-up/sign-in to mobile and web applications
+«  Federate user access across social and enterprise identity providers
+«Enable secure access to AWS resources for authenticated users
+* Build serverless backends that authenticate and authorize users
++ Implement Multi-Factor Authentication and advanced security controls
+Best Practices
++ Enable MFA for additional security
+* Use custom domains for OAuth flows
+* Store minimal sensitive data in user attributes
+«Secure Lambda triggers with IAM permissions
+* Use IAM roles with least privilege when granting AWS resource access
++ Monitor metrics and logs with CloudWatch
++ Rotate encryption keys regularly
+Exam Tips
++ User Pools manage user directories and authentication
+* Identity Pools provide AWS credentials for resource access
++ Supports social providers, SAML, OIDC for federated sign-in
+« Integrates with API Gateway, AppSync, S3, Lambda
+«Supports MFA and adaptive authentication
+* Generates ID, Access, and Refresh tokens (JWT)
+* Use IAM roles for access control based on identity
+* Advanced security features help detect compromised credentials
+
+Quick Summary
+
+239
+
+‘Amazon Cognito is a fully managed service for adding user sign-up, sign-in, and access control to
+
+applications. It includes User Pools for managing user directories and authentication, and
+Identity Pools for providing AWS credentials to authenticated users, with support for social,
+SAML, and OIDC identity providers, MFA, and advanced security features.
+

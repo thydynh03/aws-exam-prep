@@ -1,0 +1,55 @@
+* Instance Fleets and Instance Groups for flexible provisioning strategies
+
+* Decoupled compute and storage allows processing directly from $3
+Cost Optimization
+
+* Per-second billing for EC2 instances
+
+* Support for Spot Instances for significant cost savings
+
+* Cluster Auto Termination to avoid charges for idle clusters
+
+¢ Use of Reserved Instances for predictable workloads
+
+«EMR pricing based on instance hours plus EC2 costs
+Integrations
+
++ AWSS3 for data lake storage
+
++ AWS Glue for schema management
+
+AWS Lake Formation for permissions management
+
+‘* AWS Step Functions for orchestration
+
++ AWS CloudTrail for auditing
+
+« Amazon RDS and Redshift for data sources and sinks
+
+«Kinesis Data Streams and Firehose for streaming ingestion
+Use Cases
+
+* Big data processing and ETL workloads
+
+* Data lake analytics with $3
+
+* Machine learning workflows with Spark MLIib
+
++ Logand clickstream analysis
+
+* Real-time stream processing with Flink
+
+* Ad hoc analytics using notebooks
+
++ Batch processing of large datasets
+
++ Charges based on EC2 instance hours used
++ Additional EMR charge per instance hour
++ Per-second billing for EC2 instances
+
++ Costs for $3 storage and data transfer
+
+* Additional costs for AWS Glue, Lake Formation, and other integrated services
+
+15
+

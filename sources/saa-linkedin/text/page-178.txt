@@ -1,0 +1,66 @@
+177
+
+AWS Well-Archit Tool
+
+What It Is
+
+AWS Well-Architected Tool is a free service that helps you review and improve your cloud
+workloads using AWS best practices. It guides you through AWS's Well-Architected
+Framework, making it easier to identify risks and track improvements over time.
+
+Key Features
+
+Provides a structured approach to reviewing workloads
+Helps evaluate workloads against AWS Well-Architected Framework best practices
+Supports consistent, repeatable reviews across teams
+
+Stores review history for tracking improvement progress
+
+Offers improvement plans for mitigating identified risks
+
+Accessible through the AWS Management Console
+
+AWS Well-Architected Framework
+
+Foundation for the Tool’s assessments
+Consists of six pillars:
+
+© Operational Excellence: Running and monitoring systems to deliver business
+value
+
+© Security: Protecting data, systems, and assets
+
+°
+
+Reliability: Ensuring workloads perform as intended and can recover quickly
+
+°
+
+Performance Efficiency: Using resources efficiently to meet requirements
+
+°
+
+Cost Optimization: Avoiding unnecessary costs
+
+Sustainability:
+
+jinimizing environmental impacts of workloads
+
+Each pillar has design principles and best practices
+
+Workload Reviews
+
+Define and document workloads to review
+Answer a set of best-practice questions across all six pillars
+Questions help identify high-risk and medium-risk issues
+
+Add custom lenses to tailor reviews to specific industry or organizational needs
+
+Improvement Plans
+
+Tool generates prioritized improvement plans based on risks found
+Provides recommendations with direct links to AWS documentation
+Tracks completed and pending improvements
+
+Supports collaborative team review and remediation
+

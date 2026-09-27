@@ -1,0 +1,33 @@
+Use Cases
+
+Enterprise data warehousing and analytics
+Centralized data platform for BI reporting
+Large-scale log analytics and operational dashboards
+Predictive analytics and machine learning data prep
+
+Federated queries across data lakes and warehouses
+
+Exam Tips
+
+Redshift uses columnar storage and MPP for performance
+COPY command is used to bulk-load data from $3
+
+Spectrum allows querying $3 data directly using Redshift
+
+RA3 nodes separate compute from storage for flexibility
+Concurrency scaling adds transient clusters for high query loads
+Redshift Serverless offers hands-free provisioning and scaling
+Use sort and distribution keys to optimize query performance
+
+Supports VPC, encryption, IAM, and logging for security compliance
+
+Quick Summary
+
+Amazon Redshift is AWS’s fully managed data warehouse that supports petabyte-scale analytics
+workloads using standard SQL. With features like columnar storage, MPP architecture, Redshift
+Spectrum, serverless deployment, and deep AWS integration, it enables fast, scalable, and cost-
+
+effective data analysis for modern business needs.
+
+122
+

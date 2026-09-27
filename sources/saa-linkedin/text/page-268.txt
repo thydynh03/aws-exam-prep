@@ -1,0 +1,74 @@
+AWS Shield
+
+What It Is
+
+267
+
+Managed Distributed Denial of Service (DDoS) protection for AWS resources.
+
+Defends against network and transport layer (Layer 3/4) and application layer (Layer 7)
+attacks.
+
+Key Features
+1. AWS Shield Standard
+
+Included at no extra cost for all AWS customers.
+
+Automatic protection against common, most frequent DDoS attacks.
+
+Protects services like:
+
+°
+
+°
+
+°
+
+°
+
+Amazon CloudFront
+Route 53
+
+Elastic Load Balancer (ALB/NLB)
+AWS Global Accelerator
+
+Always-on detection and automatic inline mitigation.
+
+No need to enable, always active.
+
+2. AWS Shield Advanced
+
+Paid service with enhanced DDoS protection.
+
+Protects against larger and more sophisticated attacks.
+
+Features include:
+
+°
+
+°
+
+°
+
+24x7 access to the AWS DDoS Response Team (DRT).
+‘Advanced attack detection and mitigation at application and network layers.
+
+Protection against volumetric attacks, state exhaustion, and application-layer
+attacks.
+
+Cost Protection: DDoS cost protection against scaling-related charges during an
+attack.
+
+Real-time attack visibility and detailed reports.
+Layer 7 protections when combined with AWS WAR.
+
+Global threat environment dashboard.
+
+Integrated AWS Services
+
+CloudFront
+
+Route 53
+
+Global Accelerator
+

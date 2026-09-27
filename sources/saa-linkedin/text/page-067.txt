@@ -1,0 +1,37 @@
+66
+
+Amazon EC2
+What It Is
+
+Amazon Elastic Compute Cloud (EC2) is a web service that provides resizable compute capacity
+in the AWS cloud. It allows you to launch virtual servers on demand, scale them easily, and pay
+only for what you use,
+
+Key Features
++ Resizable compute capacity with multiple instance types.
+© Supports Linux and Windows operating systems.
+* Choice of instance types optimized for compute, memory, storage, or GPU workloads.
++ Flexible pricing models.
+* Supports auto scaling, load balancing, and high availability architectures.
+Integrated with many AWS services (EBS, $3, IAM, VPC, CloudWatch).
+EC2 Instance Types
+* General Purpose: Balanced resources (e.g,, t3, m5).
+* Compute Optimized: High-performance processors (¢.g., ¢5).
+* Memory Optimized: Large memory needs (eg.,r5, x1).
++ Storage Optimized: High sequential 1/0, local NVMe (e.g, i3).
+* Accelerated Computing: GPU or FPGA support (eg,, p3, 4).
+EC2 Pricing Models
+1. On-Demand Instances
+© Pay by the second (or hour).
+© Flexible, no commitment.
+© Use for short-term, unpredictable workloads.
+2. Reserved Instances (RI)
+o 1-year or 3-year terms.
+© Significant discounts.
+Standard and Convertible Ris.
+© Best for steady-state workloads.
+3. Savings Plans
+© Flexible pricing model with hourly spend commitment.
+
+© Apply to EC2, Fargate, Lambda.
+

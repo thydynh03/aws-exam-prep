@@ -1,0 +1,27 @@
+101
+
+Use Cases
+* Content management systems
+© Product catalogs and inventory
+* User profiles and personalization
+* Mobile and web applications with flexible schemas
+* Semi-structured data ingestion and processing
+Exam Tips
+* Amazon DocumentDB is MongoDB-compatible but not a native MongoDB engine
+* Ideal for applications needing flexible, schema-less document storage
+* Nota drop-in replacement for every MongoDB feature
+© Multi-AZ support with six-way data replication provides high availability
+* Automatically scales storage without downtime
+© Supports up to 15 read replicas for horizontal scaling
+* Fully managed by AWS including patching, backups, and failover
+« Use IAM and VPC for security and access control
+* Encryption at rest and in transit is enabled by default
++ Integration with CloudWatch and CloudTrail for monitoring and auditing
+
+Quick Summary
+
+Amazon DocumentDB is a scalable, fully managed document database service designed for
+modern applications that need flexible data models. With MongoDB compatibility, high
+availability, automated scaling, and integrated AWS security and monitoring, it is ideal for
+content-rich, semi-structured workloads that require low-latency and resilience.
+

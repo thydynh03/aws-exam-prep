@@ -1,0 +1,13 @@
+20
+
+* Pay per DPU-hour, no infrastructure management
+* Supports job triggers and workflows for orchestration
+Tight integration with AWS analytics and storage services
+
+Quick Summary
+
+AWS Glue is AWS's serverless data integration service providing ETL capabilities, data
+cataloging, schema discovery, and data preparation. It enables users to build scalable, cost-
+effective data pipelines and manage metadata centrally for a wide range of analytics and
+machine learning use cases on AWS.
+

@@ -1,0 +1,38 @@
+Lifecycle Hooks
+* Pause instance launching or terminating processes to run custom scripts
+‘+ Use cases include bootstrapping, log collection, or cleanup before termination
+Monitoring and Alarms
+* Uses Amazon CloudWatch for metrics and alarms
++ Key metrics: CPUUtilization, NetworkIn, NetworkOut, etc.
++ Alarms trigger scaling actions based on thresholds
+Instance Refresh
++ Replace instances in ASG with new configuration
+* Helps apply updates or patches without downtime
+Warm Pools
+*  Pre-initialize EC2 instances and keep them in a stopped state
+* Reduces scale-out time by maintaining warm capacity
+Pricing
+* No additional cost for using Auto Scaling
+* Pay only for the underlying AWS resources (EC2, ELB, etc.)
+Use Cases
+«Handling unpredictable traffic
++ Ensuring fault tolerance and high availability
+‘* Reducing operational overhead through automation
+‘+ Lowering cost by scaling in when demand is low
+Exam Tips
+«Use Target Tracking Scaling Policy for maintaining consistent performance
+* Predictive Scaling is useful for known traffic patterns
+«Health checks help maintain application availability
+«Use Warm Pools to improve response time for scale-out events
++ ASGcan span multiple AZs but not across regions
+* Use ELB to distribute traffic across Auto Scaling instances
+«Instance Refresh is useful for patching or configuration updates
+
+Quick Summary
+
+AWS Auto Scaling helps maintain optimal performance and cost efficiency by dynamically
+adjusting capacity based on real-time metrics or forecasts. It integrates with EC2, ELB,
+CloudWatch, and other AWS services to provide scalable, fault-tolerant.
+
+72
+

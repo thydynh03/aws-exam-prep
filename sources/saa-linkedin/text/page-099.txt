@@ -1,0 +1,23 @@
+98
+
+Six-way replication across three AZs ensures durability
+
+Multi-AZ by design with fast failover
+
+Aurora Replicas provide read scalability with minimal lag
+
+Global Databases enable low-latency global reads and DR
+
+‘Aurora Serverless is ideal for infrequent, unpredictable workloads
+Supports encryption at rest (KMS) and in transit (SSL/TLS)
+Point-in-time recovery and continuous backups to $3
+
+Database cloning for development and testing without affecting production workloads
+
+Quick Summary
+‘Amazon Aurora is AWS’s high-performance, highly available relational database engine
+compatible with MySQL and PostgreSQL. It offers advanced features like storage auto-scaling,
+fault-tolerant replication, read replicas, global databases, and serverless deployments, making it
+an ideal choice for modern, cloud-native applications requiring scalability, durability, and high
+availability.
+

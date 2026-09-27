@@ -1,0 +1,48 @@
+* Take EBS Snapshots for backups.
+Best Practices
+
+* Use IAM Roles for permissions, not static keys.
+
++ Encrypt EBS volumes.
+
++ Design for stateless workloads where possible.
+
+* Enable CloudWatch monitoring.
+
+© Store logs centrally with CloudWatch Logs.
+
+* Use Auto Scaling for resilience.
+
++ Regularly patch instances with AWS Systems Manager.
+Exam Tips
+
+* On-Demand for flexible, unpredictable workloads.
+
+* Reserved Instances/Savings Plans for steady state.
+
+* Spot for batch, fault-tolerant tasks.
+
++ EBSis persistent, Instance Store is ephemeral.
+
+* Security Groups = stateful, NACLs = stateless.
+
+* Use IAM roles instead of hard-coded credentials.
+
+© User Data runs at boot for configuration.
+
+* Placement Groups optimize network layout.
+
+* Auto Scaling works with ELB for high availability.
+
++ Know pricing options and best practices for cost optimization.
+
+Quick Summary
+
+70
+
+‘Amazon EC2 provides resizable virtual servers in the cloud with flexible instance types, pricing
+models, and integrated storage and networking. It supports secure, scalable, and highly available
+
+architectures using Auto Scaling, Load Balancing, and AWS best practices for cloud-native
+design.
+

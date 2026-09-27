@@ -1,0 +1,61 @@
+Facilitates proactive remediation of issues
+
+Integrations
+
+AWS Organizations to manage multi-account environments
+AWS CloudTrail for capturing API activity
+
+AWS Config for resource configuration tracking
+
+AWS Security Hub for security findings and posture insights
+
+Amazon $3 for evidence storage and export
+
+Security and Access Control
+
+Evidence encrypted in transit and at rest
+
+IAM policies control access to Audit Manager features and assessments
+
+229
+
+Integration with AWS Key Management Service (KMS) for encryption key management
+
+Fine-grained access permissions for team members and auditors
+
+Reporting and Exporting
+
+Downloadable evidence reports for auditors
+Export evidence to Amazon $3 buckets
+Organized evidence folders by control and assessment
+
+Facilitates external auditor access without exposing the entire AWS environment
+
+Supported Compliance Frameworks
+
+Pricing
+
+PCI DSS
+
+CIS AWS Foundations Benchmark
+HIPAA
+
+GDPR
+
+Soc 2
+
+ISO 27001
+
+Custom frameworks to meet internal requirements
+
+Charged per assessment per month
+Additional costs for storing evidence in $3
+
+Costs depend on volume of collected evidence and number of active assessments
+
+Use Cases
+
+Preparing for regulatory audits (PCI DSS, HIPAA, SOC 2, ISO 27001)
+
+Automating compliance evidence collection to reduce manual effort
+

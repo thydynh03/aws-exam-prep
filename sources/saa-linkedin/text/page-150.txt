@@ -1,0 +1,58 @@
+149
+
+Useful for audits and compliance reporting
+
+AWS Config Rules
+
+Define desired configurations for resources
+Continuously evaluate resource configurations against these rules
+
+AWS Managed Rules: Pre-built rules covering common compliance scenarios
+
+Custom Rules: User-defined, often using AWS Lambda functions
+Rules can be triggered by configuration changes or on a periodic basis
+
+Noncompliant resources are flagged for remediation
+
+Remediation
+
+Automate remediation of noncompliant resources
+Use AWS Systems Manager Automation documents to define remediation actions
+Can be triggered automatically or manually from the AWS Config console
+
+Ensures continuous compliance with policies
+
+Aggregators
+
+Combine configuration data from multiple accounts and regions
+Centralized view of resource configurations and compliance across an organization
+
+Supports AWS Organizations to aggregate data from all member accounts
+
+Integration with AWS Organizations
+
+Multi-account governance with AWS Config aggregators
+Organization-level AWS Config rules for consistent policy enforcement
+
+Can record and evaluate resources in all accounts of an organization
+
+Delivery Channels
+
+Define where AWS Config delivers configuration snapshots and compliance notifications
+Typically, an S3 bucket for snapshots and an SNS topic for notifications
+
+Supports encryption of data at rest using AWS KMS
+
+Security and Access Control
+
+Pricing
+
+Supports IAM policies for fine-grained access control
+Encryption of configuration data in S3 using KMS
+
+Logs delivery to CloudWatch Logs for monitoring
+
+Charged based on the number of recorded configuration items
+
+Additional charges for active AWS Config rules evaluations
+

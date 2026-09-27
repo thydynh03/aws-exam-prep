@@ -1,0 +1,18 @@
+46
+
+* Archive and replay = compliance, testing, recovery.
+
+* Schema Registry = discover, manage, and generate code for event schemas.
++ API Destinations = integrate with external HTTP endpoints.
+
++ Cross-account delivery = send events securely between accounts.
+
+* Choose EventBridge over SNS when you need advanced filtering, routing, SaaS
+integration, or event archiving.
+
+Quick Summary
+
+‘Amazon EventBridge is a serverless event bus that connects AWS services, your applications,
+and SaaS providers using events. It supports advanced filtering, routing, archiving, and
+replay for building scalable, event-driven systems.
+

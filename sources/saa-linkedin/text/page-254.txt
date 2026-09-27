@@ -1,0 +1,33 @@
+253
+
+16. Service-Linked Roles
++ Pre-defined roles linked directly to AWS services.
+
+* Required for certain AWS service operations (e.g., ECS, Auto Scaling).
+
+* Managed entirely by AWS.
+17.1AM Credential Report
+* CSV file listing all IAM users and their credentials.
+* Includes details on passwords, access keys, and MFA status.
++ Helps with auditing and compliance.
+18. 1AM Access Advisor
+* Shows last used information for permissions.
++ Helps identify unused permissions for least privilege enforcement.
+Pricing
++ IAM itselfis free.
+* You pay for the underlying AWS resources you use.
+Exam Tips
+* IAMis global (not tied to a region).
++ Roles = temporary credentials, no passwords or access keys.
+* Policies define who can do what on which resources.
++ Use least privilege everywhere.
+* MFA strongly recommended for root and privileged users.
+* IAM Access Analyzer = identify unintended external access.
++ Use IAM roles for EC2, Lambda, and cross-account access.
+«Federation enables SSO with external IdPs.
+Quick Summary
+
+AWS IAM is a global service for managing user access and permissions securely. It uses users,
+groups, roles, and policies to control who can access what in AWS, with best practices like least
+privilege, MFA, and credential rotation to ensure security.
+

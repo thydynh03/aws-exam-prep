@@ -1,0 +1,29 @@
+* Supporting hybrid architectures with consistent messaging protocols
+* Integrating legacy applications with modern cloud services
+Best Practices
+* Use Active/standby deployments for high availability in production
+* Monitor broker metrics with CloudWatch and set alarms
+Encrypt data at rest and in transit
+« Use IAM policies and ACLs to control access
++ Plan for instance sizing and storage needs based on workload
+Regularly review and update security settings and credentials
+Exam Tips
+«Fully managed message broker service for ActiveMQ and RabbitMQ
+* Supports standard messaging protocols like JMS, AMQP, STOMP, MQTT
++ Simplifies migration of existing messaging apps without code changes
+* Supports high availability with multi-AZ replication and failover
++ Integrates with IAM, KMS, Secrets Manager, CloudWatch
+* Encryption at rest (KMS) and in transit (TLS)
+* Use for decoupling microservices and supporting hybrid messaging scenarios
+Quick Summary
+
+‘Amazon MQis a fully managed message broker service for Apache ActiveMQ and RabbitMQ,
+designed to simplify the setup and management of message brokers in the cloud. It
+
+49
+
+provides high availability, supports industry-standard protocols, integrates with AWS security
+and monitoring services, and enables seamless migration of existing messaging applications to
+
+AWS.
+

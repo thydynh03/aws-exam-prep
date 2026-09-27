@@ -1,0 +1,41 @@
+169
+
+Use Cases
+
++ Platform teams want to define standardized micro-service stacks
+(containers/serverless) and allow self-service deployments > Use Proton
+
+* Enforcing architecture standards and rolling out updates across many micro-services >
+Proton's version control fits perfectly
+
+* Need automated provisioning of both infrastructure and CI/CD pipelines for each new
+service > Proton handles both seamlessly
+
+Best Practices
++ Keep environment and service templates modular and easy to maintain
+
+* Use versioning to handle infrastructure evolution and migration between template
+versions
+
++ Integrate Proton with CloudFormation or Terraform for seamless DevOps workflows
+
+* Continuously monitor deployments, automate updates, and track template drift
+
+: “self-service deployment’, “standardized templates’, “automated CI/CD”,
+“versioned templates”
+
++ Proton is delivery-oriented, not just laC, adds governance and self-service to
+infrastructure
+
+* Don't confuse Proton with Service Catalog (which manages approved product stacks) or
+plain CloudFormation (which provisions resources)
+
+* For questions about “governed, standardized app deployments at scale” + Proton is the
+answer
+
+Quick Summary
+
+AWS Proton helps teams standardize, automate, and manage deployment of containerized and
+serverless applications. It bridges the gap between DevOps automation and platform
+governance, empowering developers to deploy while keeping control centralized.
+

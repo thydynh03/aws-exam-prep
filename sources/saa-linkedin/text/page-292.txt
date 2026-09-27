@@ -1,0 +1,38 @@
+291
+
+Amazon $3,
+What It Is
+
+‘Amazon Simple Storage Service (Amazon $3) is an object storage service offering industry-
+leading scalability, data availability, security, and performance.
+Store and retrieve any amount of data from anywhere on the web.
+
+Core Concepts
++ Buckets:
+© Top-level container for objects.
+© Globally unique name.
+o Defined in a single AWS Region.
++ Objects:
+o Data stored in buckets.
+© Consists of key (name), value (data), metadata, and version ID.
+© Keys:
+o Unique identifier for an object within a bucket.
++ Regions:
+o Buckets are created in a specific AWS Region.
+Storage Classes
+«Standard:
+o Frequent access.
+o High durability (99.999999999% - 11 9s).
+© 99.99% availability.
+* Intelligent-Tiering:
+o Automatically moves objects between access tiers.
+© Suitable for unknown or changing access patterns.
++ Standard-IA (Infrequent Access):
+Lower cost for infrequent access.
+o Retrieval fee applies.
++ One Zone-IA:
+o Single AZ storage.
+© Cheaper but less resilient.
+
++ Glacier:
+

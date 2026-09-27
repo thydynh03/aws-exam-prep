@@ -1,0 +1,61 @@
+184
+
+AWS A)
+What It Is
+
+n Mi MGN’
+
+AWS Application Migration Service (MGN) is a fully managed service that simplifies, expedites,
+and reduces the cost of migrating applications to AWS. It allows you to lift and shift (rehost)
+physical, virtual, or cloud-based servers to AWS with minimal downtime,
+
+Key Features
+
+* Continuous Block-Level Replication: Automatically replicates source servers to AWS in
+near real-time.
+
+© Minimal Downtime Cutover: Enables testing and final cutover with minimal business
+disruption.
+
+* Automated Launch Templates: Automatically generates EC2 launch templates for test
+and cutover instances.
+
++ Simplified Migration: Reduces manual effort compared to traditional rehosting tools.
+
++ Supports a Variety of Environments: Works with physical, VMware, Hyper-V, and other
+cloud sources.
+
++ Rollback Capability: You can revert to the original environment if needed.
+
+* Integrated Conversion: Converts your source servers to run natively on AWS
+infrastructure.
+
+How It Works
+1. Install Agent: Deploy the AWS replication agent on your source servers.
+
+2. Continuous Replication: Data replicates continuously to a staging area subnet in your
+AWS account,
+
+3. Test Launch: You can test migrated servers to validate functionality before cutover.
+4. Cutover Launch: Perform a final migration (cutover) when ready.
+
+5. Post-Migration: Optimize instances using AWS tools like AWS Systems Manager or Cost
+Explorer.
+
+Core Components
+
++ Replication Agent: Installed on each source server to replicate data.
+
++ Staging Area: Temporary environment in AWS to store replicated data.
+
+* Launch Template: Defines configuration for EC2 instances (type, VPC, subnet, etc.)
+
+*  Testand Cutover Instances: Created automatically for validation and final migration.
+Supported Use Cases
+
+© Migrating on-premises workloads to AWS with minimal changes.
+
+* Moving workloads from other clouds to AWS.
+
+* Modernizing legacy infrastructure through rehosting.
+

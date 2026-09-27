@@ -1,0 +1,38 @@
+4. Spot Instances
+© Spare capacity at up to 90% discount.
+Can be terminated by AWS with 2-minute warning.
+© Good for batch processing, stateless workloads.
+5. Dedicated Hosts
+© Physical servers dedicated to your use.
+Helps meet compliance and licensing requirements.
+6. Dedicated Instances
+
+o Run in VPC on hardware dedicated to you.
+
+© Nottied to specific physical server.
+7. Capacity Reservations
+o Reserve capacity in a specific AZ.
+Storage Options
++ BBS (Elastic Block Store)
+© Persistent block storage.
+o Types: gp3 (general), io1/io2 (provisioned IOPS), st1/sc1 (HDD)
+© Snapshots stored in $3.
+© Supports encryption with KMS.
++ Instance Store
+Ephemeral, physically attached disks.
+o Data lost when instance stops/terminates.
+o High Iops.
++ BFS (Blastic File System)
+o Network file system for Linux instances.
+© Scales automatically.
+« FSx
+o Managed Windows File Server or Lustre.
+Networking Features
++ Launched in VPCs.
+* Assign public and private IP addresses.
++ Elastic IP: Static, routable public IPv4 address.
+
+«Security Groups: Virtual firewall for inbound/outbound rules.
+
+67
+

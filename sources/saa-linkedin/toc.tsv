@@ -1,0 +1,109 @@
+Analytics	Amazon Athena	athena	4
+Analytics	AWS Data Exchange		7
+Analytics	AWS Data Pipeline		10
+Analytics	Amazon EMR	emr	13
+Analytics	AWS Glue	glue	17
+Analytics	Amazon Kinesis	kinesis	21
+Analytics	AWS Lake Formation	lake-formation	25
+Analytics	Amazon MSK	msk	27
+Analytics	Amazon OpenSearch Service	opensearch	30
+Analytics	Amazon QuickSight	quicksight	33
+Analytics	Amazon Redshift	redshift	36
+Application Integration	Amazon AppFlow		39
+Application Integration	AWS AppSync	appsync	41
+Application Integration	Amazon EventBridge	eventbridge	43
+Application Integration	Amazon MQ	mq	47
+Application Integration	Amazon SNS	sns	50
+Application Integration	Amazon SQS	sqs	53
+Application Integration	AWS Step Functions	step-functions	56
+Cost Management	AWS Budgets		60
+Cost Management	AWS Cost and Usage Report		61
+Cost Management	AWS Cost Explorer	cost-explorer	61
+Cost Management	Savings Plans		61
+Compute	AWS Batch	batch	63
+Compute	Amazon EC2	ec2	66
+Compute	Amazon EC2 Auto Scaling	auto-scaling	71
+Compute	AWS Elastic Beanstalk	elastic-beanstalk	73
+Compute	AWS Outposts	outposts	76
+Compute	AWS Serverless Application Repository		78
+Compute	AWS Wavelength		80
+Containers	Amazon ECS Anywhere	ecs	82
+Containers	Amazon EKS Anywhere	eks	83
+Containers	Amazon EKS Distro	eks	84
+Containers	Amazon ECS	ecs	85
+Containers	Amazon ECR		89
+Containers	Amazon EKS	eks	92
+Database	Amazon Aurora	aurora	95
+Database	Amazon DocumentDB	documentdb	99
+Database	Amazon DynamoDB	dynamodb	102
+Database	Amazon ElastiCache	elasticache	105
+Database	Amazon Keyspaces		108
+Database	Amazon Neptune	neptune	111
+Database	Amazon QLDB		114
+Database	Amazon RDS	rds	117
+Database	Amazon Redshift	redshift	120
+Developer Tools	AWS X-Ray		123
+Front-end & Mobile	AWS Amplify		126
+Front-end & Mobile	Amazon API Gateway	api-gateway	129
+Front-end & Mobile	AWS Device Farm		133
+Front-end & Mobile	Amazon Pinpoint		135
+Machine Learning	Machine Learning services (Comprehend, Forecast, Fraud Detector, Kendra, Lex, Polly, Rekognition, SageMaker, Textract, Transcribe, Translate)	comprehend,forecast,kendra,polly,rekognition,sagemaker,textract,transcribe,translate	137
+Management & Governance	AWS CloudFormation	cloudformation	138
+Management & Governance	AWS CloudTrail	cloudtrail	140
+Management & Governance	Amazon CloudWatch	cloudwatch	143
+Management & Governance	AWS CLI		146
+Management & Governance	AWS Config	config	148
+Management & Governance	AWS Control Tower	control-tower	151
+Management & Governance	AWS Management Console		154
+Management & Governance	AWS Health Dashboard		155
+Management & Governance	AWS License Manager		156
+Management & Governance	Amazon Managed Grafana		159
+Management & Governance	Amazon Managed Service for Prometheus		162
+Management & Governance	AWS Organizations	organizations	164
+Management & Governance	AWS Proton		168
+Management & Governance	AWS Service Catalog		170
+Management & Governance	AWS Systems Manager	systems-manager,parameter-store	172
+Management & Governance	AWS Trusted Advisor	trusted-advisor	174
+Management & Governance	AWS Well-Architected Tool		177
+Media Services	Amazon Elastic Transcoder		180
+Migration and Transfer	AWS Application Discovery Service		182
+Migration and Transfer	AWS Application Migration Service		184
+Migration and Transfer	AWS DMS	dms	186
+Migration and Transfer	AWS DataSync	datasync	189
+Migration and Transfer	AWS Snowmobile	snowball	192
+Migration and Transfer	AWS Snowball Edge	snowball	194
+Migration and Transfer	AWS Transfer Family	transfer-family	197
+Networking & Content Delivery	Amazon CloudFront	cloudfront	200
+Networking & Content Delivery	AWS Direct Connect	direct-connect	205
+Networking & Content Delivery	Elastic Load Balancing	elb	208
+Networking & Content Delivery	AWS Global Accelerator	global-accelerator	212
+Networking & Content Delivery	Amazon Route 53	route53	216
+Networking & Content Delivery	AWS Transit Gateway	transit-gateway	219
+Networking & Content Delivery	Amazon VPC	vpc,nat-gateway,vpc-peering,privatelink,security-groups,vpn	222
+Security, Identity & Compliance	AWS Artifact		226
+Security, Identity & Compliance	AWS Audit Manager		228
+Security, Identity & Compliance	AWS Certificate Manager	acm	231
+Security, Identity & Compliance	AWS CloudHSM	cloudhsm	233
+Security, Identity & Compliance	AWS KMS	kms	235
+Security, Identity & Compliance	Amazon Cognito	cognito	237
+Security, Identity & Compliance	Amazon Detective		240
+Security, Identity & Compliance	AWS Directory Service	directory-service	242
+Security, Identity & Compliance	AWS Firewall Manager		246
+Security, Identity & Compliance	Amazon GuardDuty	guardduty	248
+Security, Identity & Compliance	AWS IAM	iam,sts	250
+Security, Identity & Compliance	Amazon Inspector	inspector	254
+Security, Identity & Compliance	Amazon Macie	macie	256
+Security, Identity & Compliance	AWS Network Firewall		258
+Security, Identity & Compliance	AWS RAM	resource-access-manager	260
+Security, Identity & Compliance	AWS Secrets Manager	secrets-manager	263
+Security, Identity & Compliance	AWS Security Hub	security-hub	265
+Security, Identity & Compliance	AWS Shield	shield	267
+Security, Identity & Compliance	AWS WAF	waf	269
+Serverless	AWS Fargate	fargate	271
+Serverless	AWS Lambda	lambda	274
+Storage	AWS Backup	backup	277
+Storage	Amazon EBS	ebs	280
+Storage	Amazon EFS	efs	284
+Storage	Amazon FSx	fsx	287
+Storage	Amazon S3	s3,s3-glacier	291
+Storage	AWS Storage Gateway	storage-gateway	296

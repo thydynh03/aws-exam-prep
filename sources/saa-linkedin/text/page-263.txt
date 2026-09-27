@@ -1,0 +1,49 @@
+262
+
+Records all AWS RAM API calls for audit and compliance.
+© Tracks sharing creation, modification, and deletion events.
+Pricing
++ AWS RAM itself has no additional charges.
++ You pay for the resources you create and use, even when shared.
+
+o Example: If you share a VPC subnet and someone launches an EC2 instance in it,
+that account pays for the EC2 instance.
+
+Common Use Cases
+Centralized Network Management:
+© Share VPC subnets, Transit Gateways for consistent networking.
+
+Hybrid Environments:
+
+© Centralize DNS resolution rules with Route 53 Resolver Rules.
+
+Cost Optimization:
+
+© Avoid duplicating resources in multiple accounts.
+
+License Management:
+
+© Share License Manager configurations to enforce license limits.
+
+Cloud WAN and Network Firewall Policies:
+© Enforce consistent network security policies across accounts.
+Best Practices
+* Use AWS Organizations for easier, scalable sharing.
++ Apply least privilege principles when defining managed permissions.
+Tag shared resources for better tracking and cost allocation.
+Exam Tips
+«AWS RAM lets you share resources securely across AWS accounts and organizations.
+* Resource Shares are the central mechanism: you pick resources and principals.
+
+* Supports VPC subnets, Transit Gateways, Route 53 Resolver Rules, and other specific
+resources.
+
+Sharing within an AWS Organization does not require acceptance.
+*  Cross-account sharing outside the org requires invitation acceptance.
+Quick Summary
+
+AWS Resource Access Manager (AWS RAM) lets you securely share supported AWS resources
+across accounts and organizations. It simplifies multi-account architectures by enabling central
+resource management, reduces duplication, and enforces access control using [AM and AWS
+Organizations.
+

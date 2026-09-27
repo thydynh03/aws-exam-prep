@@ -1,0 +1,60 @@
+159
+
+Amazon Man: fan
+
+What It Is
+
+‘Amazon Managed Grafana is a fully managed service for open-source Grafana that makes it easy
+to visualize and analyse operational data at scale. It helps you create, explore, and share
+dashboards to monitor AWS resources and other data sources without needing to manage
+Grafana infrastructure yourself.
+
+Key Features
+
+Fully managed, highly available, and scalable Grafana workspace
+
+Integration with AWS data sources such as CloudWatch, X-Ray, Timestream, and loT
+SiteWise
+
+Supports over 40 data sources including Prometheus, Elasticsearch, InfluxDB, and
+MySQL
+
+Built-in security features with AWS SSO and IAM Identity Center integration
+Supports Grafana Enterprise plugins for enhanced capabilities
+
+Automatic version updates and patching
+
+Supports creating, sharing, and embedding dashboards
+
+Alerting with multi-channel notifications including SNS and Slack
+
+Workspaces
+
+Logical Grafana environments in your AWS account
+Multi-user support with AWS SSO for access control
+Each workspace is isolated and secure
+
+Supports provisioning multiple workspaces for different teams or projects
+
+Data Sources
+
+Native integration with AWS services including:
+
+o Amazon CloudWatch
+
+°
+
+AWS X-Ray
+AWS loT SiteWise
+
+°
+
+o Amazon Timestream
+© AWS Managed Prometheus
+Also supports popular third-party sources like:
+o Prometheus
+© Elasticsearch
+o InfluxDB
+
+© MySQL/PostgreSQL
+

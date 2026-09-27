@@ -1,0 +1,36 @@
+209
+
+o Uses GENEVE protocol
+© Simplifies insertion of security appliances into traffic path
+Integrates with third-party virtual appliances
+Listeners and Rules
+* Listeners check for connection requests on configured protocols and ports.
+* ALB supports listener rules to forward traffic based on host or path conditions.
+© NLBlisteners forward TCP, TLS, or UDP traffic directly to targets.
+© GWLB listeners forward traffic using the GENEVE protocol.
+Target Groups
+* Logical grouping of targets (EC2 instances, IP addresses, Lambda functions).
+Health checks performed at target group level.
+* Supports weighted target groups for traffic distribution.
++ ALB target types include Instance, IP, Lambda.
+© NIB target types include Instance, IP.
+Health Checks
+* ELB performs health checks to determine target availability.
+* Configurable intervals, thresholds, paths, and protocols.
+* Unhealthy targets are automatically removed from routing.
+* Health check types: HTTP, HTTPS, TCP, or gRPC (for ALB).
+Cross-Zone Load Balancing
++ Distributes traffic evenly across all healthy targets in all enabled Availability Zones.
+« Enabled by default on ALB and CLB.
+* Optional on NLB (can be enabled or disabled).
+© Helps improve availability and fault tolerance.
+SSL/TLS Termination
+* Offload encryption/decryption to the load balancer.
+© Certificates managed via AWS Certificate Manager (ACM).
+¢  ALBand NLB support TLS termination.
+Helps simplify backend application configuration.
+Sticky Sessions
+* Also known as session affinity.
+
++ ALBand CLB support sticky sessions via cookies.
+

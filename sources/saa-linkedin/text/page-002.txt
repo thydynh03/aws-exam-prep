@@ -1,0 +1,53 @@
+INDEX
+SRNO CATEGORY/SERVICE PAGE NO
+
+ANALYTICS
+1 | Amazon Athena 4
+2 | AWS Data Exchange 7
+3 | AWS Data Pipeline 10
+4 | Amazon EMR 13
+5 | AWS Glue 17
+6 | Amazon Kinesis 21
+7 | AWS Lake Formation 25
+8 | Amazon Managed Streaming for Apache Kafka (Amazon MSK) 27
+9 | Amazon OpenSearch Service 30
+10 | Amazon QuickSight 33
+11 | Amazon Redshift 36
+
+APPLICATION INTEGRATION
+1 | Amazon AppFlow 39
+2 | AWS AppSync 41
+3 | Amazon EventBridge 43
+4 | Amazon MQ 47
+5 | Amazon Simple Notification Service (Amazon SNS) 50
+6 | Amazon Simple Queue Service (Amazon SQS) 53
+7 | AWS Step Functions 56
+AWS COST MANAGEMENT
+
+1 | AWS Budgets 60
+2 | AWS Cost and Usage Report 61
+3 | AWS Cost Explorer 61
+4 | Savings Plans 61
+
+COMPUTE
+1 | AWS Batch 63
+2 | Amazon EC2 66
+3 | Amazon EC2 Auto Scaling 71
+4 | AWS Elastic Beanstalk 23
+5 | AWS Outposts 76
+6 | AWS Serverless Application Repository 78
+7 | AWS Wavelength 80
+
+CONTAINERS
+
+1 | Amazon ECS Anywhere 82
+2 | Amazon EKS Anywhere 83
+3 | Amazon EKS Distro 84
+4 | Amazon Elastic Container Service(Amazon ECS) 85
+5 | Amazon Elastic Container Registry (Amazon ECR) 89
+6 | Amazon Elastic Kubernetes Service (Amazon EKS) 92
+
+DATABASE
+1 | Amazon Aurora 95
+2 | Amazon DocumentDB (with MongoDB compatibility) 99
+

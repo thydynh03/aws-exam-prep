@@ -1,0 +1,54 @@
+53
+
+Amazon SQS
+What It Is
+
+Fully managed message queuing service.
+Decouples and scales distributed systems, microservices, serverless apps.
+
+Stores, transmits, and retrieves messages between components without them needing to
+know each other’s status or location.
+
+Key Features
+
+Reliable, scalable message queuing.
+
+Supports standard queues (high throughput, at-least-once delivery) and FIFO queues
+(exactly-once processing, ordered delivery)
+
+Fully managed, no servers to provision or manage.
+
+Integrates with many AWS services (Lambda, SNS, ECS, Step Functions).
+
+1. Types of Queues
+a, Standard Queue
+
+Default queue type.
+Nearly unlimited transactions per second.
+At-least-once delivery (may deliver duplicates).
+Best-effort ordering (no strict ordering guaranteed).
+
+Use case: High-throughput applications, where occasional duplicates are acceptable
+
+b. FIFO Queue (First-In-First-Out)
+
+Guarantees exactly-once processing.
+Preserves strict message order.
+Supports up to 300 transactions per second (can increase with batching).
+
+Use case: Banking transactions, inventory updates.
+
+2, Message Lifecycle
+
+Producer sends message to queue.
+SQS stores message redundantly across multiple AZs.
+Consumer polls queue and processes message.
+
+Once processed, message is deleted.
+
+3, Message Visibility Timeout
+
+Period after a message is retrieved when it remains invisible to other consumers.
+
+Prevents multiple consumers processing the same message simultaneously.
+

@@ -1,0 +1,58 @@
+126
+
+AWS Ampli
+
+What It Is
+
+AWS Amplify is a development platform for building secure, scalable full-stack web and mobile
+applications. It provides a set of tools and services that work together to simplify frontend and
+backend development using AWS.
+
+Key Features
+
+Enables rapid development and deployment of web and mobile applications
+Supports frameworks such as React, Angular, Vue, Nextjs, iOS, Android, Flutter
+Provides libraries, CLI, UI components, and fully managed hosting
+
+Supports GraphQL and REST APIs, authentication, storage, analytics, and more
+
+Integrated with other AWS services like AppSync, Cognito, $3, and Lambda
+
+Amplify CLI
+
+Command line toolchain for configuring and deploying backend services
+Supports categories such as auth, storage, API, hosting, functions, and more
+Generates infrastructure using AWS CloudFormation templates
+
+Easily integrates with source control (Git) and CI/CD workflows
+
+Amplify Hosting
+
+Fully managed CI/CD and hosting service for static web apps
+
+Supports modern web frameworks like React, Angular, Vue, and Next js
+Automatically builds, deploys, and hosts apps from Git repositories
+Custom domain setup and SSL support included
+
+Provides previews for pull requests and branch deployments
+
+Authentication and Authorization
+
+Uses Amazon Cognito for user sign-up, sign-in, and access control
+
+Provides built-in UI components for login flows
+
+Supports multi-factor authentication (MFA), OAuth, and SAML
+
+Easily integrates with social identity providers like Google, Facebook, and Amazon
+
+Fine-grained access control via Cognito User Pools and Identity Pools
+
+API Integration
+
+Supports building and managing GraphQL APIs via AWS AppSyne
+Supports building REST APIs using Amazon API Gateway and AWS Lambda
+CLI can generate and manage API schemas and resolvers
+
+‘Automatically configures API authorization and access control
+

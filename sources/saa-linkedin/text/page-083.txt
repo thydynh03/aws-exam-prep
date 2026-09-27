@@ -1,0 +1,44 @@
+82
+
+Amazon ECS Anywhere
+What It Is
+
+Amazon ECS Anywhere allows you to run ECS tasks on your own hardware , whether on-
+premises, edge locations, or other environments outside AWS.
+It provides a hybrid cloud model while still using the same ECS control plane that runs in AWS.
+
+Key Features
+
+* Run containers on-premises or in any non-AWS environment
+
+* Uses the same ECS management and APIs
+
+* Ideal for hybrid and edge workloads
+
+© You manage the infrastructure (servers, networking, etc.)
+
+* ECS manages the containers, scheduling, deployment, and monitoring
+Benefits
+
+* Extends AWS container management to on-prem environments
+
+* Reduces operational complexity with a consistent ECS experience
+
+* Single control plane for managing workloads across AWS and on-prem
+
+Enables hybrid application architectures
+Use Cases
+
+* Edge computing (IoT or low-latency workloads)
+
++ Regulated industries where data must remain on-prem
+
++ Gradual cloud migration while keeping control of on-prem workloads
+Exam Tips
+
+* ECS Anywhere = Run ECS tasks outside AWS
+
++ Hybrid container orchestration, same ECS control plane
+
+© User manages infrastructure, ECS manages containers
+

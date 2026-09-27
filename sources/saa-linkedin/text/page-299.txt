@@ -1,0 +1,33 @@
+298
+
+Data Durability and Availability
+
+Leverages $3’s 11 nines durability.
+Virtual tapes in Glacier provide long-term, low-cost archival.
+
+Automatic replication and failover using AWS backend services.
+
+Exam Tips
+
+File Gateway = Files to S3 (via NFS/SMB), good for $3 integration.
+
+Volume Gateway = Block storage over iSCSI, good for on-prem block apps with cloud
+backup.
+
+‘Tape Gateway = VTL to $3/Glacier, good for backup /archive use cases.
+Cached Volumes = Store in AWS, cache locally.
+
+Stored Volumes = Store locally, backup to AWS.
+
+Often tested in hybrid cloud, DR, and backup scenarios.
+
+Security = TLS + KMS, and IAM access control.
+
+AWS Backup can manage Volume and Tape Gateway backups.
+
+Quick Summary
+
+AWS Storage Gateway provides three gateway types: File, Volume, and Tape, to bridge on-
+premises environments with AWS cloud storage. It supports hybrid storage, backup, and
+archival use cases with local caching, encryption, and seamless AWS integration.
+

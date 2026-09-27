@@ -1,0 +1,36 @@
++ Task Role
+© Provides AWS API permissions to the containers in the task
+«Task Execution Role
+© Permissions to pull images, write logs, manage secrets
+* Supports encryption of sensitive data using AWS Secrets Manager and AWS KMS
++ Private Docker registries supported via AWS Secrets Manager
+Integration with Other AWS Services
+* AWS Fargate for serverless container hosting
++ Elastic Load Balancing for distributing traffic
+* AWS App Mesh for microservices networking
+* AWS CloudWatch for logs and metrics
+* AWS X-Ray for tracing
++ AWS CodePipeline and CodeDeploy for C1/CD
+* Amazon ECR for storing Docker images
+* AWS Secrets Manager and Parameter Store for managing secrets
+Pricing
+* No additional charge for ECS itself
+* Pay for underlying compute resources
+o C2 instances for EC2 Launch Type
+Fargate task pricing based on vCPU and memory used per second
+* Other AWS resources used (e.g, ALB, ECR, CloudWatch) incur standard charges
+Use Cases
+© Microservices applications
+* Batch processing workloads
+* Hybrid workloads (EC2 and Fargate)
+* Migrating existing Docker workloads to AWS
+«  Event-driven container execution
+Exam Tips
+* ECS supports EC2 and Fargate launch types
++ Task Definition = blueprint; Task = running instance
+* Services manage scaling, load balancing, and deployment
+
+© awsvpe networking mode assigns ENI per task for VPC integration
+
+87
+

@@ -1,0 +1,41 @@
+200
+
+Amazon CloudFront
+What It Is
+
+Amazon CloudFront is a global Content Delivery Network (CDN) that uses a worldwide network
+of edge locations to cache and deliver content closer to users, dramatically reducing latency and
+improving performance for static and dynamic web content, videos, APIs, and applications.
+
+Core Concepts
+Edge Locations
+* Global network of caching servers (hundreds of locations worldwide)
+* Cache copies of content close to end users for faster delivery
+Serve content from the nearest location to minimize latency
+Regional Edge Caches
++ Intermediate caching layer between origin and edge locations
+* Cache larger objects with lower request volumes
+* Reduce load on origin servers by serving cached content to edge locations
+Origins
+* Source of content that CloudFront retrieves and caches
++ Supported origin types:
+© Amazon $3 buckets (static site hosting, media files)
+© EC2 instances (application servers)
+© Elastic Load Balancers (ALB, NLB)
+© Custom HTTP/HTTPS endpoints (on-premises servers, third-party origins)
+Distributions
+* Configuration defining how CloudFront delivers content
+«Types:
+
+Web Distribution - Static and dynamic content (HTML, CSS, JavaScript, images,
+videos, APIs)
+
+o RTMP Distribution - Deprecated (Adobe Flash streaming media)
+Caching and TTL
+Cache-Control Headers
+* Control how long objects remain in edge caches
+© Origin servers specify caching behaviour via HTTP headers
+Time-to-Live (TTL)
+
+¢ Minimum TTL - Shortest time content stays cached
+

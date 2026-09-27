@@ -1,0 +1,60 @@
+258
+
+AWS Network Firewall
+
+What It Is
+
+AWS Network Firewall is a managed service that provides customizable, stateful, and stateless
+network traffic filtering for your Amazon VPC. It helps protect VPC networks by inspecting and
+controlling inbound and outbound traffic at the subnet level.
+
+Key Features
+
+Managed, highly available, and scalable firewalll service
+Supports both stateful and stateless inspection rules
+
+Deep packet inspection (DPI) and domain list rule groups
+
+Integration with AWS Firewall Manager for centralized management
+Supports Suricata-compatible rule sets for advanced inspection
+Provides logging to Amazon $3, CloudWatch, and Kinesis Data Firehose
+Automatically scales to meet traffic demands
+
+Built-in high availability within an Availability Zone
+
+Components
+
+Firewall: Defines the inspection policies and logging settings
+
+Firewall Policy: Contains rule groups and settings for traffic handling
+
+Rule Groups: Sets of stateless or stateful rules to inspect traffic
+
+Stateless Rules: Match criteria based on header fields without maintaining session state
+Stateful Rules: Track and inspect connection state for advanced filtering
+
+Domain List Rules: Allow or deny based on domain names in DNS traffic
+
+Logging Configuration: Define how flow logs and alert logs are sent to $3, CloudWatch
+Logs, or Firehose
+
+Traffic Flow
+
+Deployed in a VPC subnet using AWS Gateway Load Balancer or as a VPC ingress/egress
+filter
+
+Traffic is routed through the firewall endpoint for inspection
+
+Supports routing rules in route tables to redirect traffic to firewall endpoints
+
+Use Cases
+
+Protecting VPC subnets with inbound and outbound filtering
+
+Enforcing security policies across workloads in multiple accounts using AWS Firewall
+Manager
+
+Detecting and blocking known bad IP addresses and domains
+
+Preventing data exfiltration through domain-based filtering
+

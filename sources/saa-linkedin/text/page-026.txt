@@ -1,0 +1,51 @@
+25
+
+Amazon LakeForm:
+What itis
+
+A fully managed service that simplifies setting up, securing, and managing data lakes. Builds,
+catalogs, and secures data in Amazon $3 for analytics and ML. Integrates tightly with AWS
+Glue, Athena, Redshift Spectrum, and EMR.
+
+Key Features
+
+* Centralized Data Lake Setup: Registers $3 buckets as data lake locations. Automatically
+crawls and catalogs data. Grants fine-grained access controls.
+
+Data Catalog: Unified metadata catalog shared with AWS Glue. Defines tables, schemas,
+and partitions for analytics tools.
+
+* Access Control: Fine-grained permissions at table, column, and row level. Permissions
+managed within Lake Formation, separate from IAM. Integrates with AWS IAM and AWS
+KMS for security.
+
++ BluePrints & Workflows: Pre-built ETL blueprints automate data ingestion (e.g,
+from RDS or DynamoDB). Workflows orchestrate multiple jobs and data
+transformations.
+
++ Data Filtering: Applies row- and column-level filters without duplicating data.
+
++ Transaction Support: Supports ACID transactions for governed
+tables (insert/update/delete consistency)
+
+© Storage Optimization: Uses Amazon $3 as the underlying data store. Manages metadata,
+versioning, and schema evolution.
+
++ Integration: Works with Athena, Redshift Spectrum, QuickSight, Glue, and SageMaker.
+Supports federated queries from external sources.
+
+How It Works
+* You register data locations ($3 paths) and define permissions in Lake Formation.
+* Data is crawled and cataloged into the Data Catalog (shared with AWS Glue).
+* Permissions determine which principals (users, roles) can access what data.
+* Authorized analytics services query the data directly from $3 using governed access.
+Use Cases
+* Centralize and govern enterprise data in one place.
++ Simplify onboarding of new data sources for analytics.
+* Apply fine-grained data access policies for different teams.
++ Enable self-service analytics with consistent security controls.
+* Manage ACID tables for data warehouses and ML pipelines.
+Pricing
+
+* Pay per transaction (read/write) on governed tables.
+

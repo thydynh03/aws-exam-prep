@@ -1,0 +1,43 @@
+79
+
+Integration with AWS Services
+
+* Works with AWS Lambda, API Gateway, DynamoDB, Step Functions, SNS, SQS, and other
+serverless components
+
+* Deployments use AWS CloudFormation for consistent and repeatable provisioning
+* AWS SAM CLI can be used for local testing and publishing to the repository
+Benefits
+* Accelerates development by reusing validated, production-ready serverless apps
+* Reduces duplication of effort within organizations
++ Simplifies sharing of best practices and vetted solutions
+* Improves consistency across teams by standardizing serverless deployments
+Supports continuous integration and deployment workflows
+Use Cases
+* Sharing serverless microservices within a company
+* Open-source distribution of serverless solutions
+* Centralizing vetted serverless patterns and architectures
+* Building internal catalogs of reusable serverless components
+* Quickly deploying common integrations and utilities
+Pricing
+* No additional charge to use the AWS Serverless Application Repository itself
+
++ Pay for underlying AWS resources provisioned by the application (e.g, Lambda
+invocations, API Gateway requests, DynamoDB storage)
+
+Exam Tips
+*  SARis a managed repository for packaging, sharing, and deploying serverless apps
+* Apps are defined using AWS SAM templates
+* Supports public sharing and private sharing with accounts or organizations
+* Deployments are powered by AWS CloudFormation
+
+© Ideal for promoting reuse and consistency in serverless development across teams and
+organizations
+
+Quick Summary
+
+AWS Serverless Application Repository is a fully managed service for discovering, sharing, and
+deploying serverless applications defined with AWS SAM. It helps developers and organizations
+reuse proven serverless architectures, accelerates delivery, and promotes best practices in
+building serverless solutions on AWS.
+

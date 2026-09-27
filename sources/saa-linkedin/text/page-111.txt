@@ -1,0 +1,55 @@
+Pricing
+
+Catalog and product metadata storage
+
+Event tracking and telemetry systems
+
+Pay per request for reads/writes (on-demand mode)
+Provisioned mode: pay for configured capacity
+
+PITR storage billed separately
+
+Data transfer within the same AWS Region is free
+
+Costs for backup storage and restores apply
+
+Best Practices
+
+Use on-demand mode for unpredictable workloads
+Use provisioned mode for steady traffic to control costs
+
+Design tables with a well-planned partition key for even load distribution
+Enable PITR for production data protection
+
+Restrict access via IAM and VPC PrivateLink
+
+Monitor performance with CloudWatch metrics (throttling, latency)
+
+Avoid wide partitions distribute writes evenly
+
+Exam Tips
+
+Serverless Cassandra service, no cluster management required
+Supports CQL and Cassandra drivers
+
+Automatically replicates data across 3 AZs
+
+Encryption at-rest and in-transit supported by default
+
+‘Two capacity modes: On-Demand & Provisioned
+
+PITR available for up to 35 days
+
+No VPC deployment access via PrivateLink if needed
+
+Great for scalable, low-latency, NoSQL workloads
+
+Quick Summary
+
+‘Amazon Keyspaces is a fully managed, serverless, and highly available Cassandra-compatible
+database designed for massive scalability, low-latency workloads, and seamless AWS
+integration, ideal for use cases like IoT, session management, and real-time analytics without the
+hassle of cluster administration.
+
+110
+

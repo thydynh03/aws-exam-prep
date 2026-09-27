@@ -1,0 +1,37 @@
+187
+
+* AWS Schema Conversion Tool (AWS SCT) helps convert database schema and code for
+heterogeneous migrations
+
+Replication Tasks
++ Full load: Migrates all existing data
+* CDC (Change Data Capture): Captures ongoing changes to keep source and target in sync
++ Fullload + CDC: Combines both for minimal downtime migrations
+Change Data Capture (CDC)
++ Enables near-real-time replication
++ Captures insert, update, and delete operations from the source
++ Ensures target stays up-to-date during and after initial migration
+High Availability
+© Multi-AZ deployment with failover support
++ Ensures minimal disruption in case of infrastructure failure
+« Replication tasks can be resumed after failover
+Data Transformation
+* Supports basic data transformation rules during migration
+* Modify data types, column names, or content as it moves to the target
+* Can map and filter data to control what is migrated
+Performance and Scalability
+* Scales with instance types to support large datasets
+Supports parallel table loading
+* Optimized for high-throughput migration
+Monitoring and Management
+Integrated with Amazon CloudWatch for metrics and logs
+* AWS Management Console for task creation and monitoring
+* Detailed task logs for troubleshooting
+* Notifications via Amazon SNS
+Security
+* Supports encryption at rest and in transit
+«VPC support for network isolation
++ IAM for controlling access to AWS DMS resources
+
++ AWS Key Management Service (KMS) for managing encryption keys
+

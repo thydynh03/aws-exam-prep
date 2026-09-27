@@ -1,0 +1,58 @@
+104
+
+Pricing
+
+Charges based on:
+
+Read/Write capacity (or On-Demand usage)
+© Storage (per GB/month)
+© Streams, backups, PITR, DAX, Global Tables billed separately
+
+Use Cases
+
+* Real-time bidding platforms
+
+* Gaming leaderboards
+
+© Shopping carts
+
+* loT telemetry data
+
+* Mobile app backends
+
+* User preference/profile storage
+Best Practices
+
+* Use On-Demand mode for unpredictable traffic
+
++ Partition keys should distribute traffic evenly
+
+* Enable Auto Scaling for provisioned workloads
+
++ Use DAX for frequently accessed read-heavy data
+
+* Secure with IAM, KMS, and VPC Endpoints
+
+* Use Streams + Lambda for event-driven architecture
+Exam Tips
+
+* Choose On-Demand to avoid provisioning headaches
+
++ LSI=must be defined at creation, GSI = can be added anytime
+
+Streams trigger Lambda, great for real-time applications
+
+* Global Tables enable low-latency writes and reads across regions
+
++ Transactions enable coordinated writes with ACID compliance
+
++ PITRenables second-level restore up to 35 days
+
++ Know difference between Eventually and Strongly Consistent Reads
+Quick Summary
+
+Amazon DynamoDB is a fully managed, serverless NoSQL database delivering high performance,
+scalability, and resilience. It offers on-demand and provisioned capacity, automatic multi-AZ
+replication, DAX for caching, PITR for recovery, and global tables for low-latency, multi-region
+access. Ideal for real-time, serverless, and globally distributed applications.
+

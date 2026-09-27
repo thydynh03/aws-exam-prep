@@ -1,0 +1,26 @@
+273
+
+*  Event-driven applications
+* Continuous integration and deployment pipelines
+© Migrating legacy container workloads to serverless
+* Running Kubernetes workloads without managing nodes
+Benefits
+* No server management or provisioning
++ Fine-grained billing based on actual resource usage
+* Improved security with task/pod-level isolation
+* Integration with AWS services for networking, monitoring, and security
+* Seamless scaling to meet demand
+Exam Tips
++ Fargate removes need to manage EC2 instances for ECS and EKS
+* Supports per-task/pod billing for vCPU and memory
+* Uses awsvpe networking mode with dedicated ENIs
+«Integrated with IAM roles for fine-grained permissions
+* Supports ECS Service Auto Scaling and EKS HPA
++ Secrets management via Secrets Manager and Parameter Store
++ Best for variable, unpredictable workloads or simplifying operations
+
+Quick Summary
+AWS Fargate is a serverless compute engine that runs containers without managing servers. It
+integrates with ECS and EKS to provide scalable, secure, and cost-efficient container
+deployments with per-second billing and deep AWS integration.
+

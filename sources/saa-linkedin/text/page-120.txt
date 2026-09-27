@@ -1,0 +1,59 @@
+Storage and 1/0 requests billed separately
+Backups stored in $3 are free up to the allocated storage size
+
+Data transfer costs may apply
+
+Aurora Highlights
+
+AWS-built, MySQL and PostgreSQL-compatible engine
+
+Up to 5x faster than standard MySQL, 3x faster than PostgreSQL
+Storage automatically grows up to 128 TB
+
+Six-way replication across three AZs
+
+‘Automated failover, continuous backups to $3
+
+Aurora Serverless: Auto-scales capacity based on load
+
+Global Databases for low-latency global reads and disaster recovery
+
+Use Cases
+
+Web and mobile applications
+Enterprise applications
+E-commerce platforms
+Business analytics
+
+SaaS applications requiring relational data storage
+
+Exam Tips
+
+Use multi-AZ for high availability and automatic failover
+Read Replicas are for scaling reads and disaster recovery
+
+Aurora offers better performance and high availability with low replication lag
+IAM Database Authentication adds [AM-based access control
+
+Backups support point-in-time recovery
+
+Encryption at rest uses KMS, in transit uses SSL/TLS
+
+Performance Insights helps identify slow queries
+
+Storage Auto Scaling automatically increases storage as needed
+
+Aurora Global Databases support globally distributed applications
+
+AWS handles maintenance tasks such as backups and patching
+
+Quick Summary
+‘Amazon RDS is a managed service that simplifies deploying, operating, and scaling relational
+databases in AWS. It supports multiple database engines, offers automated backups, multi-AZ
+
+deployments for high availability, read replicas for scaling, and encryption for data security.
+
+119
+
+Aurora, AWS's proprietary database engine, offers additional performance and scaling benefits.
+

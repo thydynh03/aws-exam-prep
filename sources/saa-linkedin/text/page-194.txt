@@ -1,0 +1,43 @@
+193
+
++ Integration
+
+© Once the Snowmobile arrives at the AWS data centre, AWS personnel unload the
+data into your specified $3 bucket(s).
+
+© Ordering
+© The service must be requested through the AWS account team.
+© AWS conducts an assessment and planning process before scheduling delivery.
+
+Comparison with Other Snow Services
+
+Service Capacity Use Case Delivery Time
+‘Snowball Upto80TBper | TB-scale migrations, edge Days to weeks
+Edge device computing workloads
+Snowmobile | Up to 100 PB Exabyte-scale migrations Weeks (depending
+on size)
+Security Considerations
+
+* Encryption in transit and at rest (AES-256).
++ KMS integration for key management.
+© Chain-of-custody tracking during entire operation.
+© Tamper-evident enclosures and escort security.
+Limitations
+* Only available in specific AWS regions (must confirm availability).
+© Requires significant logistical planning.
++ Typically used for one-time, large-scale migrations.
+Exam Tips
+* Snowmobile = 100 PB truck used when moving data over network is infeasible.
+* Data encrypted using KMS-managed 256-bit keys.
+* Requires on-site setup by AWS and security escort.
+Often tested in exam scenarios describing massive data centre migrations.
+
+* Compared to Snowball Edge, Snowmobile is much larger and designed for exabyte-scale
+transfer.
+
+Quick Summary
+
+AWS Snowmobile is a physically transported data transfer solution capable of moving up to 100
+PB of data per unit securely and efficiently from customer sites to AWS, with strong encryption,
+chain-of-custody controls, and logistical support from AWS.
+

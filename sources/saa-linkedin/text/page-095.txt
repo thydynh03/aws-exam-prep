@@ -1,0 +1,32 @@
+Pricing
+Charged per EKS cluster per hour
+* Pay for EC2 instances or Fargate pods used as worker nodes
+* Standard AWS charges apply for other integrated services (EBS, ALB, CloudWatch)
+Use Cases
+* Deploying and managing microservices applications
+* Hybrid workloads with EC2 and Fargate
+* Batch processing and ML workflows on Kubernetes
+* Migrating existing Kubernetes workloads to AWS
+* Building multi-AZ, highly available applications
+Exam Tips
+* _EKS control plane is managed by AWS and runs across multiple AZs
+* Supports EC2 and Fargate launch types for worker nodes
+* VPC CNI provides pod-level ENIs and IP addresses
+* IAM Roles for Service Accounts allow fine-grained permissions for pods
+* AWS Load Balancer Controller automates ALB/NLB integration for services
+Supports encryption at rest with KMS and in transit with TLS
+* Managed Node Groups simplify worker node lifecycle management
++ _ EFS integration enables persistent, shared storage between pods
++ eksctl simplifies cluster provisioning and management
++ Best for running standard Kubernetes workloads with AWS integrations
+
+Quick Summary
+
+94
+
+Amazon EKS is a fully managed Kubernetes service providing a production-ready control plane,
+integrated AWS security and networking, and support for both EC2 and Fargate worker nodes. It
+
+allows organizations to run standard Kubernetes applications on AWS with high availability,
+scalability, and ease of management.
+

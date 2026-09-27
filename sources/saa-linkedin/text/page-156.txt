@@ -1,0 +1,41 @@
+155
+
+AWS Health Dashboard
+What It Is
+
+‘The AWS Health Dashboard gives you real-time visibility into the status and health of AWS
+services globally and specific to your account.
+
+Ithelps you stay informed about service disruptions, planned maintenance, and resource-
+specific issues that could affect your workloads.
+
+There are two main views:
+1. Service Health Dashboard - Public view of AWS service status across all regions.
+
+2. Your Account Health Dashboard ~ Personalized view showing issues
+impacting your AWS resources.
+
+Key Features
+«Service Status Updates: See outages, degradation, or maintenance events in real-time.
++ Personalized Notifications: Get alerts for your account-specific incidents.
++ Event History: Review past issues and maintenance events.
++ Integration with CloudWatch & SNS: Automate notifications for operational awareness.
+* APIs Available: Access programmatically using AWS Health API (great for automation).
+Use Cases
+* Monitoring service interruptions that might impact production workloads.
+«Tracking AWS infrastructure health during incident management.
+«Setting up alerting systems via SNS or EventBridge for proactive responses.
+«Reviewing post-incident events for compliance and RCA (root cause analysis).
+Exam Tips
+* Service Health Dashboard: Accessible publicly without login shows AWS-wide events.
+
+* Account Health Dashboard: Requires AWS credentials shows issues related to your AWS
+resources.
+
+«AWS Health API can be integrated with monitoring tools for proactive alerts.
+* Often tested in exam questions related to troubleshooting, monitoring, and resiliency.
+Quick Summary
+
+Your window into AWS's operational health, track global and account-specific incidents, get
+proactive alerts, and ensure your architecture remains resilient against service disruptions.
+

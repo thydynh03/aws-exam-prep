@@ -1,0 +1,36 @@
+18
+
++ Built-in transforms like mapping, filtering, joining, partitioning
+* Support for custom transforms and libraries
++ Can read from and write to various data sources ($3, RDS, Redshift, DynamoDB, JDBC)
+* Job bookmarks to track processed data and avoid reprocessing
+AWS Glue DataBrew
+* Visual data preparation tool
+* No-code interface to clean and normalize data
+* Over 250 built-in transforms for formatting, deduplication, validation
+* Can process data stored in $3, Redshift, Athena, and other sources
+* Automates creation of transformation recipes for reuse
+AWS Glue Studio
+* Visual interface for authoring, running, and monitoring ETL jobs
+© Drag-and-drop nodes to define ETL flow
+* Supports complex transformations without coding
++ Allows code editing for advanced use cases
+* Integrated monitoring and job runs management
+Triggers and Workflows
+* Schedule jobs or run them on-demand
++ Event-driven triggers based on data arrival or other job completion
+* Workflows to coordinate multiple ETL jobs and crawlers
+* Visual interface to design and monitor workflows
+Integration with Other AWS Services
+* Amazon $3 for storage and data lakes
+* Amazon Redshift for data warehousing
+* Amazon RDS and Aurora for relational sources
+* AWS Lake Formation for data lake permissions
+* AWS Athena for querying cataloged data
+«Amazon EMR for big data processing
+* AWS Step Functions for orchestration of complex workflows
+* AWS CloudWatch for monitoring and logging
+Security
+
++ IAM roles and policies for fine-grained access control
+

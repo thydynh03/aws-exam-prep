@@ -1,0 +1,38 @@
+137
+
+AWS Machine Learning
+Rekognition
+
+Face detection and analysis, Labelling of objects
+* Celebrity recognition in photos and videos
+Transcribe
+* Converts speech to text
+* Common use case: creating subtitles for audio or video content
+Polly
+© Converts text to lifelike speech
+* Supports multiple languages and voices
+Translate
+* Language translation service
+
+Real-time and batch translations across many languages
+
+* Build conversational interfaces and chatbots
++ Natural language understanding and speech recognition
+Connect
+* Cloud-based contact centre service
+* Provides inbound and outbound communication features
+Comprehend
++ Natural Language Processing (NLP) service, detects sentiment, entities, key phrases
+SageMaker
+* Managed service to build, train, and deploy machine learning models
+* Supports all levels of ML developers and data scientists
+Kendra
+«Enterprise search service powered by machine learning
++ Provides intelligent search results across data sources
+Personalize
+Real-time personalization and recommendation service
+* Uses ML to tailor recommendations for users
+Textract
+
+* Detects and extracts text and data from scanned documents
+
