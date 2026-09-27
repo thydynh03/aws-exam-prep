@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { HANDBOOK_SECTIONS, getHandbookSectionsForService, getHandbookSectionsForExplorerId, searchHandbook } from '../saaHandbook';
 import { getFlashcardsByDeck, FLASHCARDS } from '../flashcardDatabase';
-import { retrieveRelevantKnowledge } from '../aiRagEngine';
+import { retrieveRelevantKnowledge, buildHandbookAnswer } from '../aiRagEngine';
 
 describe('SAA-C03 Handbook data', () => {
   it('covers every entry of the table of contents with content', () => {
@@ -41,5 +41,13 @@ describe('Handbook integration', () => {
       expect(card.front).toBeTruthy();
       expect(card.back).toBeTruthy();
     }
+  });
+
+  it('answers offline from the handbook for services outside the curated list', () => {
+    const res = buildHandbookAnswer('How does Athena partitioning reduce cost?');
+    expect(res?.answer).toMatch(/Amazon Athena/);
+    expect(res?.answer).toMatch(/[Pp]artition/);
+    expect(res?.citations[0].title).toMatch(/SAA-C03 Handbook: Amazon Athena/);
+    expect(buildHandbookAnswer('hi')).toBeUndefined();
   });
 });

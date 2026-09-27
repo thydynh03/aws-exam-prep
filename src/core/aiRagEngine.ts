@@ -127,6 +127,31 @@ ${svc.commonTraps.slice(0, 2).map(t => `  * ⚠️ ${t}`).join('\n')}
   return { citations: citations.slice(0, limit + handbookHits.length), serviceSnippets, relatedQuestions };
 }
 
+/** Offline answer composed from the most relevant SAA-C03 Handbook passages. */
+export function buildHandbookAnswer(query: string): { answer: string; citations: AICitation[] } | undefined {
+  const found = searchHandbook(query, { limit: 3 });
+  // Require a real keyword match on the service or heading, not just one common word
+  if (!found.length || found[0].score < 3) return undefined;
+  // Drop weak tail matches that only share a generic word like "cost"
+  const hits = found.filter((h) => h.score >= found[0].score * 0.6);
+  const top = hits[0].section;
+  let text = `### 📘 ${top.name} (${HANDBOOK_TITLE}, ${formatHandbookPages(top.printedPages)})\n\n`;
+  if (top.summary) text += `${top.summary}\n\n`;
+  const citations: AICitation[] = [];
+  for (const hit of hits) {
+    text += `#### ${hit.section.name}: ${hit.subsection.heading}\n`;
+    text += hit.subsection.items.slice(0, 8).map((i) => `- ${i}`).join('\n') + '\n\n';
+    citations.push({
+      id: `hb_${hit.section.id}_${hit.subsection.heading}`,
+      title: `SAA-C03 Handbook: ${hit.section.name} – ${hit.subsection.heading} (${formatHandbookPages(hit.section.printedPages)})`,
+      snippet: hit.subsection.items.join(' ').slice(0, 200),
+      type: 'official_doc',
+    });
+  }
+  text += `*(Trích từ tài liệu SAA-C03 Handbook. Nhập API Key hợp lệ trong ⚙️ Cài đặt để AI phân tích sâu hơn.)*`;
+  return { answer: text, citations };
+}
+
 type ChatHistoryItem = { role: 'user' | 'assistant'; content: string };
 
 export interface ConversationContext {
@@ -1296,7 +1321,13 @@ graph LR
         }
       }
 
-      // 4. Helpful architectural synthesis when no direct service matched (never return a cold refusal)
+      // 4. Answer from the SAA-C03 Handbook when it covers the topic
+      const handbookAnswer = buildHandbookAnswer(cleanUserQuery);
+      if (handbookAnswer) {
+        return { answer: handbookAnswer.answer, citations: [...handbookAnswer.citations, ...citations].slice(0, 5) };
+      }
+
+      // 5. Helpful architectural synthesis when no direct service matched (never return a cold refusal)
       let generalText = `### 💡 Tư vấn Kiến trúc AWS: "${cleanUserQuery}"\n\n`;
       generalText += `Để phân tích và thiết kế tối ưu cho yêu cầu này theo chuẩn **AWS Well-Architected Framework** và bài thi **Solutions Architect (SAA-C03)**, hãy xem xét các nguyên lý kiến trúc sau:\n\n`;
       generalText += `1. **Khả năng chịu lỗi & Sẵn sàng cao (Reliability & High Availability):**\n`;

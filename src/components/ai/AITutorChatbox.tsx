@@ -1107,9 +1107,10 @@ export const AITutorChatbox: React.FC<AITutorChatboxProps> = ({
           isCorrect,
           userNotes,
           history: chatHistory,
-          clientApiKey: config.apiKey || undefined,
-          clientProvider: config.provider,
-          clientModel: config.model,
+          // Read the saved config at send time: settings may have been changed in another window/tab
+          clientApiKey: getAITutorConfig(userId).apiKey?.trim() || undefined,
+          clientProvider: getAITutorConfig(userId).provider,
+          clientModel: getAITutorConfig(userId).model?.trim(),
           attachedImage: newUserMessage.attachedImage,
         });
 

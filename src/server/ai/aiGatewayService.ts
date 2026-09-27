@@ -485,7 +485,7 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
     query: securityCheck.sanitizedInput,
     history: payload.history || [],
     currentQuestion: payload.currentQuestion,
-    apiKey: payload.clientApiKey || process.env.GEMINI_API_KEY || process.env.OPENAI_API_KEY || '',
+    apiKey: (payload.clientApiKey?.trim() || process.env.GEMINI_API_KEY?.trim() || process.env.OPENAI_API_KEY?.trim() || ''),
     provider: payload.clientProvider || config.aiProvider.provider,
   });
 
@@ -684,7 +684,7 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
   let rawGenerated = '';
   let modelUsed = config.aiProvider.model;
 
-  const apiKeyToUse = payload.clientApiKey || process.env.GEMINI_API_KEY || process.env.OPENAI_API_KEY || '';
+  const apiKeyToUse = (payload.clientApiKey?.trim() || process.env.GEMINI_API_KEY?.trim() || process.env.OPENAI_API_KEY?.trim() || '');
   const providerToUse = payload.clientProvider || config.aiProvider.provider;
   const priorChatTurns = buildPriorTurns(payload.history, payload.query);
 
