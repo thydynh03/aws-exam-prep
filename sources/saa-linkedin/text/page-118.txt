@@ -1,0 +1,42 @@
+117
+
+Amazon RDS
+
+What It Is
+
+Amazon RDS is a managed relational database service that makes it easier to set up, operate,
+and scale databases in the cloud. It automates tasks such as provisioning, patching, backup,
+recovery, and scaling.
+
+Supported Database Engines
+* Amazon Aurora (MySQL and PostgreSQL compatible)
+© PostgreSQL
+
+* MySQL
+* MariaDB
+* Oracle
+
+© Microsoft SQL Server
+Key Features
+* Managed database service that handles maintenance tasks
+* Automated backups with point-in-time recovery
+* Automated software patching
+© Automatic failure detection and recovery
+© Multi-AZ deployments for high availability
+* Read replicas for scaling read traffic
++ Encryption at rest using AWS KMS
+«Encryption in transit using SSL/TLS
++ Easy scaling of compute and storage
+Deployment Options
+*  Single-AZ: Single database instance in one Availability Zone
+© Multi-AZ: Synchronous standby replica in another AZ for high availability
+© Automated failover to standby on failure
++ Read Replicas: Asynchronous replication for read-heavy workloads
+© Supports up to 5 read replicas for MySQL, MariaDB, PostgreSQL
+© Aurora supports up to 15 read replicas with low-latency replication
+Storage Options
++ General Purpose (SSD)
+© Cost-effective, balanced performance
+
+o Suitable for most workloads
+

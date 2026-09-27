@@ -1,0 +1,51 @@
+3 | Amazon DynamoDB 102
+4 | Amazon ElastiCache 105
+5 | Amazon Keyspaces (for Apache Cassandra) 108
+6 | Amazon Neptune 111
+7 | Amazon Quantum Ledger Database (Amazon QLDB) 114
+8 | Amazon RDS 117
+9 | Amazon Redshift 120
+DEVELOPER TOOLS
+1 | AWS X-Raj 123
+FRONT-END & MOBILE
+1 | AWS Amplify 126
+2 | Amazon API Gatewa 129
+3 | AWS Device Farm 133
+4 | Amazon Pinpoint 135
+MACHINE LEARNING
+1 | Amazon Comprehend 137
+2 | Amazon Forecast 137
+3 | Amazon Fraud Detector 137
+4 | Amazon Kendra 137
+5 | Amazon Lex 137
+6 | Amazon Polly 137
+7 | Amazon Rekognition 137
+8 | Amazon SageMaker 137
+9 | Amazon Textract 137
+10 | Amazon Transcribe 137
+11 | Amazon Translate
+MANAGEMENT & GOVERNANCE
+1 | AWS CloudFormation 138
+2 | AWS CloudTrail 140
+3 | Amazon CloudWatch 143
+4 | AWS Command Line Interface (AWS CLI) 146
+5 | AWS Config 148
+6 | AWS Control Tower 151
+7 | AWS Management Console 154
+8 | AWS Health Dashboard 155
+9 | Amazon License Manager 156
+10 | Amazon Managed Grafana 159
+11 | AWS Managed Service for Prometheus 162
+12 | AWS Organizations 164
+13 | AWS Proton 168
+14 | AWS Service Catalog 170
+15 | AWS Systems Manager 172
+16 | AWS Trusted Advisor 174
+17 | AWS Well-Architected Tool 177
+
+MEDIA SERVICES
+
+Amazon Elastic Transcoder
+
+180
+

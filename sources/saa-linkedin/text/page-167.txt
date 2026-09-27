@@ -1,0 +1,38 @@
+166
+
+Define allowed tag keys and values.
++ Backup Policies:
+© Define and enforce backup plans across accounts.
+© Automate AWS Backup settings.
++ AlServices Opt-Out Policies:
+
+© Control whether AWS Al services can store and use customer content for service
+improvements.
+
+Integration with AWS Services
+AWS Control Tower:
+© Builds landing zones on top of Organizations.
++ AWS Resource Access Manager (RAM):
+© Share resources across accounts.
++ AWS Budgets:
+
+© Track and enforce cost controls across the organization.
+
+* AWS Config:
+o Aggregate configuration data across accounts.
+© CloudTrail:
+© Centralize logging across all accounts.
+Security and Access Control
++ SCPs enforce organization-wide permission guardrails.
++ IAM policies work within the boundaries defined by SCPs.
+* Management account can create and manage all OUs and member accounts.
+© AWS CloudTrail can log all account activities centrally.
+Best Practices
+* Use OUs to reflect organizational structure (e.g,, production, development, testing).
+* Apply SCPs to enforce least privilege.
++ Enable consolidated billing to maximize savings.
+* Use tag policies to maintain resource consistency.
+* Monitor and audit with AWS Config and CloudTrail.
+
++ Enable AWS Budgets for cost tracking and alerts.
+

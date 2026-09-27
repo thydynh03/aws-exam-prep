@@ -1,0 +1,60 @@
+139
+
+Security, Governance & Cost
+
+You control access via AWS 1AM to allow who can create/update/delete stacks.
+
+Don't hard code credentials in templates; use secure parameter types, Secrets Manager
+or SSM Parameter Store.
+
+Use Stack Policies, drift detection, CloudTrail logging to ensure governance/compliance.
+
+Cost: CloudFormation itself has no extra charge; you pay for the resources the stack
+creates.
+
+Use Cases
+
+You need repeatable infrastructure provisioning across environments (dev/stage/prod).
+= Use CloudFormation.
+
+You want version-controlled infrastructure and ability to roll-back changes. >
+CloudFormation templates + Change Sets.
+
+You must deploy identical infrastructure in multiple regions /accounts. > Use StackSets.
+
+You want to modularize infrastructure (¢.g., network stack, application stack referencing
+network outputs). > Use Cross-Stack references/modules.
+
+You're building a CI/CD pipeline for infrastructure changes (DevOps flow). > Use
+CloudFormation integration with pipelines, change sets.
+
+Best Practices
+
+Keep templates modular: separate logical parts of architecture into individual stacks.
+Validate templates (linting, tools like cfn-lint) before deploying.
+Use version control for template files, treat as code (IaC).
+
+Use Stack Policies /Change Sets before applying to production stacks.
+
+Exam Tips
+
+If question: “Repeatable, immutable infrastructure” > CloudFormation (or CDK under
+the hood) is likely.
+
+If they mention “deal with account/region automation” > StackSets might be the answer.
+
+If they ask “cost of the service”, CloudFormation itself is free; you pay for underlying
+resources.
+
+‘Trick: CloudFormation vs other services (e.g,, Terraform), CloudFormation is
+AWS-native, supported by exam.
+
+Quick Summary
+
+AWS CloudFormation is your go-to for automating and managing AWS infrastructure as code.
+Define resources in templates, deploy stacks, reuse modules, govern with policies, embed into
+DevOps pipelines. For the SAA exam you'll often pick it when the requirement
+
+emphasizes automation, repeatability, infrastructure lifecycle management, account/region
+scale, and version-controlled provisioning.
+

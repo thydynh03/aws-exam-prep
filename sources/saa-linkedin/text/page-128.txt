@@ -1,0 +1,39 @@
+127
+
+Storage
+«Integrates with Amazon $3 for file and object storage
+* Manages user-specific storage (private/public/protected)
+* Upload, download, and manage files using Amplify libraries
+* Works with Cognito for secure access to files
+DataStore
+* Programming model for leveraging shared and distributed data
+* Provides conflict resolution and offline data access
+* Automatically syncs with backend when reconnected
+Functions
+* Enables adding backend logic using AWS Lambda
+* Write and deploy serverless functions from CLI
+* Can be triggered by events (e.g,, $3, DynamoDB), APIs, or manually
+* Useful for custom authentication, notifications, data processing
+Analytics
+* Collect user session data and application metrics using Amazon Pinpoint
+© Track user events, screen views, and custom analytics
++ Integrate with marketing automation and user engagement campaigns
+Predictions (AI/ML Integration)
++ Simplifies the use of AWS AI/ML services in frontend applications
+
+* Includes services like Rekognition (image analysis), Polly (text-to-speech), Translate,
+Comprehend
+
+* Requires minimal configuration via Amplify CLI
+Push Notifications
+* Uses Amazon Pinpoint to configure and send push notifications
+* Supports targeted campaigns and transactional messages
+
+* Works with mobile platforms (i0S, Android) through Amplify libraries
+
+* Supports Git-based deployment pipelines (GitHub, GitLab, Bitbucket, AWS CodeCommit)
+* Automatically builds and deploys upon code commits
++ Provides environment management for dey, test, and production
+
++ Preview URLs generated for every feature branch
+

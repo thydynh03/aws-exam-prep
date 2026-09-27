@@ -1,0 +1,44 @@
+83
+
+Amazon EKS Anywhere
+What It Is
+
+‘Amazon EKS Anywhere allows you to create and operate Kubernetes clusters on your own
+infrastructure while still using EKS tooling and APIs.
+It extends the EKS experience to on-premises or edge data centres.
+
+Key Features
+
+* Run Kubernetes clusters locally using EKS tooling
+
+* No dependency on AWS infrastructure
+
+* Supports VMware vSphere and bare metal
+
+* Integrated with EKS console and EKS CLI for management
+
+* Supports GitOps-based workflows for consistent deployments
+Benefits
+
++ Bring Kubernetes to your data centre
+
+* Maintain operational consistency with EKS in AWS
+
+* Allows hybrid or multi-cloud architectures
+
++ Improves flexibility for regulated or latency-sensitive workloads
+Use Cases
+
+* Hybrid Kubernetes deployments
+
++ On-prem Kubernetes management with AWS consistency
+
+© Organizations needing local control with AWS EKS tooling
+Exam Tips
+
+* _ EKS Anywhere = Run Kubernetes clusters on-prem using EKS tools
+
+* No need to rely solely on AWS-managed EKS
+
++ Ideal for hybrid and edge Kubernetes environments
+

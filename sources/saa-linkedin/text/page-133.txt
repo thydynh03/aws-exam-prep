@@ -1,0 +1,20 @@
+132
+
+* Authorization options include IAM, Cognito User Pools, and Lambda Authorizers
+* API Keys and Usage Plans enforce rate limiting and quotas
+
+* VPC Links allow private integrations with VPC resources
+
+* Supports custom domain names with ACM-managed certificates
+
+* Can be integrated with AWS WAF for security
+
+* Detailed monitoring with CloudWatch and X-Ray
+
+Quick Summary
+
+‘Amazon API Gateway is a fully managed service for building, deploying, and securing APIs at
+scale, It supports REST, HTTP, and WebSocket APIs with flexible integrations, authentication
+options, throttling, caching, monitoring, and advanced security features for both public and
+private APIs.
+

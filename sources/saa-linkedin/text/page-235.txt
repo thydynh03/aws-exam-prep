@@ -1,0 +1,25 @@
+234
+
+Pricing
+* Pay per HSM instance hourly.
+* Additional data transfer costs may apply.
+© Noupfront fees.
+Security and Compliance
+* FIPS 140-2 Level 3 validation.
+© Customer controls all keys and operations.
+* Data encrypted with keys never leaves the HSM unencrypted.
+AWS can'taccess or recover customer keys.
+Exam Tips
+© CloudHSM = dedicated hardware, full customer control.
+* Required for strict compliance and regulatory use cases.
+« FIPS 140-2 Level 3 certified.
+* Compare to KMS: KMS is simpler but AWS-managed.
+«Used for PKI, code signing, SSL/TLS offload, secure key storage.
++ Keys generated in CloudHSM stay under customer's exclusive control.
+
+Quick Summary
+
+AWS CloudHSM is a fully managed hardware security module service that gives customers
+dedicated, FIPS 140-2 Level 3 validated HSMs in their VPC for secure key management and
+compliance.
+

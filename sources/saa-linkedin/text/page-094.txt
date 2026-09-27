@@ -1,0 +1,42 @@
+93
+
+* AWS Load Balancer Controller for managing ALB/NLB integration
+Security
+
+* IAM integration for Kubernetes RBAC
+
+* IAM Roles for Service Accounts (IRSA) for granular permissions
+
+* Supports Kubernetes RBAC for cluster-level access control
+
+* Encryption at rest using AWS KMS
+
+© Encryption in transit using TLS
+
+* Integration with AWS Secrets Manager and AWS Parameter Store for managing secrets
+
+* Supports Amazon EBS for persistent volumes
+© Supports Amazon EFS for shared storage between pods
+* Supports FSx for Lustre for high-performance workloads
+* Dynamic provisioning of persistent volumes using Kubernetes Storage Classes
+Logging and Monitoring
+Integrated with Amazon CloudWatch for logs and metrics
+* Container Insights for detailed monitoring of cluster resources and applications
+Supports AWS X-Ray for tracing
++ Fluent Bit and CloudWatch Logs for log collection
+Cluster Autoscaler
+* Automatically adjusts the number of nodes in your cluster based on pending pods
+* Supports scaling EC2 instances in managed node groups
+Kubernetes Versions
+* AWS regularly updates supported Kubernetes versions
+* Ability to choose versions for clusters
+© Control plane and worker nodes can be upgraded independently
+Integration with AWS Services
++ AWS IAM for authentication and authorization
+«AWS ALB/NLB for ingress
+* Amazon ECR for container image storage
+* AWS App Mesh for service mesh and observability
+© AWS Fargate for serverless pods
+
+* AWS CloudFormation and eksctl for infrastructure as code
+

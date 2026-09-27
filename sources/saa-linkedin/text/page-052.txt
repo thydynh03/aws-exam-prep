@@ -1,0 +1,42 @@
+* Mobile push notifications.
+
+Real-time alerts and monitoring.
+
+SNS vs SQS
+
+Feature SNS SQs
+
+Model Pub/Sub (Push) Queue (Pull)
+
+Delivery Push to multiple subscribers Pull by one consumer
+
+Use Case Fan-out to services Decoupling with buffering
+Target Options | Lambda, SQS, SMS, Email, HTTP/S | Typically, Lambda or polling
+
+Message Filtering
+* Subscribers receive only messages that match specified message attributes.
+* Reduces need for additional logic in subscribers.
+*  Attribute-based filtering rules defined during subscription creation.
+Message Format
+* JSON by default.
+* Raw message delivery can be enabled for SQS or Lambda.
+Delivery Retries and DLQ
+* Automatically retries failed deliveries.
+* Configurable retry policy:
+Backoff strategy
+o Retry attempts
+* DLQs supported for unprocessed messages (SQS as target).
+Access Control
++ Uses IAM policies and topic access policies.
+* Controls who can publish or subscribe.
++ Can restrict access to certain accounts, services, or conditions.
+Encryption
+* Supports Server-Side Encryption (SSE) using AWS KMS.
+* Protects messages at rest within SNS topics.
+Monitoring and Logging
+© CloudWatch metrics:
+
+© Number of messages published /delivered
+
+51
+

@@ -1,0 +1,40 @@
+219
+
+AWS insi
+
+What It Is
+
+AWS Transit Gateway is a network transit hub that enables customers to connect their Amazon
+Virtual Private Clouds (VPCs) and on-premises networks through a single gateway. It simplifies
+and scales network architectures by acting as a central router for traffic flowing between
+attached networks.
+
+Key Features
+* Central hub for connecting multiple VPCs, on-premises networks, and AWS services
+* Simplifies many-to-many VPC peering connections
+«Supports thousands of VPC attachments
++ Scales elastically with your network
+* Acts asa regional resource, but can support inter-Region peering
+Attachments
+« VPC Attachments
+o Connect a VPC to the Transit Gateway using a route table
+o Each VPC can have its own subnet associations
++ VPN Attachments
+o Connect on-premises networks over AWS Site-to-Site VPN
+o Supports static and dynamic routing (BGP)
+* Direct Connect Gateway Attachments
+o Connect Direct Connect Gateway to Transit Gateway for hybrid connectivity
+Supports cross-Region VPC access
++ Peering Attachments
+o Connect Transit Gateways in different AWS Regions
+© Supports global network architectures
+Routing
++ Uses Transit Gateway route tables to manage traffic flow
+* Each attachment can associate with one or more route tables
+* Controls which attachments can communicate with each other
+‘* Supports segmentation for isolating traffic between networks
+Inter-Region Peering
+* Enables peering between Transit Gateways in different AWS Regions
+
+* Provides private, low-latency connectivity across regions
+

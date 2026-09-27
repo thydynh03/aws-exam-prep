@@ -1,0 +1,71 @@
+181
+
+Notifications
+
++ Integrates with Amazon SNS to send updates on job status (e.g,, progress, success, failure).
++ Notifications can trigger Lambda functions, workflows, or external alert systems.
+
+Security
+
++ Uses IAM roles and policies to control access to pipelines and media files.
++ Supports encryption for content in-transit and at-rest (using AWS KMS).
+
++ Input and output buckets can have fine-grained access control.
+
++ All requests to Elastic Transcoder use HTTPS for secure communication.
+
+Integration with Other AWS Services
+
+« Amazon $3 - Stores input and output media files.
+
++ Amazon CloudFront - Delivers transcoded content globally with low latency.
+
++ Amazon SNS - Sends job status notifications.
+
+« AWS Lambda - Automates post-processing workflows (e.g, metadata tagging, file cleanup).
+
+Pricing
++ Input and output $3 storage costs are billed separately.
+
++ No upfront fees or minimum commitments.
+
++ Different rates apply for standard-definition (SD), high-definition (HD), and audio-only
+outputs.
+
+Use Cases
+
++ Media streaming platforms needing device-optimized playback formats
++ User-generated content applications that require automated video processing
++ E-learning and marketing platforms delivering video content
+
++ Transcoding pipelines for mobile and web distribution
+
+Best Practices
+
+« Use system presets for quick, reliable transcoding of common formats.
++ Leverage CloudFront for content delivery to improve playback speed and reliability.
+
++ Use IAM roles with least privilege access for pipelines and $3 buckets.
+
+* Organize media files in $3 using structured folder hierarchies (input, output, logs).
+
+Exam Tips
+
++ Elastic Transcoder is used to convert (transcode) media files for playback on various devices.
+« It’s fully managed and works directly with Amazon $3 for input/output.
+
+« Transcoding is configured via pipelines, jobs, and presets.
+
++ Notifications can be sent via Amazon SNS.
+
++ It automatically scales and handles multiple simultaneous jobs.
++ Elastic Transcoder is ideal for simpler, consumer-grade media transcoding tasks.
+
+Quick Summary
+
+AWS Elastic Transcoder is a scalable, managed service for converting media files into device-
+compatible formats. It integrates seamlessly with $3 and CloudFront, uses pipelines and presets
+for automation, and provides simple, cost-effective transcoding for streaming and mobile
+applications. Perfect for developers who want to deliver high-quality media without managing
+encoding infrastructure.
+

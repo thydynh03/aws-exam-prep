@@ -1,0 +1,39 @@
+255
+
+Automated Remediation Workflows
+© Findings can be sent to:
+o AWS Security Hub.
+o Amazon EventBridge.
+© Custom remediation workflows.
+Key Benefits
++ Nomanual assessment setup, fully managed.
+* Continuous, automated vulnerability management.
+«Integrates with AWS developer workflows (ECR, Lambda)
+© Helps maintain compliance requirements.
+Pricing
++ Pay-as-you-go:
+
+o Based on number of EC2 instances, container images scanned, and Lambda
+function scans.
+
+© Noupfront costs.
+Use Cases
+Ensuring EC2 instances are patched against CVEs.
+* Scanning container images before deployment.
+Identifying Lambda code vulnerabilities.
+* Meeting security compliance frameworks (PCI DSS, CIS benchmarks).
+Security & Compliance
+* Helps enforce security best practices.
+* Supports continuous vulnerability management.
++ Findings integrate with Security Hub for centralized visibility.
+Exam Tips
+* Amazon Inspector = vulnerability scanning, not threat detection.
+* Continuous, automated scans for EC2, ECR containers, Lambda.
+* Findings include CVE details, severity, remediation.
++ Integrates with Security Hub and EventBridge.
+Quick Summary
+
+Amazon Inspector is an automated AWS service that continuously scans EC2 instances,
+container images, and Lambda functions for software vulnerabilities and network exposure,
+helping ensure secure and compliant workloads.
+

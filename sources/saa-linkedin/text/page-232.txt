@@ -1,0 +1,40 @@
+231
+
+AWS
+What It Is
+
+Manager (A\
+
+A fully managed AWS service that provisions, manages, and deploys SSL/TLS certificates.
+* Used to secure websites, applications, APIs, and other endpoints.
+Key Features
+1. Free Public Certificates
++ You can request SSL/TLS certificates for use with:
+© Elastic Load Balancers (ALB/ELB)
+© Amazon CloudFront
+o Amazon API Gateway
+© These public certificates are free and auto-renewed.
+2, Private Certificates (ACM PCA)
+* Create and manage private CA (Certificate Authority).
+Use for internal applications, microservices, or VPN devices.
+* Paid service with fine-grained control over private cert issuance.
+3, Automatic Renewal
+
+* ACM handles renewal and deployment of certs for supported AWS services
+automatically.
+
+* Reduces manual overhead and downtime risk.
+4, Integrated with AWS Services
+* Seamless integration with:
+© CloudFront
+© Elastic Load Balancers (ALB/CLB/NLB)
+o API Gateway
+© Elastic Beanstalk
+
+o AWS CloudFormation
+
+5, Secure Key Management
++ AWS manages the private key for the certificate.
+
+* Customers cannot download or export private keys for public certs.
+

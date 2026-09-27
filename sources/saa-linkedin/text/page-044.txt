@@ -1,0 +1,40 @@
+AWS ntBric
+What It Is
++ Serverless event bus service for building event-driven applications.
++ Ingests, filters, routes, and delivers events from:
+o AWS services
+o Your own applications
+© SaaS partners
+Core Concepts
+1, Event Bus
+‘* Logical pipeline that receives events.
++ Types of event buses:
+o Default Event Bus:
++ Receives events from AWS services.
+o Custom Event Bus:
+* For your own applications.
+o Partner Event Bus:
+«For SaaS integrations.
+
+2, Events
+
+* _JSON-formatted records describing changes in AWS resources or app state.
+
++ Example:
+© $3 object created
+© EC2 instance state change
+o Custom application events
+3. Rules
+* Define event patterns to match incoming events.
+* Determine targets that should receive matched events.
+
+* Can transform event before sending to target.
+
+4, Targets
++ Services that process events.
++ Examples:
+
+o Lambda
+
+o SNS
+

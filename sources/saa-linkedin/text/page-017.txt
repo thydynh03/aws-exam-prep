@@ -1,0 +1,43 @@
+16
+
+Best Practices
+
+* Use Spot Instances for core and task nodes to reduce cost
+
+«Enable EMR Managed Scaling to optimize cluster size automatically
+
+* Store data in $3 with EMRFS for separation of compute and storage
+
+* Use AWS Glue Data Catalog for centralized schema management
+
+* Secure clusters with IAM roles, KMS encryption, and Kerberos
+
+* Monitor cluster health and costs with CloudWatch and CloudTrail
+
+* Automate cluster creation and workflows with Step Functions and CloudFormation
+Exam Tips
+
+Fully managed big data platform supporting Hadoop, Spark, Hive, Presto, HBase
+
++ EMRFS enables direct read/write to $3
+
+* Managed Scaling automatically resizes cluster based on workload
+
+* Spot Instances reduce cost significantly
+
+* Supports encryption in transit (TLS) and at rest (KMS)
+
++ IAMroles control access to resources
+
+* Glue Data Catalog integration for Hive compatibility
+
+* Decoupled compute and storage architecture
+
+* Use Case: Log processing, ETL, machine learning, data lake analytics
+
+Quick Summary
+‘Amazon EMR is AWS’s managed big data platform for running open-source frameworks like
+
+Hadoop and Spark on scalable EC2 clusters, tightly integrated with $3 and other AWS services,
+with strong security, flexibility, and cost optimization features for processing massive datasets.
+

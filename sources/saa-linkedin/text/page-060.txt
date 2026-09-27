@@ -1,0 +1,27 @@
+* Monitor executions with CloudWatch for performance and errors
+Exam Tips
+
+* Standard Workflows are durable and long-running
+
+* Express Workflows are cost-effective for high-volume, short-lived tasks
+
+* Supports multiple AWS service integrations directly without custom code
+
+* Enables visual design of workflows as state machines
+
+* Built-in error handling with retries and catchers
+
+* Integrated with CloudWatch for monitoring and logging
+
+* IAM roles control permissions for workflow execution and service calls
+
++ JSON Path used to manipulate state input and output
+
+Quick Summary
+AWS Step Functions is a serverless orchestration service that coordinates AWS services and
+custom logic into resilient workflows. It supports Standard and Express Workflows, enabling
+visual design, robust error handling, service integrations, and flexible execution models for a
+wide range of use cases.
+
+59
+

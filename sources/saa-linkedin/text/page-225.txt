@@ -1,0 +1,35 @@
+Carrier Gateway
+* Used with AWS Outposts to provide connectivity to carrier networks
+* Supports traffic between Outposts and the carrier's network
+Security Groups
++ Virtual firewall for controlling inbound /outbound traffic at instance level
++ Stateful: return traffic is automatically allowed
+* Rules defined by protocol, port, and CIDR
+Network ACLs (NACLs)
+© Optional stateless firewall for subnets
+* Control inbound and outbound traffic at the subnet level
+© Supports allow and deny rules
+* Evaluated in order of rule number
+Flow Logs
+* Capture information about IP traffic going to and from network interfaces
+* Delivered to CloudWatch Logs or $3
+* Used for troubleshooting, compliance, security monitoring
+IPv6 Support
+* Assign IPv6 CIDR blocks to VPC and subnets
++ Internet Gateway supports IPvé6 traffic
+* Security groups and NACLs can filter IPv6 traffic
+VPC Sharing
+* Share subnets with other AWS accounts using AWS Organizations
++ Enables centralized VPC management in multi-account environments
+Elastic Network Interfaces (ENIs)
+* Virtual network cards attached to EC2 instances
+* Support multiple IP addresses, security groups, and MAC addresses
+© Used for high availability networking, failover
+Pricing
++ No charge for creating or using VPC itself
+
+* Charges apply for NAT Gateway, VPN connections, Transit Gateway, PrivateLink
+endpoints, traffic across AZs and peering connections
+
+224
+

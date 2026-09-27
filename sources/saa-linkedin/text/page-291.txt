@@ -1,0 +1,51 @@
+290
+
+© Storage capacity provisioned.
+© Throughput capacity.
+
+Backup storage used.
+© Data transfer (for replication).
+
+Separate pricing for SSD vs. HDD storage.
+
+Typical Use Cases
+
+Lift-and-shift Windows applications needing shared storage.
+HPC workloads using Lustre.
+
+Hybrid enterprise workloads needing NetApp features.
+Linux-native apps using OpenZFS.
+
+Media rendering, genomic analysis, ML training.
+
+Comparison Table
+FSx Type Protocols | Best For Key Features
+FSx for Windows | SMB Windows apps, user __| NTFS, AD integration, DFS,
+File Server shares Shadow Copies
+FSx for Lustre NFS, POSIX | HPC, ML, analytics S3 integration, sub-ms latency,
+high throughput
+FSxfor NetApp | NFS,SMB, | Enterprise workloads, _ | Snapshots, deduplication,
+ONTAP iSCSI hybrid storage FlexCache, tiering
+FSxfor OpenZFS | NFS v3/v4.1 | Linux workloads, Snapshots, clones,
+container storage compression, encryption
+Exam Tips
+
+Fx is fully managed, no need to maintain file servers.
+
+Choose FSx for Windows for SMB/Windows workloads needing AD.
+
+Use FSx for Lustre for HPC and $3-integrated data processing.
+
+FSx for ONTAP offers advanced enterprise storage features with multi-protocol access.
+FSx for OpenZFS is best for Linux workloads with ZFS features.
+
+Supports encryption at rest (AWS KMS) and in transit.
+
+Integrated with VPC, IAM, CloudWatch, CloudTrail, AWS Backup.
+
+Quick Summary
+
+Amazon FSx provides fully managed, scalable, high-performance file systems tailored for
+Windows, Linux, HPC, and enterprise workloads. Choose the right FSx variant based on
+protocols, performance, and features needed for your application.
+

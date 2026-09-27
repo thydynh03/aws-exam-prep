@@ -1,0 +1,38 @@
+90
+
+Image Scanning
+
+* Built-in vulnerability scanning using Common Vulnerabilities and Exposures (CVE)
+database
+
+* Can scan on image push or on-demand
++ Provides detailed findings for remediation
+* Integrated with AWS Security Hub for consolidated findings
+Replication
++ Supports cross-region replication of images
+* Automatic replication to one or more AWS regions
++ Simplifies DR, compliance, and global deployment needs
+* Managed via repository settings and policies
+Lifecycle Policies
+* Automates cleanup of unused or old images
++ Rules based on image count, age, or tags
+* Reduces storage costs and clutter
+Encryption
+Images encrypted at rest using AWS KMS
+«Encryption in transit via HTTPS/TLS
+© Supports customer-managed KMS keys
+Logging and Monitoring
+* Amazon CloudWatch integration for monitoring actions
+« AWS CloudTrail records API calls for auditing
++ EventBridge integration for image push notifications
+Integration with AWS Services
+* Amazon ECS and EKS for container orchestration
++ AWS Fargate for serverless container deployment
+* AWS CodePipeline, CodeBuild, CodeDeploy for CI/CD
+* AWS Lambda for container-based functions
+Pricing
+* Charged based on data storage (per GB-month)
++ Data transfer costs for image pulls outside the region
+
+© Scanning fees per image scan
+

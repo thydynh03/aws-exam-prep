@@ -152,7 +152,7 @@ export interface PersonalNote {
 
 export interface Flashcard {
   id: string;
-  deckId: 'services' | 'domains' | 'traps' | 'comparisons';
+  deckId: 'services' | 'domains' | 'traps' | 'comparisons' | 'handbook';
   title: string;
   category: string;
   front: string;

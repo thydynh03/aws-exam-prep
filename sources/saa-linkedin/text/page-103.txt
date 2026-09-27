@@ -1,0 +1,40 @@
+Amazon DynamoDB
+What Is It
+
+Fully managed, serverless NoSQL database (key-value and document model)
+*  Single-digit millisecond latency at any scale
+* Designed for high availability, durability, and scalability
+* Automatically replicates data across multiple AZs
+© Integrated with other AWS services (Lambda, AppSync, Glue, etc.)
+Core Concepts
+«Table: Collection of items (like a relational DB table)
+* Item: Individual record (like a row)
+Attribute: Field within an item (like a column)
+© Primary Key:
+o Partition Key: Determines data partition
+© Partition + Sort Key: Enables sorting and querying within the partition
+Indexes
+* Global Secondary Index (GSI):
+© Query on different attributes
+© Supports different partition/sort keys
++ Local Secondary Index (LSI):
+Same partition key, different sort key
+© Must be defined at table creation
+Capacity Modes
+* On-Demand:
+© No capacity planning
+
+© Scales automati
+
+lly based on traffic
++ Provisioned:
+© Manually define RCUs/WCUs
+© Canenable Auto Scaling
+Performance Optimization
++ DynamoDB Accelerator (DAX):
+© In-memory cache
+
+Reduces read latency to microseconds
+
+102
+

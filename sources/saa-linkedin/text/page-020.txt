@@ -1,0 +1,50 @@
+Encryption at rest using AWS KMS
+Encryption in transit using SSL/TLS
+
+Integration with AWS Lake Formation for table-level permissions
+VPC support for private network access
+
+CloudTrail logging for auditing API calls
+
+Pay-per-use pricing model
+Charged based on Data Processing Units (DPUs) per job hour
+Separate pricing for crawlers, Data Catalog storage, and DataBrew usage
+
+No infrastructure to manage or provision
+
+Use Cases
+
+Building and managing data lakes on AWS
+Data discovery and cataloging for analytics
+
+ETL pipelines for data warehouses like Redshift
+Preparing data for machine learning workflows
+Real-time event-driven ETL triggered by $3 uploads
+
+Data cleaning and preparation with DataBrew
+
+Best Practices
+
+Use Glue Crawlers to keep Data Catalog updated with schema changes
+Take advantage of Job Bookmarks to avoid reprocessing duplicate data
+Use DataBrew for data preparation without coding
+
+Encrypt data in transit and at rest
+
+Integrate with AWS Lake Formation for fine-grained data lake security
+Monitor jobs and workflows with CloudWatch
+
+Optimize Spark jobs by tuning DPUs and partitioning strategies
+
+Exam Tips
+
+Serverless ETL service with Apache Spark under the hood
+AWS Glue Data Catalog is a persistent, central metadata store
+Crawlers automatically discover schema and populate the catalog
+Jobs can be authoring visually (Glue Studio) or with code
+DataBrew is the no-code visual tool for preparing data
+
+Integration with Lake Formation for security and permissions
+
+19
+

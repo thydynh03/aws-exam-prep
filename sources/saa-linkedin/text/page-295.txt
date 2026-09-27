@@ -1,0 +1,36 @@
+294
+
+* Suitable for geographically distributed users.
+83 Multipart Upload
++ Splits large objects into parts for parallel upload.
+* Recommended for objects larger than 100 MB.
+© Required for objects over 5 GB.
+$3 Select
+«Retrieve a subset of data from an object using SQL expressions.
+* Reduces the amount of data transferred.
+$3 Object Lock
++ Enforces WORM (Write Once Read Many) protection.
++ Can set retention periods or legal holds.
+* Used for compliance with regulations.
+$3 Access Analyzer
+* Identifies buckets with public or cross-account access.
+* Helps remediate unintended access.
+3 Inventory
++ Provides CSV reports listing objects and their metadata.
+* Useful for auditing and compliance.
+$3 Batch Operations
+* Perform actions on millions or billions of objects.
+«Supports copying, tagging, ACL updates, and Lambda invocations.
+Security
+IAM Policies, Bucket Policies, ACLs.
+* Encryption at rest and in transit.
+© Block Public Access settings.
+* VPC endpoints for private S3 access.
+© CloudTrail logs for auditing API calls.
+Pricing
+Charges based on:
+© Storage used (per GB/month).
+o Requests and data retrieval.
+
+o Data transfer out.
+

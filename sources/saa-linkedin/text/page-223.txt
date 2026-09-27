@@ -1,0 +1,45 @@
+222
+
+Amazon VPC
+
+What It Is
+
+Amazon Virtual Private Cloud (VPC) lets you provision a logically isolated section of AWS where
+you can launch AWS resources ina virtual network you define. You have full control over
+networking configuration, including IP address ranges, subnets, route tables, and gateways
+
+Key Features
+* Complete control over virtual networking environment
+* Define custom IP address ranges using IPv4 and IPV6 CIDR blocks
+* Create public, private, or VPN-only subnets
+* Control routing with route tables
+* Configure network gateways and NAT for internet access
++ Integration with AWS Directory Service, Lambda, ECS, RDS, and many AWS services
+Subnets
+«Subnet: a range of IP addresses in your VPC
+«Public subnets: have route to an internet gateway
++ Private subnets: no direct route to the internet
++ Multiple subnets can span multiple Availability Zones for HA
+« Subnet CIDR blocks must not overlap
+Route Tables
+© Control routing for subnets
+¢ Default route table provided, can create custom tables
+
++ Routes define traffic destinations and targets (e.g,, Internet Gateway, NAT Gateway,
+Virtual Private Gateway)
+
+Internet Gateway (IGW)
+* Horizontally scaled, redundant gateway for internet access
+* Required for public subnets to communicate with the internet
+* Must attach one IGW per VPC
+
+NAT Gateway / NAT Instance
+
++ Allows instances in private subnets to initiate outbound internet traffic while blocking
+inbound connections
+
+* NAT Gateway is managed, highly available within an AZ
+© NAT Instance is a user-managed EC2 instance acting as NAT
+
+Elastic IP Addresses
+

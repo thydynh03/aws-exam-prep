@@ -1,0 +1,39 @@
+52
+
+© Failed deliveries
+© Delivery latency
+© CloudTrail logs API calls for auditing.
+Mobile Notifications
+* Supports mobile push to:
+© Amazon Device Messaging (ADM)
+Apple Push Notification Service (APNS)
+© Firebase Cloud Messaging (FCM)
+© Baidu Cloud Push
+Cross-Region and Cross-Account
+«Topics can be accessed cross-account with appropriate topic policies.
+
++ No native cross-region topic replication (can use Lambda or other mechanisms for
+replication).
+
+Limits
+© SNSis highly scalable.
+* Default limits apply (e.g,, number of topics, message size up to 256 KB).
+* Limits can be increased via support.
+Pricing
+© Charged per:
+o Requests (publishes)
+© Notification deliveries (by protocol)
+* SMS pricing varies by destination country.
+Exam Tips
+* SNS = push model, SQS = pull model.
+* Use SNS + SQS for fan-out architecture.
++ Lambda, SQS, and HTTP/S are commonly used subscribers,
+Encrypt messages at rest using KMS SSE.
+* Use IAM policies and topic access policies to control publishing/subscribing.
+* For mobile apps, use SNS for push notifications.
+Quick Summary
+
+‘Amazon SNS is a fully managed pub/sub service that allows you to send messages to multiple
+subscriber endpoints, enabling application decoupling, real-time notifications, and fan-out
+messaging patterns across AWS and mobile applications.
+

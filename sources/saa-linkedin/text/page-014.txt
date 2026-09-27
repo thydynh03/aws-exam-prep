@@ -1,0 +1,56 @@
+13
+
+Amazon EMR
+
+What It Is
+
+Amazon EMR (Elastic MapReduce) is a fully managed big data platform that simplifies running
+large-scale distributed data processing jobs using open-source frameworks like Apache Hadoop,
+Spark, Hive, HBase, Presto, and others on AWS. It lets you process vast amounts of data quickly
+and cost-effectively.
+
+Key Features
+
+Fully managed clusters for Hadoop, Spark, Hive, HBase, Presto, and more
+Quick and easy provisioning of resizable clusters
+
+Integration with Amazon $3 for data storage
+
+Decoupled storage and compute using EMRFS
+
+Cluster scaling with Auto Scaling and manual resizing
+
+EMR Managed Scaling to automatically adjust resources
+
+Cost-effective with per-second billing and Spot Instances
+
+Supports AWS Glue Data Catalog for schema management
+
+Integration with AWS Lake Formation for data lake permissions
+Integration with AWS Step Functions for orchestration
+
+Notebook support via EMR Notebooks for interactive analysis
+
+Core Components
+
+Cluster: A collection of Amazon EC2 instances running EMR
+Master Node: Manages cluster and tracks job progress
+
+Core Nodes: Process data and store intermediate results
+Task Nodes: Process data only, no HDFS storage
+
+EMRFS: Connects EMR to $3 for scalable, durable data storage
+
+Deployment and Management
+
+Launch clusters quickly via AWS Management Console, CLI, SDKs, or CloudFormation
+Choose EC2 instance types, purchase options (On-Demand, Spot)
+
+EMR Managed Scaling automatically adjusts nodes based on workload
+
+Cluster Auto Termination to save costs
+
+Bootstrap actions to install software and customize nodes at launch
+
+Supports multi-master for high availability in Hadoop YARN ResourceManager
+

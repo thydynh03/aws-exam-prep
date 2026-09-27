@@ -1,0 +1,55 @@
+30
+
+Amazon. rch
+
+What It Is
+
+Amazon OpenSearch Service is a fully managed service that makes it easy to deploy, operate, and
+scale OpenSearch and legacy Elasticsearch clusters in the AWS Cloud. It is used for search, log
+analytics, and real-time application monitoring.
+
+Key Features
+
+Fully managed service for OpenSearch and Elasticsearch
+
+Supports versions of OpenSearch and legacy Elasticsearch (up to 7.10)
+In-place version upgrades
+
+Integrated Kibana (Elasticsearch) and OpenSearch Dashboards
+Built-in integrations with AWS services (CloudWatch, Kinesis, $3)
+Provides domain-level security with fine-grained access control
+Supports encryption at rest and node-to-node encryption
+
+VPC support for secure network access
+
+Auto-Tune for performance optimization
+
+Ultrawarm and cold storage for cost-effective storage of infrequently accessed data
+
+Core Concepts
+
+Domain: An OpenSearch or Elasticsearch cluster in AWS
+Index: Collection of documents with similar characteristics
+Document: Basic unit of information in JSON format
+Shard: Horizontal partition of an index
+
+Replica: Copy of a shard for high availability
+
+Deployment and Scaling
+
+Supports cluster scaling by adjusting instance count and types
+
+Data nodes, dedicated master nodes, Ultrawarm nodes, cold storage
+Automated snapshots to $3 for backups
+
+Manual and scheduled snapshots available
+
+Supports multi-AZ deployments for high availability
+
+Ultrawarm and Cold Storage
+
+Ultrawarm: Cost-effective storage tier for read-only, infrequently accessed data
+Cold Storage: Even lower-cost storage for long-term retention
+
+Seamlessly search across hot, Ultrawarm, and cold data tiers
+

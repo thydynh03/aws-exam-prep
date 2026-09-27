@@ -1,0 +1,55 @@
+10
+
+AWS Data Pipeline
+What It Is
+
+AWS Data Pipeline is a web service that helps you reliably process and move data between
+different AWS compute and storage services, as well as on-premises data sources. It is used
+to automate the movement and transformation of data.
+
+Key Features
+
+Orchestration service for data workflows
+Supports data movement and transformation across AWS services and on-premises
+Allows scheduling of recurring data processing activities
+
+Fault-tolerant with retry and failure notification options
+
+Supports dependencies between tasks for complex workflows
+
+Provides pre-built templates for common data processing scenarios
+
+Components
+
+Pipeline: Defines the overall workflow and schedule
+Activities: Units of work like copying data or running EMR jobs
+
+Data Nodes: Define data sources and destinations (e.g, $3, RDS, DynamoDB, on-
+premises databases)
+
+Preconditions: Optional conditions that must be met before an activity runs
+Schedules: Define when and how often pipeline activities run
+
+Resources: Compute resources like EC2 instances or EMR clusters used to execute
+activities
+
+Parameters: Allow reusing pipeline definitions with different input values
+
+Common Use Cases
+
+Move data from $3 to Redshift for analytics
+Run periodic ETL jobs on EMR clusters
+Copy data between RDS databases
+
+Archive data from DynamoDB to $3
+
+Trigger workflows based on time-based schedules
+
+Supported Services
+
+Amazon $3
+Amazon RDS
+Amazon DynamoDB
+
+Amazon Redshift
+

@@ -1,0 +1,37 @@
+68
+
+* Network ACLs: Subnet-level traffic control,
++ ENI (Elastic Network Interface): Network adapter with private/public IPs.
+* Placement Groups:
+© Cluster: Low-latency, high throughput.
+© Spread: Critical instances across hardware.
+© Partition: Large distributed workloads.
+Launch Options
+* Amazon Machine Images (AMIs)
+© Preconfigured templates with 0S, software, configuration.
+© AWS, Marketplace, or custom AMIs.
+© User Data
+© Scripts that run at launch.
+© Used for bootstrapping.
+* Launch Templates
+© Store launch parameters for reuse.
+* Launch Configurations
+© Older alternative for Auto Scaling.
+Auto Scaling
+* Automatically adjusts capacity to meet demand.
+* Auto Scaling Groups (ASGs):
+© Define min, max, and desired capacity.
+© Scaling policies based on CloudWatch alarms
+
+© Health checks and instance replacement.
+Load Balancing
++ Blastic Load Balancing (ELB) supports:
+© Application Load Balancer (ALB): Layer 7, path-based routing.
+Network Load Balancer (NLB): Layer 4, ultra-low latency.
+© Gateway Load Balancer: Transparent appliances.
+© Classic Load Balancer (legacy).
+Monitoring and Management
+© CloudWatch:
+
+© Metrics and alarms.
+

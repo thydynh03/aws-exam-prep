@@ -1,0 +1,17 @@
++ Data is delivered directly into your $3 buckets
+* Supports automatic updates when providers publish new revisions
+
+* Integrated with EventBridge for event-driven processing
+
+* Subscription entitlements control access to data sets
+
++ Private products allow sharing data with specific AWS accounts
+
+* Use cases include analytics, ML training, and business intelligence with external data
+
+Quick Summary
+‘AWS Data Exchange enables secure and automated access to third-party and public data sets
+directly in AWS. It handles subscriptions, entitlement management, delivery to S3, and
+integrates with AWS analytics and storage services, making it easy to operationalize external
+data for analytics and machine learning workloads.
+

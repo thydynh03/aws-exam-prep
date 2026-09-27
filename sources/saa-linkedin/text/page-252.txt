@@ -1,0 +1,38 @@
+251
+
+5, IAM Policy Elements
+«Effect: Allow or deny.
+* Action: API operations permitted/denied.
+Resource: Targeted AWS resources.
+* Condition: Optional, for fine-grained control.
+6. 1AM Permissions Boundaries
+* Advanced feature that limits maximum permissions a role or user can have.
+* Useful in delegating permissions without over-provisioning.
+7. IAM Identity-Based vs Resource-Based Policies
++ Identity-based policies: Attached to IAM users, groups, roles.
+
+*  Resource-based policies: Attached to resources (e.g,, $3 bucket policies, Lambda
+function policies).
+
+* Resource policies enable cross-account access.
+8, 1AM Access Analyzer
++ Analyses policies to identify resources shared outside your account.
+* Helps maintain least privilege by highlighting unintended access.
+9, IAM Password Policy
+*  Enforces account-wide password rules for IAM users.
+* Configure complexity, rotation, reuse prevention.
+10. MFA (Multi-Factor Authentication)
+* Adds an extra layer of security beyond username and password.
+© Supports:
+© Virtual MFA apps.
+© U2F security keys.
+©o SMS MFA (less recommended).
+* Recommended for the root user and privileged IAM users.
+11. JAM Best Practices
+* Enable MFA, especially on the root account.
+* Use least privilege: Grant only the permissions needed.
+© Rotate access keys regularly.
+* Avoid using the root account for daily tasks.
+
+* Use roles for EC2 instances instead of embedding access keys.
+

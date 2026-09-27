@@ -175,6 +175,7 @@ export interface Translations {
     deckDomains: string;
     deckTraps: string;
     deckComparisons: string;
+    deckHandbook: string;
     mastered: string;
     learning: string;
     notStarted: string;
@@ -519,6 +520,7 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       deckDomains: 'Exam Domains',
       deckTraps: 'Exam Traps',
       deckComparisons: 'Comparisons',
+      deckHandbook: 'SAA-C03 Handbook',
       mastered: 'Mastered (Box 4-5)',
       learning: 'Learning (Box 2-3)',
       notStarted: 'New (Box 1)',
@@ -861,6 +863,7 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       deckDomains: '4 Domain Đề thi',
       deckTraps: 'Bẫy thi Thường gặp',
       deckComparisons: 'So sánh Kiến trúc',
+      deckHandbook: 'Sổ tay SAA-C03',
       mastered: 'Đã thuộc làu (Hộp 4-5)',
       learning: 'Đang ghi nhớ (Hộp 2-3)',
       notStarted: 'Chưa học (Hộp 1)',

@@ -1,0 +1,38 @@
+« Amazon EMR
+* On-premises data stores via Data Pipeline Task Runner
+Execution Options
+* Managed resources (AWS provisions and manages resources automatically)
+© Customer-managed resources (users provide and manage the resources)
+* On-premises Task Runner for hybrid data workflows
+Scheduling
++ Cron-like scheduling expressions supported
+© Supports hourly, daily, weekly, or custom intervals
+* Activities can be chained with dependencies
+Fault Tolerance and Retries
+* Automatic retry on failures
+* Configurable retry policies
++ Failure notifications via SNS
++ Logging to Amazon $3 and CloudWatch Logs
+Security
+* IAM roles and policies to control access to pipeline resources
+* Supports encryption of data in transit and at rest
+*  CloudTrail integration for auditing API calls
++ VPC integration for controlling network access
+Monitoring and Logging
+*  CloudWatch for monitoring pipeline activity and status
+Logs can be stored in $3 or CloudWatch Logs
+‘* SNS notifications for success or failure events
+* Detailed activity logs for debugging and auditing
+Pricing
+«Free for low-frequency pipelines (one activity per month)
+* Charges based on the number of pipeline runs and the frequency of execution
+
+* Costs for resources used (e.g,, EC2, EMR) are billed separately
+
+Best Practices
++ Use parameters to make pipelines reusable and configurable
+
++ Design pipelines with clear dependencies and failure handling
+
+11
+

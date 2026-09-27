@@ -1,0 +1,38 @@
+164
+
+AWS Organizations
+What It Is
+
+AWS Organizations is a free service that helps you centrally manage and govern multiple AWS
+accounts at scale. It provides a framework for consolidating billing, managing policies, and
+enforcing governance across accounts in a single organization.
+
+Key Benefits
+* Centralized billing and cost management.
++ Simplified account creation and lifecycle management.
+*  Policy-based governance with Service Control Policies (SCPs).
+* Organize accounts in Organizational Units (OUs).
+«Enforce security and compliance consistently.
++ Integration with AWS Control Tower, AWS RAM, and other services.
+Core Concepts
+1. Organization
+*  Acollection of AWS accounts under a single management account.
+* Can include hundreds or thousands of member accounts.
+2, Management Account
++ Formerly called Master Account.
+¢ Has full administrative control over the organization.
+* Pays the consolidated bill for all member accounts.
+3, Member Accounts
+* Accounts within the organization.
+* Managed via the management account.
+* Can have restrictions enforced via policies.
+4, Organizational Units (OUs)
+* Logical groupings of accounts within the organization.
++ Can be nested hierarchically.
+* Policies (like SCPs) can be applied at the OU level to govern multiple accounts together.
+Features and Capabilities
+Consolidated Billing
+« Combines charges for all accounts into one bill.
+
++ Benefits:
+

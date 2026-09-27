@@ -1,0 +1,53 @@
+282
+
+EBS Lifecycle Manager
+
+Automates snapshot creation, retention, and deletion.
+
+Helps enforce backup policies consistently.
+
+Data Lifecycle
+
+Create EBS volume in an AZ.
+
+Attach to EC2 instance in same AZ.
+
+Detach and reattach to other instances in same AZ.
+Delete when no longer needed.
+
+Snapshots allow cross-region or cross-account restoration.
+
+Security
+
+Supports encryption at rest with AWS KMS.
+Transparent encryption for data in transit between instance and volume,
+IAM policies control access to snapshots and volumes.
+
+Supports encrypted snapshots and sharing encrypted snapshots with other accounts
+(requires KMS permissions).
+
+Charged per GB per month for provisioned storage.
+Charged for provisioned 10PS (io1/io2).
+
+Snapshot storage charged per GB-month.
+
+Fast Snapshot Restore incurs additional cost.
+
+Data transfer within same AZ free; cross-AZ/region transfers billed separately.
+
+Best Practices
+
+Use gp3 for general workloads.
+Use io1/io2 for critical low-latency workloads needing high lOPS.
+‘Take regular snapshots for backup and DR.
+
+Use EBS Lifecycle Manager to automate backups.
+
+Encrypt sensitive data with AWS KMS.
+
+Monitor performance with CloudWatch metrics.
+
+Consider multi-attach for shared-disk applications.
+
+Use Fast Snapshot Restore for production recovery scenarios.
+

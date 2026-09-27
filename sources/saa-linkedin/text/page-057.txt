@@ -1,0 +1,40 @@
+56
+
+AWS Step Functions
+
+What It Is
+
+AWS Step Functions is a fully managed service for building serverless workflows that coordinate
+multiple AWS services into business-critical applications. It allows you to design workflows as
+state machines with visual modelling, error handling, and service integrations.
+
+Key Features
+* Visual workflow editor for defining state machines
+Supports Standard and Express Workflows
+* Built-in error handling, retries, and catchers
+* State input, output, and result manipulation with JSON Path
++ Service Integrations for over 200 AWS services
+© Wait states for delays or timeouts
+* Choice states for branching logic
++ Parallel execution of tasks
+* Execution history and detailed logging
+Workflow Types
+‘* Standard Workflows
+© Long-running, durable, auditable
+© Supports executions up to 1 year
+© Exactly-once workflow execution
++ Express Workflows
+© High-volume, short-duration workflows
+© Lower cost for high-frequency invocations
+o Executions up to 5 minutes
+States and State Types
+* Task State: Runs a single unit of work (e.g., Lambda function, AWS service integration)
+* Choice State: Implements branching logic based on input
++ Parallel State: Runs multiple branches in parallel
+© Map State: Processes array items in parallel or sequentially
+© Wait State: Introduces delay or waits for a specific time
++ Pass State: Passes input to output, adds static data
+* Succeed State: Marks successful completion
+
+«Fail State: Marks failure of execution
+

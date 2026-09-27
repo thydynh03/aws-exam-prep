@@ -1,0 +1,52 @@
+212
+
+AWS | Accelerator
+What It Is
+
+AWS Global Accelerator is a networking service that improves the availability and performance
+of your global applications.
+
+Ituses the AWS global network to direct traffic to optimal endpoints, improving latency and
+resilience.
+
+Key Features
++ Provides static IP addresses that act as a fixed entry point to your applications.
+* Uses the AWS global network to route traffic to optimal endpoints.
+© Supports both TCP and UDP traffic.
++ Health checks and automatic failover.
+«Improves performance for global users by routing through AWS edge locations.
+How It Works
+1. Clients connect using static IP addresses provided by Global Accelerator.
+2. Traffic enters AWS's global edge network.
+Routed over AWS's private backbone to the best endpoint in the AWS region.
+
+Health checks ensure only healthy endpoints are used.
+
+aR w
+
+Automatic rerouting during endpoint failures or health check failures.
+Static IP Addresses
+* Each accelerator provides two static IP addresses (for high availability).
++ Canalso bring your own IP addresses (BYOIP).
+Components
++ Accelerator:
+© The top-level resource.
+© Includes one or more listeners.
++ Listener:
+
+© Defines the port and protocol (TCP/UDP) for incoming traffic.
+
+Can have one or more endpoint groups.
++ Endpoint Group:
+© Tied toa specific AWS Region.
+
+Contains one or more endpoints.
+
+°
+
+°
+
+Has a traffic dial to control traffic distribution to the region.
+
+© Supports health checks for endpoints.
+

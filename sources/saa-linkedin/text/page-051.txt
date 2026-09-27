@@ -1,0 +1,38 @@
+Amazon SNS
+What It Is
++ Fully managed pub/sub messaging service.
+*  Decouples application components through asynchronous message delivery.
++ Enables message fan-out to multiple subscribers.
+Core Concepts
+1. Topics
+* Logical access point for publishing messages.
++ Publishers send messages to a topic.
+«Subscribers receive messages from a topic.
+2. Subscriptions
+* Determine where the messages are delivered.
++ Supported protocols:
+© Amazon SQS
+o AWS Lambda
+o HTTP/HTTPS
+© Email/Email-JSON
+o SMS
+© Application (mobile push)
+AWS Kinesis Data Firehose
+3. Publishers and Subscribers
+* Publisher (Producer): Sends messages to the SNS topic.
+
+* Subscriber (Consumer): Receives messages using one of the supported protocols.
+
+Message Delivery
+*  Push-based delivery to multiple endpoints.
+* Supports message filtering by attributes to control what each subscriber receives.
++ Retries automatically on delivery failure.
+*  Dead-letter queues (DLQs) supported for message delivery failures.
+Use Cases
+* Application decoupling via pub/sub.
++ Fan-out from one publisher to multiple consumers.
+
++ Event-driven architecture.
+
+50
+

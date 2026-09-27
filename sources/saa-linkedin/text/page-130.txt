@@ -1,0 +1,61 @@
+129
+
+Amazon API Gateway
+
+What It Is
+
+Amazon API Gateway is a fully managed service that makes it easy to create, publish, maintain,
+monitor, and secure APIs at any scale. It supports RESTful APIs, WebSocket APIs, and HTTP APIs,
+enabling developers to build serverless backends and expose AWS services or custom business
+logic to clients.
+
+Key Features
+
+* Supports REST, WebSocket, and HTTP APIs
+
++ Fully managed, scalable, and highly available
+
+‘© Request/response transformation with mapping templates
+
++ Integrated authorization and authentication
+
+* Throttling, caching, and quota management
+
++ Monitoring and logging with CloudWatch
+
+‘Supports custom domain names and SSL certificates
+
+* Private APIs accessible via VPC Endpoints
+API Types
+
+REST APIs: Feature-rich, customizable, supports request validation and mapping
+
+« HTTP APIs: Simpler, lower-cost alternative for most REST use cases
+
++ WebSocket APIs: Real-time two-way communication between client and server
+Integration Types
+
++ AWS Lambda: Serverless backend for APIs
+
++ AWS Service Integrations: Direct calls to AWS services using IAM roles
+
+«HTTP/HTTPS Endpoints: Proxy to external services
+
+* Mock Integration: Return mocked responses for testing
+
+* VPC Links: Access private resources in a VPC via Network Load Balancer
+Authorization and Authentication
+
++ IAM Authorization: Control API access using AWS IAM policies and roles
+
+* Cognito User Pools: User authentication and JWT token validation
+
+«Lambda Authorizers (Custom Authorizers): Run custom logic to authorize requests
+
+* Resource Policies: Control access based on IP addresses, VPCs, and AWS accounts
+API Keys and Usage Plans
+
+* API Keys: Identify and track API consumers
+
+« Usage Plans: Define throttling and quota limits for API keys
+

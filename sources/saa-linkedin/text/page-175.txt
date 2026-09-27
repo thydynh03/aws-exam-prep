@@ -1,0 +1,52 @@
+174
+
+AWS or
+
+What It Is
+
+AWS Trusted Advisor is an online resource that provides real-time guidance to help you
+provision your AWS resources following best practices. It offers recommendations to optimize
+your AWS environment for cost, performance, security, fault tolerance, and service limits.
+
+Key Features
+* Scans your AWS account and provides actionable recommendations
+
+* Covers five categories: Cost Optimization, Performance, Security, Fault Tolerance, and
+Service Limits
+
+* Continuously evaluates AWS infrastructure against AWS best practices
+* Recommendations are prioritized and actionable
++ Dashboard provides a central view of checks and recommendations
+Five Categories of Checks
+
+* Cost Optimization: Identify idle and underutilized resources to reduce costs. Examples
+include underutilized EC2 instances, unattached EBS volumes, and idle load balancers.
+
+Performance: Improve the performance of AWS services. Includes checks for instance
+type optimization and usage of provisioned IOPS.
+
+Security: Strengthen security by identifying vulnerabilities. Examples include checks for
+MFA on root accounts, $3 bucket permissions, IAM password policies, and security group
+configurations.
+
+© Fault Tolerance: Increase availability and redundancy. Checks include enabling Auto
+Scaling, monitoring EBS snapshots, and using multiple AZ deployments.
+
+* Service Limits: Tracks usage against AWS service limits to avoid disruptions. Includes
+checks for EC2 instance limits, VPC limits, and others.
+
+Available Checks
+© Over 50 checks covering various AWS services
+* Checks are regularly updated and improved by AWS
+
+* Some checks are available to all customers, while full set requires Business or Enterprise
+Support Plan
+
+Access Tiers
+* Basic and Developer Support Plans: Access to seven core checks
+«Business and Enterprise Support Plans: Access to all Trusted Advisor checks
+
+© Core checks available to all customers include: Service Limits, Security Groups - Specific
+Ports Unrestricted, IAM Use, MFA on Root Account, EBS Public Snapshots, RDS Public
+Snapshots, and $3 Bucket Permissions
+

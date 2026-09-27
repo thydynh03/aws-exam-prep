@@ -1,0 +1,36 @@
++ Provisioned IOPS (SSD)
+© High-performance storage for critical workloads
+Consistent low latency and high throughput
++ Magnetic (legacy)
+© Previous-generation storage, limited use cases
+Backups and Snapshots
++ Automated Backups
+o Enabled by default
+o Retention period configurable from 0 to 35 days
+© Supports point-in-time recovery
++ Manual Snapshots
+o User-initiated
+o Retained until explicitly deleted
+© Canbe shared with other AWS accounts or copied to other regions
+Maintenance and Patching
+«AWS manages patching of the database engine
++ Can specify maintenance window
+«Minor version upgrades can be applied automatically or manually
+Monitoring and Metrics
+* Amazon CloudWatch metrics for CPU, memory, storage, IOPS, connections
+«Enhanced Monitoring for OS-level metrics
+* Performance Insights for query performance analysis and optimization
+Security
+«Encryption at rest using AWS KMS
+«Encryption in transit using SSL/TLS
+«IAM integration for management access
++ VPC support for network isolation
+* Security groups to control inbound /outbound traffic
++ Supports AWS Secrets Manager for credential management
+© Option to enforce IAM Database Authentication (MySQL and PostgreSQL)
+Pricing
+
++ Pay for instance hours (on-demand or reserved instances)
+
+118
+

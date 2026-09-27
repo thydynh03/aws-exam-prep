@@ -1,0 +1,54 @@
+77
+
+Pricing
+*  Term-based pricing: Typically, a 3-year term for Outpost rack capacity.
+© You pay for:
+o The Outpost infrastructure (rack or server) term contract. -
+
+© AWS services running on the Outpost (the compute/storage you consume) and
+shared resources.
+
+© Data transfer associated with service link VPN traffic from the AWS Region.
++ Not charged for: Data transfer from the Outpost to the parent AWS Region (some cases).
+Use Cases
+
++ Ultra-low latency workloads (on-site manufacturing systems, real-time analytics) where
+cloud latency isn’t acceptable.
+
+* Data residency / compliance scenarios: you must keep data within a
+country /region/your own site.
+
+* _ Edge/branch offices or retail environments where you want cloud consistency but need
+local compute/storage.
+
+Best Practices
++ Evaluate if you genuinely need on-premises: hybrid comes with cost and complexity.
++ Right-size your Outpost capacity (compute, storage) for your workload and growth,
+
++ Ensure your site requirements (power, cooling, network, physical space) are met before
+ordering.
+
+* Extend your VPC carefully: manage routing, subnets, utilization of LGW / LNI properly.
+
+* Use consistent [AM and monitoring patterns as you use in the cloud region so your
+DevOps tooling remains sane.
+
+Exam Tips
+
+* Remember: Outposts = AWS on-premises. It’s not just a “local VM" but AWS
+infrastructure extended into your site.
+
++ Ituses same AWS APIs, tool-chain, and management model — so you treat it like an AZ
+extension.
+
++ Distinguish between rack vs server form-factors.
+
+* The VPC routing to/from your on-premises network matters: Outpost subnets act like
+any other AZ subnet, with extended routing to local network.
+
+Quick Summary
+
+AWS Outposts brings the AWS cloud hardware, services, and APIs into your own data-centre or
+edge site, giving a truly hybrid experience. You get local compute/storage with consistent
+tooling, while still accessing cloud region services.
+

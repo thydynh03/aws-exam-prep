@@ -1,0 +1,53 @@
+112
+
+Supports up to 15 read replicas for read scaling
+Automatically detects and recovers from database failures
+Storage scales automatically in 10 GB increments
+
+Supports IOPS-optimized storage for consistent performance
+
+Security
+
+Encryption at rest using AWS KMS
+Encryption in transit using SSL/TLS
+
+VPC isolation with subnet-level control
+IAM policies for fine-grained access control
+Database authentication using [AM
+
+Integration with AWS Secrets Manager for managing credentials
+
+Monitoring and Management
+
+Integrated with Amazon CloudWatch for monitoring metrics and logs
+Event notifications through Amazon SNS
+
+‘Amazon CloudTTrail integration for auditing and compliance
+Supports Enhanced Monitoring for resource-level insights
+
+Maintenance and patching handled by AWS
+
+Data Loading and Migration
+
+Supports bulk data loading via Amazon $3 using Neptune Bulk Loader
+Supports CSV, RDF, and JSON data formats for import
+AWS DMS can migrate relational data into Neptune
+
+Compatible with open-source graph tools and libraries
+
+Integration with AWS Services
+
+Amazon $3 for backup and bulk data loading
+IAM for authentication and authorization
+CloudWatch for monitoring and alerting
+Secrets Manager for secure credential storage
+AWS Glue and DMS for ETL and migration
+
+VPC for network-level security and access control
+
+Use Cases
+
+Social networking applications
+
+Recommendation engines
+

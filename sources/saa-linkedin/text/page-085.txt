@@ -1,0 +1,37 @@
+84
+
+Amazon E!
+What It Is
+
+‘Amazon EKS Distro (EKS-D) is the open-source Kubernetes distribution that powers Amazon
+EKS.
+It includes the same tested Kubernetes components AWS uses in KS, available to run anywhere.
+
+Key Features
+* Open-source Kubernetes distribution
+Same versioned, security-hardened components used by EKS
+* Run on any infrastructure AWS, on-prem, or other clouds
+* AWS-maintained patches for security and stability
+* Ensures compatibility with Amazon EKS clusters
+Benefits
+* Enables consistent Kubernetes operations across environments
++ Provides transparency and control over Kubernetes upgrades
+* Security updates aligned with EKS releases
+* Suitable for custom Kubernetes environments needing EKS compatibility
+Use Cases
++ Self-managed Kubernetes clusters with AWS consistency
++ Air-gapped or disconnected environments
+© Multi-cloud and on-prem Kubernetes setups
+Exam Tips
+* _EKS Distro (EKS-D) = Open-source Kubernetes distribution behind EKS
+* Same tested components as AWS-managed EKS
+© Helps maintain compatibility, reliability, and security
+*  Canbe run anywhere, not limited to AWS
+Quick Summary
+
+ECS Anywhere, EKS Anywhere, and EKS Distro (EKS-D) extend AWS container services beyond
+the cloud. ECS Anywhere runs ECS tasks on your own hardware, EKS Anywhere brings EKS-
+managed Kubernetes to on-prem environments, and EKS Distro offers the same open-source
+Kubernetes used by AWS. Together, they enable consistent, secure, and flexible hybrid container
+management across on-premises and cloud environments.
+

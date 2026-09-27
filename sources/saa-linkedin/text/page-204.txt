@@ -1,0 +1,47 @@
+203
+
+Origin Types
+* Amazon $3 - Static content storage + Ideal for static websites, images, videos, and
+downloads
+
++ EC2 Instances ~ Application servers > Used for dynamic content and APIs
+
+* Elastic Load Balancer (ELB) - Distributes traffic across instances > Ensures high
+availability and scalable applications
+
+* Custom HTTP/HTTPS - Any web server — Suitable for on-premises servers or third-
+party origins
+
+Logging and Monitoring
+Standard Logs
+* Write detailed logs to $3 bucket
++ Includes request details (IP address, URI, user agent, referrer)
++ Useful for analytics and troubleshooting
+Real-Time Logs
++ Stream logs to Kinesis Data Streams in near real-time
++ Enable immediate analysis and alerting
+CloudWatch Metrics
++ Built-in metrics for monitoring performance
++ Includes:
+co Total requests
+© Cache hit/miss ratios
+
+© Error rates (4xx, 5x)
+
+Bytes downloaded/uploaded
+
+AWS CloudTrail
+© Logs API calls for governance, compliance, and auditing
+* Track configuration changes and access patterns
+
+Price Classes
+
+* Price Class 100 - Covers US, Europe, and Canada > Cheapest option with fewer edge
+locations
+
++ Price Class 200 - Covers most regions (excludes the most expensive ones) > Balanced
+cost and coverage
+
+* Price Class All - Covers all edge locations worldwide ~ Best performance, but highest
+cost
+

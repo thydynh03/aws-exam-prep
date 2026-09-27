@@ -1,0 +1,46 @@
+Amazon ElastiCache
+Overview
+
+Fully managed in-memory data store and cache service
+Supports Redis and Memcached engines
+
+Provides microsecond latency for real-time applications
+Scales horizontally and vertically
+
+Used for caching, session storage, real-time analytics
+
+Key Benefits
+
+Engines
++ Redis
+o In-memory key-value store supporting data structures
+© Supports persistence (RDB and AOF)
+© Supports replication and automatic failover
+© Pub/Sub messaging capability
+o Advanced features like backups, cluster mode, multi-AZ
++ Memcached
+© Simple, in-memory key-value store
+© No persistence or replication
+© Supports sharding for horizontal scaling
+Ideal for straightforward caching use cases
+Architecture and Deployment
+
+Reduces load on databases by caching frequent queries
+
+Lowers latency and improves application performance
+
+Fully managed: patching, setup, failure recovery handled by AWS
+
+Supports multi-AZ with automatic failover (Redis)
+
+Deployed into Amazon VPC
+Nodes hosted on EC2 instances managed by AWS
+
+Redis supports single-node, replica sets, and cluster mode
+Multi-AZ deployments for high availability (Redis only)
+Automatic backups (Redis)
+
+Enhanced Monitoring and CloudWatch metrics
+
+105
+

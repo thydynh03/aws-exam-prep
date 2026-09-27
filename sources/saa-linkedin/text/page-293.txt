@@ -1,0 +1,36 @@
+292
+
+© Archival storage.
+o Retrieval times from minutes to hours.
++ Glacier Deep Archive:
+© Lowest-cost archival.
+o Retrieval within 12 hours.
++ Reduced Redundancy Storage (Deprecated):
+Legacy, not recommended.
+Durability and Availability
++ Durability:
+© 99,999999999% (11 9s) across storage classes.
+© Availability:
+© Standard: 99.99%
+o  Standard-IA: 99.9%
+© One Zone-IA: 99.5%
+$3 Object Versioning
++ Preserves, retrieves, and restores every version of every object.
++ Can be enabled or suspended.
++ Helps recover from unintended overwrites and deletions.
+83 Encryption Options
++ Encryption In-Transit:
+o HTTPS/TLS.
++ Encryption At Rest:
+© SSE-S3 (AWS-managed keys).
+© SSE-KMS (AWS KMS-managed keys with audit).
+© SSE-C (Customer-provided keys),
+© Client-side encryption.
+Access Control
+* Bucket Policies:
+© JSON-based policies defining access permissions.
+© Applied at bucket level.
++ IAM Policies:
+
+© User/role-based permissions.
+

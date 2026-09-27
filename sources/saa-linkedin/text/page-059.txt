@@ -1,0 +1,58 @@
+Standard Workflow Details
+
+Durable with execution history stored for 90 days
+Supports human approvals and long-running processes
+Enables auditability with detailed step-by-step tracking
+
+Higher cost per state transition
+
+Monitoring and Logging
+
+Integrated with Amazon CloudWatch for metrics and logs
+View state machine executions and results
+
+Enables alarms and automated responses to failures
+
+Security
+
+Pricing
+
+IAM policies for controlling access to Step Functions
+Fine-grained permissions per state machine and execution
+Supports VPC Endpoints for private access
+
+Encryption of data in transit and at rest with AWS KMS
+
+Charged per state transition in Standard Workflows
+Charged per execution and duration in Express Workflows
+
+Additional costs for AWS service calls and data transfer
+
+Use Cases
+
+Microservice orchestration
+
+Serverless application workflows
+
+Data processing pipelines
+
+Machine learning model training and deployment
+
+ETL workflows with AWS Glue
+
+Human approval workflows with Wait and Choice states
+
+Error handling and retries for service integrations
+
+Best Practices
+
+Choose workflow type based on execution duration and volume
+Use Choice and Parallel states to simplify complex logic
+Implement retries and error catchers to improve resilience
+
+Use Wait states for delays and human approval processes
+
+Secure workflows with IAM roles and policies
+
+58
+

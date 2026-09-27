@@ -1,0 +1,57 @@
+AWS
+
+HSM
+
+What itis
+
+Managed Hardware Security Module (HSM) service in AWS Cloud.
+
+233
+
+Let's you generate and use your own encryption keys using dedicated HSM appliances.
+
+Fully customer-controlled hardware for highest security and compliance requirements.
+
+Key Features
+
+Dedicated, single-tenant HSMs in your VPC.
+
+FIPS 140-2 Level 3 validated.
+
+You have full administrative control over the HSM.
+
+Supports standard cryptographic APIs: PKCS#11, Java JCE, Microsoft CNG.
+Scales horizontally, adds more HSMs to cluster.
+
+Automated backups for durability.
+
+Integrated with AWS services (though not as seamless as KMS).
+
+How It Works
+
+AWS provisions the HSM in your VPC.
+You manage users, keys, and policies directly.
+AWS manages maintenance, monitoring, backups.
+
+You connect securely to HSM using standard protocols.
+
+Use Cases
+
+Compliance requirements needing FIPS 140-2 Level 3 HSMs.
+Regulatory controls demanding customer-exclusive hardware.
+Managing PKI (Public Key Infrastructure).
+
+Secure key generation and storage.
+
+Offloading SSL/TLS termination.
+
+Code signing.
+
+Differences from AWS KMS
+
+KMS = AWS-managed service for encryption keys.
+CloudHSM = Customer-managed, dedicated hardware.
+KMS is simpler, integrated, easier for general use.
+
+CloudHSM is used when full control and strongest compliance are required.
+

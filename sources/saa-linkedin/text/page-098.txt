@@ -1,0 +1,65 @@
+Monito1
+
+Pricing
+
+1AM integration for management
+
+Database authentication with [AM for MySQL and PostgreSQL
+
+Audit logging for tracking database activity
+
+Integration with AWS Secrets Manager for managing credentials
+
+ring and Management
+
+Amazon CloudWatch for metrics and alarms
+
+Enhanced Monitoring for OS-level metrics
+
+Performance Insights for analysing query performance
+
+‘Automated backups, patching, and maintenance
+
+Database cloning for rapid creation of test and development environments
+Integration with Other AWS Services
+
+AWS Lambda for triggers and integrations
+
+AWS DMS for migrations to Aurora
+
+AWS Secrets Manager for credential management
+AWS Backup for centralized backup management
+
+RDS Proxy for improving application scalability and resiliency
+
+Charged per instance hour based on instance type
+
+‘Aurora Serverless charged based on Aurora Capacity Units (ACUs)
+
+Storage billed per GB per month
+
+1/0 requests billed per million requests
+
+Backup storage beyond the allocated database size incurs additional charges
+
+Cross-region replication charges for Global Databases
+
+Use Cases
+
+Enterprise-grade applications requiring high availability and durability
+SaaS applications needing high performance at scale
+
+Global applications with low-latency read requirements
+
+Variable workloads with unpredictable usage patterns (Aurora Serverless)
+
+Online transaction processing (OLTP) systems
+
+Exam Tips
+
+Aurora is MySQL- and PostgreSQL-compatible but AWS-built for cloud performance
+
+Supports automatic storage scaling up to 128TB
+
+97
+

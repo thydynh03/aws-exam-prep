@@ -1,0 +1,39 @@
+261
+
++ AWS Network Firewall Policies
+* Cloud WAN Core Network Policies
++ Resource Groups
++ Custom resources integrated with AWS Service Catalog
+How It Works
+1. Create a Resource Share:
+Choose the resources you want to share.
+© Select the principals (accounts, OUs, or the whole Organization).
+© Choose permissions.
+2. Invitation Process:
+© Ifsharing outside your organization, the recipient must accept the invitation.
+
+© Within the organization, sharing is automatic (if sharing with AWS Organizations
+accounts).
+
+3. Access and Usage:
+© Shared resources appear in recipient accounts.
+
+© Recipients can use shared resources as if they owned them, within permission
+boundaries.
+
+Sharing Types
+* Within Organization:
+© Simplest method.
+© Automatic access (no invitation/acceptance needed).
++ With Specific AWS Accounts:
+© Cross-account sharing even outside the organization.
+o Requires invitation acceptance.
+* Organizational Units (OUs)
+© Fine-grained control using AWS Organizations hierarchy.
+Permissions and Security
++ AWS RAM uses AWS Identity and Access Management (IAM) for defining policies.
+* Managed permissions help control actions on shared resources.
+* Sharing is limited to supported resource types, preventing accidental oversharing.
+Monitoring and Auditing
++ AWS CloudTrail integration:
+

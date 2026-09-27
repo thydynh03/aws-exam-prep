@@ -1,0 +1,62 @@
+180
+
+AWS Elastic Transcoder
+What It Is
+
+AWS Elastic Transcoder is a fully managed media transcoding service that converts (transcodes)
+media files from their source formats into versions optimized for playback on various devices
+like smartphones, tablets, and web browsers. It handles all the heavy lifting of scaling,
+provisioning, and managing transcoding pipelines in the cloud.
+
+Key Features
+
++ Fully managed and scalable transcoding service
+
++ Converts media files into formats suitable for multiple devices and platforms
++ Supports popular formats like MP4, H.264, AAC, WebM, and MPEG-2
+
++ Automatically scales based on the number of jobs and workloads
+
++ Integrated with Amazon $3 for input and output file storage
+
++ Delivers cost-effective transcoding through pay-as-you-go pricing
+
+How It Works
+1. You upload your source media file to an $3 bucket.
+2. Elastic Transcoder fetches the file and processes it through a transcoding pipeline.
+3. You specify presets or custom settings for output formats, resolutions, and bitrates.
+
+4. The transcoded files are output to an S3 bucket, ready for delivery via CloudFront or
+direct download.
+
+Pipelines
++ A pipeline defines the workflow for transcoding: input, output, and notifications.
++ Connects an input bucket (source media) and output bucket (transcoded files).
+
++ Can send job status updates through Amazon SNS notifications.
++ Each pipeline can process multiple transcoding jobs simultaneously.
+
+Jobs
+
++ A job represents a single transcoding request within a pipeline.
+
++ Includes input file, output format(s), and optional thumbnails or captions.
+
++ Multiple outputs (eg, different resolutions or devices) can be defined per job
+* You can define encryption for both input and output content.
+
+Presets
+
++ Presets define the settings for transcoding (e.g., codec, resolution, bitrate, aspect ratio).
++ AWS provides system presets for common devices (e.g,, iPhone, Android, web).
+
++ Custom presets can be created for fine-tuned control.
+
+« Presets help standardize outputs and simplify job creation.
+
+Thumbnails and Captions
+
++ Elastic Transcoder can automatically generate thumbnail images during transcoding.
+upports embedded or sidecar captions (e.g,, WebVTT, SRT).
+* Useful for video players that require previews or accessibility features.
+

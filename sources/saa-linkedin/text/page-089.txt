@@ -1,0 +1,15 @@
+88
+
+IAM roles for Task and Task Execution enable secure access to AWS services
+ECS Capacity Providers support EC2 On-Demand, EC2 Spot, and Fargate
+Use Fargate for serverless, no-instance-management deployments
+
+Supports integration with ALB, EFS, Secrets Manager, CloudWatch, X-Ray
+
+Quick Summary
+
+Amazon ECS is AWS's fully managed container orchestration service supporting Docker
+workloads. It offers flexible deployment with EC2 and Fargate launch types, deep AWS
+integration for security and monitoring, and tools for scaling and managing container-based
+applications in production.
+

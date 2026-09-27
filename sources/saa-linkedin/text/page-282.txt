@@ -1,0 +1,57 @@
+281
+
+Volume Features
+
+Durability:
+
+© Replicated within an AZ.
+
+© Designed for high availability and durability.
+Elastic Volumes:
+
+© Modify size, performance, and type without downtime.
+Snapshots:
+
+© Point-in-time backups.
+
+o Stored in Amazon $3.
+
+© Incremental, only changes since last snapshot.
+
+© Can be copied across regions.
+Encryption:
+
+o Uses AWS KMS.
+
+o Encrypts data at rest, data in transit between instance and volume, snapshots,
+and volume copies.
+
+Enabled at creation; cannot encrypt an existing unencrypted volume directly
+(must copy to new encrypted volume).
+
+Performance
+
+IOPS depends on volume type and size.
+Consistent and predictable performance with Provisioned OPS.
+Can burst IOPS on gp3.
+
+‘Throughput and 1OPS can be adjusted for gp3.
+
+Multi-Attach (i01/i02)
+
+Attach a single io1/io2 volume to multiple Nitro-based EC2 instances in the same AZ.
+
+Enables shared storage scenarios like clustered applications.
+
+Snapshots
+
+Stored in $3, but invisible as $3 objects.
+Incremental by design, saving storage costs.
+
+Used to restore volumes or create new volumes.
+
+Can copy snapshots to other regions for disaster recovery.
+Fast Snapshot Restore (FSR):
+
+© Enables low-latency, fully-initialized volumes from snapshots.
+

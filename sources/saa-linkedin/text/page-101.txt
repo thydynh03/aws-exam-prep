@@ -1,0 +1,60 @@
+Use AWS DMS to migrate data from existing MongoDB databases
+
+Scaling and Availability
+
+Horizontal read scaling with up to 15 read replicas
+Automatic failover to replicas during primary failure
+Storage auto-scales without downtime
+
+Multi-AZ deployments ensure high availability
+
+Supports replica lag monitoring and alerts
+
+Backups and Restore
+
+Continuous backups to Amazon $3
+Point-in-time recovery (PITR) up to 35 days
+Manual snapshots can be taken and retained as needed
+
+Snapshots can be shared across AWS accounts or copied to other regions
+
+Security
+
+Encryption at rest using AWS KMS
+
+Encryption in transit using TLS
+
+VPC deployment for network-level isolation
+
+IAM integration for resource-level access control
+
+AWS Secrets Manager integration for secure credentials management
+
+Audit logging supported using CloudWatch Logs
+
+Monitoring and Management
+
+Amazon CloudWatch for performance metrics and alarms
+Enhanced Monitoring for detailed 0S-level metrics
+
+Event notifications via Amazon SNS
+
+Amazon CloudTrail integration for API activity tracking
+
+Fully managed backups, patching, and failover by AWS
+
+Integration with AWS Services
+
+AWS DMS for data migration
+
+CloudWatch for monitoring and logging
+
+Secrets Manager for managing database credentials
+IAM for access control
+
+VPC for secure networking
+
+AWS Glue for data transformation and analytics
+
+100
+

@@ -1,0 +1,38 @@
+© Throughput up to hundreds of GB/s.
+© Use Cases:
+Machine learning.
+© High-performance computing (HPC).
+© Media processing.
+3, Amazon FSx for NetApp ONTAP
+* Managed NetApp ONTAP file systems.
+* Supports NFS, SMB, and iSCSI protocols.
+* Advanced NetApp features:
+© Multi-protocol access.
+o Snapshots.
+© Data deduplication and compression.
+© Cloning and replication.
+* Supports FlexCache for caching volumes in different regions.
++ Can tier cold data to Amazon $3.
+* Use Cases:
+© Enterprise workloads needing NetApp features.
+© Data replication and disaster recovery.
+© Hybrid cloud storage.
+4, Amazon FSx for OpenZFS
++ Managed OpenZFS file systems.
+« POSIX-compliant, Linux-native.
+© Supports NFS v3 and v4.1.
+* High throughput and low latency.
+© Use Cases:
+© Linux-based applications.
+o Container storage.
+o Dev/test environments.
+Integration and Access
+
+* Deploys inside VPC, with control over networking.
+
+Supports AWS Direct Connect and VPN for hybrid workloads.
+
++ Integrated with AWS IAM for managing access.
+
+288
+

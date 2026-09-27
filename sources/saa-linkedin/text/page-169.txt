@@ -1,0 +1,59 @@
+168
+
+AWS Proto:
+What It Is
+
+AWS Proton is a managed delivery service for provisioning and deploying container-based and
+serverless applications. It helps platform teams define standard stacks (infrastructure + CI/CD
+pipelines) as templates, and developers deploy services from those templates, so you get
+consistency, speed and governance.
+
+Key Features
+
+‘Template-based architecture: supports Environment Templates (shared infrastructure)
+and Service Templates (application stacks)
+
+Infrastructure as Code support: Works with AWS CloudFormation and Terraform for
+provisioning
+
+Versioned templates: Define major/minor versions of templates; enforce
+standardization and upgrade paths
+
+‘Template sync & Git integration: Changes to template bundles in repositories can
+automatically create new versions
+
+Automated CI/CD pipeline provisioning along with infrastructure for each service
+instance
+
+Environment provisioning options: AWS-managed, self-managed, and cross-account
+environments
+
+Core Concepts & Components
+
+Environment Template - Defines shared infrastructure used by many services (VPCs,
+clusters, load balancers)
+
+Service Template - Blueprint for a specific application or micro-service stack, including
+infrastructure and deployment pipeline
+
+Service Instance ~ A deployed instance of a Service Template within an Environment
+Component - Optional additional infrastructure that attaches to a service instance
+
+‘Template Bundle - ZIP/YAML bundle stored in $3 or Git repo containing laC files,
+manifest, and schema for templates
+
+‘Template Versions ~ Minor versions are backward-compatible, while major versions may
+introduce breaking changes
+
+Security, Governance & Cost
+
+Centralized control ensures developers use only approved architecture
+
+IAM roles and policies manage access to template registration, deployments, and
+environment management
+
+No additional Proton service cost, you pay only for the AWS resources provisioned by
+your templates
+
+Great for compliance and infrastructure standardization, preventing configuration drift
+

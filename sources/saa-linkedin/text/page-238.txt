@@ -1,0 +1,61 @@
+237
+
+Amazon Cognito
+
+What It Is
+
+Amazon Cognito is a fully managed service that provides authentication, authorization, and user
+management for web and mobile apps. It allows developers to add user sign-up, sign-in, and
+access control to applications securely and at scale.
+
+Key Features
+
+User sign-up and sign-in with customizable UI
+
+User pools for user directory management
+
+Federated identities to allow sign-in with social and SAML providers
+Secure token generation for authentication and authorization
+Integration with AWS IAM for access control to AWS resources
+Supports MFA and advanced security features
+
+User profiles and attributes storage
+
+User Pools
+
+Managed user directories to handle registration and authentication
+
+Supports email and phone number verification
+
+Built-in support for Multi-Factor Authentication (MFA)
+
+Password policies and account recovery settings
+
+Hosted UI for sign-up and sign-in flows
+
+Integration with social identity providers (Google, Facebook, Amazon, Apple)
+Integration with SAML 2.0 and OIDC providers
+
+Provides OAuth 2.0 endpoints for token-based authentication
+
+Tokens: ID Token, Access Token, Refresh Token
+
+Lambda triggers for customizing workflows (e.g., pre-sign-up, post-confirmation)
+
+Identity Pools (Federated Identities)
+
+Provide temporary AWS credentials for accessing AWS services
+
+Support sign-in with User Pools, social providers, SAML, OIDC, and unauthenticated
+guest access
+
+Integrates with AWS IAM roles for fine-grained access control
+
+Role mapping to assign different IAM roles based on user attributes or provider
+
+Authentication Flows
+
+User Pools manage authentication and generate JWT tokens
+
+Identity Pools exchange tokens for AWS credentials via STS
+

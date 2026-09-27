@@ -1,0 +1,48 @@
+246
+
+AWS
+What It Is
+
+1 Man:
+
+© Asecurity management service that centrally configures and manages firewall rules
+across multiple AWS accounts and resources.
+
+Designed for AWS Organizations to enforce consistent security policies.
+Key Features
+1. Centralized Security Policy Management
+
+* Create security policies once and apply them across accounts and resources in your
+organization.
+
++ Supports AWS Organizations integration, manage all member accounts from a central
+admin account.
+
+2. Supported Security Services
+* AWS WAF: Manage and deploy Web ACLs across accounts.
+* AWS Shield Advanced: Apply advanced DDoS protection consistently.
++ AWS Network Firewall: Define VPC-level traffic filtering rules.
+© VPC Security Groups: Audit and remediate security group rules.
++ Route 53 Resolver DNS Firewall: Manage DNS filtering policies.
+3, Automatic Policy Enforcement
+
+* New resources (e.g., ALBs, CloudFront distributions) automatically get the appropriate
+policies.
+
+Ensures compliance even as new accounts or resources are created.
+4. Compliance Monitoring
+* Continuously checks for policy compliance across all accounts.
++ Flags and optionally remediates noncompliant resources.
+5. Integration with AWS Organizations
+Firewall Manager can only work if your accounts are in an AWS Organization.
++ Policies can target:
+© Specific Us (Organizational Units)
+o Entire Organization
+© Specific accounts
+
+Use Cases
+
++ Enforcing consistent AWS WAF rules across all company websites.
+
++ Automatically protecting new resources with AWS Shield Advanced.
+

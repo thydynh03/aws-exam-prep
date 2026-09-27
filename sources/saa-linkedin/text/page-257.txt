@@ -1,0 +1,39 @@
+256
+
+Amazon Macie
+What It Is
+
+* Managed data security and privacy service that uses machine learning to discover,
+classify, and protect sensitive data in Amazon $3.
+
+* Designed to help detect PIl (Personally Identifiable Information) and other sensitive
+data.
+
+Key Features
+Automated Sensitive Data Discovery
+* Continuously monitors and automatically discovers sensitive data in $3 buckets.
+* Uses machine learning and pattern matching to identify:
+© Pll (eg, names, addresses, credit card numbers).
+© Financial data.
+© Credentials
+Data Classification
++ Classifies objects in $3 buckets based on sensitive data types.
+© Built-in managed data identifiers (common PII patterns).
++ Supports custom data identifiers for specific patterns.
+Security and Privacy Alerts
++ Generates findings when sensitive data is detected.
++ Findings include:
+© Bucket name.
+© Object details.
+© Type of sensitive data.
+© Severity levels.
+$3 Bucket-Level Analysis
++ Evaluates $3 bucket permissions.
+* Identifies publicly accessible buckets or buckets shared with other accounts.
+* Alerts on misconfigurations that could lead to data exposure.
+Integration with AWS Services
+Findings sent to AWS Security Hub for central visibility.
+* EventBridge for automation workflows (e.g., remediation).
+
++ AWS CloudWatch for alerting.
+

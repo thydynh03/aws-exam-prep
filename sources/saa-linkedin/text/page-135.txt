@@ -1,0 +1,26 @@
+134
+
+* No upfront cost for provisioning devices.
+
+* Cost Optimization Tips: Use automated parallel tests, clean up unused test runs,
+schedule idle devices carefully.
+
+Exam Tips
+
+© Focus on use cases: SAA may ask when to use Device Farm vs emulators. Correct
+answer: real device testing without managing hardware.
+
++ Integration with CI/CD: Key DevOps angle, “automatic, repeatable testing”
+
+© Security & Compliance: Tests run in isolated environments, consider AWS shared
+responsibility.
+
++ Device Pools: Can group devices for targeted testing scenarios.
++ Network Simulation: Useful for performance/resilience testing questions.
+Quick Summary
+
+AWS Device Farm lets you test apps on real devices at scale. It supports automated and manual
+testing, integrates with CI/CD pipelines, provides detailed logs and metrics, and ensures security
+and isolation, perfect for SAA exam scenarios where you need to pick a managed service for
+scalable, reliable, and low-overhead mobile testing.
+

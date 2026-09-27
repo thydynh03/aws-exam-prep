@@ -1,0 +1,39 @@
+© Log collection with CloudWatch Agent.
+* AWS Systems Manager (SSM):
+Run Command, Patch Manager.
+© Session Manager for SSH-free access.
++ CloudTrail:
+© Records API calls for audit.
+Security
++ IAMRoles for EC2:
+© Grant temporary credentials to apps.
+* Security Groups:
+
+© Stateful, instance-level firewall.
+
++ Key Pairs:
+o SSH access for Linux, RDP for Windows.
+© Encryption:
+
+© EBS volume encryption using KMS.
+© Encrypted snapshots.
+Purchasing Options and Cost Savings
+* Use Savings Plans for flexibility.
+* Purchase Reserved Instances for predictable workloads.
+* Use Spot Instances for interruptible workloads at low cost.
+* Combine Auto Scaling with Spot and On-Demand using EC2 Fleet or Spot Fleet.
+Placement Strategies
+* Cluster Placement Group:
+© High performance within single AZ.
+* Spread Placement Group:
+© Instances spread across distinct hardware.
++ Partition Placement Group:
+© Distribute across partitions with isolation
+High Availability and Fault Tolerance
+* Deploy across multiple AZs.
+* Use Auto Scaling Groups with ELB.
+
+* Use Elastic IPs for static addressing.
+
+69
+

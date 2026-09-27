@@ -1,0 +1,21 @@
+Store data in columnar formats (Parquet or ORC)
+* Compress data to reduce storage and scan costs
+* Manage schemas in AWS Glue Data Catalog
+© Secure data using IAM policies and encryption
+Exam Tips
++ Serverless SQL queries on data in $3
+* Charged per TB scanned, so optimize with partitions and formats
+* Integrated with AWS Glue Data Catalog
+© Supports multiple data formats including Parquet and ORC
+* Can be used with QuickSight for visualization
++ Best for ad hoc queries on large datasets stored in $3
+* Use IAM and Lake Formation for access control
++ Encrypt data at rest and in transit
+
+Quick Summary
+
+Amazon Athena is a serverless query service that analyses $3 data using SQL without
+infrastructure management. It is cost-effective, integrates with AWS Glue for schema
+management, and supports multiple data formats and security features, making i
+hoc analytics and data lake querying.
+

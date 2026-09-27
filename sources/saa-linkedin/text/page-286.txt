@@ -1,0 +1,36 @@
+285
+
+Throughput Modes
+1. Bursting Throughput
+Default.
+© Throughput scales with file system size.
+© Suitable for most workloads.
+2. Provisioned Throughput
+Specify throughput independent of storage size.
+© Useful for workloads needing higher, consistent throughput.
+Availability and Durability
+* Data is stored redundantly across multiple AZs in a region.
+© Designed for 99.999999999% (11 9s) durability.
+«Regional service: accessible from all AZs in a region.
+Security
+«Supports AWS KMS for encryption at rest.
+* TLS encryption for data in transit.
++ IAM policies and POSIX permissions for access control.
++ Supports VPC security groups and network ACLs.
+« EFS Access Points:
+o Managed application access.
+Enforce user and group identities, root access control.
+Mounting Options
+* Mount directly on EC2 instances using NFS protocol.
++ Mount targets in each AZ for high availability.
+«Supported on:
+o Linux EC2 instances.
+o On-premises servers via AWS Direct Connect or VPN.
+o AWS services like ECS and Lambda (via EFS Access Points).
+Backup and Restore
++ AWS Backup supports EFS file systems.
+* Centralized, automated backup service.
+* Define backup plans and retention policies.
+
++ Point-in-time recovery of file systems.
+

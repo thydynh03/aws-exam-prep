@@ -1,0 +1,57 @@
+170
+
+AWS Service Catalog
+What It Is
+
+AWS Service Catalog lets you create, manage and distribute a catalog of approved AWS-resource
+“products” (stacks, services, templates) to end-users. Administrators define what resources are
+approved, bundled, and how they can be used; end-users deploy from the catalog within
+guardrails.
+
+Key Features
+
+Standardization of assets: Administrators define products via CloudFormation
+templates, version them, bundle them into portfolios.
+
+Self-service discovery & launch: End-users browse available products, launch with
+constrained parameters.
+
+Fine-grained access control: IAM + launch constraints, template constraints, tag update
+constraints.
+
+Versioning & sharing: Products can have active/inactive versions; portfolios can be
+shared across accounts.
+
+Core Concepts
+
+Product: A CloudFormation template (or packaged AWS Marketplace offering) that
+defines one or more AWS resources.
+
+Portfolio: A collection of products, with configuration for who can access/deploy them,
+constraints applied, tags inherited.
+
+Versions: Each product can have multiple versions; you manage active/inactive/deleted
+states.
+
+Constraints: Template constraints (limit parameters), launch constraints (specify [AM
+role used when product is deployed), notification constraints (SNS notifications on stack
+events), tag update constraints (whether end-user can change tags).
+
+Service Actions: Additional actions end-users can perform on provisioned products (for
+example, run a System's Manager document, update resources).
+
+AppRegistry (integration): Manage application metadata, attribute groups, associating
+stacks/provisioned products with applications for visibility.
+
+Security & Governance & Cost
+
+Works with IAM for who can create/edit catalogs, portfolios, access products.
+Data in $3/DynamoDB used under the hood is encrypted at rest; communication via TLS.
+Integration with CloudTrail for auditing provisioning and changes.
+
+Pricing: Free tier includes first 1,000 API calls per month; charge starts on API usage
+beyond free tier.
+
+Because products often create AWS resources via CloudFormation, underlying resource
+cost still applies.
+

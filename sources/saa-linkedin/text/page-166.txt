@@ -1,0 +1,41 @@
+165
+
+Share volume discounts across accounts.
+© Single payment method.
+© Simplified billing and reporting.
+« No extra cost to use.
++ Billing and usage tracked at both organization and individual account levels.
+Service Control Policies (SCPs)
+
+* Policies to define maximum available permissions for accounts or OUs.
+
+© Work with IAM policies
+those boundaries.
+
+(CPs set boundaries; IAM policies grant permissions within
+
++ Can allow or deny specific AWS actions.
+= SCP Types:
+o FullAWSAccess: Default SCP attached to root OU and new accounts.
+© Custom SCPs for fine-grained control.
+* Examples
+© Deny usage of certain regions.
+© Block deletion of specific resources.
+AWS Single Sign-On (IAM Identity Center) Integration
+* Enables centralized access management across accounts.
+* Assign user permissions across AWS accounts.
+* Supports SAML integration with external identity providers.
+Account Creation and Invitation
+* Create new accounts programmatically or via AWS Management Console.
+* Invite existing standalone AWS accounts to join the organization.
+* Central governance is enforced upon joining.
+‘Tagging Support
+«Tag AWS accounts for
+* Helps with tracking and reporting. cost allocation and organization.
+Policy Types
+* Service Control Policies (SCPs):
+o Control what services and actions accounts can use.
+Tag Policies:
+
+© Enforce consistent tagging across resources in accounts.
+

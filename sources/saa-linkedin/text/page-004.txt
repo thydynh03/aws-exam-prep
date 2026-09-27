@@ -1,0 +1,61 @@
+MIGRATION AND TRANSFER,
+
+1 | AWS Application Discovery Service 182
+2 | AWS Application Migration Service 184
+3 | AWS Database Migration Service (AWS DMS) 186
+4 | AWS DataSync 189
+5 | AWS Snow Mobile 192
+6 | AWS Snowball Edge 194
+7 | AWS Transfer Famil 197
+
+NETWORKING & CONTENT DELIVERY
+1 | Amazon CloudFront 200
+2 | AWS Direct Connect 205
+3 | Elastic Load Balancing (ELB) 208
+4 | AWS Global Accelerator 212
+5 | Amazon Route 53 216
+6 | AWS Transit Gateway 219
+7 | Amazon VPC 222
+
+SECURITY, IDENTITY & COMPLIANCE
+1 | AWS Artifact 226
+2 | AWS Audit Manager 228
+3 | AWS Certificate Manager (ACM) 231
+4 | AWS CloudHSM 233
+5 | AWS Key Management Service (AWS KMS) 235
+6 | Amazon Cognito 237
+7 | Amazon Detective 240
+8 | AWS Directory Service 242
+9 | AWS Firewall Manager 246
+
+10 | Amazon GuardDuty 248
+
+11 | AWS Identity and Access Management (IAM) 250
+
+12 | Amazon Inspector 254
+
+13 | Amazon Macie 256
+
+14 | AWS Network Firewall 258
+
+15 | AWS Resource Access Manager (AWS RAM) 260
+
+16 | AWS Secrets Manager 263
+
+17 | AWS Security Hub 265
+
+18 | AWS Shield 267
+
+19 | AWS WAF 269
+
+SERVERLESS
+1 | AWS Fargate 271
+2 | AWS Lambda 274
+STORAGE
+1 | AWS Backup 277
+2 | Amazon Elastic Block Store (Amazon EBS) 280
+3 | Amazon Elastic File System (Amazon EFS) 284
+4 | Amazon FSx (for all types) 287
+5 | Amazon $3 291
+6 | AWS Storage Gateway 296
+

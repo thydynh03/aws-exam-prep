@@ -1,0 +1,26 @@
+158
+
+© Managing software license compliance for hybrid (AWS + on-premises) environments
+Optimizing costs through better visibility into license usage
+* Supporting BYOL strategies for existing software investments
+Best Practices
+* Define clear license configurations that match your vendor agreements
+* Integrate with AWS Systems Manager for discovery and tracking
+* Enable cross-account sharing for Organizations to standardize governance
+* Regularly review usage reports to identify optimization opportunities
+* Use IAM policies to control access to License Manager configurations
+Exam Tips
++ AWS License Manager helps track and enforce licensing rules in AWS and on-premises
+* Supports BYOL by defining custom licensing rules
+«Integrated with Systems Manager for inventory and tracking
+* Can enforce rules at launch to prevent non-compliance
+* Supports cross-account management with AWS Organizations
+* Helps manage AWS Marketplace licenses in addition to BYOL software
+
+Quick Summary
+
+AWS License Manager is a service that enables customers to centrally manage and track
+software licenses across AWS and on-premises environments. It supports BYOL, enforces license
+usage rules to ensure compliance, integrates with AWS Systems Manager for discovery, and
+provides visibility and reporting to help reduce costs and maintain audit readiness.
+

@@ -1,0 +1,38 @@
+284
+
+Amazon EFS
+What It Is
+
+Amazon Elastic File System (EFS) is a fully managed, scalable, elastic NFS file system for use
+with AWS services and on-premises resources. Provides shared, concurrent access to thousands
+of EC2 instances,
+
+Key Characteristics
+Managed Network File System (NFSv4.1, NFSv4.0)
+* Elastic: Automatically grows and shrinks as files are added or removed.
+* Scalable: Supports petabytes of data, high levels of throughput and IOPS.
+* Accessible concurrently by multiple instances across AZs.
+‘Supports POSIX permissions for access control.
+Storage Classes
+1. Standard
+o For frequently accessed files.
+o Higher cost.
+© Designed for low latency, high throughput.
+2. Infrequent Access (IA)
+o Lower cost for infrequently accessed files.
+© Charged per GB stored and per access request.
+o Ideal for files not read often but must be available.
+3. Lifecycle Management
+o Automatically moves files to IA based on age.
+© Configurable transition policy (e.g,, 30 days of no access).
+Performance Modes
+1. General Purpose
+o Default mode.
+Low latency for latency-sensitive use cases.
+o Suitable for web servers, CMS, home directories.
+2. Max1/O
+o Supports higher levels of aggregate throughput.
+o Higher latencies.
+
+© Best for big data, media processing, analytics workloads.
+

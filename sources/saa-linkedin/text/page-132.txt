@@ -1,0 +1,36 @@
+131
+
+Pricing
++ Based on number of API calls and data transfer out
+* Separate pricing for REST APIs, HTTP APIs, and WebSocket APIs
+* Caching and custom domain name usage incur additional charges
+Integration with Other AWS Services
++ AWS Lambda: Create serverless backends
++ AWS Cognito: User authentication and authorization
++ AWS Step Functions: Orchestrate workflows
++ AWS DynamoDB: Direct service integrations
++ AWS S53: Serve static content or store API results
++ AWS Kinesis: Streaming data ingestion
+«AWS SNS/SQS: Messaging and queuing
+Use Cases
+* Build RESTful and WebSocket APIs for mobile and web applications
+* Create serverless backends with AWS Lambda
+* Securely expose AWS services to external applications
+* Enable real-time communication with WebSocket APIs
+* Build microservice architectures with managed APIs
++ Support third-party developer access with API keys and usage plans
+Best Practices
+* Use IAM, Cognito, or Lambda Authorizers for securing APIs
+* Enable request throttling and usage plans to prevent abuse
+* Use caching to improve performance and reduce backend load
+* Monitor usage with CloudWatch and enable logging for troubleshooting
+* Apply resource policies to restrict access to trusted networks or accounts
+‘* Use canary deployments to test new versions safely
++ Design APIs for idempotency and error handling
+Exam Tips
+* REST APIs offer advanced customization and integration features
++ HTTP APIs are simpler and cheaper, ideal for most REST use cases
+© WebSocket APIs support two-way real-time communication
+
+* Supports multiple integration types including Lambda, AWS services, HTTP endpoints
+

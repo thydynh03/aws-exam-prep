@@ -1,0 +1,37 @@
+55
+
+12. Cost Model
+© Pay for:
+Number of requests.
+© Payload data transfer.
+* FIFO queues typically cost more than standard queues due to ordering guarantees.
+13. FIFO Queue Features
+© Message groups for ordered processing in parallel.
++ Exactly-once delivery with deduplication.
+* Up to 20,000 in-flight messages (per message group).
+14. DLQ and Redrive Policy
+©  DLQs help isolate and investigate failing messages.
++ Redrive policy defines:
+o Maximum receive count before moving to DLQ.
+© DLQ destination.
+15. Limits
+* Default limits on number of queues, throughput per account (can be raised via support).
++ FIFO throughput limits can be increased with batching.
+Use Cases
++ Decouple microservices.
+* Buffer and smooth out workloads.
+© Offload long-running tasks.
+Failure isolation via DLQs.
+Exam Tips
+* Standard queues: high throughput, at-least-once delivery, possible duplicates.
+© FIFO queues: exactly-once processing, strict ordering.
+* Visibility timeout avoids double-processing during work.
+Long polling reduces cost and latency by waiting for messages.
+«Encryption with KMS secures data at rest.
+Quick Summary
+
+‘Amazon SQS is a fully managed message queuing service that enables decoupled, scalable, and
+reliable communication between distributed application components. It supports both standard
+and FIFO queues, offers encryption, DLQs, long polling, and seamless AWS integrations for
+building robust cloud architectures.
+

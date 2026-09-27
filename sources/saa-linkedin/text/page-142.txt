@@ -1,0 +1,60 @@
+141
+
+* Can view, search, and download events in the AWS console
+
+* Useful for viewing recent account activity without setting up a trail
+CloudTrail Insights
+
+* Analyses write management events to detect unusual activity
+
+* Detects spikes in API call volume or error rates
+
+* Provides Insight Events with details about the anomaly
+
++ Helps identify security issues or operational problems
+Integration with Other AWS Services
+
+* Amazon S3 for storing logs
+
+* AWS CloudWatch Logs for real-time analysis and alarms
+
+* Amazon EventBridge for automating workflows and security responses
+
+* AWS Lambda to automatically respond to specific events
+
+© AWS Organizations for organization-level trails covering all member accounts
+Organization Trails
+
+AWS Organizations can create a trail that applies to all accounts in the organization
+
+* Centralized logging for governance and compliance
+
+* Prevents member accounts from disabling logging
+Security and Access Control
+
++ Logs can be encrypted with AWS KMS for secure storage
+
+* IAM policies control access to CloudTrail logs and settings
+
+* Supports bucket policies and $3 ACLs for secure delivery of logs
+Pricing
+
+* Viewing CloudTrail Event History (last 90 days of management events) is free
+
++ First copy of management events recorded in a trail is free
+
+* Charges apply for additional copies, data events, and Insights events
+
++ Storage costs for $3 and optionally CloudWatch Logs ingestion and storage
+Best Practices
+
+* Always enable CloudTrail in all Regions to ensure full coverage
+
+* Use organization trails in AWS Organizations for centralized auditing
+
++ Enable log file validation to ensure log integrity
+
++ Enable encryption using AWS KMS for secure log storage
+
+* Store logs in a dedicated $3 bucket with strict access controls
+

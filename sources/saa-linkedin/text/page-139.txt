@@ -1,0 +1,61 @@
+AWS
+
+138
+
+Form:
+
+What It Is
+
+AWS CloudFormation is an infrastructure-as-code (aC) service that lets you model, provision,
+and manage AWS resources (and some third-party resources) via declarative templates (JSON
+or YAML).
+
+You define everything (instances, networks, databases, permissions) as code; CloudFormation
+handles the creation, updates, deletions as “stacks”.
+
+Key Features
+
+‘Templates: YAML/JSON file with sections like Parameters, Mappings, Conditions,
+Resources, Outputs.
+
+Stacks: A deployed collection of AWS resources defined by a template. You manage all
+resources as one unit.
+
+Change Sets: Preview updates/changes before applying so you can see what will change
+or be replaced.
+
+Nested Stacks / Modules / Registry: Reuse templates /components for modularizing
+infrastructure.
+
+StackSets: Deploy stacks across multiple AWS accounts/regions with a single template.
+Drift Detection: Detect when stack resources diverge from the declared template.
+Integration: Works with CI/CD pipelines (since you're a DevOps intern, this is gold).
+
+Free to use for the service; you pay for the resources provisioned via CloudFormation.
+
+Core Concepts & Components
+
+‘Template: The blueprint (YAML/JSON) defining resources.
+
+Resources: The only required section in a template; each resource maps to AWS service
+(EC2, VPC, S3...).
+
+Parameters: Inputs you can provide when creating/updating stacks for flexibility.
+
+Mappings / Conditions: Provide region/OS/AMI variations or conditionally deploy
+resources.
+
+Outputs: Values you want to export, or make available after stack creation (e.g, VPC ID).
+
+Ref / GetAtt / Fn::ImportValue: Intrinsic functions for referencing resources, attributes,
+cross-stack imports.
+
+Stack: The runtime instantiation of a template (ie, the actual deployed set of resources).
+
+Cross-Stack References: Export outputs from one stack and import into another
+(modular design).
+
+Module / Nested Stack: Reusable, nested templates/components for better organization.
+
+StackSet: For multi-account/multi-region deployments.
+

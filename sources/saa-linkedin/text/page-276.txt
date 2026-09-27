@@ -1,0 +1,41 @@
+275
+
+Deployment and Versioning
+* Supports function versions (immutable snapshots)
+* Aliases can point to specific versions for safe deployments
+* Supports blue/green deployments using AWS CodeDeploy with traffic shifting
+* Code packages can be uploaded as .zip files or via container images (up to 10 GB)
+Container Image Support
+* Build and deploy Lambda functions as container images
+* Supports up to 10 GB image size
++ Use AWS ECR to store and manage images
+Security
+IAM roles define what resources a function can access
+* VPC integration allows functions to access resources in a VPC
++ AWS KMS for encrypting environment variables
+
+* Supports AWS Secrets Manager and AWS Systems Manager Parameter Store for secure
+configuration
+
+Monitoring and Logging
+* Integrated with Amazon CloudWatch Logs for function logs
+© CloudWatch Metrics track invocation count, duration, errors, throttles
+* AWS X-Ray provides tracing for performance analysis and debugging
+© CloudTrail logs API calls made to Lambda
+Pricing
+* Pay per request (first 1 million requests per month are free)
+* Pay per compute time in GB-seconds, rounded to nearest millisecond
+* Additional charges for Provisioned Concurrency and data transfer
+Use Cases
+
+* Real-time file processing (e.g,, $3 uploads)
+
+*  Event-driven data processing (e.g,, DynamoDB Streams, Kinesis)
++ Serverless APIs using API Gateway + Lambda
+* Automation and infrastructure management tasks
+* Backend for IoT, mobile, and web applications
+
+Integration with AWS Services
+
+* API Gateway: Create REST or WebSocket APIs backed by Lambda
+

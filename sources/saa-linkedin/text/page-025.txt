@@ -1,0 +1,53 @@
+24
+
+Kinesis Service Comparison
+Service | Purpose Data Storage __| Scaling Use Cases
+Kinesis | Real-time data _| Stored in shards | Manual shard | Real-time dashboards,
+Data ingestion and (24h-74 scaling or On- | log collection,
+Streams custom retention) Demand clickstreams
+
+processing
+Kinesis | Fullymanaged _| No storage Auto-scales | Load data to $3,
+Data delivery to (streams Redshift, OpenSearch,
+Firehose __ | destinations directly) near real-time ETL
+Kinesis | SQL-based Processes input | Managed Real-time metrics,
+Data analysis of streams (no scaling via | continuous
+Analytics | streaming data long-term KPUs transformations
+storage)
+
+Kinesis | Ingestand store _| Stores time- Managed Security camera feeds,
+Video video for analysis | indexed video in | ingestion, loT video, ML analysis
+Streams S3 built for video
+
+Integration
+
+Lambda: Event source for processing.
+$3: Destination via Firehose.
+
+Redshift: Direct loading via Firehose.
+
+OpenSearch (Elasticsearch): Index streaming data.
+
+AWS Rekognition: Analyse video streams.
+
+Exam Tips
+
+Kinesis Data Streams: Real-time, ordered, sharded. Best for real-time analytics with
+custom processing.
+
+Firehose: Simplest way to load data to $3, Redshift, OpenSearch. Fully managed, near
+real-time.
+
+Data Analytics: Run continuous SQL on streaming data
+Video Streams: Ingest and analyse video feeds.
+Shards determine throughput in KDS.
+
+Enhanced fan-out provides dedicated throughput per consumer.
+
+Quick Summary
+
+‘Amazon Kinesis is a suite of services for real-time streaming data ingestion, processing, analysis,
+and delivery. It includes Kinesis Data Streams (sharded streams), Firehose (managed delivery),
+Data Analytics (SQL processing), and Video Streams (video ingestion and analysis), enabling you
+to build scalable, real-time data applications.
+

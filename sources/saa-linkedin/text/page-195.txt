@@ -1,0 +1,37 @@
+194
+
+AWS Sn IE
+What It Is
+
+AWS Snowball Edge is a rugged, portable data transfer and edge computing device designed to
+move TB-scale data to and from AWS, and to run select AWS compute services locally.
+
+Key Features
+Storage and Capacity
+* Two device types:
+o Snowball Edge Storage Optimized
+80 TB usable storage.
+= Best for large-scale data transfer, local storage.
+© Snowball Edge Compute Optimized
++ 42 TB usable storage.
+«Includes more vCPUs and GPU options for edge computing workloads.
+Edge Computing Capabilities
+* Canrun AWS Lambda functions locally.
+* Supports EC2 instances for local compute processing.
+«Enables processing, filtering, and transforming data before transfer.
+* Helps support workloads in disconnected or intermittent-network environments.
+Use Cases
+* Data migration to AWS (TB-scale).
+* Edge computing in remote or mobile environments.
+‘+ loT data processing at the edge.
+* Disaster recovery and business continuity.
++ Military or rugged field operations with limited connectivity.
+Data Transfer
++ Secure, offline transfer to AWS:
+© Customer loads data onto Snowball Edge on-premises.
+Device is shipped back to AWS.
+o AWS uploads data into the customer's S3 bucket.
++ Also supports online data transfer between devices in a local cluster.
+
+* Supports data import and export.
+

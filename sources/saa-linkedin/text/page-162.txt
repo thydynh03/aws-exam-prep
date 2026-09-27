@@ -1,0 +1,32 @@
+161
+
+Use Cases
+* Monitoring AWS infrastructure with CloudWatch metrics
+* Centralized observability for microservices with Prometheus and AWS X-Ray
+* Industrial loT monitoring with AWS IoT SiteWise
+* Operational dashboards for DevOps and SRE teams
+* Correlating logs, metrics, and traces in a single view
+Best Practices
+* Use AWS SSO for secure user management and access control
+«Leverage IAM policies to restrict workspace access
+* Enable audit logging for compliance and visibility
+* Organize workspaces by team or project to manage isolation
+* Integrate with SNS for alerting to AWS services and other endpoints
+Exam Tips
+* Managed Grafana is AWS's fully managed, secure, scalable Grafana service
+© Supports integration with AWS-native and third-party data sources
+* AWS SSO and IAM help manage user access securely
+
+«Use for building dashboards to monitor AWS services, application traces, and custom
+metrics
+
+* Fully managed deployment means AWS handles patching, scaling, and availability
++ Alerts can notify via SNS, email, Slack, and other channels
+
+Quick Summary
+
+Amazon Managed Grafana simplifies creating and managing Grafana dashboards for monitoring
+AWS and third-party data sources. It is fully managed by AWS, supports secure access with SSO
+and IAM, integrates natively with AWS services, offers enterprise plugin options, and provides
+advanced alerting to help teams monitor and respond to operational events effectively.
+

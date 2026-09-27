@@ -1,0 +1,35 @@
+190
+
+Performance
+*  Purpose-built protocol optimized for high-speed transfers.
+© Canuse parallel, multi-threaded operations.
++ Transfers hundreds of terabytes or millions of files quickly.
+* Supports throttling to avoid saturating network links.
+Security
+* Data encrypted in transit using TLS.
+* Data at rest uses AWS-managed encryption:
+© $3 SSE (including SSE-KMS).
+o EFS and FSx encryption features.
++ Integrates with AWS IAM for access control.
+* Supports VPC endpoints for private connectivity.
+Monitoring & Management
+* AWS Management Console and CLI support for configuration and monitoring.
+« AWS CloudWatch:
+© Monitor task metrics and performance.
+© Receive alarms on failures or thresholds.
+* AWS CloudTrail:
+© Logs API calls for auditing.
+Pricing
++ Charged based on amount of data copied (per GB transferred).
+* Additional AWS service costs apply for storing transferred data (e.g., $3 storage fees).
+Typical Use Cases
++ Data migration:
+© On-premises storage to AWS for cloud adoption.
+© Ongoing replication:
+o Backup and DR strategies with continuous sync.
+* Hybrid cloud workflows:
+© Sync data between on-premises and AWS.
+* Data movement between AWS services:
+
+o Eg.,S3 to EFS, FSx to $3.
+

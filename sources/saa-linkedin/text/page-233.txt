@@ -1,0 +1,33 @@
+232
+
+Validation Methods
+1. DNS Validation (Recommended)
+* You adda CNAME record in your DNS to prove domain ownership.
++ Preferred for automation and renewal.
+2, Email Validation
+* Verification email sent to admin/contact/tech email of the domain.
+* Manual and prone to expiration if not confirmed.
+Use Cases
+* Securing web apps hosted on AWS with HTTPS.
++ Protecting custom domains on CloudFront and API Gateway.
+© Automating certificate lifecycle (renewals, deployments)
+* Internal TLS usage via ACM Private CA.
+Pricing
+* Public certificates are free.
+* Private CA (ACM PCA) incurs cost based on CA hours and certificate issuance.
+Security & Compliance
+© AWS manages private keys securely.
+* Certificates use 2048-bit RSA keys or ECDSA.
+© Supports FIPS-compliant algorithms.
+Exam Tips
+* Use ACM for SSL/TLS certificates on AWS services.
+* Public certs = free + auto-renewed, but only usable with supported AWS resources.
+* Use ACM PCA for issuing internal private certs.
+* Choose DNS validation for easier automation.
+* For custom domain HTTPS on CloudFront, use ACM in the us-east-1 (N. Virginia) region.
+* ACM does not support downloading the private key for public certs.
+Quick Summary
+
+AWS Certificate Manager provides free, automatically managed public certificates and scalable
+private certificate authority services for securing your applications and services using SSL/TLS.
+

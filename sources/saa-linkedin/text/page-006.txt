@@ -1,0 +1,54 @@
+Supports schema versioning
+
+Security
+
+Encryption at rest using $3 server-side encryption (SSE-S3, SSE-KMS)
+
+Encryption in transit using HTTPS
+
+IAM policies to control access to queries and data
+Integration with AWS Lake Formation for fine-grained access control
+
+Query result encryption in 3 using SSE
+
+Monitoring and Logging
+
+Integrated with AWS CloudWatch for query metrics
+CloudTrail logs for auditing Athena API calls
+Query history available in the Athena console
+
+Can monitor failed or long-running queries
+
+Use Cases
+
+Ad hoc querying of log files in $3
+Analysing AWS service logs (CloudTrail, ELB, VPC Flow Logs)
+Data lake analytics without ETL
+
+Interactive data exploration and reporting
+
+Integrating with BI tools like Amazon QuickSight
+
+Cost-effective data warehousing for infrequent queries
+
+Charged per TB of data scanned
+Compressed, columnar, and partitioned data reduces cost
+No charges for infrastructure provisioning or idle time
+
+AWS Glue Data Catalog pricing applies separately
+
+Integration with Other AWS Services
+
+Amazon $3: Data source and result storage
+AWS Glue: Data Catalog for schema management
+
+Amazon QuickSight: For visualization and dashboards
+
+AWS Lake Formation: For data lake governance and security
+
+AWS CloudTrail and CloudWatch for logging and monitoring
+
+Best Practices
+
+Use partitioning to limit data scanned
+

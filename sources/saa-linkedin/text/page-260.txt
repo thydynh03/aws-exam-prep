@@ -1,0 +1,42 @@
+259
+
+Deployment
+* Integrated with AWS Transit Gateway for centralized inspection of traffic between VPCs
+* Can be deployed in individual VPCs for distributed architectures
+* Automatically scales horizontally to meet throughput demands
+Logging and Monitoring
++ Send alert and flow logs to $3, CloudWatch Logs, or Kinesis Data Firehose
+* Supports detailed analysis and forensic investigations
+* Integration with CloudWatch Metrics for monitoring throughput and packet counts
+Integration with Other AWS Services
+
+* AWS Firewall Manager: Centrally configure and deploy firewall policies across accounts
+and VPCs in AWS Organizations
+
+« AWS Transit Gateway: Integrate for centralized inspection of East-West and North-South
+traffic
+
++ Amazon VPC: Direct integration for ingress and egress filtering
+«AWS Security Hub: Aggregate findings and integrate with other security tooling
+Pricing
+* Charged based on firewall endpoint hours and the amount of traffic processed
++ Separate pricing for stateful and stateless rule evaluations
+‘* Logging costs based on delivery to $3, CloudWatch Logs, or Firehose
+Best Practices
+«Use AWS Firewall Manager for multi-account, multi-VPC management
++ Define clear segmentation in VPC subnets to control traffic flow
+«Maintain and update Suricata-compatible rule sets to address evolving threats
++ Enable logging for audit and compliance purposes
+Exam Tips
+* AWS Network Firewall provides stateful and stateless filtering at the VPC level
+«Supports integration with AWS Firewall Manager for centralized policy enforcement
++ Can inspect traffic between VPCs via Transit Gateway integration
+* Scales automatically with traffic without user-managed infrastructure
+
+Quick Summary
+
+AWS Network Firewall is a fully managed, scalable service that delivers customizable traffic
+filtering at the VPC level. It supports both stateful and stateless inspection, integrates with AWS
+services like Firewall Manager and Transit Gateway, and provides logging for compliance and
+auditing, helping secure AWS workloads against network threats.
+

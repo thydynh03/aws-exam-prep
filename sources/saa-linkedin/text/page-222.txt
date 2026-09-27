@@ -1,0 +1,17 @@
+221
+
+Supports VPN, Direct Connect, VPC, and peering attachments
+Inter-Region peering enables cross-Region private connectivity
+Supports multicast workloads
+
+Resource Access Manager (RAM) enables sharing across AWS accounts
+
+Recommended for large-scale, complex network topologies
+
+Quick Summary
+
+AWS Transit Gateway is a highly scalable, central networking hub that connects VPCs and on-
+premises networks through a single gateway. It simplifies routing, supports hybrid and multi-
+Region architectures, and integrates with AWS services to create secure, manageable, large-scale
+network designs.
+

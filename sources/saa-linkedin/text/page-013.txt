@@ -1,0 +1,25 @@
+12
+
+* Monitor pipeline execution using CloudWatch metrics and logs
+* Use preconditions to ensure data quality before processing
++ Secure pipeline roles and resources with IAM policies
+* Automate alerts for failures using SNS
+
+Exam Tips
+
+* AWS Data Pipeline is used for orchestrating data movement and transformation
+workflows
+
+* Supports copying data between AWS services and on-premises sources
+* Activities define work, Data Nodes define sources and destinations
+* Scheduling supports complex recurring workflows
++ Integrates with $3, Redshift, RDS, EMR, DynamoDB, and on-premises systems
++ Supports fault tolerance with retries and notifications
+© Managed and customer-managed resource options available
+* Logs and metrics available in CloudWatch and $3
+Quick Summary
+
+‘AWS Data Pipeline enables the reliable movement and transformation of data across AWS and
+on-premises systems. It provides scheduling, monitoring, fault tolerance, and
+automation for complex ETL workflows, making it easier to manage data pipelines at scale
+

@@ -1,0 +1,54 @@
+AWS Aj
+What It Is
+
+n Re
+
+AWS Serverless Application Repository (SAR) is a managed repository that enables developers,
+
+teams, and organizations to find, deploy, and share serverless applications. It simplifies the
+
+discovery and reuse of serverless components and entire applications built using AWS services.
+
+Key Features
++ Fully managed repository for serverless apps
+© Supports public and private sharing within AWS accounts or organizations
+* Applications packaged as AWS SAM templates
+
+* Deploy directly through the AWS Management Console, AWS CLI, AWS SDKs, or AWS
+SAM CLI
+
+* Supports versioning of applications for tracking changes over time
+© Integrated with AWS IAM for permission management
+Publishing Applications
+
+* Developers can publish serverless applications built using AWS SAM (Serverless
+‘Application Model)
+
+© Must include an AWS SAM template defining resources and configurations
+
+© Supports adding metadata such as application name, description, license, and usage
+instructions
+
+Can publish public applications available to all AWS customers or restrict sharing to
+specific accounts/organizations
+
+«Enables versioning for iterative improvements and easy rollback
+
+Deploying Applications
+
+* Applications can be deployed directly to your AWS account from the console, CLI, or SAM
+
+CLI
+
+* AWS CloudFormation handles provisioning and deployment using the included SAM
+template
+
+© Supports customization through parameters defined in the template
+«Ensures best practices by enforcing proper packaging and permissions
+Security and Access Control
+* Integrated with AWS IAM for fine-grained access control
+* Publishers control who can view and deploy applications
++ Permissions defined in the SAM template are reviewed during deployment
+
+* AWS performs automated scanning for known security issues in published apps
+

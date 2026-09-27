@@ -1,0 +1,43 @@
+186
+
+AWS D; Mi, ‘DM:
+What It Is
+
+AWS Database Migration Service (AWS DMS) is a managed service that helps you migrate
+databases to AWS easily and securely. It supports homogeneous migrations (e.g,, Oracle to
+Oracle) and heterogeneous migrations (e.g, Oracle to Aurora). It also supports ongoing
+replication for minimal downtime migrations.
+
+Key Features
+Supports one-time migration and continuous data replication
+* Handles homogeneous and heterogeneous database migrations
+
+* Supports both schema and data migration (with AWS Schema Conversion Tool)
+
+* Minimal downtime with change data capture (CDC)
+* Supports on-premises, EC2-based, and AWS cloud database sources and targets
+© High availability with multi-AZ deployments
+* Supports data transformation during migration
++ Integrated monitoring with Amazon CloudWatch
+‘Supported Sources and Targets
+* Sources:
+© On-premises databases
+o AWS databases
+
+o EC2-hosted databases
+
+© Amazon RDS (all engines)
+o Amazon Aurora
+© Amazon Redshift
+o Amazon S3
+© DynamoDB
+o Kinesis Data Streams
+© OpenSearch Service
+o Any database supported by JDBC driver
+
+Homogeneous vs. Heterogeneous Migrations
+
+* Homogeneous: Source and target engines are the same (eg. Oracle to Oracle)
+
+* Heterogeneous: Source and target engines differ (e.g,, Oracle to Aurora PostgreSQL)
+

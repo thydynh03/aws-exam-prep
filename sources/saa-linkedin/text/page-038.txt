@@ -1,0 +1,60 @@
+37
+
++ Supports open data formats like CSV, Parquet, ORC, JSON, and Avro
+
+Integrates with AWS Glue Data Catalog for schema definitions
+
++ Ideal for extending queries beyond data stored in Redshift clusters
+Performance Optimization
+
++ Use of distribution styles (KEY, EVEN, ALL) to manage data distribution across nodes
+
+* Sort keys optimize query performance on large tables
+
+* Compression (encoding) reduces storage usage and speeds up processing
+
++ Materialized views store precomputed query results for faster performance
+
+* Workload management (WLM) to prioritize and allocate query resources
+Scalability and Elasticity
+
+«Elastic resize for quick cluster scaling
+
+* Concurrency scaling to handle spikes in query load
+
+* RAB instances with managed storage to scale compute and storage independently
+
+*  Cross-region data sharing supported using datashares
+Security
+
+* Data encryption at rest using AWS KMS or hardware security modules (HSM)
+
+* SSL encryption for data in transit
+
+* VPC support for network isolation
+
+* IAM for access control and resource policies
+
+* Audit logging with integration to Amazon CloudWatch and AWS CloudTrail
+Monitoring and Management
+
+* Performance Insights for query analysis and tuning
+
+© CloudWatch integration for metrics, logs, and alarms
+
+* Automatic backup to $3 with user-defined retention
+
++ Snapshot-based restore options including cross-region snapshots
+
+* Maintenance windows for patching and upgrades
+Pricing
+
++ Based on instance type and node count for provisioned clusters
+
+* Redshift Serverless pricing based on RPU-seconds used
+
+* Separate charges for backup storage, concurrency scaling, and data transfer
+
+* No cost for querying $3 data via Redshift Spectrum (only standard $3 and query charges
+apply)
+

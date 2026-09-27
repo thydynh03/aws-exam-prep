@@ -1,0 +1,49 @@
+64
+
++ RUNNING - Job currently executing.
+* SUCCEEDED - Job completed successfully.
++ FAILED - Job terminated with error.
+Job Scheduling and Dependencies
+* Priority is determined by job queue order and compute environment allocation.
+‘© Supports job dependencies, jobs can start only after other jobs succeed.
+* Array jobs and multi-node jobs can be combined for complex workflows.
+«Retry strategies and timeout policies handle transient failures gracefully.
+Compute Environments
+
+* Managed Compute Environment - AWS Batch automatically creates and scales compute
+resources (EC2 On-Demand or Spot).
+
+« Unmanaged Compute Environment - You manage the compute resources yourself
+(custom ECS clusters).
+
++ Supports multiple instance types, Spot Fleet, or On-Demand instances.
+
+* Can specify allocation strategy: BEST_FIT, BEST_FIT_PROGRESSIVE, or
+SPOT_CAPACITY_OPTIMIZED.
+
+Integration with Other AWS Services
+* Amazon ECS - Runs containerized jobs in Batch.
+* Amazon ECR - Stores and pulls Docker images.
+* Amazon CloudWatch Logs - Collects and monitors job logs.
+* Amazon SNS/SQS - Triggers or notifies job completion /failure.
++ AWS Lambda / Step Functions - Orchestrates Batch job submissions and workflows.
+
++ AWS Identity and Access Management (IAM) - Controls access and permissions for jobs
+and resources.
+
+* Amazon $3 - Commonly used for input/output data storage.
+Monitoring and Logging
+
++ Integrated with Amazon CloudWatch for metrics and alarms.
+
++ Track job execution history, retries, and failures in the console.
+
+* Custom metrics can monitor job duration, queue depth, and cost.
+Security
+
+© IAM Roles control job and service access.
+
++ AWS KMS encrypts sensitive data (e.g, environment variables).
+
+© Supports VPC configuration to run jobs in private subnets.
+

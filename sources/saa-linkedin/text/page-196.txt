@@ -1,0 +1,48 @@
+Clustering
+
+Multiple Snowball Edge devices can be clustered for:
+Increased local storage capacity.
+© High-availability deployments.
+
+Clusters can act as a local HDFS-compatible storage layer.
+
+Security
+
+End-to-end 256-bit encryption.
+
+AWS KMS integration for managing encryption keys.
+Tamper-resistant enclosures with tamper-evident seals.
+
+Trusted Platform Module (TPM) for hardware-based key storage.
+Chain-of-custody tracking during transit.
+
+Data automatically wiped after successful transfer to AWS.
+
+Ordering and Management
+
+eee
+
+Ordered via AWS Management Console.
+
+Managed with the Snow Family Management Console or CLI.
+Tracks shipping, jobs, and device status.
+
+Snowball Edge devices arrive pre-configured for the customer's job.
+
+Networking
+
+Supports 10 Gb, 25 Gb, and 40 Gb network connections.
+Local interfaces allow for fast on-premises transfer.
+
+Can be used in edge locations with limited or no internet connectivity.
+
+195
+
+Snowball Edge Variants
+Type Storage Use Case ‘Compute Capabilities
+Capacity
+Storage 80 TB usable | Bulk data transfer, local __ | Basic EC2 and Lambda support
+Optimized storage
+Compute 42 TB usable | Edge compute-heavy Extra vCPUs, optional GPU
+Optimized workloads, ML/AI (NVIDIA Tesla V100)
+

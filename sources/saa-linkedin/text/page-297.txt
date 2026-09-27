@@ -1,0 +1,40 @@
+296
+
+AWS Storage Gateway
+What It Is
+
+AWS Storage Gateway is a hybrid cloud storage service that connects on-premises environments
+to AWS storage infrastructure.
+
+Itenables you to seamlessly integrate on-prem applications with cloud storage, supporting
+backup, archiving, disaster recovery, and tiered storage use cases.
+
+Gateway Types
+1. File Gateway (NFS / SMB)
+* Provides file-based access to objects in Amazon S3.
+* Interfaces with on-prem apps via NFS or SMB.
++ Files are stored as objects in $3.
+* Frequently accessed data cached locally for low-latency access.
+* Supports Amazon $3 Object Lock for WORM (Write Once Read Many) compliance.
+© Use Cases:
+© File server replacement
+© Backup storage
+© Data lake ingestion
+2. Volume Gateway (iSCSI)
++ Presents cloud-backed block storage volumes to on-prem servers via iSCSI.
+© Two modes:
+© Stored Volumes:
++ Primary data is stored locally.
+= Asynchronous backups to AWS (EBS Snapshots).
++ Low-latency access with local storage.
+© Cached Volumes:
++ Primary data stored in AWS.
++ Frequently accessed data cached locally.
++ Reduces on-prem storage requirements.
+«Use Cases:
+© Local apps with cloud backup
+o Disaster recovery
+3. Tape Gateway (VTL)
+
++ Presents itself as a virtual tape library (VTL) to backup applications.
+

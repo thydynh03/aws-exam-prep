@@ -1,0 +1,53 @@
+ML Insights
+
+Built-in machine learning capabilities without needing ML expertise
+Anomaly detection to identify unexpected changes
+Forecasting to predict future trends using ML models
+
+Narrative Insights to automatically generate textual summaries of data
+
+User Management and Access Control
+
+Supports AWS IAM for authentication and access management
+Role-based access control within QuickSight
+Integration with AWS SSO and Active Directory for enterprise sign-in
+
+Row-level security to restrict data access within datasets
+
+Deployment Options
+
+QuickSight Standard Edition for individuals and small teams
+
+QuickSight Enterprise Edition for advanced features, security, and enterprise
+integrations
+
+Pay-per-session pricing for readers to reduce costs for infrequent users
+
+SPICE capacity purchased separately for high-speed querying
+
+Security
+
+Encryption at rest using AWS KMS
+Encryption in transit using SSL/TLS
+VPC connectivity for secure access to private data sources
+
+Compliance with AWS security and compliance standards
+
+Integration with AWS Services
+
+Direct integration with AWS data sources like Redshift, Athena, $3, RDS
+AWS Glue Data Catalog for schema and metadata management
+Integration with AWS loT Analytics and other analytics services
+
+Ability to embed dashboards into custom applications using AWS SDKs
+
+Monitoring and Management
+
+AWS CloudWatch for usage metrics and alarms
+Usage tracking for pay-per-session billing
+Audit logging via AWS CloudTrail
+
+Centralized management of users and permissions
+
+34
+

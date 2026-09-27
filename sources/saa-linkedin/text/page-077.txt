@@ -1,0 +1,55 @@
+76
+
+AWS Outposts
+What It Is
+
+AWS Outposts is a fully-managed hybrid-cloud service that brings AWS infrastructure, services,
+APIs and tools to your on-premises or edge location. It essentially extends an AWS Availability
+Zone into your data centre or colocation site.
+
+Key Features
+* Run AWS services locally (EC2, EBS, ECS/BKS, etc) in your premises.
+
+* Managed hardware from AWS (racks/servers/switches) so you don't handle the low-
+level stuff.
+
+* Same APIs, tooling, and experience as the cloud region (so your DevOps patterns stay
+consistent).
+
+* Low latency access and on-premises data processing/residency advantages (for
+compliance, edge use-cases).
+
+Form Factors / Configurations
+
+* Outposts Racks - Full 42U rack installations with compute + storage + network,
+installed on-site by AWS.
+
+« Outposts Servers - Smaller footprint (1U or 2U servers) for branch locations, retail, edge
+zones.
+
+How It Works
+
+* Your Outpost is “homed” to an AWS Region and Availability Zone; it extends that AZ into
+your premises.
+
+* Outpost Subnet - You create a subnet in your VPC that’s associated with the Outpost.
+
+* Local Gateway (LGW) - For rack form factor: route tables point to LGW for on-prem
+network integration (direct routing or CoIP).
+
+* Local Network Interface (LNI) - For server form factor: network interface to your on-
+prem network.
+
+« Service Link - Encrypted connectivity between Outpost and AWS Region for
+management/intra-VPC traffic.
+
+Supported Services & Capabilities
+© Compute: EC2, ECS, EKS locally.
++ Storage: EBS (and in some cases $3/other services depending on generation) locally.
+
+« Networking/VPC: VPC extension, route tables, local routing to on-prem, Internet/Direct
+Connect integration.
+
++ Data residency, edge computing: useful when you can’t send data off-site because of
+regulation or latency constraints.
+

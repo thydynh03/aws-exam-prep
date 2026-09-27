@@ -1,0 +1,40 @@
+5, AWS Cost Explorer
+* Interactive tool to:
+Analyse past and current spend.
+© Group/filter costs by service, region, account, tag, etc.
+o Forecast future costs.
+© Visualize RI and Savings Plan utilization.
+* Ideal for identifying cost trends and inefficiencies.
+6. AWS Cost and Usage Report (CUR)
+* Most detailed billing data, delivered in CSV format to $3.
+
++ Granular data (hourly, daily) on usage and cost.
+
++ Can be queried with Athena, visualized in QuickSight, or loaded into Redshift.
+
+7. Consolidated Billing (via AWS Organizations)
+* Combines charges across multiple accounts into one payer account.
++ Benefits:
+© Volume discounts shared across accounts.
+© Simplifies centralized cost control.
+
+© Still tracks per-account usage and cost.
+8. Cost Allocation Tags
+© Helps categorize and attribute costs by:
+Project, department, team, etc.
++ Types:
+© AWS-generated tags (e.g,, createdBy).
+User-defined tags (custom).
+* Must be activated in Billing Console for them to appear in Cost Explorer /CUR.
+9, Reserved Instances and Savings Plans
+* Discount pricing for long-term, predictable workloads.
++ Reserved Instances:
+© Commit to specific instance types and regions.
+© Apply to EC2, RDS, ElastiCache, Redshift.
+© Savings Plans:
+© More flexible pricing model.
+
+© Commit toa dollar amount per hour.
+
+61
+

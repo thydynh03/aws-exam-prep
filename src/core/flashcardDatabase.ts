@@ -1,6 +1,7 @@
 import type { Flashcard } from './types';
+import { HANDBOOK_SECTIONS, formatHandbookPages, type HandbookSection } from './saaHandbook';
 
-export const FLASHCARDS: Flashcard[] = [
+const CURATED_FLASHCARDS: Flashcard[] = [
   // --- SERVICES DECK ---
   {
     id: 'fc-s3-tiers',
@@ -205,11 +206,63 @@ export const FLASHCARDS: Flashcard[] = [
   },
 ];
 
+const HANDBOOK_CARD_HEADINGS = /^(key features|use cases|pricing|security|limitations|best practices|storage classes|pricing models)$/i;
+const MAX_BACK_ITEMS = 8;
+
+function toBullets(items: string[]): string {
+  return items.slice(0, MAX_BACK_ITEMS).map((i) => `• ${i}`).join('\n');
+}
+
+/** Sinh thẻ ôn tập từ tài liệu SAA-C03 Handbook: một thẻ tổng quan và các thẻ theo mục chính. */
+function buildHandbookFlashcards(section: HandbookSection): Flashcard[] {
+  const pages = formatHandbookPages(section.printedPages);
+  const base = {
+    deckId: 'handbook' as const,
+    category: section.category,
+    relatedServices: section.serviceIds,
+    box: 1,
+    reviewsCount: 0,
+  };
+  const cards: Flashcard[] = [];
+  const features = section.subsections.find((s) => /key features/i.test(s.heading));
+  if (section.summary) {
+    cards.push({
+      ...base,
+      id: `fc-${section.id}-overview`,
+      title: `${section.name}: Overview`,
+      front: `What is ${section.name} and what problem does it solve?`,
+      back: section.summary + (features ? `\n\n${toBullets(features.items.slice(0, 4))}` : ''),
+      keyTakeaway: `SAA-C03 Handbook, ${pages}`,
+    });
+  }
+  for (const sub of section.subsections) {
+    if (!HANDBOOK_CARD_HEADINGS.test(sub.heading) || sub.items.length < 2) continue;
+    cards.push({
+      ...base,
+      id: `fc-${section.id}-${sub.heading.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+      title: `${section.name}: ${sub.heading}`,
+      front: `${section.name}: list the main ${sub.heading.toLowerCase()}.`,
+      back: toBullets(sub.items),
+      keyTakeaway: `SAA-C03 Handbook, ${pages}`,
+    });
+  }
+  return cards;
+}
+
+export const HANDBOOK_FLASHCARDS: Flashcard[] = (() => {
+  const seen = new Set<string>();
+  return HANDBOOK_SECTIONS.flatMap(buildHandbookFlashcards).filter((c) =>
+    seen.has(c.id) ? false : (seen.add(c.id), true)
+  );
+})();
+
+export const FLASHCARDS: Flashcard[] = [...CURATED_FLASHCARDS, ...HANDBOOK_FLASHCARDS];
+
 export function getAllFlashcards(): Flashcard[] {
   return FLASHCARDS;
 }
 
-export function getFlashcardsByDeck(deckId: 'services' | 'domains' | 'traps' | 'comparisons'): Flashcard[] {
+export function getFlashcardsByDeck(deckId: Flashcard['deckId']): Flashcard[] {
   return FLASHCARDS.filter((c) => c.deckId === deckId);
 }
 

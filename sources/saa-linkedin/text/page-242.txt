@@ -1,0 +1,60 @@
+241
+
+1AM Users and Roles
+
+IP Addresses
+
+Security Use Cases
+
+Investigate suspicious login activity or unauthorized access attempts
+Trace lateral movement and network anomalies
+
+Identify misconfigured permissions or policy changes
+
+Review behaviour before and after GuardDuty findings
+
+Understand long-term patterns for persistent threats
+
+Access and Permissions
+
+Pricing
+
+Integrated with AWS Organizations for centralized investigation
+Delegated administrator account can view behaviour across all member accounts
+
+IAM roles and policies control access to Amazon Detective
+
+Charged based on the volume of data ingested from supported sources
+No additional charge for querying or visualizing the data
+
+Data is retained for up to 12 months automatically
+
+Best Practices
+
+Enable GuardDuty and Detective together for a unified threat detection and investigation
+workflow
+
+Use in combination with AWS Security Hub to centralize alerts
+Grant security teams read-only access to Amazon Detective dashboards
+
+Monitor key entities like IAM users and EC2 instances for unusual activity
+
+Exam Tips
+
+Amazon Detective is used for security investigations and root cause analysis
+
+Works by analysing CloudTrail, VPC Flow Logs, and GuardDuty findings
+
+Builds a behaviour graph to visualize entity relationships and changes over time
+No manual data collection is needed—data is ingested and correlated automatically
+Not used for real-time alerting, but for deep dive forensic analysis
+
+Complements, but does not replace, services like GuardDuty and Security Hub
+
+Quick Summary
+
+‘Amazon Detective helps security teams quickly investigate and understand the root cause of
+security issues using visualized and correlated data from AWS security services. It reduces the
+time and effort needed for analysis by automatically building a behaviour graph and providing
+interactive dashboards for security-relevant entities.
+

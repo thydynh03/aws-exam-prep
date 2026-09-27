@@ -1,0 +1,62 @@
+185
+
+Large-scale datacentre migration and disaster recovery setups.
+
+Best Practices
+
+Perform Test Launches: Always test before final cutover.
+
+Ensure IAM Permissions: Grant correct permissions for the MGN service role.
+Monitor Using CloudWatch: Track replication lag and health status.
+
+‘Tag Resources: Helps with tracking and cost management.
+
+Clean Up Post-Migration: Remove staging resources after cutover to avoid extra costs.
+
+Integration with Other AWS Services
+
+Pricing
+
+AWS Identity and Access Management (IAM): Controls access to MGN resources.
+Amazon CloudWatch: For performance and replication monitoring.
+
+AWS Systems Manager: Post-migration instance management.
+
+AWS Migration Hub: Centralized migration tracking and reporting.
+
+AWS Cost Explorer: Analyse and optimize costs after migration.
+
+Pay-as-you-go: Based on the number of source servers actively replicating to AWS.
+
+No separate charge for test or cutover instances beyond EC2 and EBS usage.
+
+Exam Tips
+
+MGN is the recommended service for lift-and-shift migrations to AWS.
+
+Unlike AWS SMS (Server Migration Service), MGN provides continuous
+replication instead of snapshot-based replication.
+
+Staging area subnet is required for data replication.
+You can migrate physical, virtual, or cloud-based servers.
+MGN automatically creates EC2 launch templates for test and cutover.
+
+Always test migration before final cutover to avoid application downtime.
+
+Quick Summary
+
+AWS Application Migration Service (MGN) is the go-to tool for seamless lift-and-shift migrations
+
+to AWS.
+
+. It continuously replicates your source servers physical, virtual, or cloud-based into
+
+AWS, minimizing downtime and manual effort. With automated EC2 launch templates, near real-
+
+time re]
+
+plication, and test launch capabilities, MGN ensures a smooth transition before final
+
+cutover. It integrates tightly with IAM, CloudWatch, and Migration Hub, making it ideal for large-
+scale, low-risk migrations and modernization projects.
+

@@ -1,0 +1,40 @@
+145
+
+* Supports KMS for log group encryption
+* AWS CloudTrail integration for auditing API calls
+Integration with AWS Services
+* Works with C2, Lambda, RDS, DynamoDB, ELB, ECS, EKS, and many other AWS services
+* Supports custom applications publishing metrics via the PutMetricData API
+* Integrates with AWS Auto Scaling for dynamic resource management
+* Supports cross-account dashboards and metrics
+Pricing
+* Charged based on metrics, API requests, alarms, dashboards, logs ingested and stored,
+and canary runs
+
+«Free tier includes basic monitoring metrics and 5GB of log ingestion per month
+Best Practices
+* Use detailed monitoring for production-critical resources
++ Set up alarms for key metrics and use SNS for notifications
+© Use log filters to extract custom metrics from logs
+* Leverage Contributor Insights for analysing high-volume log data
+* Combine metrics, logs, and traces in dashboards for full observability
+* Use anomaly detection to avoid hard thresholds for dynamic workloads
+* Archive old logs to $3 for cost optimization
+Exam Tips
+© CloudWatch Metrics: monitor AWS resources and custom data
+© CloudWatch Logs: store, search, and analyse application and system logs
++ Alarms: trigger actions based on metric thresholds
+* Dashboards: visualize operational data in one place
++ Events/EventBridge: respond to state changes and schedule tasks
+* Synthetics: monitor API and web endpoint availability
+* Contributor Insights: analyse top contributors in log data
+© ServiceLens: correlate metrics, logs, and traces for application performance monitoring
+* Integration with SNS, Lambda, EC2 Auto Scaling, and many other AWS services
+
+Quick Summary
+
+Amazon CloudWatch is AWS's integrated monitoring and observability service. It provides
+metrics, logs, alarms, dashboards, events, and advanced features like anomaly detection,
+Contributor Insights, and ServiceLens to help you understand and manage the performance,
+health, and availability of your AWS environment and applications.
+

@@ -1,0 +1,38 @@
+65
+
+Pricing
+© Noextra charge for AWS Batch itself.
+Pay only for EC2 / Fargate resources and storage used.
+* Save costs by using Spot Instances for non-urgent or flexible workloads.
+Use Cases
+* Data processing pipelines and analytics
+© Machine learning model training or inference
+* Media rendering or transcoding
++ Financial risk analysis or report generation
++ Nightly ETL jobs or large-scale file processing
+Best Practices
+* Use Managed Compute Environments for automatic scaling and optimization.
++ Leverage Spot Instances for cost savings — but plan for interruptions.
+* Use Array Jobs to parallelize similar workloads.
+* Define IAM roles with least-privilege access for each job.
+* Set retry strategies and timeout policies to handle transient errors.
+* Use CloudWatch for monitoring and job-level metrics.
+* Store large datasets in $3 and pass paths as environment variables.
+* Combine Step Functions or EventBridge for orchestration and automation.
+Exam Tips
+* You pay only for the underlying compute and storage used.
+‘* Integrates with ECS to run containerized workloads.
+* Supports EC2 On-Demand, Spot, and Fargate compute options.
+* Job definitions store container image, vCPU/memory, IAM role, and retry config.
+* Managed compute environments are the easiest to use, AWS handles provisioning.
+* Array jobs can run thousands of similar jobs concurrently.
+* Commonly integrated with Step Functions for orchestration and CloudWatch for logging.
+Ideal for long-running or parallel workloads that don’t require real-time responses.
+Quick Summary
+
+AWS Batch is a serverless batch computing orchestration service that eliminates the need to
+manage clusters or job schedulers. It integrates tightly with ECS, CloudWatch, and
+
+IAM, automatically scales compute resources, supports job dependencies and retries, and is
+designed for running large-scale, cost-efficient, containerized workloads in the cloud.
+

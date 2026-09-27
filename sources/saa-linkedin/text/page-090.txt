@@ -1,0 +1,58 @@
+89
+
+Amazon El; ntainer Re ‘Amazon ECR)
+
+What It Is
+
+‘Amazon ECR is a fully managed container image registry that makes it easy to store, manage,
+share, and deploy container images and artifacts. It integrates with AWS services like ECS, EKS,
+and AWS Lambda, as well as open-source tools.
+
+Key Features
+
+Fully managed, highly available registry
+
+Supports Docker and Open Container Initiative (OCI) images
+
+Integrated with ECS, EKS, Lambda, CodeBuild, CodeDeploy, CodePipeline
+Push and pull images using standard Docker CLI or AWS CLI
+
+Supports image scanning for vulnerabilities
+
+Repository-level permissions with AWS IAM
+
+Lifecycle policies for automated image cleanup
+
+Supports replication across regions for DR and latency optimization
+Encryption at rest with AWS KMS and in transit with TLS
+
+Cross-account access with resource policies
+
+Repositories
+
+Stores container images in private or public repositories
+Private repositories for controlled access
+Public repositories for open sharing without authentication
+
+Each repository stores multiple image versions identified by tags
+
+Authentication
+
+AWS CLI or SDK for authentication
+
+IAM policies control user and role access to repositories
+ECR Credential Helper for Docker CLI integration
+
+Supports temporary credentials via AWS IAM roles
+
+Image Management
+
+Push images to ECR from build systems or local machines
+
+Pull images to ECS, EKS, Fargate, or other Docker environments
+Supports multi-architecture images
+
+Image tags for versioning and organizing images
+
+Immutable tags can be enforced to prevent overwrites
+

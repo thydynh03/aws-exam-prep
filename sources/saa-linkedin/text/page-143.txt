@@ -1,0 +1,28 @@
+142
+
+Integrate with CloudWatch Logs and EventBridge for real-time alerting and automated
+responses
+
+* Use Insights for detecting anomalous API activity
+Exam Tips
+
+* CloudTrail records all API calls made in your account, including from the console, SDKs,
+CLI, and other AWS services
+
+* Delivers logs to $3, integrates with CloudWatch Logs for monitoring and alarms
+* Management Events include control plane operations (e.., creating resources)
+
++ Data Events must be explicitly enabled (e.g,, $3 object-level actions, Lambda invocations)
+© Supports organization-wide trails in AWS Organizations
+
+* Insights detect unusual API activity patterns
+
+Security best practices include encryption with KMS and log file validation
+
+Quick Summary
+
+AWS CloudTrail is the essential AWS service for auditing and compliance, recording API activity
+across your account and delivering logs to $3 for analysis. It supports real-time monitoring via
+CloudWatch, integrates with EventBridge for automation, and offers advanced features like
+Insights for detecting anomalies.
+

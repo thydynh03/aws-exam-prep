@@ -1,0 +1,57 @@
+240
+
+Amazon Detective
+
+What It Is
+
+Amazon Detective is a fully managed security service that simplifies the process of investigating
+potential security issues or suspicious activities. It automatically collects log data from AWS
+resources and uses machine learning, statistical analysis, and graph theory to build interactive
+visualizations for investigation.
+
+Key Features
+
+« Automatically collects and organizes data from AWS CloudTrail, Amazon VPC Flow Logs,
+Amazon GuardDuty findings, and AWS Security Hub
+
+* Creates a behaviour graph that links disparate pieces of security data for faster analysis
+
+* Provides visualizations for entities like AWS accounts, EC2 instances, IAM users, and IP
+addresses
+
+* Helps security teams quickly identify the root cause of incidents
+© Noneed for manual data collection or complex querying
+* Automatically updates and retains up to 12 months of security data
+
+* Data is processed and stored in a graph model that enables efficient querying and
+visualization
+
+* Integrates with Amazon GuardDuty for streamlined threat detection and investigation
+* Maintains context over time, helping to understand changes in behaviour
+How It Works
+
+_ Ingests data from AWS security services (CloudTrail, VPC Flow Logs, GuardDuty, Security
+Hub)
+
+© Organizes data into a linked set of entities in a graph model
+* Provides dashboards and entity profiles to explore relationships and activity
+
+* Investigators can navigate between entities, review timelines, and compare historical
+behaviour
+
+© Noagents or additional log forwarding is required
+‘Supported Data Sources
+
+* AWS CloudTrail for API activity logs
+
+* VPC Flow Logs for network traffic metadata
+
+* Amazon GuardDuty for threat detection findings
+
+* AWS Security Hub for additional context from security alerts
+Entity Types Analysed
+
+« AWS Accounts
+
++ EC2 Instances
+

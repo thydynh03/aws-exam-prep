@@ -1,0 +1,43 @@
+223
+
+«Static, public IPv4 addresses associated with AWS account
+* Used for consistent addressing of EC2 instances, NAT gateways
+VPC Peering
+* Connects two VPCs to route traffic privately using AWS backbone
+© Supports intra- and inter-region peering
+* No transitive peering: traffic must go through direct peering connections
+© Must update route tables and security groups
+AWS Transit Gateway
+© Central hub for connecting multiple VPCs and on-prem networks
++ Simplifies many-to-many VPC connectivity
++ Supports transitive routing
+* Integrated with AWS Direct Connect and VPN
+AWS PrivateLink
+* Provides private connectivity to AWS services or customer-managed services
+«Exposes services as endpoint services in your VPC
+* Uses VPC endpoints with Elastic Network Interfaces (ENIs)
+VPC Endpoints
+* Private connections to supported AWS services without internet
+
+© Types: Interface Endpoints (powered by PrivateLink) and Gateway Endpoints (for $3
+and DynamoDB)
+
++ Improve security by avoiding public internet exposure
+VPN Connections
+
+* Connect on-premises networks to AWS VPC over encrypted VPN tunnels
+
+* Supports static or dynamic routing with BGP
+
+* Can use AWS Site-to-Site VPN or Customer Gateway devices
+Virtual Private Gateway
+
+* AWS side of a VPN connection
+
+* Enables connectivity between on-premises network and VPC over VPN
+Customer Gateway
+
++  On-premises side of a VPN connection
+
++ Represents physical or software device in customer network
+

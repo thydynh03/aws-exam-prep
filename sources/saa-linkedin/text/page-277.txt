@@ -1,0 +1,53 @@
+276
+
+$3: Process object events like uploads or deletes
+DynamoDB Streams: React to data changes
+
+Kinesis: Real-time stream processing
+
+SNS/SQS: Asynchronous messaging and queue processing
+EventBridge: Event routing and orchestration
+
+Step Functions: Orchestrate multiple Lambda functions in workflows
+
+Best Practices
+
+Use environment variables for configuration
+
+Break down monolithic functions into smaller, single-purpose functions
+Use Provisioned Concurrency for latency-sensitive workloads
+
+Minimize package size for faster cold starts
+
+Monitor with CloudWatch and set alarms on errors or throttles
+
+Secure IAM roles with least privilege access
+
+Use Lambda Layers to share common dependencies
+
+Exam Tips
+
+Lambda is fully managed and serverless with automatic scaling
+Charges are based on request count and execution time
+Supports multiple event sources and triggers
+
+Can run up to 15 minutes per invocation
+
+IAM role attached to Lambda defines its permissions
+Integrates with VPCs for private resource access
+
+Supports container images for deployment
+
+Use Provisioned Concurrency to avoid cold start latency
+CloudWatch for logs and metrics, X-Ray for tracing
+
+Works well with API Gateway, $3, DynamoDB, Kinesis, SNS, SQS, EventBridge, Step
+Functions
+
+Quick Summary
+
+AWS Lambda is a serverless compute service that runs code in response to events, scales
+automatically, and eliminates the need to manage servers. It integrates with many AWS services,
+supports various languages and deployment models, and is priced based on execution time and
+requests, making it ideal for building scalable, event-driven applications.
+

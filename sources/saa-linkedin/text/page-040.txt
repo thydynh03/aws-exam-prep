@@ -1,0 +1,55 @@
+39
+
+Amazon AppFlow
+What It Is
+
+Amazon AppFlow is a fully managed integration service that automates data flows between SaaS
+applications and AWS services.
+
+No code required to set up secure data transfers.
+
+Key Features
+
+Supports popular SaaS apps: Salesforce, ServiceNow, Slack, Google Analytics, Marketo,
+Zendesk, etc.
+
+Connects to AWS services like $3, Redshift, Salesforce, EventBridge.
+Bidirectional flows: Ingest data to AWS or send data from AWS to SaaS.
+On-demand or scheduled transfers.
+
+Event-triggered flows supported.
+
+Data transformations (masking, mapping, validation) built in.
+PrivateLink support for secure private connections.
+
+Handles encryption at rest and in transit.
+
+Use Cases
+
+Syne customer data from Salesforce to $3 for analytics.
+Load marketing data to Redshift.
+Automate ticket data from Zendesk to $3.
+
+Move ServiceNow records to an AWS data lake.
+
+Benefits
+
+Pricing
+
+No servers to manage.
+
+Reduces need for custom integration code.
+Secure, private data transfer via AWS PrivateLink.
+Scales automatically.
+
+Ensures data consistency and integrity.
+
+Pay per flow run.
+Additional costs for data processed.
+
+No upfront fees.
+
+Integration
+
+Works inside your AWS account.
+

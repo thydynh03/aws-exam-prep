@@ -1,0 +1,40 @@
+197
+
+AWS insfer Famil
+What It Is
+
+AWS Transfer Family is a fully managed service that enables you to transfer files directly into
+and out of Amazon $3 or Amazon EFS using SFTP, FTPS, and FTP protocols.
+
+It provides a secure, highly available, and scalable way to integrate traditional file transfer
+workflows with AWS storage services.
+
+Supported Protocols
++ SFTP (Secure File Transfer Protocol)
+«FIPS (FTP over SSL/TLS)
++ FTP (unencrypted; generally used only if required by legacy systems)
+Key Features
+Fully managed service, no need to manage your own FTP servers.
+Supports direct integration with:
+© Amazon $3
+o Amazon Elastic File System (EFS)
+* Scales automatically to handle thousands of concurrent connections.
+* Supports custom domain names via AWS Certificate Manager (ACM).
+© High availability with AWS-managed infrastructure.
+* User authentication options:
+© Service-managed identities
+o AWS Directory Service (Active Directory)
+© Custom identity providers via API Gateway and Lambda.
+Storage Integration
+* Amazon $3
+© Users’ files land in specified $3 buckets.
+© Supports $3 access points for fine-grained permissions.
+* Amazon EFS:
+© Mount EFS file systems as the backend for FTP servers.
+o Allows POSIX-compliant shared access.
+Security
+«Data in transit:
+o SFTP and FTPS ensure encryption over the wire.
+
+© FTPis available for compatibility but is unencrypted.
+

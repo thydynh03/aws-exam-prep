@@ -1,0 +1,50 @@
+249
+
+* Continuous monitoring without performance impact on workloads.
+
+© Noagent required, works from AWS log data.
+
++ Regional service with cross-account support via AWS Organizations.
+Pricing
+
+*  Pay-as-you-go pricing:
+
+© Based on volume of analysed logs.
+© Malware scans billed per GB scanned.
+
+* Noupfront costs.
+Use Cases
+
+* Detecting compromised EC2 instances running crypto-miners.
+
+© Monitoring for unusual API calls that suggest account compromise.
+
++ Flagging data exfiltration attempts via DNS or traffic anomalies.
+
+Centralized threat detection for multi-account environments.
+Security & Compliance
+
+* Supports AWS Organizations for multi-account monitoring.
+
++ Findings logged to AWS CloudWatch Events / EventBridge for alerting and remediation.
+
+* Helps meet compliance requirements for continuous monitoring.
+Exam Tips
+
+© GuardDuty = threat detection, not prevention.
+
+* Analyses VPC Flow Logs, CloudTrail, DNS Logs, and Kubernetes Audit Logs
+
++ No agent installation required.
+
++ Integrates with Security Hub, EventBridge, and AWS Organizations.
+
++ Findings include severity levels and recommended remediation.
+
+*  Pay-as-you-go pricing with no upfront commitments.
+Quick Summary
+
+‘Amazon GuardDuty is a managed AWS service that continuously monitors AWS accounts and
+workloads for malicious activity using threat intelligence and machine learning, delivering
+actionable security findings with no infrastructure to manage.
+

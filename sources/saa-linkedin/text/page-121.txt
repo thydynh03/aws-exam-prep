@@ -1,0 +1,40 @@
+120
+
+Amazon Redshift
+What It Is
+
+Amazon Redshift is a fully managed, petabyte-scale cloud data warehouse service designed for
+analyzing large datasets using standard SQL and existing Business Intelligence (BI) tools. It
+offers high performance, scalability, and cost-effectiveness for data analytics workloads.
+
+Key Features
+* Columnar storage format optimized for analytics
+© Massively Parallel Processing (MPP) architecture for performance
+* Supports standard SQL and integrates with common BI tools
+* Automated backups and snapshots
+* Redshift Spectrum enables querying data in $3 without loading it into Redshift
+
+* AQUA (Advanced Query Accelerator) improves query performance using hardware
+acceleration
+
++ Built-in security features including encryption, VPC, IAM, and logging
+* Compatible with PostgreSQL drivers and clients
+Data Warehouse Architecture
+Redshift cluster consists of a leader node and one or more compute nodes
+* Leader node receives queries and distributes them to compute nodes
+* Compute nodes process the queries in parallel and return results to the leader node
+* Supports provisioned and serverless deployment modes
+Redshift Serverless
+Allows running analytics without managing infrastructure
+* Automatically provisions and scales compute capacity
+* Charges based on Redshift Processing Units (RPUs) used
+* Suitable for variable or unpredictable workloads
++ Easy to set up, integrates with data in Redshift-managed storage and $3
+Data Loading
+* Load data using COPY command from $3, DynamoDB, EMR, or other sources
+* Supports parallel loading for high performance
+* Can use AWS Glue Data Catalog for schema discovery
++ Supports SQL-based INSERT statements for small-scale operations
+Redshift Spectrum
+* Query data in $3 directly using Redshift SQL
+

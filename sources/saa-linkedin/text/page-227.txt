@@ -1,0 +1,37 @@
+226
+
+AWS Artifact
+What It Is
++ Aself-service portal for accessing AWS compliance-related documents, like:
+© Audit reports
+© Security and compliance certifications
+Agreements (e.g., HIPAA BAA, GDPR DPA)
+Key Features
+‘Two Main Types of Content
++ Artifact Reports:
+© Downloadable compliance reports such as:
+* $0C1,SOC 2,SOC3
++ 180 certifications
++ PCIDSS, etc.
+Verifies AWS's compliance with various industry standards.
+Artifact Agreements:
+© Let you review and accept legal agreements like:
+* Business Associate Addendum (BAA) for HIPAA
+= GDPR Data Processing Addendum (DPA)
+Key Benefits
+* Provides transparency into AWS's compliance posture.
+* Helps customers with their own audit, risk, and compliance programs.
+* Noneed to contact AWS Support for reports, self-service access.
+Security & Access
++ IAM policies control who can download or accept agreements.
++ Allactivity is logged in AWS CloudTrail for auditing.
+Use Cases
+* Auditors reviewing AWS's compliance before migrating sensitive workloads
+* Businesses needing official proof of AWS compliance (e.g., SOC reports).
+
+© Organizations requiring legal agreements like HIPAA BAA or GDPR DPA before storing
+regulated data.
+
+Pricing
+= AWS Artifact is free to use.
+

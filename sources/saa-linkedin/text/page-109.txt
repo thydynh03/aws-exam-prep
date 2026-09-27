@@ -1,0 +1,36 @@
+108
+
+Amazon Ke for A)
+What It Is
++ Fully managed, serverless, and scalable Apache Cassandra-compatible database service
+* Designed for high availability, durability, and low-latency performance
++ Serverless, automatically scales up/down based on traffic
+* Noneed to provision, patch, or manage Cassandra clusters
++ Compatible with Cassandra Query Language (CQL) and drivers
+Key Benefits
+«+ Eliminates operational overhead of managing Cassandra clusters
+*  Serverless scaling, pay only for what you use
++ Automatic replication across multiple AZs for fault tolerance
+«Fully managed backup, patching, and maintenance
++ Strong consistency and flexible read/write options
+* Seamless integration with AWS ecosystem
+Architecture and Deployment
+«Fully managed, no EC2 or cluster provisioning needed
+* Data automatically replicated across 3 Availability Zones
+« Supports single-region deployments with multi-AZ redundancy
++ CQL-compatible endpoint, no driver code changes required
+* Integrates with AWS Identity and Access Management (IAM)
+*  Serverless: scales partitions and throughput automatically
+High Availability and Durability
++  Multi-AZ replication for fault tolerance
+* Durable writes, all data written to 3 replicas across AZs
+* No downtime during scaling or patching
+* Highly available reads and writes even during node failures
+*  Point-in-time recovery (PITR) up to 35 days
+Performance and Scaling
+* On-demand capacity mode: scales automatically with workload
+*  Provisioned capacity mode: manually define read/write throughput
+«Latency in single-digit milliseconds
+
+* Automatic load balancing and partition management
+

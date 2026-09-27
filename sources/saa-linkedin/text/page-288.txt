@@ -1,0 +1,60 @@
+287
+
+Amazon FSx
+What It Is
+
+‘Amazon FSx is a fully managed service that makes it easy to launch, run, and scale feature-rich,
+high-performance file systems in the cloud.
+
+It provides native Windows and Linux file systems, eliminating the need to manage file servers
+or storage hardware.
+
+Key Features
+
+Fully managed by AWS: patching, backups, monitoring.
+Supports multiple file system types to match different workloads.
+Provides high performance, scalable storage.
+
+Integrates with AWS security and networking,
+
+Supports encryption at rest and in transit.
+
+Supported File Systems
+1. Amazon FSx for Windows File Server
+
+Built on Microsoft Windows Server.
+Provides SMB protocol access.
+Supports Windows NTFS features:
+
+o ACLs
+
+© User quotas
+
+© Shadow copies
+Integrates with Active Directory for user authentication.
+Supports DFS namespaces and replication.
+
+Use Cases:
+
+© Windows-based applications.
+
+Home directories.
+
+°
+
+°
+
+Content management systems.
+
+2, Amazon FSx for Lustre
+
+High-performance file system for fast processing of workloads.
+POSIX-compliant.
+Seamlessly integrates with Amazon S3:
+
+© Can link $3 buckets for data processing.
+
+© Results can be written back to $3.
+
+Sub-millisecond latencies.
+

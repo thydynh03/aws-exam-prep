@@ -1,0 +1,37 @@
+188
+
+AWS Schema Conversion Tool (SCT)
++ Complements AWS DMS for heterogeneous migrations
+* Converts database schema, stored procedures, views, and other code objects
+«Provides assessment reports to identify manual changes required
+* Supports conversion to Amazon Aurora, PostgreSQL, MySQL, and others
+Pricing
+* Pay only for replication instance hours used
+«Storage for migration logs and cached changes is billed separately
+‘+ Nocharge for data transfer between AWS DMS and AWS databases in the same region
+Use Cases
++ Migrating production databases to AWS with minimal downtime
+* Continuous replication for disaster recovery or high availability setups
+* Consolidating multiple databases into a single AWS target
+© Moving analytical workloads to Amazon Redshift
+* Archiving transactional data to Amazon S3
+Best Practices
++ Use AWS SCT for schema conversion in heterogeneous migrations
+«Test migration tasks thoroughly before production cutover
++ Monitor tasks using CloudWatch metrics and logs
+* Enable multi-AZ deployments for high availability
+* Plan for network connectivity and security (VPC, IAM policies)
+* Validate data integrity post-migration
+Exam Tips
+‘* Supports homogeneous and heterogeneous migrations
+* AWS SCT is required for schema conversion in heterogeneous migrations
+‘Supports sources and targets on-premises, in EC2, or AWS-managed databases
+«Integrated monitoring with CloudWatch and notifications with SNS
+« Encryption in transit and at rest supported via AWS KMS
+Quick Summary
+
+AWS DMS simplifies and automates database migrations to AWS with minimal downtime. It
+supports both same-engine and cross-engine migrations, continuous replication via CDC, and
+works with AWS SCT for schema conversion. With built-in monitoring, security, and multi-AZ
+support, it ensures reliable, secure, and low-disruption database migrations.
+

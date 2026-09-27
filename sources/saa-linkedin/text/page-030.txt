@@ -1,0 +1,52 @@
+29
+
++ Log aggregation pipelines
+
+© Website activity tracking
+
+* Messaging between microservices
+
+* [oT data ingestion and processing
+
+* Data lake ingestion workflows
+Best Practices
+
+* Use IAM policies for least-privilege access control
+
++ Enable encryption at rest and in transit
+
+* Monitor with CloudWatch and set up alarms
+
++ Plan broker count and storage for expected throughput
+
+* Use MSK Serverless for unpredictable workloads without managing capacity
+
+* Store sensitive configuration details in AWS Secrets Manager
+
+* Design topics and partitions for scalability and consumption patterns
+Exam Tips
+
+Fully managed service for Apache Kafka on AWS
+
+* MSK Serverless simplifies scaling and cost management
+
+* Supports encryption at rest (AWS KMS) and in transit (TLS)
+
+* Integrated with VPC for private networking
+
+© Monitoring via CloudWatch, CloudTrail, and Kafka metrics
+
+* IAM and TLS mutual authentication for access control
+
+* Common use cases include real-time analytics, microservice communication, and log
+ingestion
+
+* Compatible with open-source Kafka tooling and client libraries
+
+Quick Summary
+
+Amazon MSK is AWS's fully managed service for running Apache Kafka without the operational
+overhead. It offers secure, highly available, and scalable streaming data processing with
+integrations across AWS services, supporting both provisioned clusters and serverless
+deployments for flexible, cost-effective streaming workloads.
+

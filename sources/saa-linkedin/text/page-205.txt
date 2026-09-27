@@ -1,0 +1,44 @@
+Compression
+* Automatic compression of certain file types (JavaScript, CSS, HTML)
+* Reduces object size delivered to viewers
+«Improves transfer speeds and reduces bandwidth costs
+* Must be enabled in distribution settings
+Origin Groups
+© Support failover scenarios for high availability
+* Configure primary and secondary origins
+
++ Ifprimary origin fails (returns 5xx errors), CloudFront automatically switches to
+secondary
+
+* Useful for disaster recovery and redundancy
+Integration with Other AWS Services
+* Amazon $3 - Static site hosting, media storage
++ AWS WAR - Application protection, custom rules
+* AWS Shield - DDoS mitigation
++ Lambda@Edge and CloudFront Functions - Request customization
+«AWS Certificate Manager (ACM) - Free SSL/TLS certificates
+* Route 53 - DNS routing to CloudFront distributions
+* AWS Global Accelerator - Optimized routing for dynamic content
+* Amazon CloudWatch - Monitoring and alerting
+* AWS CloudTrail - Audit logging
+Exam Tips
+*  CloudFront = Global CDN caching content at edge locations for low latency
+* Origin Access Control (OAC) secures S3 origins by preventing direct access
+* Signed URLs/Cookies restrict access to premium or private content
++ Field-Level Encryption protects sensitive data at the edge
+
++ Lambda@Edge for complex customization; CloudFront Functions for simple, high-
+volume tasks
+
+* Geo Restriction controls access by geographic location
+Quick Summary
+
+Amazon CloudFront is AWS's global Content Delivery Network (CDN) that improves
+
+204
+
+performance and security by caching static and dynamic content at edge locations worldwide. It
+integrates deeply with AWS security services (WAE, Shield, ACM), offers advanced customization
+
+with Lambda@Edge and CloudFront Functions.
+

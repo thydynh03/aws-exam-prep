@@ -1,0 +1,33 @@
+SQs
+© Step Functions
+o Kinesis Data Streams
+© EC2 instances via Systems Manager Run Command
+o  EventBridge API Destinations (HTTP endpoints)
+5, Event Patterns
+«JSON structure that filters events based on their contents.
+* Rules use patterns to decide which events to route.
+6. Event Archive and Replay
++ Archive:
+© Store events for later analysis or compliance.
++ Replay:
+o Re-send stored events to the event bus.
+o Useful for testing new rules or recovering from failures.
+7. Schema Registry
++ Automatically discovers and stores event schemas.
+* Developers can view schemas for consistent parsing.
+«Supports downloading code bindings for events in popular languages.
+8. API Destinations
++ Send events to HTTP endpoints outside AWS.
+‘+ Supports setting authorization with API keys or OAuth.
++ Enables integration with external SaaS or custom APIs.
+9. Cross-Account Event Delivery
++ Send events between AWS accounts.
++ Useful for centralizing events in a single account.
++ Supports resource policies to allow cross-account access.
+10. Partner Integrations
+* SaaS providers can publish events directly to your Partner Event Bus.
+«Examples:
+o Zendesk
+© Datadog
+o PagerDuty
+

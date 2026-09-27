@@ -1,0 +1,35 @@
+Enforce request limits per consumer to manage costs and resources
+Throttling and Quotas
++ Global and per-method request limits
++ Prevents overuse and abuse
+* Helps control costs and protect backends
+Caching
++ Enable response caching at the stage level
+* Reduce backend load and improve latency
+* Specify cache TTL and encryption options
+Deployment and Stages
+* Deploy APIs to stages (e.g,, dev, test, prod)
+* Stage variables for configuration management
+* Supports canary deployments for gradual rollout
+Custom Domain Names
++ Map APIs to custom domains
+* Supports ACM-managed SSL/TLS certificates
+* Base path mapping for routing multiple APIs under one domain
+Monitoring and Logging
+© CloudWatch Metrics: Track requests, latency, errors, cache hits
+© CloudWatch Logs: Full request/response logging for debugging
+«AWS X-Ray integration for tracing API calls
+Private APIs
+* Accessible only within specified VPCs using Interface VPC Endpoints
+* Secures internal microservices without exposure to the public internet
+Security Features
+* TLS encryption for data in transit
+*_IAM-based resource policies
+«API keys for managing access to consumers
+* AWS WAF integration for protection against common web exploits
++ Cognito integration for user authentication and JWT validation
+
+* Resource policies to restrict access to specific IP ranges or AWS accounts
+
+130
+

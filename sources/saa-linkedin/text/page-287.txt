@@ -1,0 +1,39 @@
+286
+
+Use Cases
++ Content management.
+© Web serving and hosting.
+* Home directories.
+* Media processing workflows.
+Pricing
+* Charged based on:
+© Storage used (Standard or IA), Requests to IA storage class.
+
+© Provisioned throughput if used, Data transfer within VPC is free; across regions
+incurs charges.
+
+Integration with Other AWS Services
++ EC2: Primary mounting target.
++ BCS: Persistent shared storage for containers.
+* Lambda: Native integration with EFS via Access Points.
++ AWS Backup: Centralized backup management,
+Best Practices
+* Use Lifecycle Management to reduce costs.
+* Choose General Purpose performance mode for low-latency workloads.
+* Use Max 1/0 for highly parallel, throughput-heavy workloads.
+«Encrypt data at rest and in transit.
+* Design for regional redundancy by using mount targets in each AZ.
+Exam Tips
+* EFS is POSIX-compliant, network file system.
+* Supports concurrent access from thousands of instances.
++ Elastic, managed, scales automatically with usage.
+© Two storage classes: Standard and IA with Lifecycle Management.
+* Can be mounted on-premises using Direct Connect or VPN.
++ Integrated with AWS Backup for managed backups.
+Quick Summary
+
+‘Amazon EFS is a regional, managed, elastic NFS file system that supports scalable, concurrent
+access from thousands of instances. It offers multiple performance and storage classes, POSIX-
+compliant access controls, strong security and encryption options, and seamless integration
+with AWS services for building highly available, shared file-based workloads.
+

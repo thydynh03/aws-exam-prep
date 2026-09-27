@@ -1,0 +1,34 @@
+154
+
+AWS Management Console
+What It Is
+
+‘The AWS Management Console is a web-based interface that lets you interact with and manage
+your AWS resources visually without needing the CLI or SDKs. Think of it as your control room
+for everything in AWS.
+
+Key Features
+© Web-Based UI: Manage and configure AWS services from your browser.
+* Global Search Bar: Quickly access services, documentation, and recent resources.
++ Resource Dashboard: Monitor active resources, costs, and billing data.
+* Service Favourites: Pin your frequently used AWS services for faster access.
+* Account Management: Manage users, billing, regions, and support plans.
++ Integrated Access: Launch CloudShell, connect to Cloud9, or switch to CLI seamlessly.
+Use Cases
++ Spinning up EC2 instances, RDS databases, or $3 buckets manually.
+* Managing IAM users, roles, and permissions.
+«Monitoring application health and performance using CloudWatch dashboards.
+* Viewing service quotas and billing summaries.
+Exam Tips
+« AWS Console is region-specific, always check your region in the top-right corner!
+* Some services (like IAM or CloudFront) are global, meaning they aren't tied to regions.
+* You can access AWS CloudShell directly from the console to execute CLI commands.
+
++ For automation, prefer AWS CLI, SDKs, or CloudFormation, the console is mostly for
+setup, testing, or visualization.
+
+Quick Summary
+
+Aweb-based GUI that gives you full control of your AWS resources, ideal for visual management,
+quick deployments, and billing insights. It's user-friendly but not meant for automation.
+

@@ -1,0 +1,46 @@
+71
+
+AWS EC2 Auto Scaling
+
+What It Is
+
+AWS Auto Scaling is a fully managed service that automatically adjusts capacity to maintain
+performance and minimize costs. It can be used to scale EC2 instances, ECS tasks, DynamoDB
+throughput, Aurora Replicas, and Spot Fleets. It supports both vertical and horizontal scaling
+strategies.
+
+Key Features
+* Automatically scales resources based on demand
+© Helps improve application availability and reduce costs
++ Predictive scaling (machine learning-based forecasting)
+Components of EC2 Auto Scaling
+1. Launch Template or Launch Configuration
+© Specifies instance type, AMI, key pair, security groups, and other settings
+© Launch Template is recommended over Launch Configuration
+2. Auto Scaling Group (ASG)
+© Alogical group of EC2 instances managed together
+Defines min, max, and desired capacity
+© Can span multiple Availability Zones within a region
+
+3. Scaling Policies
+
+°
+
+Dynamic Scaling: Adjusts capacity based on real-time metrics
++ Target Tracking: Maintain metric (e.g,, CPU) at target value
++ Step Scaling: Increase /decrease capacity in steps based on thresholds
+
++ Simple Scaling: Basic rule that adds/removes instances based on
+CloudWatch alarm
+
+© Predictive Scaling: Uses ML to forecast traffic and scale proactively
+© Scheduled Scaling: Scales at specific times based on schedule
+Health Checks
++ Performed via EC2 and optionally ELB
+© Unhealthy instances are automatically terminated and replaced
+Elastic Load Balancer Integration
+* ASG automatically registers and deregisters instances with ELB
+Ensures traffic is distributed only to healthy instances
+
+* Supports Classic, Application, and Network Load Balancers
+

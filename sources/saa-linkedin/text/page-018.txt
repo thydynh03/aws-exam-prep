@@ -1,0 +1,59 @@
+17
+
+AWS Glue
+
+What It Is
+
+AWS Glue is a fully managed serverless data integration service that makes it easy to discover,
+prepare, move, and integrate data for analytics, machine learning, and application development.
+It provides a central platform for data cataloging, ETL (extract, transform, load), and data
+integration across various AWS services and data sources.
+
+Key Features
+
+Fully managed, serverless architecture
+
+Automated ETL using Apache Spark
+
+AWS Glue Data Catalog as a persistent metadata store
+Visual and code-based job authoring
+
+Crawlers to automatically discover and catalog data
+Support for schema versioning and evolution
+
+Data preparation with AWS Glue DataBrew
+
+Integration with AWS Lake Formation for access control
+Job scheduling and orchestration
+
+Supports Python and Scala for custom ETL scripts
+
+Built-in transforms and connectors for popular data stores
+
+AWS Glue Data Catalog
+
+Centralized metadata repository
+
+Stores table definitions, schemas, and job metadata
+
+Integrated with AWS services like Athena, Redshift Spectrum, EMR, and Lake Formation
+Supports schema versioning and evolution
+
+Can catalog data in $3, JDBC sources, DynamoDB, and more
+
+Enables discovery through AWS Glue Crawlers
+
+AWS Glue Crawlers
+
+Automatically scan data sources to infer schema and create catalog tables
+Support multiple data stores ($3, JDBC, DynamoDB)
+Can be scheduled or triggered on demand
+
+Handle schema changes over time with versioning
+
+ETL Jobs
+
+Serverless ETL using Apache Spark
+
+Can be created with visual job editor or by writing code in Python/Scala
+

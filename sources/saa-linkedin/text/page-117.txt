@@ -1,0 +1,34 @@
+Pricing
+
+116
+
+Pay only for journal storage, indexed storage, read and write I/O requests
+No upfront costs or server provisioning
+
+Costs scale with usage
+
+Exam Tips
+
+QLDB is not a blockchain, it is a centralized ledger database with blockchain-like
+immutability
+
+Journal is append-only and cryptographically verifiable
+
+Ideal for applications needing an authoritative system of record with full auditability
+Supports PartiQL for querying both current and historical data
+
+ACID transactions ensure data consistency
+
+Serverless design with automatic scaling and high availability
+
+Encryption at rest with KMS and in transit with TLS
+
+Integrates with CloudWatch, IAM, and CloudTrail for monitoring and security
+
+Quick Summary
+
+Amazon QLDB is a fully managed ledger database that delivers an immutable, transparent, and
+cryptographically verifiable transaction log. It simplifies building audit-ready systems by
+providing a central, trusted ledger with high availability, flexible querying, and strong security,
+making it ideal for financial systems, supply chains, and regulatory compliance use cases.
+

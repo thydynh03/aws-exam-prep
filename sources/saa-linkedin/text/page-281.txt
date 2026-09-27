@@ -1,0 +1,38 @@
+280
+
+Amazon EBS
+What It Is
+
+Amazon Elastic Block Store (EBS) is durable block storage for use with Amazon EC2 instances.
+Provides persistent storage volumes that can be attached to instances in the same Availability
+Zone.
+
+Key Characteristics
+*  Block-level storage for EC2.
+* Persistent, data remains even after instance stops or terminates.
+* Designed for 9.999% availability.
+© Supports snapshots for backup and recovery.
++ Encryptable using AWS KMS.
+Can be dynamically resized without downtime.
+EBS Volume Types
+1. General Purpose SSD (gp3)
+* Baseline 3,000 1OPS, can provision up to 16,000 IOPS.
+© Throughput up to 1,000 MB/s.
+* Suitable for most workloads (boot volumes, dev/test).
+2. Provisioned IOPS SSD (io1 /io2)
+* Designed for critical applications needing high performance.
+* iol: Up to 64,000 OPS.
++ i02: More durability (9.999% durability SLA).
+© Supports multi-attach (attach to multiple instances in same AZ).
+3. Throughput Optimized HDD (st1)
+© Low-cost, high-throughput workloads.
+Upto 500 MB/s throughput.
+* Good for big data, data warehouses, log processing.
+* Cannot be a boot volume.
+4. Cold HDD (sc1)
+« Lowest cost.
++ Infrequently accessed data.
+Upto 250 MB/s throughput.
+
++ Cannot be a boot volume.
+

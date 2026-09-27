@@ -1,0 +1,40 @@
+92
+
+Amazon El; Kubern ‘Amazon EI
+
+What It Is
+
+‘Amazon EKS is a fully managed Kubernetes service that simplifies deploying, managing, and
+scaling containerized applications using Kubernetes on AWS. It eliminates the need to install,
+operate, and maintain your own Kubernetes control plane.
+
+Key Features
+© Fully managed, highly available Kubernetes control plane
+Runs upstream, open-source Kubernetes for compatibility
+* Automatic scaling and patching of control plane
+* Integrated with AWS services like IAM, VPC, ALB, CloudWatch, ECR
+* Supports EC2 and AWS Fargate as compute options
+«Native Kubernetes tools (kubectl, Helm) work seamlessly
+© Multi-AZ deployments for high availability
+Control Plane
+* Managed by AWS with automatic scaling and redundancy
+Runs across multiple Availability Zones for high availability
+* Managed API server and etcd with automatic patching and backups
+* AWS handles upgrades of the Kubernetes control plane
+Worker Nodes
+* EC2 Launch Type
+Self-managed or managed node groups
+© Control over instance types and AMIs
++ AWS Fargate Launch Type
+© Serverless, runs Kubernetes pods without managing EC2 instances
+© Specify CPU and memory at pod level
+* Managed Node Groups
+o AWS provisions and manages EC2 nodes
+© Integrated with Auto Scaling
+Networking
+* Uses Amazon VPC for cluster networking
++ Supports Kubernetes CNI (Container Network Interface) with VPC-native networking
+* Each pod gets its own ENI and private IP
+
+* Security Groups and NACLs for traffic control
+

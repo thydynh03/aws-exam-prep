@@ -1,0 +1,43 @@
+156
+
+AWS
+
+What It Is
+
+AWS License Manager is a service that helps you manage, track, and control software licenses in
+AWS and on-premises environments. It simplifies license administration, reduces the risk of
+non-compliance, and supports license optimization by enforcing usage rules.
+
+nse Manager
+
+Key Features
+* Centralized license management for AWS and on-premises resources
+* Supports BYOL (Bring Your Own License) models
+* Define rules to track license usage and enforce limits
+«Integrates with AWS Systems Manager for discovery of installed software
+* Provides visibility into license usage across AWS accounts in an organization
+
+* Supports integration with AWS Marketplace for license management of Marketplace
+products
+
+License Configurations
+* Define custom licensing rules including:
+© Number of vCPUs or cores
+o Number of instances or sockets
+© Licensing metrics (e.g., per VM, per core)
+Create rules that align with your vendor agreements
+* Enforce compliance by preventing overuse of licenses
+License Tracking
+* Automatically track license consumption on AWS resources
+© Supports tracking for:
+o C2 instances
+© On-premises servers connected via AWS Systems Manager
+* Visibility into resource usage against defined limits
+© Generate reports for audit and compliance purposes
+Enforcement
+* Enforce licensing rules at launch time
++ Prevents creation of resources that exceed defined license limits
++ Integration with AWS Service Catalog to ensure compliant deployments
+
+* Helps ensure usage stays within vendor agreements
+

@@ -1,0 +1,57 @@
+114
+
+Amazon. ntum: r Di LDB)
+
+What It Is
+
+Amazon QLDB is a fully managed ledger database designed to provide a transparent, immutable,
+and cryptographically verifiable transaction log. It tracks all changes to application data over
+time, making it ideal for use cases requiring auditability and data integrity without the overhead
+of managing a blockchain network.
+
+Key Features
+
+Fully managed ledger database service
+
+Immutable transaction log that maintains a complete and verifiable history of changes
+Cryptographic verification with SHA-256 hashes to prove data integrity
+
+‘Transparent and append-only journal—no records can be deleted or modified
+Serverless with on-demand pricing and auto scaling
+
+Supports PartiQL for querying data with familiar SQL-like syntax
+
+High availability with replication across multiple Availability Zones
+
+No need to build or manage complex blockchain networks or consensus mechanisms
+
+Ledger Structure
+
+Ledger: Primary container for all data and history
+
+Journal: Immutable transaction log that records every change in order
+
+Tables: Store current state of data with flexible document model (similar to JSON)
+Document revisions: Every change creates a new immutable revision
+
+Digest: Cryptographic summary of journal for integrity verification
+
+Immutability and Verification
+
+Append-only journal guarantees that records cannot be altered or deleted
+
+Cryptographic hash chaining of entries provides proof that data has not been tampered
+with
+
+Periodic digest generation enables audit and verification
+
+Clients can compare digests to detect unauthorized changes
+
+PartiQL Query Language
+
+SQL-compatible query language for querying data in tables
+Supports SELECT, INSERT, UPDATE, and DELETE operations
+Allows querying historical revisions using system-generated metadata
+
+Enables time-travel queries to see the state of a table at any point in time
+

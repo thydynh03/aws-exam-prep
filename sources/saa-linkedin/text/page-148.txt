@@ -1,0 +1,56 @@
+147
+
+“Automate cleanup of EC2 instances across regions monthly” > Use CLI ina script or via
+‘AWS Systems Manager Run Command.
+
+“You want to query across multiple accounts/profiles for resource status” > CLI profiles
++ parameterization.
+
+“You need to integrate AWS commands into Jenkins or GitHub Actions pipeline” > CLI
+enables programmatic invocation.
+
+Best Practices
+
+Use named profiles for different environments (dev/test/prod) rather than default
+profile only.
+
+Store configuration in ~/.aws/config and ~/.aws/credentials securely, avoid version
+controlling secrets.
+
+Use --dry-run or equivalent flags (when available) to check actions before executing.
+
+Combine CLI commands with infrastructure-as-code (aC) tools (like AWS
+CloudFormation or AWS CDK) for repeatable builds.
+
+Script operations with error handling, logging output, and cleanup to avoid resource
+leakage.
+
+Use --output table for human readability in ad-hoc tasks; --output json for
+automation/parsing.
+
+Keep the CLI tool up-to-date (aws version) because AWS adds new services/features
+constantly.
+
+Exam Tips
+
+Ifa question describes “you need to automate repeated operations across AWS using
+scripts” > CLlis a key candidate.
+
+When they mention “use command-line to query resource details” > use CLI example.
+Don't confuse CLI with SDK/console — "command line" means CLI.
+
+Know that CLI actions are subject to [AM permissions and region/account context. If a
+command fails, misconfigured profile/region or insufficient IAM is probable.
+
+Remember: CLI is tool-agnostic of AWS services; it’s the interface to them. So, in exam
+context pick answers that highlight “scriptable, automatable, less manual, supports
+multiple services”,
+
+Quick Summary
+
+AWS CLIis your go-to command-line tool for controlling AWS services in an automated, scripted
+
+fashion, For the SAA exam: think “automation’, “script’, “multiple services via terminal”,
+“region/profile context’, “IAM controls”. It’s not a service like S3 or EC2, it’s the interface you'll
+use to manage them.
+

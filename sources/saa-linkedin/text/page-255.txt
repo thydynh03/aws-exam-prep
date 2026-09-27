@@ -1,0 +1,39 @@
+254
+
+Amazon Inspector
+What It Is
+
++ Automated vulnerability management service that scans AWS workloads for software
+vulnerabilities and unintended network exposure.
+
+* Helps maintain security and compliance by continuously assessing EC2, container
+images (ECR), and Lambda functions.
+
+Key Features
+Automated, Continuous Scanning
+* Continuously scans for:
+© Operating system vulnerabilities (CVEs).
+© Application vulnerabilities.
+© Network reachability (exposure to the internet).
+© Container image vulnerabilities (Amazon ECR).
+o Lambda function code packages.
+Integration with AWS Services
+* BC2:
+© Scans installed packages, 0S.
+© Checks network exposure.
+* Amazon ECR:
+© Scans container images for known vulnerabilities.
+© Continuous scanning on push.
++ AWS Lambda:
+© Scans function code for known vulnerabilities.
+Findings and Scoring
+«Generates security findings with:
+o CVE details.
+Severity scores (CVSS-based).
+o Recommended remediation steps.
++ Prioritizes by risk to help with patching.
+AWS Organizations Integration
+* Supports multi-account environments.
+
+Central management of scans and findings across accounts.
+

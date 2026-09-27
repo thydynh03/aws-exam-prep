@@ -1,0 +1,40 @@
+260
+
+AWS Re Manager (AWS RAI
+What It Is
+
+AWS Resource Access Manager (RAM) is a service that lets you securely share AWS resources
+with other AWS accounts, within your organization (AWS Organizations), or with Organizational
+Units (0Us).
+
+It removes the need to duplicate resources across accounts, simplifying management and
+reducing costs.
+
+Why Use AWS RAM
+* Centralize management of shared resources.
+* Avoid duplication of resources across accounts.
+‘+ Enforce access controls and security boundaries.
+« Facilitate multi-account architectures recommended by AWS.
++ Reduce operational overhead in large organizations.
+Key Concepts
++ Resource Share:
+© Acontainer for resources you want to share.
+© Specifies which AWS accounts, Organizations, or OUs have access.
+© Principal:
+o The AWS accounts, OUs, or entire organization with which you share resources.
+«Managed Permissions:
+© Define what actions principals can perform on shared resources.
+AWS provides default managed permissions for supported resource types.
+Supported Resource Types
+AWS RAM supports sharing of specific AWS resources across accounts. Examples include:
++ VPC Subnets
+o Enables multiple accounts to launch resources into a shared subnet.
+«Transit Gateways
+© Allows centralized routing across multiple accounts.
++ Route 53 Resolver Rules
+o Enables sharing DNS resolution configurations.
+«License Manager Configurations
+© Share software licenses across accounts.
+
+= AWS Outposts
+

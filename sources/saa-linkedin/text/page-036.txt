@@ -1,0 +1,30 @@
+35
+
+Pricing
+* Author pricing: fixed monthly fee per author user
+* Reader pricing: pay-per-session or monthly pricing model
++ SPICE storage pricing based on GB stored per month
++ Noupfront costs or infrastructure to manage
+Use Cases
+* Business intelligence dashboards and reporting
+* Operational analytics with near real-time data
+* Embedded analytics for SaaS applications
+* Executive dashboards and KPI monitoring
++ Self-service data exploration for business users
+Exam Tips
+© QuickSight is AWS's managed BI service with no servers to manage
++ SPICE provides fast, in-memory query performance
++ Supports pay-per-session pricing for cost-effective sharing
+* Integrates deeply with AWS data sources like Athena, Redshift, and $3
+© ML Insights add built-in anomaly detection and forecasting
+* Supports embedding dashboards into apps for custom experiences
++ Role-based access and row-level security control data access
+* Can connect to on-premises and third-party databases via connectors
+
+Quick Summary
+
+‘Amazon QuickSight is a serverless, fully managed Bl service that delivers fast, interactive
+dashboards and visualizations using the SPICE engine. It integrates with a wide range of AWS
+and external data sources, supports pay-per-session pricing, and offers ML-powered insights to
+help organizations make data-driven decisions at scale.
+

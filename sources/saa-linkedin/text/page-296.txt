@@ -1,0 +1,45 @@
+Replication costs.
+
+© Features like $3 Select and Inventory reports.
+
+Integration with AWS Services
+
+AWS Lambda for event-driven processing.
+CloudFront for content delivery.
+
+Athena for querying data in $3
+
+AWS Glue for ETL workflows.
+
+Amazon Macie for sensitive data discovery.
+DataSync for large-scale transfers.
+
+Snowball and Snowmobile for offline migration.
+
+Exam Tips
+
+$3 is object storage, not block or file.
+Highly durable (11 9s), region-scoped buckets.
+
+Versioning enables protection against deletes /overwrites.
+Encryption can use SSE-S3, SSE-KMS, SSE-C, or client-side.
+Lifecycle rules automate class transitions and deletions.
+Replication supports CRR and SRR for DR and compliance.
+Block Public Access is critical for securing data.
+
+Access via IAM, bucket policies, access points, ACLs.
+‘Transfer Acceleration speeds up global transfers.
+
+Object Lock enables compliance with WORM requirements.
+
+Integration with Lambda, SNS, SQS for event notifications.
+
+Quick Summary
+
+Amazon $3 is AWS's highly durable, scalable, secure object storage service, supporting advanced
+features like lifecycle management, replication, encryption, event notifications, and integrations
+with a wide range of AWS services. It is essential for storing unstructured data in the cloud with
+fine-grained access controls and cost-effective storage classes.
+
+295
+

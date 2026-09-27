@@ -1,0 +1,41 @@
+47
+
+AWS Mi
+What It Is
+
+‘Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ. It makes
+it easy to set up, operate, and scale message brokers in the cloud. It supports industry-standard
+APIs and protocols so applications can easily migrate without rewriting messaging code.
+
+Key Features
+Fully managed message broker service
+* Supports Apache ActiveMQ and RabbitMQ engines
+
+* Compatible with industry-standard APIs and protocols such as JMS, NMS, AMQP, STOMP,
+MQTT, and WebSocket
+
++ Simplifies migration of existing messaging applications to AWS without code changes
++ Provides message durability and high availability
+© Supports failover and replication for fault tolerance
+* Integrates with AWS monitoring and security services
+Broker Engines Supported
+* Apache ActiveMQ
+*  RabbitMQ
+Protocols and APIs
+«JMS (Java Message Service)
+* NMS (.NET Messaging Service)
+* AMQP (Advanced Message Queuing Protocol)
+* STOMP (Simple Text Oriented Messaging Protocol)
+* MQTT (Message Queuing Telemetry Transport)
+© WebSocket
+High Availability and Durability
+* Supports replication for fault tolerance
++ Active/standby brokers in different Availability Zones for failover
+* Data replicated across multiple Availability Zones
+© Automatic failover for high availability deployments
+* Durable queues to persist messages
+Deployment Options
++ Single-instance brokers for development or low-cost use cases
+
++ Active/standby brokers with multi-AZ replication for production workloads
+

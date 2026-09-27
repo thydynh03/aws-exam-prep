@@ -1,0 +1,47 @@
+236
+
+«Encrypt RDS databases.
+
+* Lambda environment variables.
+
++ Application-layer encryption with KMS APIs.
+
++ Regulatory /compliance needs for key management.
+Pricing
+
+* Pay per CMK stored monthly.
+
++ Pay per KMS API request (encrypt, decrypt, generate data key).
+Security and Compliance
+
+« FIPS 140-2 validated HSMs used under the hood.
+
+*  Customer-defined access policies.
+
+© CloudTrail logs for full visibility.
+
++ Regionally isolated keys by default (except multi-region keys).
+Exam Tips
+
++ AWS KMS = central, managed key management.
+
+© CMKs = AWS-managed or customer-managed.
+
++ SSE-KMS = $3 objects encrypted with KMS keys.
+
+Integrated with many AWS services.
+
+* Use CloudTrail for logging key usage.
+
++ For full hardware control, use AWS CloudHSM.
+
++ Envelope encryption = encrypt data keys with CMKs for performance and security.
+
+Import keys for strict compliance requirements.
+
+Quick Summary
+
+AWS KMS is the central service for creating and managing encryption keys across AWS, enabling
+secure encryption of data at rest and in transit, with fine-grained control, auditing, and
+integration with AWS services.
+

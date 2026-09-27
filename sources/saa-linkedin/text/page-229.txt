@@ -1,0 +1,56 @@
+228
+
+AWS Audit Manager
+
+What It Is
+
+AWS Audit Manager is a service that helps you continuously audit AWS usage to simplify risk
+assessments and compliance with regulations and industry standards. It automates evidence
+collection to reduce manual effort and maintain audit readiness.
+
+Key Features
+* Automates evidence collection for audits
+
+* Supports prebuilt frameworks for common compliance standards (e.g., CIS, GDPR, PCI
+DSS, HIPAA)
+
+* Custom frameworks to meet internal or industry-specific requirements
+Mapping of AWS resources and configurations to control requirements
+* Continuous monitoring to maintain audit readiness
+* Evidence stored securely and organized for auditor review
+Assessment Frameworks
++ Prebuilt frameworks cover common compliance standards
+* Custom frameworks can be built from scratch or by modifying existing frameworks
+
+* Controls defined within frameworks specify what evidence to collect and how to
+evaluate it
+
+© Mapping of controls to AWS resources ensures relevant evidence is gathered
+Assessments
+
+* Created from frameworks to evaluate specific environments or accounts
+
+* Define scope by selecting AWS accounts and services
+
+* Automates collection of evidence based on defined controls
+
+© Ongoing assessments provide continuous visibility into compliance posture
+Evidence Collection
+
+* Automatic collection from AWS services and resources
+
+* Manual evidence upload supported for non-AWS resources or custom requirements
+
+* Evidence includes configuration snapshots, policies, logs, and API activity
+
++ Evidence is time-stamped and organized by control for easy auditor access
+
+* Supports export of evidence to AWS $3 for long-term storage or sharing
+Continuous Auditing
+
+* Ongoing monitoring ensures compliance posture is maintained
+
+«Tracks changes over time, enabling identification of noncompliance as it occurs
+
+* Reduces point-in-time audit preparation burden
+

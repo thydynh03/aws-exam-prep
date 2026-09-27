@@ -1,0 +1,47 @@
+189
+
+AWS DataSyne
+What It Is
+
+AWS DataSync is a fully managed data transfer service that simplifies, automates, and
+accelerates moving large amounts of data between on-premises storage and AWS services.
+Itis designed for fast, secure, and automated data movement, supporting one-time migrations
+and ongoing transfers.
+
+Key Features
+
+‘Transfers data up to 10x faster than open-source tools.
+
+Automates tasks like data validation, scheduling, monitoring, and encryption.
+Built-in integrity verification to ensure data consistency.
+
+Handles metadata and ACL preservation for files.
+
+No need to write custom transfer scripts or manage infrastructure.
+
+‘Supported Transfer Locations
+
+On-premises storage:
+o NFS (Network File System)
+© SMB (Server Message Block)
+AWS services:
+o Amazon $3
+o Amazon EFS (Elastic File System)
+© Amazon FSx for Windows File Server
+Amazon FSx for Lustre
+© AWS Snowcone (via DataSync agent)
+
+Amazon S3-compatible storage
+
+How It Works
+
+Deploy AWS DataSync Agent on-premises:
+© Virtual appliance for VMware, Hyper-V, or EC2.
+© Connects to on-premises NFS or SMB shares.
+Configure source and destination locations.
+Define and start tasks:
+© Transfer data from on-prem to AWS, AWS to on-prem, or between AWS services.
+Supports scheduled and incremental transfers.
+
+Transfers securely over AWS Direct Connect, VPN, or the Internet.
+

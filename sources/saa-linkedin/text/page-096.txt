@@ -1,0 +1,59 @@
+95
+
+Amazon Aurora
+
+What It Is
+
+Amazon Aurora isa fully managed, MySQL- and PostgreSQL-compatible relational database
+engine built for the cloud. It delivers the performance and availability of high-end commercial
+databases at a lower cost, while being fully integrated with AWS services.
+
+Key Features
+
+MySQL- and PostgreSQL-compatible
+Up to 5x faster than standard MySQL and 3x faster than standard PostgreSQL
+Storage automatically scales in 10GB increments up to 128TB
+
+Fault-tolerant and self-healing storage system with six-way replication across three
+Availability Zones
+
+Continuous backups to Amazon S3
+
+Automatic, incremental backups with point-in-time recovery
+
+Database cloning for fast, cost-effective copies
+
+Supports Global Databases for low-latency global reads and disaster recovery
+
+Integrated with AWS monitoring and security services
+
+Aurora Cluster Architecture
+
+Consists of a cluster volume that spans multiple AZs
+
+One primary instance for read/write operations
+
+Up to 15 Aurora Replicas for read scaling with low replication lag
+Reader endpoint automatically load-balances read traffic
+
+Failover to a replica typically takes less than 30 seconds
+
+Aurora Storage
+
+Distributed, fault-tolerant, self-healing storage
+‘Automatically replicated six ways across three AZs
+Continuous backup to Amazon $3 without affecting performance
+
+Supports storage auto-scaling up to 128TB
+
+Aurora Replicas
+
+Provide read scalability
+Up to 15 Aurora Replicas per cluster
+
+Replication lag typically under 100 milliseconds
+
+Supports cross-Region replication with Global Databases
+
+Failover targets for high availability
+

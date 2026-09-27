@@ -1,0 +1,40 @@
+128
+
+Security
+* Uses AWS IAM roles and policies for secure access to backend resources
++ Amplify CLI supports environment isolation
++ Role-based access control for developers and apps
+Monitoring and Logging
+* Integration with Amazon CloudWatch for logs and metrics
+* Monitor Lambda function execution, API errors, and performance
+* View deployment status and error messages in Amplify console
+Pricing
+* Hosting: Based on build and hosting time (per-minute and per-GB transfer rates)
+* Backend services: Pay-as-you-go for Cognito, Lambda, S3, etc.
++ Free tier available for hosting and backend resources
+Use Cases
++ Full-stack web and mobile applications
++ Serverless applications with real-time data sync and offline access
+*  MVPand rapid prototyping
+Applications requiring authentication, storage, APIs, and analytics
+* React, Vue, and Angular apps with integrated backend
+Best Practices
+* Use Amplify environments (dev, prod) for safe deployments
+«Use CLI and GitHub integration for CI/CD automation
+* Secure your storage and APIS using Cognito and [AM
+Exam Tips
+* Amplify is a full-stack development platform for building cloud-based apps
+
+* Uses Cognito for auth, AppSync/API Gateway for APIs, $3 for storage, and Lambda for
+backend logic
+
+* Supports real-time, offline, and cross-platform mobile apps via DataStore
++ CLIallows infrastructure provisioning using CloudFormation
+
+Quick Summary
+
+AWS Amplify is a full-stack development service that helps frontend and mobile developers
+build, deploy, and host scalable and secure applications. It offers deep integration with AWS
+services, real-time data sync, authentication, storage, APIs, and CI/CD, all from a unified CLI and
+web console
+

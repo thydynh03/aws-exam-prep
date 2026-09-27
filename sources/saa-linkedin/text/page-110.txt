@@ -1,0 +1,56 @@
+No manual resharding required like traditional Cassandra
+
+Data Security
+
+Encryption at rest with AWS KMS
+Encryption in transit using TLS
+
+IAM for fine-grained access control
+
+VPC endpoints via AWS PrivateLink for private connectivity
+Audit logging using AWS CloudTrail
+
+No direct SSH or node-level access
+
+Backup and Restore
+
+Continuous backups with Point-in-Time Recovery (PITR)
+Manual on-demand backups available
+
+Data stored redundantly across AZs
+
+Backups can be restored to new tables
+
+No impact on performance during backup operations
+
+Monitoring and Management
+
+Integrated with Amazon CloudWatch for metrics
+AWS CloudTrail for auditing API activity
+
+No need to monitor nodes or repair clusters
+Manage via AWS Console, CLI, or SDKs
+
+CQL-compatible tools like cqlsh can connect
+
+Integration with AWS Services
+
+Integrates with Lambda, Kinesis, Glue, Data Pipeline, and $3
+Use with Amazon MSK for streaming writes
+
+Connect via Amazon VPC endpoints
+
+Integrates with AWS CloudFormation, Terraform, and CDK for laC
+
+Ideal for hybrid or multi-region architectures with data replication
+
+Use Cases
+
+1OT data ingestion and time-series data
+Session and user profile storage
+High-velocity log data and clickstreams
+
+Real-time recommendation systems
+
+109
+

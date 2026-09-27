@@ -1,0 +1,33 @@
+247
+
+* Centrally managing Network Firewall rules for all VPCs.
+* Auditing and fixing overly permissive security groups.
+© Applying DNS Firewall rules to block malicious domains.
+Security & Compliance
+* Helps meet enterprise security requirements for policy consistency.
+* Reduces misconfigurations and drift across accounts.
+* Provides visibility into security posture across the organization.
+Pricing
+* AWS Firewall Manager charges based on:
+o Number of policies created.
+© AWS security services used (e.g., WAF, Shield Advanced, Network Firewall).
+
+* Additional costs for underlying services (WAF rules, Shield Advanced, Network Firewall
+usage).
+
+Exam Tips
+Firewall Manager = central policy management across multiple accounts.
+* Requires AWS Organizations to function.
+
+* Supports AWS WAE Shield Advanced, Network Firewall, Security Groups, and DNS
+Firewall.
+
++ Auto-applies security policies to new resources.
+* Monitors compliance and can remediate automatically.
++ Great for enterprises with multi-account strategies.
+Quick Summary
+
+AWS Firewall Manager lets you centrally configure, deploy, and enforce security policies (WAE,
+Shield Advanced, Network Firewall, Security Groups, DNS Firewall) across all AWS accounts in
+an organization for consistent, automated security.
+

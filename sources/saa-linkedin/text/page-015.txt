@@ -1,0 +1,36 @@
+14
+
+Data Storage
++ EMRFS for $3 integration with eventual consistency improvements
++ HDFS for ephemeral storage on cluster nodes
+‘© Supports AWS Glue Data Catalog for Hive Metastore compatibility
+* Lake Formation integration for centralized data access control
+Processing Frameworks
++ Hadoop MapReduce for batch processing
+«Apache Spark for fast, in-memory data processing
+«Hive for SQL-like queries
+* Presto for low-latency SQL queries
++ HBase for NoSQL data storage
+*  Flink for real-time stream processing
+* Zeppelin and Jupyter Notebooks for interactive analytics
+Security
+*  IAMroles for fine-grained access control
+«AWS Key Management Service (KMS) for encryption at rest
+«TLS for encryption in transit
++ Kerberos authentication for Hadoop clusters
+* Security groups for controlling network access
+«Integration with AWS Lake Formation for data permissions
++ EC2 key pairs for SSH access to nodes
++ AWS CloudTrail for auditing API calls
+Monitoring and Logging
++ Amazon CloudWatch for metrics and alarms
++ CloudWatch Logs for application logs
+« EMR console for real-time cluster monitoring
++ Ganglia and Spark UI for detailed performance monitoring
+* $3 for storing log files
+Scaling and Flexibility
+* Resize clusters manually or with Auto Scaling
+« EMR Managed Scaling automatically scales clusters based on workload
+
++ Support for Spot Instances to reduce cost
+

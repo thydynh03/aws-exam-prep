@@ -1,0 +1,35 @@
+106
+
+High Availability
+*  Redis: Supports replication groups with primary and replica nodes
+* Automatic failover to replica in case of primary node failure
+© Multi-AZ failover with minimal downtime
+* Backup and restore support for disaster recovery
+Scaling
+* Vertical scaling by changing node types
+* Horizontal scaling via sharding (Redis cluster mode, Memcached)
+* Add or remove nodes to meet demand
+* Supports online resharding in Redis cluster mode
+Data Security
+* Encryption in-transit using TLS
++ Encryption at-rest with AWS KMS (Redis)
+* IAM policies to control API access
+*  Redis AUTH for password protection
+* VPC for network isolation and security groups for access control
+Performance Features
+*  Microsecond latency reads and writes
+* Supports large datasets due to memory optimization
+* Connection multiplexing to reduce client connections
+© Optimized for high-throughput workloads
+Backup and Restore (Redis Only)
+© Supports automatic daily snapshots
+* Manual backups to Amazon $3
+* Restore clusters from snapshots
+* Useful for disaster recovery and migration
+Monitoring and Management
+* Amazon CloudWatch integration for metrics
+Enhanced Monitoring for detailed metrics
+* AWS CLI, SDKs, Console for management
+
+* Events for operational changes and alerts
+

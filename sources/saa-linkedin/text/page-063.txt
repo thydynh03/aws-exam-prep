@@ -1,0 +1,38 @@
+62
+
+Apply to EC2, Lambda, Fargate.
+10. AWS Trusted Advisor - Cost Optimization
+* Recommends savings by identifying:
+© Idle/underutilized resources.
+o Unassociated Elastic IPs.
+© Low-traffic Load Balancers.
++ Part of five categories of checks.
+* Some checks require Business or Enterprise support plans.
+11. AWS Compute Optimizer
+* Uses machine learning to recommend optimal EC2 instance types.
+* Based on historical usage patterns.
+* Helps reduce cost and improve performance by right-sizing.
+12. AWS Cost Anomaly Detection
+* Monitors spend and usage patterns using machine learning.
+
++ Detects unexpected cost spikes.
+
+* Automatically notifies via:
+o Email
+© SNS topic
+Exam Tips
++ Cost Explorer = visual breakdown, trend analysis, and forecasting.
++ AWS Budgets = alerts on thresholds (cost, usage, RI/SP).
+* CUR = detailed data, ideal for advanced analysis.
+«Tags must be activated for use in allocation reports.
++ Savings Plans are more flexible than Reserved Instances.
+* Cost Anomaly Detection = machine learning to detect abnormal spikes.
+* Consolidated Billing = volume discounts + centralized billing.
+© Compute Optimizer and Trusted Advisor = optimization insights.
+Quick Summary
+
+AWS Cost Management tools help architects and organizations estimate, control, monitor, and
+optimize their cloud expenses. From planning costs (Pricing Calculator) to tracking anomalies
+(Cost Anomaly Detection) and analysing trends (Cost Explorer), these tools enable financial
+accountability in the cloud.
+

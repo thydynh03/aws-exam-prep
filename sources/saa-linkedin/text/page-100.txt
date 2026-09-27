@@ -1,0 +1,61 @@
+99
+
+Amazon DocumentDB
+
+What It Is
+
+Amazon DocumentDB (with MongoDB compatibility) is a fully managed document database
+service designed to store, query, and index JSON-like documents. It is optimized for scalability,
+availability, and performance, and is used for semi-structured data applications that require
+flexible schemas, such as content management systems, catalogs, and user profiles.
+
+Key Features
+
+* Fully managed document database service
+
+* Compatible with MongoDB APIs (version 3.6, 4.0, 5.0)
+
+* Designed for high performance, scalability, and availability
+
+* Stores semi-structured JSON-like documents
+
+* Automatically scales storage up to 64 TB
+
+© Built-in security, backup, and monitoring features
+
+* Offers automatic failover, backups, and patching
+
+«Integrates with AWS services like CloudWatch, IAM, and Secrets Manager
+Architecture and Performance
+
+© Separates compute and storage layers
+
++ Each cluster has one primary instance (read/write) and up to 15 replicas (read-only)
+
+* Six copies of data replicated across three Availability Zones
+
+* Compute instances are based on Amazon EC2
+
+* Automatically scales storage in 10 GB increments as needed
+
+« Supports millions of reads per second with low latency
+
+© Uses a purpose-built storage engine optimized for document workloads
+Data Model
+
+* Uses a flexible, schema-less JSON-like format
+
+* Collections contain documents, similar to tables in a relational database
+
+* Supports embedded documents and arrays for nested data
+
++ Ideal for applications with changing or dynamic data structures
+MongoDB Compatibility
+
+* Supports MongoDB drivers and tools
+
+* Compatible with popular MongoDB APIs, including find, insert, update, and delete
+
+* Some features such as capped collections and change streams may not be fully
+supported
+
