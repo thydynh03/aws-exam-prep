@@ -7,6 +7,8 @@ import {
   requireAuth,
   requireRole,
   optionalAuth,
+  loginRateLimiter,
+  resetLoginAttempts,
   type AuthenticatedRequest,
 } from './middleware.js';
 import {
@@ -118,10 +120,11 @@ app.get('/api/health', (_req, res) => {
    1. AUTHENTICATION ENDPOINTS
    ========================================================================== */
 
-app.post('/api/auth/login', async (req, res) => {
+app.post('/api/auth/login', loginRateLimiter, async (req, res) => {
   try {
     const { username, adminPasscode, device, deviceInfo } = req.body;
     const result = await loginUser(username, adminPasscode, device || deviceInfo);
+    resetLoginAttempts(req); // Clear rate limit on successful login
     res.json(result);
   } catch (err: any) {
     const isAuthError = err.message && (

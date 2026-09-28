@@ -2,6 +2,8 @@ import { describe, it, expect, beforeAll } from 'vitest';
 import request from 'supertest';
 import { app } from '../app.js';
 
+process.env.ADMIN_PASSCODE = process.env.ADMIN_PASSCODE || 'admin123';
+
 describe('RBAC & User Analytics API Integration Tests', () => {
   let learner1Token: string;
   let learner1Id: string;

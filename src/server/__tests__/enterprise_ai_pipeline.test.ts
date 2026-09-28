@@ -10,6 +10,7 @@ import { guardOutput } from '../ai/aiOutputGuard.js';
 import { buildSafePromptContext } from '../ai/aiContextBuilder.js';
 import { loginUser } from '../authService.js';
 
+process.env.ADMIN_PASSCODE = process.env.ADMIN_PASSCODE || 'admin123';
 process.env.COHERE_API_KEY = process.env.COHERE_API_KEY || 'cohere_7aOMvg9J2weVzFg5pc3wN2Ob20ZTqNeaoeEGQu682XS3XT';
 
 describe('Enterprise AI Production Pipeline Test Suite', () => {

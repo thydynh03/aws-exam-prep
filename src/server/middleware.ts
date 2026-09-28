@@ -1,10 +1,56 @@
 import type { Request, Response, NextFunction } from 'express';
 import { validateSession, type UserRecord } from './authService.js';
 
+// ── In-memory rate limiter for login brute-force protection ────────
+const loginAttempts = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000; // 15 minutes
+const RATE_LIMIT_MAX_ATTEMPTS = 5;
+
+function getClientIp(req: Request): string {
+  const forwarded = req.headers['x-forwarded-for'];
+  if (typeof forwarded === 'string') return forwarded.split(',')[0].trim();
+  return req.socket?.remoteAddress || 'unknown';
+}
+
+export function loginRateLimiter(req: Request, res: Response, next: NextFunction) {
+  const ip = getClientIp(req);
+  const now = Date.now();
+  const entry = loginAttempts.get(ip);
+
+  if (entry && now < entry.resetAt) {
+    if (entry.count >= RATE_LIMIT_MAX_ATTEMPTS) {
+      const retryAfterSec = Math.ceil((entry.resetAt - now) / 1000);
+      res.status(429).json({
+        error: `Quá nhiều lần đăng nhập thất bại. Thử lại sau ${retryAfterSec} giây.`,
+        retryAfter: retryAfterSec,
+      });
+      return;
+    }
+    entry.count++;
+  } else {
+    loginAttempts.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+  }
+
+  // Cleanup old entries every 100 requests
+  if (loginAttempts.size > 1000) {
+    for (const [key, val] of loginAttempts) {
+      if (now > val.resetAt) loginAttempts.delete(key);
+    }
+  }
+
+  next();
+}
+
+export function resetLoginAttempts(req: Request) {
+  const ip = getClientIp(req);
+  loginAttempts.delete(ip);
+}
+
 export interface AuthenticatedRequest extends Request {
   user?: UserRecord;
   token?: string;
 }
+
 
 /**
  * Authentication Middleware: enforces valid Bearer session token

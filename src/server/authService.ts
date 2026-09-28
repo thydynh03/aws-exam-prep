@@ -21,10 +21,18 @@ export interface DeviceInfo {
 }
 
 export function getAdminPasscode(): string {
-  return (process.env.ADMIN_PASSCODE || 'admin123').trim();
+  const passcode = process.env.ADMIN_PASSCODE;
+  if (!passcode) {
+    console.error('[SECURITY] ADMIN_PASSCODE env var is not set. Admin login is disabled.');
+    return crypto.randomUUID(); // unreachable passcode — admin login disabled without env var
+  }
+  return passcode.trim();
 }
 const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
-const SESSION_SECRET = process.env.SESSION_SECRET || 'aws-exam-prep-secret-key-2026-v1';
+const SESSION_SECRET = process.env.SESSION_SECRET || (() => {
+  console.warn('[SECURITY] SESSION_SECRET env var is not set. Using random secret (sessions will not persist across restarts).');
+  return crypto.randomUUID() + crypto.randomUUID();
+})();
 
 export interface TokenPayload {
   uid: string;
