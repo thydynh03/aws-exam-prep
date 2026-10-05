@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import type { ExamResult, Question } from '../core/types';
-import { formatTime } from '../core/examEngine';
+import { formatTime, simulateRealExamScoring } from '../core/examEngine';
 import { 
   CheckCircle2, 
   XCircle, 
@@ -36,6 +36,11 @@ export const ResultView: React.FC<ResultViewProps> = ({
 
   const { t } = useLanguage();
   const [filter, setFilter] = useState<'all' | 'incorrect' | 'correct' | 'unanswered' | 'marked'>('all');
+  // Đề đủ 65 câu: mô phỏng việc 15 câu không tính điểm để ra khoảng điểm thực tế
+  const realSim = useMemo(
+    () => simulateRealExamScoring(result.questionResults.map((q) => q.isCorrect)),
+    [result]
+  );
   const [expandedQuestionId, setExpandedQuestionId] = useState<number | null>(null);
 
   const qMap = new Map<number, Question>();
@@ -97,6 +102,27 @@ export const ResultView: React.FC<ResultViewProps> = ({
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
               {result.passed ? t.result.congrats : t.result.tryAgain}
             </p>
+
+            <p className="text-[11px] text-slate-500 dark:text-slate-400">
+              {t.result.estimateNote.replace('{total}', String(result.totalQuestions))}
+            </p>
+
+            {realSim && (
+              <div className="mt-1 rounded-lg border border-indigo-200 bg-indigo-50/70 p-3 text-xs dark:border-indigo-900/60 dark:bg-indigo-950/30">
+                <p className="font-bold text-indigo-900 dark:text-indigo-200">{t.result.realSimTitle}</p>
+                <p className="mt-1 font-mono text-indigo-800 dark:text-indigo-300">
+                  {t.result.realSimRange
+                    .replace('{min}', String(realSim.minScaledScore))
+                    .replace('{max}', String(realSim.maxScaledScore))
+                    .replace('{median}', String(realSim.medianScaledScore))}
+                  {' · '}
+                  {t.result.realSimPassChance.replace('{pct}', String(Math.round(realSim.passProbability * 100)))}
+                </p>
+                <p className="mt-1 text-[11px] text-indigo-700/80 dark:text-indigo-300/70">
+                  {t.result.realSimNote.replace('{trials}', String(realSim.trials))}
+                </p>
+              </div>
+            )}
           </div>
 
           {/* Action buttons */}

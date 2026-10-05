@@ -143,8 +143,10 @@ describe('Exam Engine & Scoring', () => {
   it('calculates scaled score on AWS 100-1000 scale', () => {
     expect(calculateScaledScore(0, 32)).toBe(100);
     expect(calculateScaledScore(32, 32)).toBe(1000);
-    // 23 / 32 = 71.875% -> 100 + 0.71875 * 900 = 747
-    expect(calculateScaledScore(23, 32)).toBe(747);
+    // 72% correct maps exactly to the 720 pass mark
+    expect(calculateScaledScore(72, 100)).toBe(720);
+    // 24 / 32 = 75% -> 720 + (0.03 / 0.28) * 280 = 750
+    expect(calculateScaledScore(24, 32)).toBe(750);
   });
 
   it('calculates complete exam result accurately', () => {
