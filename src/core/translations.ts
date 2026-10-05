@@ -296,6 +296,11 @@ export interface Translations {
   };
   result: {
     reportTitle: string;
+    estimateNote: string;
+    realSimTitle: string;
+    realSimRange: string;
+    realSimPassChance: string;
+    realSimNote: string;
     passingScore: string;
     passed: string;
     didNotPass: string;
@@ -641,6 +646,11 @@ export const TRANSLATIONS: Record<Language, Translations> = {
     },
     result: {
       reportTitle: 'Official Exam Simulation Report',
+      estimateNote: 'Estimated score: all {total} questions are scored and 72% correct maps to 720. AWS does not publish its scaling formula, so treat this as an approximation.',
+      realSimTitle: 'Real exam simulation (50 scored + 15 unscored)',
+      realSimRange: 'Likely score range: {min}–{max} (median {median})',
+      realSimPassChance: 'Pass probability: {pct}%',
+      realSimNote: 'The real exam hides 15 unscored trial questions among the 65. We randomly drop 15 of your answers {trials} times and score the remaining 50 to show how much the result can swing.',
       passingScore: 'Passing Score: 720 / 1000 (72%)',
       passed: 'PASSED',
       didNotPass: 'DID NOT PASS',
@@ -984,6 +994,11 @@ export const TRANSLATIONS: Record<Language, Translations> = {
     },
     result: {
       reportTitle: 'Báo cáo Kết quả Kỳ thi Thử',
+      estimateNote: 'Điểm ước lượng: chấm cả {total} câu, 72% câu đúng tương ứng 720. AWS không công bố công thức quy đổi nên đây chỉ là con số gần đúng.',
+      realSimTitle: 'Mô phỏng chấm như thi thật (50 câu tính điểm + 15 câu không tính)',
+      realSimRange: 'Khoảng điểm có thể đạt: {min}–{max} (trung vị {median})',
+      realSimPassChance: 'Khả năng đậu: {pct}%',
+      realSimNote: 'Đề thật có 15 câu thử nghiệm không tính điểm, trộn lẫn trong 65 câu. App bỏ ngẫu nhiên 15 câu trong bài của bạn {trials} lần rồi chấm 50 câu còn lại, để thấy điểm có thể dao động bao nhiêu.',
       passingScore: 'Điểm chuẩn đỗ: 720 / 1000 (72%)',
       passed: 'ĐÃ ĐẠT (PASS)',
       didNotPass: 'CHƯA ĐẠT (FAIL)',

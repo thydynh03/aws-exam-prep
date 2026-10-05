@@ -64,10 +64,12 @@ describe('Edge Cases & State Resilience', () => {
     });
 
     it('accurately calculates pass threshold at 72%', () => {
-      // 23 of 32 = 71.875% -> scaled score 747 >= 720 -> PASS
-      expect(calculateScaledScore(23, 32)).toBeGreaterThanOrEqual(720);
-      // 22 of 32 = 68.75% -> scaled score 719 < 720 -> FAIL
-      expect(calculateScaledScore(22, 32)).toBeLessThan(720);
+      // 24 of 32 = 75% -> PASS; 23 of 32 = 71.875% -> just below 72% -> FAIL
+      expect(calculateScaledScore(24, 32)).toBeGreaterThanOrEqual(720);
+      expect(calculateScaledScore(23, 32)).toBeLessThan(720);
+      // Full 65-question exam: 47 correct (72.3%) passes, 46 (70.8%) fails
+      expect(calculateScaledScore(47, 65)).toBeGreaterThanOrEqual(720);
+      expect(calculateScaledScore(46, 65)).toBeLessThan(720);
     });
   });
 
