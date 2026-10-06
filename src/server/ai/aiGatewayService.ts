@@ -491,12 +491,16 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
 
   // 4b. Prompt Rewriter & Question Understanding
   const rewrite = rewritePrompt(contextualized.standaloneQuery);
+  // Question memory compares what the learner actually typed. The contextualized query
+  // carries up to 400 chars of the displayed exam question, so two unrelated messages
+  // ("hi" and "How does Athena...") would otherwise look ~90% similar.
+  const ownQuery = rewritePrompt(securityCheck.sanitizedInput).normalizedQuery;
   const rewriteLatencyMs = Math.max(1, Math.round(performance.now() - step4Start));
 
   // 5. Question Memory & Previous Mistakes Check
   const step6Start = performance.now();
   const similarQuestion = await findSimilarQuestions(
-    rewrite.normalizedQuery,
+    ownQuery,
     rewrite.intent,
     rewrite.topic,
     tenantId
@@ -515,7 +519,9 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
     const cacheResult = await checkSemanticCache(
       rewrite.normalizedQuery,
       tenantId,
-      config.memory.similarityThreshold
+      // A context-anchored query shares most of its words with every other message about
+      // the same exam question, so only an exact match is trustworthy there.
+      contextualized.method === 'none' ? config.memory.similarityThreshold : Number.POSITIVE_INFINITY
     );
     cacheLatencyMs = Math.max(1, Math.round(performance.now() - step5Start));
 
@@ -783,7 +789,7 @@ export async function executeAIPipeline(payload: AIChatRequestPayload): Promise<
     tenantId,
     userId: payload.userId,
     originalQuestion: payload.query,
-    normalizedQuestion: rewrite.normalizedQuery,
+    normalizedQuestion: ownQuery,
     rewrittenQuestion: rewrite.rewrittenQuery,
     intent: rewrite.intent,
     topic: rewrite.topic,

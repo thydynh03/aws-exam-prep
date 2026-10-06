@@ -76,6 +76,9 @@ function tokenize(text: string): Set<string> {
   return new Set(words);
 }
 
+/** Fewer meaningful words than this and a message is too vague to match against memory. */
+const MIN_MATCH_TOKENS = 3;
+
 function calculateJaccardSimilarity(setA: Set<string>, setB: Set<string>): number {
   if (setA.size === 0 || setB.size === 0) return 0;
   let intersection = 0;
@@ -135,6 +138,9 @@ export async function findSimilarQuestions(
   topic: string,
   tenantId = 'default'
 ): Promise<QuestionMemoryMatch | null> {
+  // Greetings and one-word messages ("hi", "ok") carry no topic to match on
+  if (tokenize(normalizedQuery).size < MIN_MATCH_TOKENS) return null;
+
   // 1. Exact normalized match check
   const exact = await dbQueryOne<{
     original_question: string;
@@ -185,6 +191,7 @@ export async function findSimilarQuestions(
 
   for (const c of candidates) {
     const candidateTokens = tokenize(c.normalized_question);
+    if (candidateTokens.size < MIN_MATCH_TOKENS) continue;
     const sim = calculateJaccardSimilarity(queryTokens, candidateTokens);
 
     if (sim > maxSim && sim >= minThreshold) {
