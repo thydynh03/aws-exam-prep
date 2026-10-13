@@ -1,5 +1,5 @@
-import React, { useMemo, useCallback } from 'react';
-import { Check, X } from 'lucide-react';
+import React, { useMemo, useCallback, useState } from 'react';
+import { Check, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import type { Question } from '../core/types';
 import { getDomainMeta } from '../core/domainMeta';
 
@@ -93,6 +93,9 @@ const QuestionNavButton = React.memo<QuestionNavButtonProps>(({
 
 QuestionNavButton.displayName = 'QuestionNavButton';
 
+/** Số ô câu hỏi mỗi trang, tránh render 1000+ ô làm danh sách dài vô tận. */
+const PAGE_SIZE = 50;
+
 export const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
   questionIds,
   currentIndex,
@@ -123,6 +126,19 @@ export const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
   }
 
   const unansweredCount = total - answeredCount;
+
+  // Trang hiện tại tự nhảy theo câu đang làm, người dùng vẫn lật trang tự do
+  const pageCount = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  const currentPage = Math.floor(currentIndex / PAGE_SIZE);
+  const [page, setPage] = useState(currentPage);
+  const [trackedPage, setTrackedPage] = useState(currentPage);
+  if (trackedPage !== currentPage) {
+    setTrackedPage(currentPage);
+    setPage(currentPage);
+  }
+  const safePage = Math.min(page, pageCount - 1);
+  const pageStart = safePage * PAGE_SIZE;
+  const pageIds = questionIds.slice(pageStart, pageStart + PAGE_SIZE);
 
   const handleNextUnanswered = () => {
     // find next unanswered index starting from current + 1, looping around
@@ -246,10 +262,45 @@ export const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
         </div>
       </div>
 
+      {/* Pagination */}
+      {pageCount > 1 && (
+        <div className="flex items-center gap-2 px-4 pt-3">
+          <button
+            onClick={() => setPage(Math.max(0, safePage - 1))}
+            disabled={safePage === 0}
+            className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-40"
+            aria-label="Previous page"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+          <select
+            value={safePage}
+            onChange={(e) => setPage(Number(e.target.value))}
+            className="flex-1 min-w-0 text-xs font-mono py-1.5 px-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200"
+            aria-label="Question page"
+          >
+            {Array.from({ length: pageCount }, (_, p) => (
+              <option key={p} value={p}>
+                {p * PAGE_SIZE + 1}–{Math.min(total, (p + 1) * PAGE_SIZE)}
+              </option>
+            ))}
+          </select>
+          <button
+            onClick={() => setPage(Math.min(pageCount - 1, safePage + 1))}
+            disabled={safePage >= pageCount - 1}
+            className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-40"
+            aria-label="Next page"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+      )}
+
       {/* Grid of questions */}
       <div className="flex-1 overflow-y-auto p-4">
         <div className="grid grid-cols-4 sm:grid-cols-5 gap-1.5 sm:gap-2">
-          {questionIds.map((id, idx) => {
+          {pageIds.map((id, i) => {
+            const idx = pageStart + i;
             const isCurrent = idx === currentIndex;
             const isAnswered = Boolean(answers[id] && answers[id].trim().length > 0);
             const isMarked = Boolean(markedForReview[id]);
